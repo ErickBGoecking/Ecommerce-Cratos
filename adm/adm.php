@@ -325,7 +325,13 @@
                             <div class="qty">2</div>
                         </a>
                     </div>
-
+                    <div class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true">
+                            <i class="fa fa-shopping-cart"></i>
+                            <span>Your Cart</span>
+                            <div class="qty">3</div>
+                        </a>
+                    </div>
                     <div class="menu-toggle">
                         <a href="#">
                             <i class="fa fa-bars"></i>
