@@ -25,13 +25,13 @@
 <header>
     <div id="top-header">
         <div class="container">
-            <ul class="header-links pull-left">
+            <!-- <ul class="header-links pull-left">
                 <li><a href="#"><i class="fa fa-phone"></i> +021-95-51-84</a></li>
                 <li><a href="#"><i class="fa fa-envelope-o"></i> email@email.com</a></li>
                 <li><a href="#"><i class="fa fa-map-marker"></i> 1734 Stonecoal Road</a></li>
-            </ul>
+            </ul> -->
             <ul class="header-links pull-right">
-                <li><a href="#"><i class="fa fa-dollar"></i> USD</a></li>
+                <!-- <li><a href="#"><i class="fa fa-dollar"></i> USD</a></li> -->
                 <li><a href="#"><i class="fa fa-user-o"></i> My Account</a></li>
             </ul>
         </div>
@@ -42,7 +42,7 @@
                 <div class="col-md-3">
                     <div class="header-logo">
                         <a href="#" class="logo">
-                            <img src="./img/logo.png" alt="">
+                            <img src="./img/logo1.png" alt="">
                         </a>
                     </div>
                 </div>
@@ -124,13 +124,13 @@
     <div class="container">
         <div id="responsive-nav">
             <ul class="main-nav nav navbar-nav">
-                <li class="active"><a href="#">Home</a></li>
-                <li><a href="#">Hot Deals</a></li>
-                <li><a href="#">Categories</a></li>
-                <li><a href="#">Laptops</a></li>
-                <li><a href="#">Smartphones</a></li>
-                <li><a href="#">Cameras</a></li>
-                <li><a href="#">Accessories</a></li>
+                <li class="active"><a href="#">Início</a></li>
+                <li><a href="#">Whey Protein</a></li>
+                <li><a href="#">Creatina</a></li>
+                <li><a href="#">Pre-Treinos</a></li>
+                <li><a href="#">Hipercalóricos</a></li>
+                <li><a href="#">Emagrecedores</a></li>
+                <li><a href="#">Naturais</a></li>
             </ul>
         </div>
     </div>
