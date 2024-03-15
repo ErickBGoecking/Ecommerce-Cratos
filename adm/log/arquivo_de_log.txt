@@ -1,0 +1,9 @@
+Throwable: Division by zero
+File: D:\htdocs\cursosenai\2024\TARDE\TRILHAS\func\dashboard.php
+Line: 60
+Throwable: Division by zero
+File: D:\htdocs\cursosenai\2024\TARDE\TRILHAS\func\dashboard.php
+Line: 60
+Throwable: Call to undefined method PDOStatement::rowCounta()
+File: D:\htdocs\cursosenai\2024\TARDE\TRILHAS\func\dashboard.php
+Line: 61
