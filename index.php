@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Electro - HTML Ecommerce Template</title>
+    <title>Cratos Nutrition</title>
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700" rel="stylesheet">
     <link type="text/css" rel="stylesheet" href="css/bootstrap.min.css"/>
     <link type="text/css" rel="stylesheet" href="css/slick.css"/>
@@ -50,11 +50,11 @@
                     <div class="header-search">
                         <form>
                             <select class="input-select">
-                                <option value="0">All Categories</option>
+                                <option value="0">Categorias</option>
                                 <option value="1">Category 01</option>
                                 <option value="1">Category 02</option>
                             </select>
-                            <input class="input" placeholder="Search here">
+                            <input class="input" placeholder="O que você procura?">
                             <button class="search-btn">Search</button>
                         </form>
                     </div>
@@ -126,15 +126,61 @@
             <ul class="main-nav nav navbar-nav">
                 <li class="active"><a href="#">Início</a></li>
                 <li><a href="#">Whey Protein</a></li>
-                <li><a href="#">Creatina</a></li>
-                <li><a href="#">Pre-Treinos</a></li>
-                <li><a href="#">Hipercalóricos</a></li>
-                <li><a href="#">Emagrecedores</a></li>
-                <li><a href="#">Naturais</a></li>
+                <li><a href="#">Top 20</a></li>
+                <li><a href="#">Marcas</a></li>
+                <li><a href="#">Kits</a></li>
+                <li><a href="#">Objetivos</a></li>
+                <li><a href="#">Combos</a></li>
+                <li><a href="#">Clube Cratos</a></li>
+
             </ul>
         </div>
     </div>
 </nav>
+
+<!-- CARROUSEL INICIO -->
+<!-- <div class="container"> CARROUSEL RETIRADO DA CLASSE -->
+<div class="">
+
+
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+        <!-- Indicators -->
+        <!-- <ol class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="1"></li>
+        <li data-target="#myCarousel" data-slide-to="2"></li>
+        </ol> -->
+
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner">
+
+        <div class="item active">
+            <img src="./img/banner/img11.png" alt="Los Angeles" style="width:100%;">
+        </div>
+
+        <div class="item">
+            <img src="./img/banner/img11.png" alt="Chicago" style="width:100%;">
+        </div>
+        
+        <div class="item">
+            <img src="./img/banner/img11.png" alt="New York" style="width:100%;">
+        </div>
+    
+        </div>
+
+        <!-- Left and right controls -->
+        <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left"></span>
+        <span class="sr-only">Previous</span>
+        </a>
+        <a class="right carousel-control" href="#myCarousel" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right"></span>
+        <span class="sr-only">Next</span>
+        </a>
+    </div>
+</div>
+<!-- CARROUSEL FINAL -->
+
 <div class="section">
     <div class="container">
         <div class="row">
