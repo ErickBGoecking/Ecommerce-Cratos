@@ -1,3 +1,11 @@
+<?php
+session_start();
+include_once './func/func.php';
+//if (session_status() == PHP_SESSION_NONE) {
+//    session_start();
+//}
+validarSessaoExterna('index.php');
+?>
 <!doctype html>
 <html lang="pt-br">
 <head>

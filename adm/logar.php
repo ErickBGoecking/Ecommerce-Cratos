@@ -16,7 +16,7 @@ if ($retornoLogar) {
     } else if ($retornoLogar === 'senha') {
         echo json_encode(['sucesso' => false, 'mensagem' => "Senha Errada!"]);
     } else {
-        $idpessoa = $retornoLogar->idpessoa;
+        $_SESSION['idsis'] = $retornoLogar->idpessoa;
         echo json_encode(['sucesso' => true, 'mensagem' => "Logado com Sucesso!"]);
     }
 } else {

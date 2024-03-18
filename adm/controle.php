@@ -16,6 +16,7 @@ if (isset($controle) && !empty($controle)) {
         case'login':
             include_once 'logar.php';
             break;
+
         default:
             echo 'Padrão alterar';
     }
