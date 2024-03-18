@@ -12,13 +12,7 @@
     <link type="text/css" rel="stylesheet" href="css/nouislider.min.css"/>
     <link rel="stylesheet" href="css/font-awesome.min.css">
     <link type="text/css" rel="stylesheet" href="css/style.css"/>
-
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
+    <link rel="stylesheet" href="css/slide.css">
 
 </head>
 <body>
@@ -33,7 +27,7 @@
             </ul> -->
             <ul class="header-links pull-right">
                 <!-- <li><a href="#"><i class="fa fa-dollar"></i> USD</a></li> -->
-                <li><a href="#"><i class="fa fa-user-o"></i> My Account</a></li>
+                <li><a href="#"><i class="fa fa-user-o"></i> Meu Acesso</a></li>
             </ul>
         </div>
     </div>
@@ -56,7 +50,7 @@
                                 <option value="1">Category 02</option>
                             </select>
                             <input class="input" placeholder="O que você procura?">
-                            <button class="search-btn">Search</button>
+                            <button class="search-btn">Procurar</button>
                         </form>
                     </div>
                 </div>
@@ -65,14 +59,14 @@
                         <div>
                             <a href="#">
                                 <i class="fa fa-heart-o"></i>
-                                <span>Your Wishlist</span>
+                                <span>Favoritos</span>
                                 <div class="qty">2</div>
                             </a>
                         </div>
                         <div class="dropdown">
                             <a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true">
                                 <i class="fa fa-shopping-cart"></i>
-                                <span>Your Cart</span>
+                                <span>Meu Carrinho</span>
                                 <div class="qty">3</div>
                             </a>
                             <div class="cart-dropdown">
@@ -104,7 +98,7 @@
                                     <h5>SUBTOTAL: $2940.00</h5>
                                 </div>
                                 <div class="cart-btns">
-                                    <a href="#">View Cart</a>
+                                    <a href="#">Meu Carrinho</a>
                                     <a href="#">Checkout  <i class="fa fa-arrow-circle-right"></i></a>
                                 </div>
                             </div>
@@ -397,6 +391,7 @@
     </div>
 </div>
 
+
 <!-- SUPLEMENTOS PROTEINA -->
 <div class="section">
     <div class="container">
@@ -404,14 +399,120 @@
             <div class="col-md-12">
                 <div class="section-title">
                     <h3 class="title">Suplementos Proteína</h3>
-                    <div class="section-nav">
+                </div>
+            </div>
+            <div class="col-md-12">
+                <div class="row">
+                <div class="carousel-rotate" data-devicetype="desktop" data-carouselType="2" data-carouselSpeed="80">
+	<div class="wrapper carousel-content" style="animation: marquee 80s linear infinite;">
+		<div class="slide-1" style=" -webkit-animation: swap 80s linear infinite;animation: swap 80s linear infinite;">
+			<ul>
+                <li>
+                    <div>
+                        <img src="https://logospng.org/download/integralmedica/integralmedica-2048.png" />
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <img src="https://logospng.org/download/max-titanium/max-titanium-4096.png" />
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-g6ld3j_uTXEe4_zgP1uFqjQBmvoQL-Cvo2QwoRIy3zLhPZmeLaZVXQsvbWzWyLZ_xD0&usqp=CAU" />
+                    </div>
+                </li>
+
+                <!-- <li>
+                    <div>
+                        <img src="https://cdn.dribbble.com/users/1726478/screenshots/3781908/car-dealer-loader-gif.gif" />
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <img src="https://cdn.dribbble.com/users/1726478/screenshots/3636280/gif-1.gif" />
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <img src="https://media.giphy.com/media/l0ExhgDYmserkFabm/source.gif" />
+                    </div>
+                </li><li>
+                    <div>
+                        <img src="https://cdn.dribbble.com/users/1726478/screenshots/3739184/car-dealer-gif.gif" />
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <img src="https://media.giphy.com/media/l0ExhgDYmserkFabm/source.gif" />
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <img src="https://cdn.dribbble.com/users/1726478/screenshots/3781908/car-dealer-loader-gif.gif" />
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <img src="https://cdn.dribbble.com/users/1726478/screenshots/3636280/gif-1.gif" />
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <img src="https://media.giphy.com/media/l0ExhgDYmserkFabm/source.gif" />
+                    </div>
+                </li> -->
+			</ul>
+		</div>
+
+		<div class="slide-2">
+			<ul>
+                 <li>
+                    <div>
+                        <img src="https://www.universalusa.com/wp-content/uploads/2022/12/universal-logo-hero.png" />
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <img src="https://mma.prnewswire.com/media/880127/Dymatize_Logo.jpg?p=facebook" />
+                    </div>
+                </li><li>
+                    <div>
+                        <img src="https://ftwsuplementos.com.br/wp-content/uploads/2021/01/ftwcorreto1.png" />
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <img src="https://blackskullusa.vtexassets.com/arquivos/ids/157956-800-auto?v=638199668697430000&width=800&height=auto&aspect=true" />
+                    </div>
+                </li>
+			</ul>
+		</div>
+	</div>
+</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- MARCA -->
+
+
+<!-- SUPLEMENTOS PROTEINA -->
+<div class="section">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="section-title">
+                    <h3 class="title">Suplementos Proteína</h3>
+                    <!-- <div class="section-nav">
                         <ul class="section-tab-nav tab-nav">
                             <li class="active"><a data-toggle="tab" href="#tab1">Laptops</a></li>
-                            <li><a data-toggle="tab" href="#tab1">Smartphones</a></li>
-                            <li><a data-toggle="tab" href="#tab1">Cameras</a></li>
-                            <li><a data-toggle="tab" href="#tab1">Accessories</a></li>
+                            <li><a data-toggle="tab" href="#tab2">Smartphones</a></li>
+                            <li><a data-toggle="tab" href="#tab3">Cameras</a></li>
+                            <li><a data-toggle="tab" href="#tab4">Accessories</a></li>
                         </ul>
-                    </div>
+                    </div> -->
                 </div>
             </div>
             <div class="col-md-12">
@@ -566,14 +667,14 @@
             <div class="col-md-12">
                 <div class="section-title">
                     <h3 class="title">Suplementos Creatina</h3>
-                    <div class="section-nav">
+                    <!-- <div class="section-nav">
                         <ul class="section-tab-nav tab-nav">
                             <li class="active"><a data-toggle="tab" href="#tab1">Laptops</a></li>
                             <li><a data-toggle="tab" href="#tab1">Smartphones</a></li>
                             <li><a data-toggle="tab" href="#tab1">Cameras</a></li>
                             <li><a data-toggle="tab" href="#tab1">Accessories</a></li>
                         </ul>
-                    </div>
+                    </div> -->
                 </div>
             </div>
             <div class="col-md-12">
@@ -728,14 +829,14 @@
             <div class="col-md-12">
                 <div class="section-title">
                     <h3 class="title">Suplementos Pré-Treino</h3>
-                    <div class="section-nav">
+                    <!-- <div class="section-nav">
                         <ul class="section-tab-nav tab-nav">
                             <li class="active"><a data-toggle="tab" href="#tab1">Laptops</a></li>
                             <li><a data-toggle="tab" href="#tab1">Smartphones</a></li>
                             <li><a data-toggle="tab" href="#tab1">Cameras</a></li>
                             <li><a data-toggle="tab" href="#tab1">Accessories</a></li>
                         </ul>
-                    </div>
+                    </div> -->
                 </div>
             </div>
             <div class="col-md-12">
@@ -883,6 +984,7 @@
     </div>
 </div>
 
+<!-- PROMOCAO -->
 <div id="hot-deal" class="section">
     <div class="container">
         <div class="row">
@@ -892,31 +994,31 @@
                         <li>
                             <div>
                                 <h3>02</h3>
-                                <span>Days</span>
+                                <span>Dias</span>
                             </div>
                         </li>
                         <li>
                             <div>
                                 <h3>10</h3>
-                                <span>Hours</span>
+                                <span>Horas</span>
                             </div>
                         </li>
                         <li>
                             <div>
                                 <h3>34</h3>
-                                <span>Mins</span>
+                                <span>Minutos</span>
                             </div>
                         </li>
                         <li>
                             <div>
                                 <h3>60</h3>
-                                <span>Secs</span>
+                                <span>Segundos</span>
                             </div>
                         </li>
                     </ul>
-                    <h2 class="text-uppercase">hot deal this week</h2>
-                    <p>New Collection Up to 50% OFF</p>
-                    <a class="primary-btn cta-btn" href="#">Shop now</a>
+                    <h2 class="text-uppercase">Promoção CRATOS 5 ANOSS</h2>
+                    <p>Toda a nossa loja com 25% OFF</p>
+                    <a class="primary-btn cta-btn" href="#">Compre agora</a>
                 </div>
             </div>
         </div>
@@ -1084,12 +1186,13 @@
     </div>
 </div> -->
 
+<!-- TOP DOS TOPS -->
 <div class="section">
     <div class="container">
         <div class="row">
             <div class="col-md-4 col-xs-6">
                 <div class="section-title">
-                    <h4 class="title">Top selling</h4>
+                    <h4 class="title">Mais Vendidos</h4>
                     <div class="section-nav">
                         <div id="slick-nav-3" class="products-slick-nav"></div>
                     </div>
@@ -1099,40 +1202,7 @@
                     <div>
                         <div class="product-widget">
                             <div class="product-img">
-                                <img src="./img/product07.png" alt="">
-                            </div>
-                            <div class="product-body">
-                                <p class="product-category">Category</p>
-                                <h3 class="product-name"><a href="#">product name goes here</a></h3>
-                                <h4 class="product-price">$980.00 <del class="product-old-price">$990.00</del></h4>
-                            </div>
-                        </div>
-                        <div class="product-widget">
-                            <div class="product-img">
-                                <img src="./img/product08.png" alt="">
-                            </div>
-                            <div class="product-body">
-                                <p class="product-category">Category</p>
-                                <h3 class="product-name"><a href="#">product name goes here</a></h3>
-                                <h4 class="product-price">$980.00 <del class="product-old-price">$990.00</del></h4>
-                            </div>
-                        </div>
-                        <div class="product-widget">
-                            <div class="product-img">
-                                <img src="./img/product09.png" alt="">
-                            </div>
-                            <div class="product-body">
-                                <p class="product-category">Category</p>
-                                <h3 class="product-name"><a href="#">product name goes here</a></h3>
-                                <h4 class="product-price">$980.00 <del class="product-old-price">$990.00</del></h4>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div>
-                        <div class="product-widget">
-                            <div class="product-img">
-                                <img src="./img/product01.png" alt="">
+                                <img src="./img/product02.png" alt="">
                             </div>
                             <div class="product-body">
                                 <p class="product-category">Category</p>
@@ -1152,7 +1222,40 @@
                         </div>
                         <div class="product-widget">
                             <div class="product-img">
-                                <img src="./img/product03.png" alt="">
+                                <img src="./img/product02.png" alt="">
+                            </div>
+                            <div class="product-body">
+                                <p class="product-category">Category</p>
+                                <h3 class="product-name"><a href="#">product name goes here</a></h3>
+                                <h4 class="product-price">$980.00 <del class="product-old-price">$990.00</del></h4>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="product-widget">
+                            <div class="product-img">
+                                <img src="./img/product02.png" alt="">
+                            </div>
+                            <div class="product-body">
+                                <p class="product-category">Category</p>
+                                <h3 class="product-name"><a href="#">product name goes here</a></h3>
+                                <h4 class="product-price">$980.00 <del class="product-old-price">$990.00</del></h4>
+                            </div>
+                        </div>
+                        <div class="product-widget">
+                            <div class="product-img">
+                                <img src="./img/product02.png" alt="">
+                            </div>
+                            <div class="product-body">
+                                <p class="product-category">Category</p>
+                                <h3 class="product-name"><a href="#">product name goes here</a></h3>
+                                <h4 class="product-price">$980.00 <del class="product-old-price">$990.00</del></h4>
+                            </div>
+                        </div>
+                        <div class="product-widget">
+                            <div class="product-img">
+                                <img src="./img/product02.png" alt="">
                             </div>
                             <div class="product-body">
                                 <p class="product-category">Category</p>
@@ -1166,7 +1269,7 @@
 
             <div class="col-md-4 col-xs-6">
                 <div class="section-title">
-                    <h4 class="title">Top selling</h4>
+                    <h4 class="title">Mais Buscados</h4>
                     <div class="section-nav">
                         <div id="slick-nav-4" class="products-slick-nav"></div>
                     </div>
@@ -1176,7 +1279,7 @@
                     <div>
                         <div class="product-widget">
                             <div class="product-img">
-                                <img src="./img/product04.png" alt="">
+                                <img src="./img/product02.png" alt="">
                             </div>
                             <div class="product-body">
                                 <p class="product-category">Category</p>
@@ -1186,7 +1289,7 @@
                         </div>
                         <div class="product-widget">
                             <div class="product-img">
-                                <img src="./img/product05.png" alt="">
+                                <img src="./img/product02.png" alt="">
                             </div>
                             <div class="product-body">
                                 <p class="product-category">Category</p>
@@ -1196,7 +1299,7 @@
                         </div>
                         <div class="product-widget">
                             <div class="product-img">
-                                <img src="./img/product06.png" alt="">
+                                <img src="./img/product02.png" alt="">
                             </div>
                             <div class="product-body">
                                 <p class="product-category">Category</p>
@@ -1208,7 +1311,7 @@
                     <div>
                         <div class="product-widget">
                             <div class="product-img">
-                                <img src="./img/product07.png" alt="">
+                                <img src="./img/product02.png" alt="">
                             </div>
                             <div class="product-body">
                                 <p class="product-category">Category</p>
@@ -1219,7 +1322,7 @@
                         <!-- product widget -->
                         <div class="product-widget">
                             <div class="product-img">
-                                <img src="./img/product08.png" alt="">
+                                <img src="./img/product02.png" alt="">
                             </div>
                             <div class="product-body">
                                 <p class="product-category">Category</p>
@@ -1229,7 +1332,7 @@
                         </div>
                         <div class="product-widget">
                             <div class="product-img">
-                                <img src="./img/product09.png" alt="">
+                                <img src="./img/product02.png" alt="">
                             </div>
                             <div class="product-body">
                                 <p class="product-category">Category</p>
@@ -1243,7 +1346,7 @@
             <div class="clearfix visible-sm visible-xs"></div>
             <div class="col-md-4 col-xs-6">
                 <div class="section-title">
-                    <h4 class="title">Top selling</h4>
+                    <h4 class="title">Produtos Novos</h4>
                     <div class="section-nav">
                         <div id="slick-nav-5" class="products-slick-nav"></div>
                     </div>
@@ -1252,7 +1355,7 @@
                     <div>
                         <div class="product-widget">
                             <div class="product-img">
-                                <img src="./img/product01.png" alt="">
+                                <img src="./img/product02.png" alt="">
                             </div>
                             <div class="product-body">
                                 <p class="product-category">Category</p>
@@ -1272,7 +1375,7 @@
                         </div>
                         <div class="product-widget">
                             <div class="product-img">
-                                <img src="./img/product03.png" alt="">
+                                <img src="./img/product02.png" alt="">
                             </div>
                             <div class="product-body">
                                 <p class="product-category">Category</p>
@@ -1285,7 +1388,7 @@
                     <div>
                         <div class="product-widget">
                             <div class="product-img">
-                                <img src="./img/product04.png" alt="">
+                                <img src="./img/product02.png" alt="">
                             </div>
                             <div class="product-body">
                                 <p class="product-category">Category</p>
@@ -1295,7 +1398,7 @@
                         </div>
                         <div class="product-widget">
                             <div class="product-img">
-                                <img src="./img/product05.png" alt="">
+                                <img src="./img/product02.png" alt="">
                             </div>
                             <div class="product-body">
                                 <p class="product-category">Category</p>
@@ -1305,7 +1408,7 @@
                         </div>
                         <div class="product-widget">
                             <div class="product-img">
-                                <img src="./img/product06.png" alt="">
+                                <img src="./img/product02.png" alt="">
                             </div>
                             <div class="product-body">
                                 <p class="product-category">Category</p>
@@ -1449,6 +1552,7 @@
 <script src="js/nouislider.min.js"></script>
 <script src="js/jquery.zoom.min.js"></script>
 <script src="js/main.js"></script>
+<!-- <script src="js/slide.js"></script> -->
 
 </body>
 </html>
