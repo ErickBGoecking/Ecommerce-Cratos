@@ -49,11 +49,11 @@
 
 
                                     <div class=" item-menu"><a class="nav-link" aria-current="page"
-                                            href="./cliente-historico.php"><span class="mdi mdi-order-bool-descending"></span><span class="ps-4"></span>Histórico</span></a></div>
-                                    <div class=" item-menu"><a class="nav-link" aria-current="page" href="./cliente-carrinho.php">
+                                            href="cliente.php?pagina=historico"><span class="mdi mdi-order-bool-descending"></span><span class="ps-4"></span>Histórico</span></a></div>
+                                    <div class=" item-menu"><a class="nav-link" aria-current="page" href="./cliente.php?pagina=carrinho">
                                     <span class="mdi mdi-cart"></span><span class="ps-4"></span> Carrinho de compras</span></a></div>
                                     <div class=" item-menu"><a class="nav-link " aria-current="page"
-                                            href="./cliente-lista-desejos.php"><span class="mdi mdi-heart"></span><span class="ps-4"></span> Lista de Desejos</a></div>
+                                            href="cliente.php?pagina=lista-desejos"><span class="mdi mdi-heart"></span><span class="ps-4"></span> Lista de Desejos</a></div>
 
                                 </div>
                             </div>

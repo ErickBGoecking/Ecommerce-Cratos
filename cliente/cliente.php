@@ -8,11 +8,29 @@ include_once("cabecalho.php");
 
         <?php include_once('barraLateral.php');?>
 
-        <div class="conteúdo col-md-10 bg-body-secondary" style="min-height: 100vh;">
+        <div class="conteúdo bg-body-secondary d-flex justify-content-center" style="width:100%">
+            <?php 
+            
+            if (isset($_GET['pagina']) && !empty($_GET['pagina'])){
+                $pagina = $_GET['pagina'];
 
+                switch ($pagina){
+                    case "historico":
+                        include_once('historico.php');
+                        break;
+                    case "carrinho":
+                        include_once('carrinho.php');
+                        break;
+                    case "lista-desejos":
+                        include_once('lista-desejos.php');
+                        break;
+                }
+            }
+
+            ?>
         </div>
     </div>
-    
+
 </body>
 
 </html>
