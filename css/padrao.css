@@ -1,0 +1,13 @@
+:root{
+    --cor-principal: #f9d02a;
+    --cor-secundaria: black;
+
+    --cor-btn-primary-fonte: black;
+    --cor-btn-secondary-fonte: #f9d02a;
+
+}
+html {
+    font-family: sans-serif;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+}

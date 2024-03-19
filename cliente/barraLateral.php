@@ -1,24 +1,4 @@
 
-<style>
-.item-menu * {
-    color: slategray;
-    padding-left: 10px;
-}
-
-.item-menu :hover {
-    color: slategray !important;
-    border-left: 5px solid rgb(106, 90, 205);
-    margin-left: -5px;
-    cursor: pointer;
-}
-
-.item-menu * :hover {
-    color: slategray !important;
-    border-left: 0px;
-    margin-left: 0px;
-}
-</style>
-
 <div class="barra_lateral col-md-2">
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <div class="container-fluid align-items-start">
@@ -49,11 +29,11 @@
 
 
                                     <div class=" item-menu"><a class="nav-link" aria-current="page"
-                                            href="cliente.php?pagina=historico"><span class="mdi mdi-order-bool-descending"></span><span class="ps-4"></span>Histórico</span></a></div>
-                                    <div class=" item-menu"><a class="nav-link" aria-current="page" href="./cliente.php?pagina=carrinho">
+                                            href="?pagina=historico"><span class="mdi mdi-order-bool-descending"></span><span class="ps-4"></span>Histórico</span></a></div>
+                                    <div class=" item-menu"><a class="nav-link" aria-current="page" href="?pagina=carrinho">
                                     <span class="mdi mdi-cart"></span><span class="ps-4"></span> Carrinho de compras</span></a></div>
                                     <div class=" item-menu"><a class="nav-link " aria-current="page"
-                                            href="cliente.php?pagina=lista-desejos"><span class="mdi mdi-heart"></span><span class="ps-4"></span> Lista de Desejos</a></div>
+                                            href="?pagina=lista-desejos"><span class="mdi mdi-heart"></span><span class="ps-4"></span> Lista de Desejos</a></div>
 
                                 </div>
                             </div>

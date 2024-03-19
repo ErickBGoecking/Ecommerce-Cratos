@@ -1,0 +1,64 @@
+@import url('./padrao.css');
+
+/* ------------- BOTÕES  -------------------- */
+
+.btn-primary {
+    background-color: var(--cor-principal);
+    color: var(--cor-btn-primary-fonte);
+    font-weight: 600;
+    border: 2px solid var(--cor-principal);
+    ;
+}
+
+.btn-primary:hover {
+    background-color: white;
+    border: 2px solid var(--cor-principal);
+    color: var(--cor-btn-primary-fonte);
+}
+
+.btn-primary:active {
+    background-color: var(--cor-principal) !important;
+    color: var(--cor-btn-primary-fonte) !important;
+    font-weight: 600 !important;
+    border: 2px solid var(--cor-principal) !important;
+    ;
+}
+
+.btn-secondary {
+    color: var(--cor-btn-secondary-fonte);
+    background-color: var(--cor-secundaria);
+    font-weight: 600;
+    border: 2px solid var(--cor-secundaria);
+}
+
+.btn-secondary:hover {
+    color: var(--cor-secundaria);
+    background-color: white;
+    font-weight: 600;
+    border: 2px solid var(--cor-secundaria);
+}
+
+.btn-light {
+    font-weight: 600;
+}
+
+
+/* ------------- MENU LATERAL -------------------- */
+
+.item-menu * {
+    color: slategray;
+    padding-left: 10px;
+}
+
+.item-menu :hover {
+    color: slategray !important;
+    border-left: 5px solid var(--cor-principal);
+    margin-left: -5px;
+    cursor: pointer;
+}
+
+.item-menu * :hover {
+    color: slategray !important;
+    border-left: 0px;
+    margin-left: 0px;
+}

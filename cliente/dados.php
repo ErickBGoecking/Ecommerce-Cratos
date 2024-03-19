@@ -4,7 +4,7 @@ function db(){
         "compra1" => array(
             "produto" => "Tela Para Notebook Acer Nitro 5 An515-54-58cl 15.6",
             "idCompra" => "1",
-            "fotoProduto" => "product01.png",
+            "fotoProduto" => "product03.png",
             "quantidade" => "1 unidade",
             "valorProduto" => "350,99",
             "valorFrete" => "0",
