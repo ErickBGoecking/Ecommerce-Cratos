@@ -1,5 +1,4 @@
 <?php 
-include_once("cabecalho.php");
 include_once("dados.php");
 
 $info = dados();
