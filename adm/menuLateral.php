@@ -51,4 +51,7 @@
 
     </nav>
 </div>
+
 <div class="luciano">Pettersen</div>
+<div classe="fernando">Fernando</div>
+
