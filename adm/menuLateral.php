@@ -7,29 +7,24 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse m-0 mt-3 " id="navbarTogglerDemo02">
-
-
                 <nav class="nav flex-column container-fluid justify-content-start p-0">
-
-                    <div class="accordion accordion-flush container-fluid  p-0" id="accordionFlushExample">
+                    <div class="accordion accordion-flush container-fluid  p-0" id="menuAdm">
                         <div class="accordion-item">
-                            <div class=" item-menu">
+                            <div class="item-menu">
                                 <h2 class="accordion-header">
-                                    <div class="accordion-button collapsed bg-body-tertiary ps-0"
-                                        data-bs-toggle="collapse" data-bs-target="#flush-collapseOne"
-                                        aria-expanded="false" aria-controls="flush-collapseOne">
-                                        <span class="mdi mdi-shopping"></span><span class="ps-2"></span>Compras
+                                    <a href="#">
+                                    <div class="accordion-button collapsed bg-body-tertiary ps-0" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                                        <span class="mdi mdi-content-save-move"></span><span class="ps-2"></span>Cadastros
                                     </div>
+                                    </a>
                                 </h2>
                             </div>
-                            <div id="flush-collapseOne" class="accordion-collapse collapse"
-                                data-bs-parent="#accordionFlushExample">
+                            <div id="flush-collapseOne" class="accordion-collapse collapse show" data-bs-parent="#menuAdm">
                                 <div class="accordion-body">
-                                    <div class=" item-menu"><a class="nav-link" aria-current="page" href="?pagina=historico"><span class="mdi mdi-order-bool-descending"></span><span class="ps-2"></span>Histórico</span></a></div>
-                                    <div class=" item-menu"><a class="nav-link" aria-current="page" href="?pagina=historico"><span class="mdi mdi-order-bool-descending"></span><span class="ps-2"></span>Pettersen</span></a></div>
-                                    <div class=" item-menu"><a class="nav-link" aria-current="page" href="?pagina=carrinho"><span class="mdi mdi-cart"></span><span class="ps-2"></span> Carrinho</span></a></div>
-                                    <div class=" item-menu"><a class="nav-link " aria-current="page" href="?pagina=lista-desejos"><span class="mdi mdi-heart"></span><span class="ps-2"></span> Lista de Desejos</a></div>
-                                    <div class=" item-menu"><a class="nav-link " aria-current="page" href="?pagina=lista-desejos"><span class="mdi mdi-heart"></span><span class="ps-2"></span> Fernando</a></div>
+                                    <div class="item-menu"><a class="nav-link" aria-current="page" href="?pagina=categoria"><span class="mdi mdi-order-bool-descending"></span><span class="ps-2"></span>Categoria</span></a></div>
+                                    <div class="item-menu"><a class="nav-link" aria-current="page" href="?pagina=historico"><span class="mdi mdi-order-bool-descending"></span><span class="ps-2"></span>Pettersen</span></a></div>
+                                    <div class="item-menu"><a class="nav-link" aria-current="page" href="?pagina=carrinho"><span class="mdi mdi-cart"></span><span class="ps-2"></span> Carrinho</span></a></div>
+                                    <div class="item-menu"><a class="nav-link " aria-current="page" href="?pagina=lista-desejos"><span class="mdi mdi-heart"></span><span class="ps-2"></span> Lista de Desejos</a></div>
                                 </div>
                             </div>
                         </div>
@@ -46,9 +41,7 @@
                 </nav>
 
             </div>
-            <!-- <div class="vh-100 d-none d-md-block"></div> -->
         </div>
-
     </nav>
 </div>
 

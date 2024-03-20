@@ -21,7 +21,6 @@
     color: var(--cor-btn-primary-fonte) !important;
     font-weight: 600 !important;
     border: 2px solid var(--cor-principal) !important;
-    ;
 }
 
 .btn-secondary {
@@ -66,7 +65,11 @@
     border-left: 0px;
     margin-left: 0px;
 }
-
+.item-menu * :active {
+    color: #4acb0b; !important;
+    border-left: 0px;
+    margin-left: 0px;
+}
 /*-----------------------------------PAINEL ADM------------------------------*/
 .fundoAdm{
     background-color: #ffcb00;

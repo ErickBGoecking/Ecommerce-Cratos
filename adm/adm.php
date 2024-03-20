@@ -6,9 +6,6 @@ include_once './func/func.php';
 //}
 validarSessaoExterna('index.php');
 ?>
-<?php
-include_once("topo.php");
-?>
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -18,11 +15,11 @@ include_once("topo.php");
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Adm Cratos</title>
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700" rel="stylesheet">
-    <link type="text/css" rel="stylesheet" href="../css/slick.css" />
-    <link type="text/css" rel="stylesheet" href="../css/slick-theme.css" />
-    <link type="text/css" rel="stylesheet" href="../css/nouislider.min.css" />
+    <link type="text/css" rel="stylesheet" href="../css/slick.css"/>
+    <link type="text/css" rel="stylesheet" href="../css/slick-theme.css"/>
+    <link type="text/css" rel="stylesheet" href="../css/nouislider.min.css"/>
     <link rel="stylesheet" href="../css/font-awesome.min.css">
-    <link type="text/css" rel="stylesheet" href="../css/style.css" />
+    <link type="text/css" rel="stylesheet" href="../css/style.css"/>
     <link rel="stylesheet" type="text/css"
           href="//cdn.jsdelivr.net/npm/@mdi/font@6.5.95/css/materialdesignicons.min.css">
 
@@ -30,20 +27,35 @@ include_once("topo.php");
           integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
           integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
-          crossorigin="anonymous" referrerpolicy="no-referrer" />
+          crossorigin="anonymous" referrerpolicy="no-referrer"/>
     <link rel="stylesheet" href="../css/bootstrap-personalizado.css">
-
 </head>
 
 <body class="bg-body-tertiary">
-<?php include_once("topo.php");?>
+<?php
+if (isset($_GET['pagina']) && !empty($_GET['pagina'])) {
+    $pagina = $_GET['pagina'];
+} else {
+    $pagina = '';
+}
+include_once("topo.php");
+?>
 
 <div class="d-flex flex-column flex-md-row">
 
-    <?php include_once('menuLateral.php');?>
+    <?php include_once('menuLateral.php'); ?>
 
     <div class="bg-body-secondary" style="width:100%; min-height:83vh;">
-<!--        area-->
+        <?php
+        switch ($pagina) {
+            case "categoria":
+                include_once('./produto/listaCategoria.php');
+                break;
+            case "produto":
+                include_once('./produto/listaProduto.php');
+                break;
+        }
+        ?>
     </div>
 </div>
 
