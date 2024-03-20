@@ -30,6 +30,8 @@
 
                                     <div class=" item-menu"><a class="nav-link" aria-current="page"
                                                                href="?pagina=historico"><span class="mdi mdi-order-bool-descending"></span><span class="ps-2"></span>Histórico</span></a></div>
+                                    <div class=" item-menu"><a class="nav-link" aria-current="page"
+                                                               href="?pagina=historico"><span class="mdi mdi-order-bool-descending"></span><span class="ps-2"></span>Luciano</span></a></div>
                                     <div class=" item-menu"><a class="nav-link" aria-current="page" href="?pagina=carrinho">
                                             <span class="mdi mdi-cart"></span><span class="ps-2"></span> Carrinho</span></a></div>
                                     <div class=" item-menu"><a class="nav-link " aria-current="page"
