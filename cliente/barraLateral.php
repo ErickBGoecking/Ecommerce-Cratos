@@ -1,5 +1,13 @@
-
-<div class="barra_lateral col-md-2">
+<?php 
+    $pagina = $_GET['pagina'];
+?>
+<style>
+    .ativo{
+        background-color: red !important;
+        color: red;
+    }
+</style>
+<div class="barra_lateral col-md-2" id="menuLateral">
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <div class="container-fluid align-items-start">
             <a class="navbar-brand p-0 m-0" href="#"></a>
@@ -23,17 +31,25 @@
                                     </div>
                                 </h2>
                             </div>
-                            <div id="flush-collapseOne" class="accordion-collapse collapse"
+                            <div id="flush-collapseOne" class="accordion-collapse collapse 
+                                <?php 
+                                if($pagina=='historico'or$pagina=='carrinho'or$pagina=='lista-desejos')
+                                {echo 'show';}
+                                ?>"
                                 data-bs-parent="#accordionFlushExample">
                                 <div class="accordion-body">
 
-
-                                    <div class=" item-menu"><a class="nav-link" aria-current="page"
-                                            href="?pagina=historico"><span class="mdi mdi-order-bool-descending"></span><span class="ps-2"></span>Histórico</span></a></div>
-                                    <div class=" item-menu"><a class="nav-link" aria-current="page" href="?pagina=carrinho">
-                                    <span class="mdi mdi-cart"></span><span class="ps-2"></span> Carrinho</span></a></div>
-                                    <div class=" item-menu"><a class="nav-link " aria-current="page"
-                                            href="?pagina=lista-desejos"><span class="mdi mdi-heart"></span><span class="ps-2"></span> Lista de Desejos</a></div>
+                                    <div class=" item-menu"><a class="nav-link <?php if($pagina=='historico'){echo 'ativo';}?>" aria-current="page"
+                                            href="?pagina=historico"><span
+                                                class="mdi mdi-order-bool-descending"></span><span
+                                                class="ps-2"></span>Histórico</span></a></div>
+                                    <div class=" item-menu"><a class="nav-link <?php if($pagina=='carrinho'){echo 'ativo';}?>" aria-current="page"
+                                            href="?pagina=carrinho">
+                                            <span class="mdi mdi-cart"></span><span class="ps-2"></span>
+                                            Carrinho</span></a></div>
+                                    <div class=" item-menu "><a class="nav-link  <?php if($pagina=='lista-desejos'){echo 'ativo';}?>" aria-current="page"
+                                            href="?pagina=lista-desejos"><span class="mdi mdi-heart"></span><span
+                                                class="ps-2"></span> Lista de Desejos</a></div>
 
                                 </div>
                             </div>
@@ -47,7 +63,7 @@
                                 class="ps-4 item-menu-sub">Mensagens</a>
                     </div>
                     <div class="item-menu">
-                        <a class="nav-link" href="#"><span class="mdi mdi-account"></span><span class="ps-4 ">Meu
+                        <a class="nav-link" href="?pagina=perfil"><span class="mdi mdi-account"></span><span class="ps-4 ">Meu
                                 Perfil</a>
                     </div>
                 </nav>
@@ -58,3 +74,22 @@
 
     </nav>
 </div>
+
+<script>
+function mudar() {
+    var menu = document.getElementById("menuLateral");
+    var resolucao = window.innerWidth;
+
+    if (window.scrollY > 260 && resolucao < 720) {
+        menu.style.cssText = "position: fixed; top: 0; width: 100%; z-index: 1;";
+    } else if (resolucao < 720) {
+        menu.style.cssText = "position: relative; width: 100%;";
+    } else {
+        menu.style.cssText = "position: relative; width: 16%;";
+    }
+}
+
+window.addEventListener('scroll', mudar);
+window.addEventListener('resize', mudar);
+
+</script>

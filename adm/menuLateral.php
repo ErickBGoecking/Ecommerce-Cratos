@@ -1,4 +1,4 @@
-<div class="barra_lateral col-md-2">
+<div class="barra_lateral col-md-2" id="menuLateral">
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <div class="container-fluid align-items-start">
             <a class="navbar-brand p-0 m-0" href="#"></a>
@@ -45,3 +45,22 @@
     </nav>
 </div>
 
+
+<script>
+function mudar() {
+    var menu = document.getElementById("menuLateral");
+    var resolucao = window.innerWidth;
+
+    if (window.scrollY > 260 && resolucao < 720) {
+        menu.style.cssText = "position: fixed; top: 0; width: 100%; z-index: 1;";
+    } else if (resolucao < 720) {
+        menu.style.cssText = "position: relative; top: 0; width: 100%; z-index: 0;";
+    } else {
+        menu.style.cssText = "position: relative; top: 0; width: 16%; z-index: 0;";
+    }
+}
+
+window.addEventListener('scroll', mudar);
+window.addEventListener('resize', mudar);
+
+</script>
