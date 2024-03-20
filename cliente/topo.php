@@ -9,7 +9,7 @@
             <ul class="header-links pull-right" style="margin-top: -20px">
                 <li>
                     <div class="dropdown">
-                        <img src="./user/img/luciano.jpg" class="rounded-circle" alt="Luciano Pettersen" title="Luciano Pettersen" width="35px">
+                        <img src="./img/luciano.jpg" class="rounded-circle" alt="Luciano Pettersen" title="Luciano Pettersen" width="35px">
                         <button class="btn texto-dourado dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                             Luciano Pettersen
                         </button>
@@ -29,7 +29,7 @@
             <div class="row">
                 <div class="col-md-3">
                     <div class="header-logo">
-                        <a href="#" class="logo">
+                        <a href="index.php" class="logo">
                             <img src="../img/logo1.png" alt="">
                         </a>
                     </div>
