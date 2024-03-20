@@ -54,8 +54,6 @@
             ?>
         </div>
     </div>
-    teste
-
     <script src="../js/jquery.min.js"></script>
     <script src="../js/slick.min.js"></script>
     <script src="../js/nouislider.min.js"></script>
