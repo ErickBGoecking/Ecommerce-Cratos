@@ -30,7 +30,7 @@ $info = dados();
                 </div>
                 <div class="d-flex flex-column gap-2 p-2 justify-content-center">
                     <button class="btn btn-primary">Comprar</button>
-                    <button class="btn btn-light">Adicionar ao Carrinho</button>
+                    <button class="btn btn-secondary">Excluir</button>
                 </div>
             </div>
         </div>
