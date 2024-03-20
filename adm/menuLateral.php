@@ -1,14 +1,16 @@
 <?php
-if (isset($_GET['pagina']) && !empty($_GET['pagina'])) {
-    $pagina = $_GET['pagina'];
-} else {
-    $pagina = '';
-}
+$pagina = "";
+if(isset($_GET['pagina'])){$pagina = $_GET['pagina'];};
 ?>
 <style>
     .ativo {
-        background-color: red !important;
-        color: red;
+        background-color: var(--cor-principal) !important;
+        border-radius: 8px;
+        color:black;
+        font-weight: 600;
+    }
+    .ativo *{
+        background-color: var(--cor-principal) !important;
     }
 </style>
 <div class="barra_lateral col-md-2" id="menuLateral">
@@ -37,30 +39,22 @@ if (isset($_GET['pagina']) && !empty($_GET['pagina'])) {
                             </div>
                             <div id="flush-collapseOne" class="accordion-collapse collapse
                                 <?php
-                            if ($pagina == 'historico' or $pagina == 'carrinho' or $pagina == 'lista-desejos') {
-                                echo 'show';
-                            }
+                            if($pagina=='historico'or$pagina=='carrinho'or$pagina=='lista-desejos')
+                            {echo 'show';}
                             ?>"
                                  data-bs-parent="#accordionFlushExample">
                                 <div class="accordion-body">
 
-                                    <div class=" item-menu"><a class="nav-link <?php if ($pagina == 'historico') {
-                                            echo 'ativo';
-                                        } ?>" aria-current="page"
+                                    <div class=" item-menu"><a class="nav-link <?php if($pagina=='historico'){echo 'ativo';}?>" aria-current="page"
                                                                href="?pagina=historico"><span
                                                     class="mdi mdi-order-bool-descending"></span><span
                                                     class="ps-2"></span>Histórico</span></a></div>
-                                    <div class=" item-menu"><a class="nav-link <?php if ($pagina == 'carrinho') {
-                                            echo 'ativo';
-                                        } ?>" aria-current="page"
+                                    <div class=" item-menu"><a class="nav-link <?php if($pagina=='carrinho'){echo 'ativo';}?>" aria-current="page"
                                                                href="?pagina=carrinho">
                                             <span class="mdi mdi-cart"></span><span class="ps-2"></span>
                                             Carrinho</span></a></div>
-                                    <div class=" item-menu "><a class="nav-link  <?php if ($pagina == 'lista-desejos') {
-                                            echo 'ativo';
-                                        } ?>" aria-current="page"
-                                                                href="?pagina=lista-desejos"><span
-                                                    class="mdi mdi-heart"></span><span
+                                    <div class=" item-menu "><a class="nav-link  <?php if($pagina=='lista-desejos'){echo 'ativo';}?>" aria-current="page"
+                                                                href="?pagina=lista-desejos"><span class="mdi mdi-heart"></span><span
                                                     class="ps-2"></span> Lista de Desejos</a></div>
 
                                 </div>
@@ -75,8 +69,7 @@ if (isset($_GET['pagina']) && !empty($_GET['pagina'])) {
                                     class="ps-4 item-menu-sub">Mensagens</a>
                     </div>
                     <div class="item-menu">
-                        <a class="nav-link" href="?pagina=perfil"><span class="mdi mdi-account"></span><span
-                                    class="ps-4 ">Meu
+                        <a class="nav-link" href="?pagina=perfil"><span class="mdi mdi-account"></span><span class="ps-4 ">Meu
                                 Perfil</a>
                     </div>
                 </nav>
