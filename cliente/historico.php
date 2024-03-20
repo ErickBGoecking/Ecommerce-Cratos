@@ -34,9 +34,9 @@ $info = dados();
                 </div>
                 <div class="d-flex flex-column gap-2 p-2 justify-content-center">
                     <button class="btn btn-primary"
-                        onclick="modalVerMais('modalVerMais',<?php echo $compra['idCompra'];?>,'saibaMais')">Ver
+                        onclick="modalVerMais('modalVerMais',<?php echo $compra['idCompra'];?>,'saibaMais')"><span class="mdi mdi-eye-outline pe-3"></span>Ver
                         compra</button>
-                    <button class="btn btn-secondary">Comprar Novamente</button>
+                    <button class="btn btn-secondary"><span class="mdi mdi-cart-minus pe-3"></span>Comprar Novamente</button>
                 </div>
             </div>
         </div>

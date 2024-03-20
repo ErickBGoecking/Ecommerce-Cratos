@@ -10,30 +10,28 @@ $info = dados();
     <div class="d-flex flex-column flex-md-row flex-md-wrap gap-3">
         <?php 
             $x = 0;
-            while($x < 3){ $x++;
+            while($x < 5){ $x++;
                 foreach($info as $compra){
 
                 ?>
         <div class="card border border-0 shadow-sm col-md-2" id="<?php echo $compra['idCompra'] . $x; ?>">
             <div class="card-body d-flex flex-column justify-content-between">
                 <div class="d-flex justify-content-end">
-                    <button type="button" class="btn-close" aria-label="Close" onclick="fecharItem(<?php echo $compra['idCompra'] . $x; ?>)"></button>
+                    <button type="button" class="btn-close" aria-label="Close"
+                        onclick="fecharItem(<?php echo $compra['idCompra'] . $x; ?>)"></button>
                 </div>
-                <div class="d-flex flex-column">
-                    <div class="d-flex flex-column v-100 gap-2 gap-md-0 ">
-                        <div class="p-2 d-flex justify-content-center align-items-center">
-                            <img src="../img/<?php echo $compra['fotoProduto'] ?>" alt=""
-                                style="width:80px; height:80px;">
-                        </div>
-                        <div class="flex-fill p-2 d-flex flex-column justify-content-center">
-                            <h5><?php echo $compra['produto'] ?></h5>
-                        </div>
-                        <div class="d-flex flex-column justify-content-center px-md-5">
-                            <p>de <del>R$ 450,99</del></p>
-                            <div class="d-flex">
-                                <p>Por</p>
-                                <h5>R$ <?php echo $compra['valorProduto'] ?></h5>
-                            </div>
+                <div class="d-flex flex-column justify-content-between h-100" >
+                    <div class="p-2 d-flex justify-content-center align-items-center">
+                        <img src="../img/<?php echo $compra['fotoProduto'] ?>" alt="" style="width:80px; height:80px;">
+                    </div>
+                    <div class="flex-fill p-2 d-flex flex-column justify-content-center">
+                        <h5><?php echo $compra['produto'] ?></h5>
+                    </div>
+                    <div class="d-flex flex-column justify-content-center align-items-center">
+                        <p>de <del>R$ 450,99</del></p>
+                        <div class="d-flex">
+                            <p>Por</p>
+                            <h5>R$ <?php echo $compra['valorProduto'] ?></h5>
                         </div>
                     </div>
                 </div>
@@ -62,8 +60,8 @@ $info = dados();
     </div>
 
     <script>
-        function fecharItem(id){
-            var div =document.getElementById(id);
-            div.parentNode.removeChild(div);
-        };
+    function fecharItem(id) {
+        var div = document.getElementById(id);
+        div.parentNode.removeChild(div);
+    };
     </script>
