@@ -34,7 +34,7 @@
 
         <div class="bg-body-secondary" style="width:100%; min-height:83vh;">
             <?php 
-            
+
             if (isset($_GET['pagina']) && !empty($_GET['pagina'])){
                 $pagina = $_GET['pagina'];
 
@@ -67,6 +67,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
         integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous">
     </script>
+    <script src="./js/scriptcrato.js"></script>
 
 </body>
 
