@@ -9,7 +9,7 @@
             <ul class="header-links pull-right" style="margin-top: -20px">
                 <li>
                     <div class="dropdown">
-                        <img src="./user/img/luciano.jpg" class="rounded-circle" alt="Luciano Pettersen" title="Luciano Pettersen" width="35px">
+                        <img src="./img/luciano.jpg" class="rounded-circle" alt="Luciano Pettersen" title="Luciano Pettersen" width="35px">
                         <button class="btn texto-dourado dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                             Luciano Pettersen
                         </button>
