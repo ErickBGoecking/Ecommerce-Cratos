@@ -1,5 +1,4 @@
 <?php 
-include_once("cabecalho.php");
 include_once("dados.php");
 
 $info = dados();
@@ -15,7 +14,7 @@ $info = dados();
                     <h5>Carrinho</h5>
                     <?php foreach($info as $compra){ ?>
 
-                    <div class="d-flex flex-column flex-md-row border-top">
+                    <div class="d-flex flex-column flex-md-row border-top" id="<?php echo $compra['idCompra']; ?>">
                         <div class="p-2 d-flex justify-content-center align-items-center col-md-1">
                             <img src="../img/<?php echo $compra['fotoProduto'] ?>" alt=""
                                 style="width:80px; height:80px;">
@@ -23,7 +22,8 @@ $info = dados();
                         <div class="d-flex flex-column col-md-7 justify-content-center">
                             <h5><?php echo $compra['produto'] ?></h5>
                             <div class="d-flex flex-column flex-md-row gap-3">
-                                <button class="btn btn-light">Excluir</button>
+                                <button class="btn btn-light"
+                                    onclick="fecharItem(<?php echo $compra['idCompra']; ?>)">Excluir</button>
                                 <button class="btn btn-light">Comprar</button>
                             </div>
                         </div>
@@ -90,6 +90,12 @@ function incrementarValor(idLocal, operacao) {
         }
     }
 }
+
+
+function fecharItem(id) {
+    var div = document.getElementById(id);
+    div.parentNode.removeChild(div);
+};
 </script>
 
 </div>
