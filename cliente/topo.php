@@ -15,7 +15,7 @@
                         </button>
                         <ul class="dropdown-menu">
                             <div class="d-flex flex-column">
-                                <li><a class="dropdown-item" href="#"><span class="mdi mdi-account"></span> Perfil</a></li>
+                                <li><a class="dropdown-item" href="?pagina=perfil"><span class="mdi mdi-account"></span> Perfil</a></li>
                                 <li><a class="dropdown-item" href="#"><span class="mdi mdi-door-closed"></span> Sair</a></li>
                             </div>
                         </ul>
@@ -29,7 +29,7 @@
             <div class="row">
                 <div class="col-md-3">
                     <div class="header-logo">
-                        <a href="index.php" class="logo">
+                        <a href="http://cratos.prod" class="logo">
                             <img src="../img/logo1.png" alt="">
                         </a>
                     </div>
