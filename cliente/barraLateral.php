@@ -1,10 +1,16 @@
 <?php 
-    $pagina = $_GET['pagina'];
+$pagina = "";
+    if(isset($_GET['pagina'])){$pagina = $_GET['pagina'];};
 ?>
 <style>
-    .ativo{
-        background-color: red !important;
-        color: red;
+    .ativo {
+        background-color: var(--cor-principal) !important;
+        border-radius: 8px;
+        color:black;
+        font-weight: 600; 
+    }
+    .ativo *{
+        background-color: var(--cor-principal) !important;
     }
 </style>
 <div class="barra_lateral col-md-2" id="menuLateral">
