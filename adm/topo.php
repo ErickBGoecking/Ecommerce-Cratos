@@ -29,7 +29,7 @@
             <div class="row">
                 <div class="col-md-3">
                     <div class="header-logo">
-                        <a href="#" class="logo">
+                        <a href="adm.php" class="logo">
                             <img src="../img/logo1.png" alt="">
                         </a>
                     </div>
