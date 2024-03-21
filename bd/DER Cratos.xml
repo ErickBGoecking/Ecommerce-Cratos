@@ -1,7 +1,7 @@
 <?xml version="1.0" standalone="yes" ?>
 <DBMODEL Version="4.0">
 <SETTINGS>
-<GLOBALSETTINGS ModelName="DER HIPNUS" IDModel="0" IDVersion="0" VersionStr="1.0.0.0" Comments="" UseVersionHistroy="1" AutoIncVersion="1" DatabaseType="MySQL" ZoomFac="68.25" XPos="0" YPos="0" DefaultDataType="5" DefaultTablePrefix="0" DefSaveDBConn="" DefSyncDBConn="" DefQueryDBConn="" Printer="" HPageCount="4.0" PageAspectRatio="1.440892512336408" PageOrientation="1" PageFormat="A4 (210x297 mm, 8.26x11.7 inches)" SelectedPages="" UsePositionGrid="0" PositionGridX="20" PositionGridY="20" TableNameInRefs="1" DefaultTableType="1" ActivateRefDefForNewRelations="1" FKPrefix="" FKPostfix="" CreateFKRefDefIndex="1" DBQuoteCharacter="`" CreateSQLforLinkedObjects="0" DefModelFont="Tahoma" CanvasWidth="4096" CanvasHeight="2842" />
+<GLOBALSETTINGS ModelName="DER HIPNUS" IDModel="0" IDVersion="0" VersionStr="1.0.0.0" Comments="" UseVersionHistroy="1" AutoIncVersion="1" DatabaseType="MySQL" ZoomFac="68.25" XPos="505" YPos="0" DefaultDataType="5" DefaultTablePrefix="0" DefSaveDBConn="" DefSyncDBConn="" DefQueryDBConn="" Printer="" HPageCount="4.0" PageAspectRatio="1.440892512336408" PageOrientation="1" PageFormat="A4 (210x297 mm, 8.26x11.7 inches)" SelectedPages="" UsePositionGrid="0" PositionGridX="20" PositionGridY="20" TableNameInRefs="1" DefaultTableType="1" ActivateRefDefForNewRelations="1" FKPrefix="" FKPostfix="" CreateFKRefDefIndex="1" DBQuoteCharacter="`" CreateSQLforLinkedObjects="0" DefModelFont="Tahoma" CanvasWidth="4096" CanvasHeight="2842" />
 <DATATYPEGROUPS>
 <DATATYPEGROUP Name="Numeric Types" Icon="1" />
 <DATATYPEGROUP Name="Date and Time Types" Icon="2" />
@@ -932,82 +932,7 @@
 </INDEX>
 </INDICES>
 </TABLE>
-<TABLE ID="1980" Tablename="produto" PrevTableName="Table_11" XPos="2528" YPos="494" TableType="1" TablePrefix="0" nmTable="0" Temporary="0" UseStandardInserts="0" StandardInserts="\n" TableOptions="DelayKeyTblUpdates=0\nPackKeys=0\nRowChecksum=0\nRowFormat=0\nUseRaid=0\nRaidType=0\n" Comments="" Collapsed="0" IsLinkedObject="0" IDLinkedModel="-1" Obj_id_Linked="-1" OrderPos="22" >
-<COLUMNS>
-<COLUMN ID="1982" ColName="idproduto" PrevColName="" Pos="0" idDatatype="5" DatatypeParams="" Width="-1" Prec="-1" PrimaryKey="1" NotNull="1" AutoInc="1" IsForeignKey="0" DefaultValue="" Comments="">
-<OPTIONSELECTED>
-<OPTIONSELECT Value="1" />
-<OPTIONSELECT Value="0" />
-</OPTIONSELECTED>
-</COLUMN>
-<COLUMN ID="2269" ColName="iddpartamentosub" PrevColName="" Pos="7" idDatatype="5" DatatypeParams="" Width="-1" Prec="-1" PrimaryKey="1" NotNull="1" AutoInc="0" IsForeignKey="0" DefaultValue="" Comments="">
-<OPTIONSELECTED>
-<OPTIONSELECT Value="1" />
-<OPTIONSELECT Value="0" />
-</OPTIONSELECTED>
-</COLUMN>
-<COLUMN ID="2276" ColName="iddepartamento" PrevColName="" Pos="1" idDatatype="5" DatatypeParams="" Width="-1" Prec="-1" PrimaryKey="0" NotNull="1" AutoInc="0" IsForeignKey="1" DefaultValue="" Comments="">
-<OPTIONSELECTED>
-<OPTIONSELECT Value="1" />
-<OPTIONSELECT Value="0" />
-</OPTIONSELECTED>
-</COLUMN>
-<COLUMN ID="2275" ColName="iddepartamentosub" PrevColName="" Pos="1" idDatatype="5" DatatypeParams="" Width="-1" Prec="-1" PrimaryKey="0" NotNull="1" AutoInc="0" IsForeignKey="1" DefaultValue="" Comments="">
-<OPTIONSELECTED>
-<OPTIONSELECT Value="1" />
-<OPTIONSELECT Value="0" />
-</OPTIONSELECTED>
-</COLUMN>
-<COLUMN ID="1984" ColName="foto" PrevColName="" Pos="1" idDatatype="20" DatatypeParams="(255)" Width="-1" Prec="-1" PrimaryKey="0" NotNull="0" AutoInc="0" IsForeignKey="0" DefaultValue="" Comments="">
-<OPTIONSELECTED>
-<OPTIONSELECT Value="0" />
-</OPTIONSELECTED>
-</COLUMN>
-<COLUMN ID="1985" ColName="produto" PrevColName="" Pos="2" idDatatype="20" DatatypeParams="(255)" Width="-1" Prec="-1" PrimaryKey="0" NotNull="1" AutoInc="0" IsForeignKey="0" DefaultValue="" Comments="">
-<OPTIONSELECTED>
-<OPTIONSELECT Value="0" />
-</OPTIONSELECTED>
-</COLUMN>
-<COLUMN ID="1986" ColName="descricao" PrevColName="" Pos="3" idDatatype="30" DatatypeParams="" Width="-1" Prec="-1" PrimaryKey="0" NotNull="1" AutoInc="0" IsForeignKey="0" DefaultValue="" Comments="">
-<OPTIONSELECTED>
-</OPTIONSELECTED>
-</COLUMN>
-<COLUMN ID="1987" ColName="cadastro" PrevColName="" Pos="4" idDatatype="15" DatatypeParams="" Width="-1" Prec="-1" PrimaryKey="0" NotNull="1" AutoInc="0" IsForeignKey="0" DefaultValue="CURRENT_TIMESTAMP" Comments="">
-<OPTIONSELECTED>
-</OPTIONSELECTED>
-</COLUMN>
-<COLUMN ID="1988" ColName="alteracao" PrevColName="" Pos="5" idDatatype="16" DatatypeParams="" Width="-1" Prec="-1" PrimaryKey="0" NotNull="1" AutoInc="0" IsForeignKey="0" DefaultValue="" Comments="">
-<OPTIONSELECTED>
-</OPTIONSELECTED>
-</COLUMN>
-<COLUMN ID="1989" ColName="ativo" PrevColName="" Pos="6" idDatatype="19" DatatypeParams="(1)" Width="-1" Prec="-1" PrimaryKey="0" NotNull="1" AutoInc="0" IsForeignKey="0" DefaultValue="\aA\a" Comments="">
-<OPTIONSELECTED>
-<OPTIONSELECT Value="0" />
-</OPTIONSELECTED>
-</COLUMN>
-</COLUMNS>
-<RELATIONS_START>
-<RELATION_START ID="2037" />
-</RELATIONS_START>
-<RELATIONS_END>
-<RELATION_END ID="2271" />
-</RELATIONS_END>
-<INDICES>
-<INDEX ID="1983" IndexName="PRIMARY" IndexKind="0" FKRefDef_Obj_id="-1">
-<INDEXCOLUMNS>
-<INDEXCOLUMN idColumn="1982" LengthParam="0" />
-<INDEXCOLUMN idColumn="2269" LengthParam="0" />
-</INDEXCOLUMNS>
-</INDEX>
-<INDEX ID="2274" IndexName="produto_FKIndex1" IndexKind="1" FKRefDef_Obj_id="2271">
-<INDEXCOLUMNS>
-<INDEXCOLUMN idColumn="2275" LengthParam="0" />
-<INDEXCOLUMN idColumn="2276" LengthParam="0" />
-</INDEXCOLUMNS>
-</INDEX>
-</INDICES>
-</TABLE>
-<TABLE ID="1994" Tablename="produtovariacao" PrevTableName="Table_12" XPos="1928" YPos="231" TableType="1" TablePrefix="0" nmTable="0" Temporary="0" UseStandardInserts="0" StandardInserts="\n" TableOptions="DelayKeyTblUpdates=0\nPackKeys=0\nRowChecksum=0\nRowFormat=0\nUseRaid=0\nRaidType=0\n" Comments="" Collapsed="0" IsLinkedObject="0" IDLinkedModel="-1" Obj_id_Linked="-1" OrderPos="23" >
+<TABLE ID="1994" Tablename="produtovariacao" PrevTableName="Table_12" XPos="1956" YPos="245" TableType="1" TablePrefix="0" nmTable="0" Temporary="0" UseStandardInserts="0" StandardInserts="\n" TableOptions="DelayKeyTblUpdates=0\nPackKeys=0\nRowChecksum=0\nRowFormat=0\nUseRaid=0\nRaidType=0\n" Comments="" Collapsed="0" IsLinkedObject="0" IDLinkedModel="-1" Obj_id_Linked="-1" OrderPos="23" >
 <COLUMNS>
 <COLUMN ID="1996" ColName="idprodutovariacao" PrevColName="" Pos="0" idDatatype="5" DatatypeParams="" Width="-1" Prec="-1" PrimaryKey="1" NotNull="1" AutoInc="1" IsForeignKey="0" DefaultValue="" Comments="">
 <OPTIONSELECTED>
@@ -1015,13 +940,13 @@
 <OPTIONSELECT Value="0" />
 </OPTIONSELECTED>
 </COLUMN>
-<COLUMN ID="1998" ColName="idproduto" PrevColName="" Pos="1" idDatatype="5" DatatypeParams="" Width="-1" Prec="-1" PrimaryKey="1" NotNull="1" AutoInc="0" IsForeignKey="1" DefaultValue="" Comments="">
+<COLUMN ID="2439" ColName="produto_idpai" PrevColName="" Pos="1" idDatatype="5" DatatypeParams="" Width="-1" Prec="-1" PrimaryKey="0" NotNull="1" AutoInc="0" IsForeignKey="1" DefaultValue="" Comments="">
 <OPTIONSELECTED>
 <OPTIONSELECT Value="1" />
 <OPTIONSELECT Value="0" />
 </OPTIONSELECTED>
 </COLUMN>
-<COLUMN ID="2270" ColName="produto_iddpartamentosub" PrevColName="" Pos="1" idDatatype="5" DatatypeParams="" Width="-1" Prec="-1" PrimaryKey="0" NotNull="1" AutoInc="0" IsForeignKey="1" DefaultValue="" Comments="">
+<COLUMN ID="2438" ColName="idproduto" PrevColName="" Pos="1" idDatatype="5" DatatypeParams="" Width="-1" Prec="-1" PrimaryKey="0" NotNull="1" AutoInc="0" IsForeignKey="1" DefaultValue="" Comments="">
 <OPTIONSELECTED>
 <OPTIONSELECT Value="1" />
 <OPTIONSELECT Value="0" />
@@ -1079,13 +1004,12 @@
 <INDEX ID="1997" IndexName="PRIMARY" IndexKind="0" FKRefDef_Obj_id="-1">
 <INDEXCOLUMNS>
 <INDEXCOLUMN idColumn="1996" LengthParam="0" />
-<INDEXCOLUMN idColumn="1998" LengthParam="0" />
 </INDEXCOLUMNS>
 </INDEX>
-<INDEX ID="2039" IndexName="produtovariacao_FKIndex1" IndexKind="1" FKRefDef_Obj_id="2037">
+<INDEX ID="2440" IndexName="produtovariacao_FKIndex1" IndexKind="1" FKRefDef_Obj_id="2037">
 <INDEXCOLUMNS>
-<INDEXCOLUMN idColumn="1998" LengthParam="0" />
-<INDEXCOLUMN idColumn="2270" LengthParam="0" />
+<INDEXCOLUMN idColumn="2438" LengthParam="0" />
+<INDEXCOLUMN idColumn="2439" LengthParam="0" />
 </INDEXCOLUMNS>
 </INDEX>
 </INDICES>
@@ -1099,12 +1023,6 @@
 </OPTIONSELECTED>
 </COLUMN>
 <COLUMN ID="2013" ColName="idprodutovariacao" PrevColName="" Pos="1" idDatatype="5" DatatypeParams="" Width="-1" Prec="-1" PrimaryKey="1" NotNull="1" AutoInc="0" IsForeignKey="1" DefaultValue="" Comments="">
-<OPTIONSELECTED>
-<OPTIONSELECT Value="1" />
-<OPTIONSELECT Value="0" />
-</OPTIONSELECTED>
-</COLUMN>
-<COLUMN ID="2044" ColName="idproduto" PrevColName="" Pos="1" idDatatype="5" DatatypeParams="" Width="-1" Prec="-1" PrimaryKey="0" NotNull="1" AutoInc="0" IsForeignKey="1" DefaultValue="" Comments="">
 <OPTIONSELECTED>
 <OPTIONSELECT Value="1" />
 <OPTIONSELECT Value="0" />
@@ -1142,7 +1060,6 @@
 <INDEX ID="2043" IndexName="fotoproduto_FKIndex1" IndexKind="1" FKRefDef_Obj_id="2040">
 <INDEXCOLUMNS>
 <INDEXCOLUMN idColumn="2013" LengthParam="0" />
-<INDEXCOLUMN idColumn="2044" LengthParam="0" />
 </INDEXCOLUMNS>
 </INDEX>
 </INDICES>
@@ -1156,12 +1073,6 @@
 </OPTIONSELECTED>
 </COLUMN>
 <COLUMN ID="2027" ColName="idprodutovariacao" PrevColName="" Pos="1" idDatatype="5" DatatypeParams="" Width="-1" Prec="-1" PrimaryKey="1" NotNull="1" AutoInc="0" IsForeignKey="1" DefaultValue="" Comments="">
-<OPTIONSELECTED>
-<OPTIONSELECT Value="1" />
-<OPTIONSELECT Value="0" />
-</OPTIONSELECTED>
-</COLUMN>
-<COLUMN ID="2049" ColName="idproduto" PrevColName="" Pos="1" idDatatype="5" DatatypeParams="" Width="-1" Prec="-1" PrimaryKey="0" NotNull="1" AutoInc="0" IsForeignKey="1" DefaultValue="" Comments="">
 <OPTIONSELECTED>
 <OPTIONSELECT Value="1" />
 <OPTIONSELECT Value="0" />
@@ -1228,7 +1139,6 @@
 <INDEX ID="2048" IndexName="estoque_FKIndex1" IndexKind="1" FKRefDef_Obj_id="2045">
 <INDEXCOLUMNS>
 <INDEXCOLUMN idColumn="2027" LengthParam="0" />
-<INDEXCOLUMN idColumn="2049" LengthParam="0" />
 </INDEXCOLUMNS>
 </INDEX>
 </INDICES>
@@ -1254,12 +1164,6 @@
 </OPTIONSELECTED>
 </COLUMN>
 <COLUMN ID="2071" ColName="idgenero" PrevColName="" Pos="1" idDatatype="5" DatatypeParams="" Width="-1" Prec="-1" PrimaryKey="0" NotNull="1" AutoInc="0" IsForeignKey="1" DefaultValue="" Comments="">
-<OPTIONSELECTED>
-<OPTIONSELECT Value="1" />
-<OPTIONSELECT Value="0" />
-</OPTIONSELECTED>
-</COLUMN>
-<COLUMN ID="2066" ColName="idproduto" PrevColName="" Pos="1" idDatatype="5" DatatypeParams="" Width="-1" Prec="-1" PrimaryKey="0" NotNull="1" AutoInc="0" IsForeignKey="1" DefaultValue="" Comments="">
 <OPTIONSELECTED>
 <OPTIONSELECT Value="1" />
 <OPTIONSELECT Value="0" />
@@ -1298,7 +1202,6 @@
 <INDEX ID="2065" IndexName="comentarioproduto_FKIndex1" IndexKind="1" FKRefDef_Obj_id="2062">
 <INDEXCOLUMNS>
 <INDEXCOLUMN idColumn="2054" LengthParam="0" />
-<INDEXCOLUMN idColumn="2066" LengthParam="0" />
 </INDEXCOLUMNS>
 </INDEX>
 <INDEX ID="2070" IndexName="comentarioproduto_FKIndex2" IndexKind="1" FKRefDef_Obj_id="2067">
@@ -1318,12 +1221,6 @@
 </OPTIONSELECTED>
 </COLUMN>
 <COLUMN ID="2076" ColName="idprodutovariacao" PrevColName="" Pos="1" idDatatype="5" DatatypeParams="" Width="-1" Prec="-1" PrimaryKey="1" NotNull="1" AutoInc="0" IsForeignKey="1" DefaultValue="" Comments="">
-<OPTIONSELECTED>
-<OPTIONSELECT Value="1" />
-<OPTIONSELECT Value="0" />
-</OPTIONSELECTED>
-</COLUMN>
-<COLUMN ID="2086" ColName="idproduto" PrevColName="" Pos="1" idDatatype="5" DatatypeParams="" Width="-1" Prec="-1" PrimaryKey="0" NotNull="1" AutoInc="0" IsForeignKey="1" DefaultValue="" Comments="">
 <OPTIONSELECTED>
 <OPTIONSELECT Value="1" />
 <OPTIONSELECT Value="0" />
@@ -1364,7 +1261,6 @@
 <INDEX ID="2085" IndexName="perguntaprodvariacao_FKIndex1" IndexKind="1" FKRefDef_Obj_id="2082">
 <INDEXCOLUMNS>
 <INDEXCOLUMN idColumn="2076" LengthParam="0" />
-<INDEXCOLUMN idColumn="2086" LengthParam="0" />
 </INDEXCOLUMNS>
 </INDEX>
 </INDICES>
@@ -1541,7 +1437,7 @@
 </INDEX>
 </INDICES>
 </TABLE>
-<TABLE ID="2143" Tablename="pagamento" PrevTableName="Table_20" XPos="974" YPos="849" TableType="1" TablePrefix="0" nmTable="0" Temporary="0" UseStandardInserts="0" StandardInserts="\n" TableOptions="DelayKeyTblUpdates=0\nPackKeys=0\nRowChecksum=0\nRowFormat=0\nUseRaid=0\nRaidType=0\n" Comments="" Collapsed="0" IsLinkedObject="0" IDLinkedModel="-1" Obj_id_Linked="-1" OrderPos="40" >
+<TABLE ID="2143" Tablename="pagamento" PrevTableName="Table_20" XPos="986" YPos="857" TableType="1" TablePrefix="0" nmTable="0" Temporary="0" UseStandardInserts="0" StandardInserts="\n" TableOptions="DelayKeyTblUpdates=0\nPackKeys=0\nRowChecksum=0\nRowFormat=0\nUseRaid=0\nRaidType=0\n" Comments="" Collapsed="0" IsLinkedObject="0" IDLinkedModel="-1" Obj_id_Linked="-1" OrderPos="40" >
 <COLUMNS>
 <COLUMN ID="2145" ColName="idpagamento" PrevColName="" Pos="0" idDatatype="5" DatatypeParams="" Width="-1" Prec="-1" PrimaryKey="1" NotNull="1" AutoInc="1" IsForeignKey="0" DefaultValue="" Comments="">
 <OPTIONSELECTED>
@@ -1733,7 +1629,7 @@
 </INDEX>
 </INDICES>
 </TABLE>
-<TABLE ID="2246" Tablename="departamento" PrevTableName="Table_24" XPos="2263" YPos="138" TableType="1" TablePrefix="0" nmTable="0" Temporary="0" UseStandardInserts="0" StandardInserts="\n" TableOptions="DelayKeyTblUpdates=0\nPackKeys=0\nRowChecksum=0\nRowFormat=0\nUseRaid=0\nRaidType=0\n" Comments="" Collapsed="0" IsLinkedObject="0" IDLinkedModel="-1" Obj_id_Linked="-1" OrderPos="45" >
+<TABLE ID="2246" Tablename="departamento" PrevTableName="Table_24" XPos="1947" YPos="100" TableType="1" TablePrefix="0" nmTable="0" Temporary="0" UseStandardInserts="0" StandardInserts="\n" TableOptions="DelayKeyTblUpdates=0\nPackKeys=0\nRowChecksum=0\nRowFormat=0\nUseRaid=0\nRaidType=0\n" Comments="" Collapsed="0" IsLinkedObject="0" IDLinkedModel="-1" Obj_id_Linked="-1" OrderPos="45" >
 <COLUMNS>
 <COLUMN ID="2248" ColName="iddepartamento" PrevColName="" Pos="0" idDatatype="5" DatatypeParams="" Width="-1" Prec="-1" PrimaryKey="1" NotNull="1" AutoInc="1" IsForeignKey="0" DefaultValue="" Comments="">
 <OPTIONSELECTED>
@@ -2047,6 +1943,81 @@
 </INDEX>
 </INDICES>
 </TABLE>
+<TABLE ID="1980" Tablename="produto" PrevTableName="Table_11" XPos="2503" YPos="482" TableType="1" TablePrefix="0" nmTable="0" Temporary="0" UseStandardInserts="0" StandardInserts="\n" TableOptions="DelayKeyTblUpdates=0\nPackKeys=0\nRowChecksum=0\nRowFormat=0\nUseRaid=0\nRaidType=0\n" Comments="" Collapsed="0" IsLinkedObject="0" IDLinkedModel="-1" Obj_id_Linked="-1" OrderPos="22" >
+<COLUMNS>
+<COLUMN ID="1982" ColName="idproduto" PrevColName="" Pos="0" idDatatype="5" DatatypeParams="" Width="-1" Prec="-1" PrimaryKey="1" NotNull="1" AutoInc="1" IsForeignKey="0" DefaultValue="" Comments="">
+<OPTIONSELECTED>
+<OPTIONSELECT Value="1" />
+<OPTIONSELECT Value="0" />
+</OPTIONSELECTED>
+</COLUMN>
+<COLUMN ID="2269" ColName="idpai" PrevColName="iddpartamentosub" Pos="7" idDatatype="5" DatatypeParams="" Width="-1" Prec="-1" PrimaryKey="1" NotNull="1" AutoInc="0" IsForeignKey="0" DefaultValue="" Comments="">
+<OPTIONSELECTED>
+<OPTIONSELECT Value="1" />
+<OPTIONSELECT Value="0" />
+</OPTIONSELECTED>
+</COLUMN>
+<COLUMN ID="2442" ColName="iddepartamentosub" PrevColName="" Pos="1" idDatatype="5" DatatypeParams="" Width="-1" Prec="-1" PrimaryKey="0" NotNull="1" AutoInc="0" IsForeignKey="1" DefaultValue="" Comments="">
+<OPTIONSELECTED>
+<OPTIONSELECT Value="1" />
+<OPTIONSELECT Value="0" />
+</OPTIONSELECTED>
+</COLUMN>
+<COLUMN ID="2276" ColName="iddepartamento" PrevColName="" Pos="1" idDatatype="5" DatatypeParams="" Width="-1" Prec="-1" PrimaryKey="0" NotNull="1" AutoInc="0" IsForeignKey="1" DefaultValue="" Comments="">
+<OPTIONSELECTED>
+<OPTIONSELECT Value="1" />
+<OPTIONSELECT Value="0" />
+</OPTIONSELECTED>
+</COLUMN>
+<COLUMN ID="1984" ColName="foto" PrevColName="" Pos="1" idDatatype="20" DatatypeParams="(255)" Width="-1" Prec="-1" PrimaryKey="0" NotNull="0" AutoInc="0" IsForeignKey="0" DefaultValue="" Comments="">
+<OPTIONSELECTED>
+<OPTIONSELECT Value="0" />
+</OPTIONSELECTED>
+</COLUMN>
+<COLUMN ID="1985" ColName="produto" PrevColName="" Pos="2" idDatatype="20" DatatypeParams="(255)" Width="-1" Prec="-1" PrimaryKey="0" NotNull="1" AutoInc="0" IsForeignKey="0" DefaultValue="" Comments="">
+<OPTIONSELECTED>
+<OPTIONSELECT Value="0" />
+</OPTIONSELECTED>
+</COLUMN>
+<COLUMN ID="1986" ColName="descricao" PrevColName="" Pos="3" idDatatype="30" DatatypeParams="" Width="-1" Prec="-1" PrimaryKey="0" NotNull="1" AutoInc="0" IsForeignKey="0" DefaultValue="" Comments="">
+<OPTIONSELECTED>
+</OPTIONSELECTED>
+</COLUMN>
+<COLUMN ID="1987" ColName="cadastro" PrevColName="" Pos="4" idDatatype="15" DatatypeParams="" Width="-1" Prec="-1" PrimaryKey="0" NotNull="1" AutoInc="0" IsForeignKey="0" DefaultValue="CURRENT_TIMESTAMP" Comments="">
+<OPTIONSELECTED>
+</OPTIONSELECTED>
+</COLUMN>
+<COLUMN ID="1988" ColName="alteracao" PrevColName="" Pos="5" idDatatype="16" DatatypeParams="" Width="-1" Prec="-1" PrimaryKey="0" NotNull="1" AutoInc="0" IsForeignKey="0" DefaultValue="" Comments="">
+<OPTIONSELECTED>
+</OPTIONSELECTED>
+</COLUMN>
+<COLUMN ID="1989" ColName="ativo" PrevColName="" Pos="6" idDatatype="19" DatatypeParams="(1)" Width="-1" Prec="-1" PrimaryKey="0" NotNull="1" AutoInc="0" IsForeignKey="0" DefaultValue="\aA\a" Comments="">
+<OPTIONSELECTED>
+<OPTIONSELECT Value="0" />
+</OPTIONSELECTED>
+</COLUMN>
+</COLUMNS>
+<RELATIONS_START>
+<RELATION_START ID="2037" />
+</RELATIONS_START>
+<RELATIONS_END>
+<RELATION_END ID="2271" />
+</RELATIONS_END>
+<INDICES>
+<INDEX ID="1983" IndexName="PRIMARY" IndexKind="0" FKRefDef_Obj_id="-1">
+<INDEXCOLUMNS>
+<INDEXCOLUMN idColumn="1982" LengthParam="0" />
+<INDEXCOLUMN idColumn="2269" LengthParam="0" />
+</INDEXCOLUMNS>
+</INDEX>
+<INDEX ID="2433" IndexName="produto_FKIndex1" IndexKind="1" FKRefDef_Obj_id="2271">
+<INDEXCOLUMNS>
+<INDEXCOLUMN idColumn="2442" LengthParam="0" />
+<INDEXCOLUMN idColumn="2276" LengthParam="0" />
+</INDEXCOLUMNS>
+</INDEX>
+</INDICES>
+</TABLE>
 </TABLES>
 <RELATIONS>
 <RELATION ID="1718" RelationName="1genero1pessoa" Kind="0" SrcTable="1655" DestTable="1639" FKFields="idgenero=idgenero\n" FKFieldsComments="\n" relDirection="4" MidOffset="0" OptionalStart="0" OptionalEnd="0" CaptionOffsetX="0" CaptionOffsetY="0" StartIntervalOffsetX="0" StartIntervalOffsetY="0" EndIntervalOffsetX="0" EndIntervalOffsetY="0" CreateRefDef="1" Invisible="0" RefDef="Matching=0\nOnDelete=0\nOnUpdate=0\n" Comments="" FKRefDefIndex_Obj_id="1720" Splitted="0" IsLinkedObject="0" IDLinkedModel="-1" Obj_id_Linked="-1" OrderPos="6" />
@@ -2058,24 +2029,24 @@
 <RELATION ID="1909" RelationName="1nivelacessoNnivelpermissao" Kind="2" SrcTable="1818" DestTable="1870" FKFields="idnivelacesso=idnivelacesso\n" FKFieldsComments="\n" relDirection="2" MidOffset="0" OptionalStart="0" OptionalEnd="0" CaptionOffsetX="0" CaptionOffsetY="0" StartIntervalOffsetX="0" StartIntervalOffsetY="0" EndIntervalOffsetX="0" EndIntervalOffsetY="0" CreateRefDef="1" Invisible="0" RefDef="Matching=0\nOnDelete=0\nOnUpdate=0\n" Comments="" FKRefDefIndex_Obj_id="1990" Splitted="0" IsLinkedObject="0" IDLinkedModel="-1" Obj_id_Linked="-1" OrderPos="21" />
 <RELATION ID="1913" RelationName="1permissaoNnivelpermissao" Kind="2" SrcTable="1808" DestTable="1870" FKFields="idpermissao=idpermissao\n" FKFieldsComments="\n" relDirection="4" MidOffset="0" OptionalStart="0" OptionalEnd="0" CaptionOffsetX="0" CaptionOffsetY="0" StartIntervalOffsetX="0" StartIntervalOffsetY="0" EndIntervalOffsetX="0" EndIntervalOffsetY="0" CreateRefDef="1" Invisible="0" RefDef="Matching=0\nOnDelete=0\nOnUpdate=0\n" Comments="" FKRefDefIndex_Obj_id="1991" Splitted="0" IsLinkedObject="0" IDLinkedModel="-1" Obj_id_Linked="-1" OrderPos="22" />
 <RELATION ID="1977" RelationName="1nivelacessoNfuncionarios" Kind="2" SrcTable="1818" DestTable="1743" FKFields="idnivelacesso=idnivelacesso\n" FKFieldsComments="\n" relDirection="1" MidOffset="0" OptionalStart="0" OptionalEnd="0" CaptionOffsetX="0" CaptionOffsetY="0" StartIntervalOffsetX="0" StartIntervalOffsetY="0" EndIntervalOffsetX="0" EndIntervalOffsetY="0" CreateRefDef="1" Invisible="0" RefDef="Matching=0\nOnDelete=0\nOnUpdate=0\n" Comments="" FKRefDefIndex_Obj_id="1979" Splitted="0" IsLinkedObject="0" IDLinkedModel="-1" Obj_id_Linked="-1" OrderPos="21" />
-<RELATION ID="2037" RelationName="1produtoNvariacao" Kind="2" SrcTable="1980" DestTable="1994" FKFields="idproduto=idproduto\niddpartamentosub=produto_iddpartamentosub\n" FKFieldsComments="\n\n" relDirection="4" MidOffset="0" OptionalStart="0" OptionalEnd="0" CaptionOffsetX="0" CaptionOffsetY="0" StartIntervalOffsetX="0" StartIntervalOffsetY="0" EndIntervalOffsetX="0" EndIntervalOffsetY="0" CreateRefDef="1" Invisible="0" RefDef="Matching=0\nOnDelete=1\nOnUpdate=1\n" Comments="" FKRefDefIndex_Obj_id="2039" Splitted="0" IsLinkedObject="0" IDLinkedModel="-1" Obj_id_Linked="-1" OrderPos="26" />
-<RELATION ID="2040" RelationName="1variacaoNfotos" Kind="2" SrcTable="1994" DestTable="2006" FKFields="idprodutovariacao=idprodutovariacao\nidproduto=idproduto\n" FKFieldsComments="\n\n" relDirection="2" MidOffset="0" OptionalStart="0" OptionalEnd="0" CaptionOffsetX="0" CaptionOffsetY="0" StartIntervalOffsetX="0" StartIntervalOffsetY="0" EndIntervalOffsetX="0" EndIntervalOffsetY="0" CreateRefDef="1" Invisible="0" RefDef="Matching=0\nOnDelete=1\nOnUpdate=1\n" Comments="" FKRefDefIndex_Obj_id="2043" Splitted="0" IsLinkedObject="0" IDLinkedModel="-1" Obj_id_Linked="-1" OrderPos="27" />
-<RELATION ID="2045" RelationName="1variacaoNestoque" Kind="2" SrcTable="1994" DestTable="2023" FKFields="idprodutovariacao=idprodutovariacao\nidproduto=idproduto\n" FKFieldsComments="\n\n" relDirection="4" MidOffset="0" OptionalStart="0" OptionalEnd="0" CaptionOffsetX="0" CaptionOffsetY="0" StartIntervalOffsetX="0" StartIntervalOffsetY="0" EndIntervalOffsetX="0" EndIntervalOffsetY="0" CreateRefDef="1" Invisible="0" RefDef="Matching=0\nOnDelete=1\nOnUpdate=1\n" Comments="" FKRefDefIndex_Obj_id="2048" Splitted="0" IsLinkedObject="0" IDLinkedModel="-1" Obj_id_Linked="-1" OrderPos="28" />
-<RELATION ID="2062" RelationName="1prodVariacaoNcomentarios" Kind="2" SrcTable="1994" DestTable="2050" FKFields="idprodutovariacao=idprodutovariacao\nidproduto=idproduto\n" FKFieldsComments="\n\n" relDirection="4" MidOffset="0" OptionalStart="0" OptionalEnd="0" CaptionOffsetX="0" CaptionOffsetY="0" StartIntervalOffsetX="0" StartIntervalOffsetY="0" EndIntervalOffsetX="0" EndIntervalOffsetY="0" CreateRefDef="1" Invisible="0" RefDef="Matching=0\nOnDelete=0\nOnUpdate=0\n" Comments="" FKRefDefIndex_Obj_id="2065" Splitted="0" IsLinkedObject="0" IDLinkedModel="-1" Obj_id_Linked="-1" OrderPos="30" />
+<RELATION ID="2040" RelationName="1variacaoNfotos" Kind="2" SrcTable="1994" DestTable="2006" FKFields="idprodutovariacao=idprodutovariacao\n" FKFieldsComments="\n" relDirection="2" MidOffset="0" OptionalStart="0" OptionalEnd="0" CaptionOffsetX="0" CaptionOffsetY="0" StartIntervalOffsetX="0" StartIntervalOffsetY="0" EndIntervalOffsetX="0" EndIntervalOffsetY="0" CreateRefDef="1" Invisible="0" RefDef="Matching=0\nOnDelete=1\nOnUpdate=1\n" Comments="" FKRefDefIndex_Obj_id="2043" Splitted="0" IsLinkedObject="0" IDLinkedModel="-1" Obj_id_Linked="-1" OrderPos="27" />
+<RELATION ID="2045" RelationName="1variacaoNestoque" Kind="2" SrcTable="1994" DestTable="2023" FKFields="idprodutovariacao=idprodutovariacao\n" FKFieldsComments="\n" relDirection="4" MidOffset="0" OptionalStart="0" OptionalEnd="0" CaptionOffsetX="0" CaptionOffsetY="0" StartIntervalOffsetX="0" StartIntervalOffsetY="0" EndIntervalOffsetX="0" EndIntervalOffsetY="0" CreateRefDef="1" Invisible="0" RefDef="Matching=0\nOnDelete=1\nOnUpdate=1\n" Comments="" FKRefDefIndex_Obj_id="2048" Splitted="0" IsLinkedObject="0" IDLinkedModel="-1" Obj_id_Linked="-1" OrderPos="28" />
+<RELATION ID="2062" RelationName="1prodVariacaoNcomentarios" Kind="2" SrcTable="1994" DestTable="2050" FKFields="idprodutovariacao=idprodutovariacao\n" FKFieldsComments="\n" relDirection="4" MidOffset="0" OptionalStart="0" OptionalEnd="0" CaptionOffsetX="0" CaptionOffsetY="0" StartIntervalOffsetX="0" StartIntervalOffsetY="0" EndIntervalOffsetX="0" EndIntervalOffsetY="0" CreateRefDef="1" Invisible="0" RefDef="Matching=0\nOnDelete=0\nOnUpdate=0\n" Comments="" FKRefDefIndex_Obj_id="2065" Splitted="0" IsLinkedObject="0" IDLinkedModel="-1" Obj_id_Linked="-1" OrderPos="30" />
 <RELATION ID="2067" RelationName="1pessoaNcomentarioProd" Kind="2" SrcTable="1639" DestTable="2050" FKFields="idpessoa=idpessoa\nidgenero=idgenero\n" FKFieldsComments="\n\n" relDirection="2" MidOffset="0" OptionalStart="0" OptionalEnd="0" CaptionOffsetX="0" CaptionOffsetY="0" StartIntervalOffsetX="0" StartIntervalOffsetY="0" EndIntervalOffsetX="0" EndIntervalOffsetY="0" CreateRefDef="1" Invisible="0" RefDef="Matching=0\nOnDelete=1\nOnUpdate=1\n" Comments="" FKRefDefIndex_Obj_id="2070" Splitted="0" IsLinkedObject="0" IDLinkedModel="-1" Obj_id_Linked="-1" OrderPos="31" />
-<RELATION ID="2082" RelationName="1prodVariacaoNpergunta" Kind="2" SrcTable="1994" DestTable="2072" FKFields="idprodutovariacao=idprodutovariacao\nidproduto=idproduto\n" FKFieldsComments="\n\n" relDirection="3" MidOffset="0" OptionalStart="0" OptionalEnd="0" CaptionOffsetX="0" CaptionOffsetY="0" StartIntervalOffsetX="0" StartIntervalOffsetY="0" EndIntervalOffsetX="0" EndIntervalOffsetY="0" CreateRefDef="1" Invisible="0" RefDef="Matching=0\nOnDelete=1\nOnUpdate=1\n" Comments="" FKRefDefIndex_Obj_id="2085" Splitted="0" IsLinkedObject="0" IDLinkedModel="-1" Obj_id_Linked="-1" OrderPos="33" />
+<RELATION ID="2082" RelationName="1prodVariacaoNpergunta" Kind="2" SrcTable="1994" DestTable="2072" FKFields="idprodutovariacao=idprodutovariacao\n" FKFieldsComments="\n" relDirection="3" MidOffset="0" OptionalStart="0" OptionalEnd="0" CaptionOffsetX="0" CaptionOffsetY="0" StartIntervalOffsetX="0" StartIntervalOffsetY="0" EndIntervalOffsetX="0" EndIntervalOffsetY="0" CreateRefDef="1" Invisible="0" RefDef="Matching=0\nOnDelete=1\nOnUpdate=1\n" Comments="" FKRefDefIndex_Obj_id="2085" Splitted="0" IsLinkedObject="0" IDLinkedModel="-1" Obj_id_Linked="-1" OrderPos="33" />
 <RELATION ID="2123" RelationName="1carrinhoNcarrinhoproduto" Kind="2" SrcTable="2095" DestTable="2111" FKFields="idcarrinho=idcarrinho\nidpessoa=carrinho_idpessoa\n" FKFieldsComments="\n\n" relDirection="2" MidOffset="0" OptionalStart="0" OptionalEnd="0" CaptionOffsetX="0" CaptionOffsetY="0" StartIntervalOffsetX="0" StartIntervalOffsetY="0" EndIntervalOffsetX="0" EndIntervalOffsetY="0" CreateRefDef="1" Invisible="0" RefDef="Matching=0\nOnDelete=1\nOnUpdate=1\n" Comments="" FKRefDefIndex_Obj_id="2126" Splitted="0" IsLinkedObject="0" IDLinkedModel="-1" Obj_id_Linked="-1" OrderPos="37" />
 <RELATION ID="2157" RelationName="1carrinhoNpagamento" Kind="2" SrcTable="2095" DestTable="2143" FKFields="idcarrinho=idcarrinho\nidpessoa=carrinho_idpessoa\n" FKFieldsComments="\n\n" relDirection="3" MidOffset="0" OptionalStart="0" OptionalEnd="0" CaptionOffsetX="0" CaptionOffsetY="0" StartIntervalOffsetX="0" StartIntervalOffsetY="0" EndIntervalOffsetX="0" EndIntervalOffsetY="0" CreateRefDef="1" Invisible="0" RefDef="Matching=0\nOnDelete=1\nOnUpdate=1\n" Comments="" FKRefDefIndex_Obj_id="2160" Splitted="0" IsLinkedObject="0" IDLinkedModel="-1" Obj_id_Linked="-1" OrderPos="41" />
 <RELATION ID="2162" RelationName="1pagamentotipoNpagamento" Kind="2" SrcTable="2133" DestTable="2143" FKFields="idpagamentotipo=idpagamentotipo\n" FKFieldsComments="\n" relDirection="4" MidOffset="0" OptionalStart="0" OptionalEnd="0" CaptionOffsetX="0" CaptionOffsetY="0" StartIntervalOffsetX="0" StartIntervalOffsetY="0" EndIntervalOffsetX="0" EndIntervalOffsetY="0" CreateRefDef="1" Invisible="0" RefDef="Matching=0\nOnDelete=0\nOnUpdate=0\n" Comments="" FKRefDefIndex_Obj_id="2164" Splitted="0" IsLinkedObject="0" IDLinkedModel="-1" Obj_id_Linked="-1" OrderPos="42" />
 <RELATION ID="2212" RelationName="1estoqueNcarrinhoProd" Kind="2" SrcTable="2023" DestTable="2111" FKFields="idestoque=idestoque\nidprodutovariacao=idprodutovariacao\n" FKFieldsComments="\n\n" relDirection="4" MidOffset="0" OptionalStart="0" OptionalEnd="0" CaptionOffsetX="1" CaptionOffsetY="0" StartIntervalOffsetX="0" StartIntervalOffsetY="0" EndIntervalOffsetX="0" EndIntervalOffsetY="0" CreateRefDef="1" Invisible="0" RefDef="Matching=0\nOnDelete=0\nOnUpdate=0\n" Comments="" FKRefDefIndex_Obj_id="2215" Splitted="0" IsLinkedObject="0" IDLinkedModel="-1" Obj_id_Linked="-1" OrderPos="42" />
 <RELATION ID="2235" RelationName="1cupomNpagamento" Kind="2" SrcTable="2220" DestTable="2143" FKFields="idcupom=idcupom\n" FKFieldsComments="\n" relDirection="4" MidOffset="0" OptionalStart="0" OptionalEnd="0" CaptionOffsetX="0" CaptionOffsetY="0" StartIntervalOffsetX="0" StartIntervalOffsetY="0" EndIntervalOffsetX="0" EndIntervalOffsetY="0" CreateRefDef="1" Invisible="0" RefDef="Matching=0\nOnDelete=0\nOnUpdate=0\n" Comments="" FKRefDefIndex_Obj_id="2237" Splitted="0" IsLinkedObject="0" IDLinkedModel="-1" Obj_id_Linked="-1" OrderPos="44" />
 <RELATION ID="2265" RelationName="1departamentoNdeparSub" Kind="2" SrcTable="2246" DestTable="2256" FKFields="iddepartamento=iddepartamento\n" FKFieldsComments="\n" relDirection="2" MidOffset="0" OptionalStart="0" OptionalEnd="0" CaptionOffsetX="0" CaptionOffsetY="0" StartIntervalOffsetX="0" StartIntervalOffsetY="0" EndIntervalOffsetX="0" EndIntervalOffsetY="0" CreateRefDef="1" Invisible="0" RefDef="Matching=0\nOnDelete=1\nOnUpdate=1\n" Comments="" FKRefDefIndex_Obj_id="2267" Splitted="0" IsLinkedObject="0" IDLinkedModel="-1" Obj_id_Linked="-1" OrderPos="47" />
-<RELATION ID="2271" RelationName="1departamentoSubNproduto" Kind="2" SrcTable="2256" DestTable="1980" FKFields="iddepartamentosub=iddepartamentosub\niddepartamento=iddepartamento\n" FKFieldsComments="\n\n" relDirection="3" MidOffset="0" OptionalStart="0" OptionalEnd="0" CaptionOffsetX="0" CaptionOffsetY="0" StartIntervalOffsetX="0" StartIntervalOffsetY="0" EndIntervalOffsetX="0" EndIntervalOffsetY="0" CreateRefDef="1" Invisible="0" RefDef="Matching=0\nOnDelete=1\nOnUpdate=1\n" Comments="" FKRefDefIndex_Obj_id="2274" Splitted="0" IsLinkedObject="0" IDLinkedModel="-1" Obj_id_Linked="-1" OrderPos="48" />
 <RELATION ID="2341" RelationName="1Nlista" Kind="2" SrcTable="1639" DestTable="2323" FKFields="idpessoa=idpessoa\nidgenero=idgenero\n" FKFieldsComments="\n\n" relDirection="2" MidOffset="0" OptionalStart="0" OptionalEnd="0" CaptionOffsetX="0" CaptionOffsetY="0" StartIntervalOffsetX="0" StartIntervalOffsetY="0" EndIntervalOffsetX="0" EndIntervalOffsetY="0" CreateRefDef="1" Invisible="0" RefDef="Matching=0\nOnDelete=1\nOnUpdate=1\n" Comments="" FKRefDefIndex_Obj_id="2344" Splitted="0" IsLinkedObject="0" IDLinkedModel="-1" Obj_id_Linked="-1" OrderPos="49" />
 <RELATION ID="2346" RelationName="1pessoaNcarrinho" Kind="2" SrcTable="1639" DestTable="2095" FKFields="idpessoa=idpessoa\nidgenero=idgenero\n" FKFieldsComments="\n\n" relDirection="2" MidOffset="0" OptionalStart="0" OptionalEnd="0" CaptionOffsetX="0" CaptionOffsetY="0" StartIntervalOffsetX="0" StartIntervalOffsetY="0" EndIntervalOffsetX="0" EndIntervalOffsetY="0" CreateRefDef="1" Invisible="0" RefDef="Matching=0\nOnDelete=1\nOnUpdate=1\n" Comments="" FKRefDefIndex_Obj_id="2349" Splitted="0" IsLinkedObject="0" IDLinkedModel="-1" Obj_id_Linked="-1" OrderPos="50" />
 <RELATION ID="2406" RelationName="1pessoaNfornecedor" Kind="2" SrcTable="1639" DestTable="2373" FKFields="idpessoa=idpessoa\nidgenero=idgenero\n" FKFieldsComments="\n\n" relDirection="2" MidOffset="0" OptionalStart="0" OptionalEnd="0" CaptionOffsetX="0" CaptionOffsetY="0" StartIntervalOffsetX="0" StartIntervalOffsetY="0" EndIntervalOffsetX="0" EndIntervalOffsetY="0" CreateRefDef="1" Invisible="0" RefDef="Matching=0\nOnDelete=1\nOnUpdate=1\n" Comments="" FKRefDefIndex_Obj_id="2409" Splitted="0" IsLinkedObject="0" IDLinkedModel="-1" Obj_id_Linked="-1" OrderPos="53" />
 <RELATION ID="2411" RelationName="1categoriaNcategoriafornecedor" Kind="2" SrcTable="2351" DestTable="2373" FKFields="idcategoria=idcategoria\n" FKFieldsComments="\n" relDirection="4" MidOffset="0" OptionalStart="0" OptionalEnd="0" CaptionOffsetX="0" CaptionOffsetY="0" StartIntervalOffsetX="0" StartIntervalOffsetY="0" EndIntervalOffsetX="0" EndIntervalOffsetY="0" CreateRefDef="1" Invisible="0" RefDef="Matching=0\nOnDelete=0\nOnUpdate=0\n" Comments="" FKRefDefIndex_Obj_id="2413" Splitted="0" IsLinkedObject="0" IDLinkedModel="-1" Obj_id_Linked="-1" OrderPos="54" />
 <RELATION ID="2426" RelationName="1pessoaNlembretesenha" Kind="2" SrcTable="1639" DestTable="2414" FKFields="idpessoa=idpessoa\nidgenero=idgenero\n" FKFieldsComments="\n\n" relDirection="3" MidOffset="0" OptionalStart="0" OptionalEnd="0" CaptionOffsetX="2" CaptionOffsetY="0" StartIntervalOffsetX="0" StartIntervalOffsetY="0" EndIntervalOffsetX="0" EndIntervalOffsetY="0" CreateRefDef="1" Invisible="0" RefDef="Matching=0\nOnDelete=1\nOnUpdate=1\n" Comments="" FKRefDefIndex_Obj_id="2429" Splitted="0" IsLinkedObject="0" IDLinkedModel="-1" Obj_id_Linked="-1" OrderPos="56" />
+<RELATION ID="2037" RelationName="1produtoNvariacao" Kind="2" SrcTable="1980" DestTable="1994" FKFields="idproduto=idproduto\nidpai=produto_idpai\n" FKFieldsComments="\n\n" relDirection="4" MidOffset="0" OptionalStart="0" OptionalEnd="0" CaptionOffsetX="0" CaptionOffsetY="0" StartIntervalOffsetX="0" StartIntervalOffsetY="0" EndIntervalOffsetX="0" EndIntervalOffsetY="0" CreateRefDef="1" Invisible="0" RefDef="Matching=0\nOnDelete=1\nOnUpdate=1\n" Comments="" FKRefDefIndex_Obj_id="2440" Splitted="0" IsLinkedObject="0" IDLinkedModel="-1" Obj_id_Linked="-1" OrderPos="26" />
+<RELATION ID="2271" RelationName="1departamentoSubNproduto" Kind="2" SrcTable="2256" DestTable="1980" FKFields="iddepartamentosub=iddepartamentosub\niddepartamento=iddepartamento\n" FKFieldsComments="\n\n" relDirection="3" MidOffset="0" OptionalStart="0" OptionalEnd="0" CaptionOffsetX="0" CaptionOffsetY="0" StartIntervalOffsetX="0" StartIntervalOffsetY="0" EndIntervalOffsetX="0" EndIntervalOffsetY="0" CreateRefDef="1" Invisible="0" RefDef="Matching=0\nOnDelete=1\nOnUpdate=1\n" Comments="" FKRefDefIndex_Obj_id="2433" Splitted="0" IsLinkedObject="0" IDLinkedModel="-1" Obj_id_Linked="-1" OrderPos="48" />
 </RELATIONS>
 <NOTES>
 <NOTE ID="1638" NoteName="Note_01" XPos="7" YPos="11" NoteText="PROJETO CRATOS (DER)\n" IsLinkedObject="0" IDLinkedModel="-1" Obj_id_Linked="-1" OrderPos="2" />

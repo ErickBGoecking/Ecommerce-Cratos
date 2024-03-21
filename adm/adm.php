@@ -46,16 +46,21 @@ include_once("topo.php");
     <?php include_once('menuLateral.php'); ?>
 
     <div class="bg-body-secondary" style="width:100%; min-height:83vh;">
-        <?php
-        switch ($pagina) {
-            case "categoria":
-                include_once('./produto/listaCategoria.php');
-                break;
-            case "produto":
-                include_once('./produto/listaProduto.php');
-                break;
-        }
-        ?>
+        <div class="container-fluid mt-4">
+            <?php
+            switch ($pagina) {
+                case "categoria":
+                    include_once('./produto/listaCategoria.php');
+                    break;
+                case "produto":
+                    include_once('./produto/listaProduto.php');
+                    break;
+                case "fornecedor":
+                    include_once('./fornecedor/listaFornecedor.php');
+                    break;
+            }
+            ?>
+        </div>
     </div>
 </div>
 

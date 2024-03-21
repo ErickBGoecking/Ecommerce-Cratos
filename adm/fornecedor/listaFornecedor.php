@@ -1,13 +1,13 @@
 <nav aria-label="breadcrumb">
     <ol class="breadcrumb">
         <li class="breadcrumb-item"><a href="adm.php">Home</a></li>
-        <li class="breadcrumb-item active"><a href="?pagina=categoria">Categorias</a></li>
-<!--        <li class="breadcrumb-item active" aria-current="page">Data</li>-->
+        <li class="breadcrumb-item active"><a href="?pagina=fornecedor">Fornecedores</a></li>
+        <!--        <li class="breadcrumb-item active" aria-current="page">Data</li>-->
     </ol>
 </nav>
 <div class="card">
     <div class="card-header">
-        #Listar Categorias
+        #Listar de Fornecedores
         <button type="button" class="btn btn-sm btn-primary float-end">Cadastrar</button>
     </div>
     <div class="card-body">
@@ -15,7 +15,7 @@
             <thead class="table-light">
             <tr>
                 <th scope="col" width="5%" class="text-center">Cod</th>
-                <th scope="col" width="65%">Categorias</th>
+                <th scope="col" width="65%">Fornecedores</th>
                 <th scope="col" width="10%" class="text-center">Cadastro</th>
                 <th scope="col" width="20%" class="text-center">Ação</th>
             </tr>
@@ -23,7 +23,7 @@
             <tbody>
             <tr>
                 <th scope="row" class="text-center">1</th>
-                <td>Proteinas</td>
+                <td>Max Titanium</td>
                 <td class="text-center">20/03/2024</td>
                 <td>
                     <div class="float-end">
@@ -35,7 +35,7 @@
             </tr>
             <tr>
                 <th scope="row" class="text-center">2</th>
-                <td>Suplementos</td>
+                <td>Probiotica</td>
                 <td class="text-center">20/03/2024</td>
                 <td>
                     <div class="float-end">
@@ -47,13 +47,13 @@
             </tr>
             <tr>
                 <th scope="row" class="text-center">3</th>
-                <td>Pré-Treino</td>
+                <td>Universal</td>
                 <td class="text-center">20/03/2024</td>
                 <td>
                     <div class="float-end">
-                        <a href="#" class="btn btn-sm btn-outline-primary" aria-current="page"><span class="mdi mdi-monitor-eye"></span> Ver Mais</a>
-                        <a href="#" class="btn btn-sm btn-outline-primary"><span class="mdi mdi-file-document-edit"></span> Alterar</a>
-                        <a href="#" class="btn btn-sm btn-outline-primary"><span class="mdi mdi-delete-alert"></span> Excluir</a>
+                            <a href="#" class="btn btn-sm btn-outline-primary" aria-current="page"><span class="mdi mdi-monitor-eye"></span> Ver Mais</a>
+                            <a href="#" class="btn btn-sm btn-outline-primary"><span class="mdi mdi-file-document-edit"></span> Alterar</a>
+                            <a href="#" class="btn btn-sm btn-outline-primary"><span class="mdi mdi-delete-alert"></span> Excluir</a>
                     </div>
                 </td>
             </tr>
