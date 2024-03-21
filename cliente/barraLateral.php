@@ -2,17 +2,6 @@
 $pagina = "";
     if(isset($_GET['pagina'])){$pagina = $_GET['pagina'];};
 ?>
-<style>
-    .ativo {
-        background-color: var(--cor-principal) !important;
-        border-radius: 8px;
-        color:black;
-        font-weight: 600; 
-    }
-    .ativo *{
-        background-color: var(--cor-principal) !important;
-    }
-</style>
 <div class="barra_lateral col-md-2" id="menuLateral">
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <div class="container-fluid align-items-start">
@@ -22,13 +11,14 @@ $pagina = "";
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse m-0 mt-3 " id="navbarTogglerDemo02">
-
-
                 <nav class="nav flex-column container-fluid justify-content-start p-0">
-
                     <div class="accordion accordion-flush container-fluid  p-0" id="accordionFlushExample">
                         <div class="accordion-item">
-                            <div class=" item-menu">
+                            <div class=" item-menu 
+                                <?php 
+                                if($pagina=='historico'or$pagina=='carrinho'or$pagina=='lista-desejos')
+                                {echo 'menuAberto';}
+                                ?>">
                                 <h2 class="accordion-header">
                                     <div class="accordion-button collapsed bg-body-tertiary ps-0"
                                         data-bs-toggle="collapse" data-bs-target="#flush-collapseOne"
@@ -56,7 +46,6 @@ $pagina = "";
                                     <div class=" item-menu "><a class="nav-link  <?php if($pagina=='lista-desejos'){echo 'ativo';}?>" aria-current="page"
                                             href="?pagina=lista-desejos"><span class="mdi mdi-heart"></span><span
                                                 class="ps-2"></span> Lista de Desejos</a></div>
-
                                 </div>
                             </div>
                         </div>

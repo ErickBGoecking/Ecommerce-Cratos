@@ -66,9 +66,23 @@
     margin-left: 0px;
 }
 .item-menu * :active {
-    color: #4acb0b; !important;
+    color: #4acb0b !important;
     border-left: 0px;
     margin-left: 0px;
+}
+
+.ativo {
+    background-color: var(--cor-principal) !important;
+    border-radius: 8px;
+    color:black;
+    font-weight: 600; 
+}
+.ativo *{
+    background-color: var(--cor-principal) !important;
+}
+.menuAberto *{
+    background-color: #e9ecef !important;
+    border-radius: 8px;
 }
 /*-----------------------------------PAINEL ADM------------------------------*/
 .fundoAdm{
@@ -89,7 +103,7 @@
 }
 
 .dropdown-menu .dropdown-item:hover {
-    background-color: var(--cor-principal)
+    background-color: var(--cor-principal);
     color: #000000;
 }
 .dropdown-menu .dropdown-item:focus {
