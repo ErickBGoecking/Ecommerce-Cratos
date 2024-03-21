@@ -23,7 +23,7 @@ $pagina = "";
                                     <div class="accordion-button collapsed bg-body-tertiary ps-0"
                                         data-bs-toggle="collapse" data-bs-target="#flush-collapseOne"
                                         aria-expanded="false" aria-controls="flush-collapseOne">
-                                        <span class="mdi mdi-shopping"></span><span class="ps-4"></span>Compras
+                                        <span class="mdi mdi-shopping"></span><span class="ps-2"></span>Compras
                                     </div>
                                 </h2>
                             </div>
@@ -50,23 +50,19 @@ $pagina = "";
                             </div>
                         </div>
                     </div>
-
-
                     <!-- <a class="nav-link" href="#">Link</a> -->
-                    <div class="item-menu">
-                        <a class="nav-link" href="#"><span class="mdi mdi-email item-menu-sub"></span><span
-                                class="ps-4 item-menu-sub">Mensagens</a>
+                    <div class="item-menu  ">
+                        <a class="nav-link <?php if($pagina=='mensagem'){echo 'ativo';}?>" href="?pagina=mensagem"><span class="mdi mdi-email item-menu-sub"></span><span
+                                class="ps-2 item-menu-sub">Mensagens</a>
                     </div>
-                    <div class="item-menu">
-                        <a class="nav-link" href="?pagina=perfil"><span class="mdi mdi-account"></span><span class="ps-4 ">Meu
+                    <div class="item-menu  ">
+                        <a class="nav-link <?php if($pagina=='perfil'){echo 'ativo';}?>" href="?pagina=perfil"><span class="mdi mdi-account"></span><span class="ps-2">Meu
                                 Perfil</a>
                     </div>
                 </nav>
-
             </div>
             <!-- <div class="vh-100 d-none d-md-block"></div> -->
         </div>
-
     </nav>
 </div>
 
