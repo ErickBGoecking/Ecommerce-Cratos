@@ -16,7 +16,6 @@
 .subMenu li {
     padding: 5px;
 }
-}
 </style>
 
 <nav id="navigation">
