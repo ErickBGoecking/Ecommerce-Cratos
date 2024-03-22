@@ -42,9 +42,9 @@ document.addEventListener("DOMContentLoaded", function() {
                 return response.json();
             })
             .then(data => {
-                mostrarProcessando();
                 console.log(data)
                 if (data.sucesso) {
+                    mostrarProcessando();
                     mostrarMensagem(data.mensagem, "alert-success");
                     setTimeout(function() {
                         window.location.href = "adm.php";
