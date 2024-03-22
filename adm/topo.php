@@ -5,7 +5,7 @@
 </style>
 <header>
     <div id="top-header">
-        <div class="container p-3">
+        <div class="container-fluid p-3">
             <ul class="header-links pull-right" style="margin-top: -20px">
                 <li>
                     <div class="dropdown">
