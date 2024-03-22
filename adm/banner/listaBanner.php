@@ -47,7 +47,6 @@
                     } else {
                         $btnAtivo = '<a href="#" class="btn btn-sm btn-outline-primary" aria-current="page" title="Banner Desativado"><span class="mdi mdi-lock-check text-danger"></span> Desativado</a>';
                     }
-                }
                 ?>
                 <tr>
                     <th scope="row" class="text-center"><?php echo $idbanner; ?></th>
@@ -70,6 +69,7 @@
                     </td>
                 </tr>
                 <?php
+                }
             } else {
                 ?>
                 <tr>
@@ -124,20 +124,22 @@
                                     <input type="file" name="img" id="iImg" style="display: none;">
                                     <label for="iImg" style="cursor: pointer;">
                                         <div id="imagemPreview">
-                                            <img id="imgPreview" src="./banner/img/sem-imagem.png" alt="Preview da Imagem" style="max-width: 100%; height: 200px;">
+                                            <img id="imgPreview" src="./banner/img/sem-imagem.png"
+                                                 alt="Preview da Imagem" style="max-width: 100%; height: 200px;">
                                         </div>
                                     </label>
                                 </div>
                                 <div class="col-12">
                                     <div class="mb-3">
                                         <label for="iTitulo" class="form-label">Título:</label>
-                                        <input type="text" class="form-control" id="iTitulo" name="titulo" aria-describedby="tituloHelp">
+                                        <input type="text" class="form-control" id="iTitulo" name="titulo"
+                                               aria-describedby="tituloHelp">
                                     </div>
                                 </div>
                                 <div class="col-4">
                                     <div class="mb-3">
                                         <label for="sTipo" class="form-label">Tipo:</label>
-                                        <select class="form-select" aria-label="Default select example" id="sTipo">
+                                        <select class="form-select" aria-label="Default select example" id="sTipo" name="sTipo">
                                             <option value="Rotativo" selected>Rotativo</option>
                                             <option value="Central">Central</option>
                                         </select>
@@ -145,20 +147,27 @@
                                 </div>
                                 <div class="col-4">
                                     <div class="mb-3">
-                                        <label for="iDataF" class="form-label">Data Final:</label>
-                                        <input type="text" class="form-control" name="dataf" id="iDataF">
+                                        <label for="iDataI" class="form-label">Data Inicial:</label>
+                                        <?php
+                                        $dataAtualFormatada = date('Y-m-d\TH:i:s');
+                                        ?>
+                                        <input type="datetime-local" class="form-control" name="dataI" id="iDataI" value="<?php echo $dataAtualFormatada; ?>">
                                     </div>
                                 </div>
                                 <div class="col-4">
                                     <div class="mb-3">
                                         <label for="iDataF" class="form-label">Data Final:</label>
-                                        <input type="text" class="form-control" name="dataf" id="iDataF">
+                                        <?php
+                                        $dataAtual = date('Y-m-d H:i:s');
+                                        $dataFinal = date('Y-m-d\TH:i:s', strtotime('+1 month', strtotime($dataAtual)));
+                                        ?>
+                                        <input type="datetime-local" class="form-control" name="dataF" id="iDataF" value="<?php echo $dataFinal; ?>">
                                     </div>
                                 </div>
                             </div>
                             <div class="float-end">
                                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
-                                <button type="submit" class="btn btn-primary">Cadastrar</button>
+                                <button type="button" class="btn btn-primary" id="btnEnviar">Cadastrar</button>
                             </div>
                         </form>
                     </div>
@@ -170,18 +179,15 @@
         </div>
     </div>
 </div>
-
-<script>
-    document.getElementById('iImg').addEventListener('change', function() {
-        var arquivo = this.files[0];
-        if (arquivo) {
-            var leitor = new FileReader();
-            leitor.onload = function() {
-                document.getElementById('imgPreview').src = leitor.result;
-            }
-            leitor.readAsDataURL(arquivo);
-        } else {
-            document.getElementById('imgPreview').src = 'img/sem-imagem.png';
-        }
-    });
-</script>
+<div class="toast-container position-fixed top-0 end-0 p-3">
+    <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+        <div class="toast-header" style="background-color: var(--cor-principal)">
+            <strong class="me-auto">Mensagem de Sucesso</strong>
+            <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+        </div>
+        <div class="toast-body">
+            Banner Cadastrado com sucesso!
+        </div>
+    </div>
+</div>
+<script src="js/scriptcrato.js"></script>
