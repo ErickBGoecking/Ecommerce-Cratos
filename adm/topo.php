@@ -16,7 +16,7 @@
                         <ul class="dropdown-menu">
                             <div class="d-flex flex-column">
                                 <li><a class="dropdown-item" href="#"><span class="mdi mdi-account"></span> Perfil</a></li>
-                                <li><a class="dropdown-item" href="#"><span class="mdi mdi-door-closed"></span> Sair</a></li>
+                                <li><a class="dropdown-item" href="logout.php"><span class="mdi mdi-door-closed"></span> Sair</a></li>
                             </div>
                         </ul>
                     </div>
