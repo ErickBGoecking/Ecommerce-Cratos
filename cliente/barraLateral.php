@@ -1,71 +1,84 @@
 <?php 
 $pagina = "";
-    if(isset($_GET['pagina'])){$pagina = $_GET['pagina'];};
+
+if(isset($_GET['pagina'])){$pagina = $_GET['pagina'];};
+$menu = array(
+    "Compras" => array(
+        "icone" => "mdi mdi-shopping",
+        "subMenu" => array(
+            "Historico" => array("icone" => "mdi mdi-order-bool-descending", "link" => "historico"),
+            "Carrinho" => array("icone" => "mdi mdi-cart", "link" => "carrinho"),
+            "Lista de Desejos" => array("icone" => "mdi mdi-heart", "link" => "lista-desejos"),
+        )
+    ),
+    "Mensagens" => array("icone" => "mdi mdi-email", "link" => "mensagem"),
+    "Meu Perfil" => array("icone" => "mdi mdi-account", "link" => "perfil"),
+);
 ?>
+
+
 <div class="barra_lateral col-md-2" id="menuLateral">
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <div class="container-fluid align-items-start">
             <a class="navbar-brand p-0 m-0" href="#"></a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02"
-                aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu"
+                aria-controls="menu" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse m-0 mt-3 " id="navbarTogglerDemo02">
+            <div class="collapse navbar-collapse m-0 mt-3 " id="menu">
                 <nav class="nav flex-column container-fluid justify-content-start p-0">
-                    <div class="accordion accordion-flush container-fluid  p-0" id="accordionFlushExample">
+
+                    <?php foreach ($menu as $titulo => $item) {
+                         if (is_array($item) && isset($item['subMenu'])) {
+                            $id = str_replace(" ","",$titulo);
+                            $aberto = False;
+                            foreach($item['subMenu'] as $indice => $i){if( $i['link']==$pagina){$aberto=True;}};
+                    ?>
+
+                    <div class="accordion accordion-flush container-fluid  p-0" id="accordion<?php echo $id;?>">
                         <div class="accordion-item">
-                            <div class=" item-menu 
-                                <?php 
-                                if($pagina=='historico'or$pagina=='carrinho'or$pagina=='lista-desejos')
-                                {echo 'menuAberto';}
-                                ?>">
+                            <div class=" item-menu <?php if($aberto){echo 'menuAberto';}?>">
                                 <h2 class="accordion-header">
                                     <div class="accordion-button collapsed bg-body-tertiary ps-0"
-                                        data-bs-toggle="collapse" data-bs-target="#flush-collapseOne"
-                                        aria-expanded="false" aria-controls="flush-collapseOne">
-                                        <span class="mdi mdi-shopping"></span><span class="ps-2"></span>Compras
+                                        data-bs-toggle="collapse" data-bs-target="#<?php echo $id;?>"
+                                        aria-expanded="true" aria-controls="<?php echo $id;?>">
+                                        <span class="<?php echo $item['icone']?>"></span><span class="ps-2">
+                                            <?php  echo $titulo;?>
+                                        </span>
                                     </div>
                                 </h2>
                             </div>
-                            <div id="flush-collapseOne" class="accordion-collapse collapse 
-                                <?php 
-                                if($pagina=='historico'or$pagina=='carrinho'or$pagina=='lista-desejos')
-                                {echo 'show';}
-                                ?>"
-                                data-bs-parent="#accordionFlushExample">
-                                <div class="accordion-body">
-
-                                    <div class=" item-menu"><a class="nav-link <?php if($pagina=='historico'){echo 'ativo';}?>" aria-current="page"
-                                            href="?pagina=historico"><span
-                                                class="mdi mdi-order-bool-descending"></span><span
-                                                class="ps-2"></span>Histórico</span></a></div>
-                                    <div class=" item-menu"><a class="nav-link <?php if($pagina=='carrinho'){echo 'ativo';}?>" aria-current="page"
-                                            href="?pagina=carrinho">
-                                            <span class="mdi mdi-cart"></span><span class="ps-2"></span>
-                                            Carrinho</span></a></div>
-                                    <div class=" item-menu "><a class="nav-link  <?php if($pagina=='lista-desejos'){echo 'ativo';}?>" aria-current="page"
-                                            href="?pagina=lista-desejos"><span class="mdi mdi-heart"></span><span
-                                                class="ps-2"></span> Lista de Desejos</a></div>
+                            <?php foreach ($item['subMenu'] as $subTitulo => $subItem) { ?>
+                            <div id="<?php echo $id;?>" class="accordion-collapse collapse <?php if($aberto){echo 'show';}?>" data-bs-parent="#accordion<?php echo $id;?>">
+                                <div class="accordion-body pt-0 pb-0">   
+                                    <div class="item-menu">
+                                        <a class="nav-link <?php if($pagina==$subItem['link']){echo 'ativo';}?>"
+                                            href="?pagina=<?php echo $subItem['link'];?>"><span
+                                                class="<?php echo $subItem['icone']?>"></span><span
+                                                class="ps-2 item-menu-sub"><?php echo $subTitulo;?></a>
+                                    </div>
                                 </div>
                             </div>
+                            <?php };?>
                         </div>
                     </div>
-                    <!-- <a class="nav-link" href="#">Link</a> -->
+
+                    <?php }else{?>
+
                     <div class="item-menu  ">
-                        <a class="nav-link <?php if($pagina=='mensagem'){echo 'ativo';}?>" href="?pagina=mensagem"><span class="mdi mdi-email item-menu-sub"></span><span
-                                class="ps-2 item-menu-sub">Mensagens</a>
+                        <a class="nav-link <?php if($pagina==$item['link']){echo 'ativo';}?>"
+                            href="?pagina=<?php echo $item['link'];?>"><span
+                                class="<?php echo $item['icone']?>"></span><span
+                                class="ps-2 item-menu-sub"><?php echo $titulo;?></a>
                     </div>
-                    <div class="item-menu  ">
-                        <a class="nav-link <?php if($pagina=='perfil'){echo 'ativo';}?>" href="?pagina=perfil"><span class="mdi mdi-account"></span><span class="ps-2">Meu
-                                Perfil</a>
-                    </div>
+
+                    <?php }};?>
                 </nav>
             </div>
             <!-- <div class="vh-100 d-none d-md-block"></div> -->
         </div>
     </nav>
 </div>
-
 <script>
 function mudar() {
     var menu = document.getElementById("menuLateral");
@@ -82,5 +95,4 @@ function mudar() {
 
 window.addEventListener('scroll', mudar);
 window.addEventListener('resize', mudar);
-
 </script>

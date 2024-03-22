@@ -3,8 +3,7 @@ include_once("dados.php");
 
 $info = dados();
 ?>
-
-<div class="container-fluid pt-5 d-flex flex-column gap-3">
+<div class="container-fuid ms-md-4 p-2 p-md-5">
     <h3>Lista de Desejos</h3>
 
     <div class="d-flex flex-column flex-md-row flex-md-wrap gap-3">
@@ -14,13 +13,13 @@ $info = dados();
                 foreach($info as $compra){
 
                 ?>
-        <div class="card border border-0 shadow-sm col-md-2" id="<?php echo $compra['idCompra'] . $x; ?>">
+        <div class="card border border-0 shadow-sm col-md-2" id="<?php echo $compra['idCompra'] . $x; ?>" style="min-width:250px; max-width:400px;">
             <div class="card-body d-flex flex-column justify-content-between">
                 <div class="d-flex justify-content-end">
                     <button type="button" class="btn-close" aria-label="Close"
                         onclick="fecharItem(<?php echo $compra['idCompra'] . $x; ?>)"></button>
                 </div>
-                <div class="d-flex flex-column justify-content-between h-100" >
+                <div class="d-flex flex-column justify-content-between h-100">
                     <div class="p-2 d-flex justify-content-center align-items-center">
                         <img src="../img/<?php echo $compra['fotoProduto'] ?>" alt="" style="width:80px; height:80px;">
                     </div>
@@ -37,7 +36,8 @@ $info = dados();
                 </div>
 
                 <div class="d-grid gap-2">
-                    <button class="btn btn-secondary"><span class="mdi mdi-eye-outline pe-3"></span>ver mais</button>
+                    <button class="btn btn-secondary"><span class="mdi mdi-eye-outline pe-3"></span>ver
+                        mais</button>
                     <button class="btn btn-primary"><span class="mdi mdi-cart-minus pe-3"></span>Comprar</button>
                 </div>
             </div>
@@ -58,10 +58,12 @@ $info = dados();
             </div>
         </div>
     </div>
+</div>
+</div>
 
-    <script>
-    function fecharItem(id) {
-        var div = document.getElementById(id);
-        div.parentNode.removeChild(div);
-    };
-    </script>
+<script>
+function fecharItem(id) {
+    var div = document.getElementById(id);
+    div.parentNode.removeChild(div);
+};
+</script>

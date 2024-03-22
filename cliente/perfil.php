@@ -39,7 +39,7 @@ $itens=array(
 }
 </style>
 
-<div class="container col-md-6 pt-3">
+<div class="container pt-3" style="max-width:800px;">
     <div class="card border border-0 shadow-sm">
         <div class="card-body d-flex">
             <img src="./img/luciano.jpg" class="rounded-circle" alt="" style="width: 100px">
@@ -67,7 +67,7 @@ $itens=array(
                     </div>
                     <div class="d-flex flex-column gap-0 ps-3 flex-fill">
                         <p><strong><?php echo $item['title']?></strong>
-                            <br><span class="d-inline-block text-truncate" style="max-width: 150px;"><?php echo $item['info']?></span>
+                            <br><span class="d-inline-block text-truncate" style="max-width: 200px;" id="text-truncate"><?php echo $item['info']?></span>
                         </p>
                     </div>
                     <span class="mdi mdi-chevron-right px-3 mt-3"></span>
@@ -79,3 +79,28 @@ $itens=array(
     </div>
 
 </div>
+
+<script>
+
+function textTruncate() {
+    var elementos = document.getElementsByClassName("text-truncate");
+    var resolucao = window.innerWidth;
+
+    if (elementos.length > 0) { // Verifica se existem elementos
+        for (var i = 0; i < elementos.length; i++) { // Itera sobre todos os elementos
+            if (resolucao < 769) {
+                elementos[i].style.maxWidth = "200px";
+            } else if (resolucao >= 768 && resolucao < 1000) {
+                elementos[i].style.maxWidth = "500px";
+            } else {
+                elementos[i].style.maxWidth = "";
+            }
+        }
+    }
+}
+
+// Adiciona os ouvintes de eventos
+window.addEventListener('resize', textTruncate);
+window.addEventListener('load', textTruncate);
+
+</script>
