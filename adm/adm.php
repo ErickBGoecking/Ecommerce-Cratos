@@ -1,6 +1,8 @@
 <?php
 session_start();
 include_once './func/func.php';
+include_once './config/constantes.php';
+include_once './config/conexao.php';
 //if (session_status() == PHP_SESSION_NONE) {
 //    session_start();
 //}
@@ -57,6 +59,9 @@ include_once("topo.php");
                     break;
                 case "fornecedor":
                     include_once('./fornecedor/listaFornecedor.php');
+                    break;
+                    case "banner":
+                    include_once('./banner/listaBanner.php');
                     break;
             }
             ?>

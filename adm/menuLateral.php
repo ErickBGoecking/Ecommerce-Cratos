@@ -32,13 +32,13 @@ if(isset($_GET['pagina'])){$pagina = $_GET['pagina'];};
                             ?>">
                                 <h2 class="accordion-header">
                                     <div class="accordion-button collapsed bg-body-tertiary ps-0"
-                                         data-bs-toggle="collapse" data-bs-target="#flush-collapseOne"
-                                         aria-expanded="false" aria-controls="flush-collapseOne">
+                                         data-bs-toggle="collapse" data-bs-target="#showCadastro"
+                                         aria-expanded="false" aria-controls="showCadastro">
                                         <span class="mdi mdi-content-save-move"></span><span class="ps-2"></span>Cadastros
                                     </div>
                                 </h2>
                             </div>
-                            <div id="flush-collapseOne" class="accordion-collapse collapse
+                            <div id="showCadastro" class="accordion-collapse collapse
                                 <?php
                             if($pagina=='categoria'or$pagina=='produto'or$pagina=='fornecedor')
                             {echo 'show';}
@@ -56,26 +56,27 @@ if(isset($_GET['pagina'])){$pagina = $_GET['pagina'];};
                         <div class="accordion-item">
                             <div class=" item-menu
                             <?php
-                            if($pagina=='cargo'or$pagina=='funcionario'or$pagina=='administrador')
+                            if($pagina=='cargo'or$pagina=='funcionario'or$pagina=='administrador'or$pagina=='banner')
                             {echo 'menuAberto';}
                             ?>">
                                 <h2 class="accordion-header">
                                     <div class="accordion-button collapsed bg-body-tertiary ps-0"
-                                         data-bs-toggle="collapse" data-bs-target="#flush-collapseOne"
-                                         aria-expanded="false" aria-controls="flush-collapseOne">
+                                         data-bs-toggle="collapse" data-bs-target="#showConfig"
+                                         aria-expanded="false" aria-controls="showConfig">
                                         <span class="mdi mdi-content-save-move"></span><span class="ps-2"></span>Configurações
                                     </div>
                                 </h2>
                             </div>
-                            <div id="flush-collapseOne" class="accordion-collapse collapse
+                            <div id="showConfig" class="accordion-collapse collapse
                                 <?php
-                            if($pagina=='cargo'or$pagina=='funcionario'or$pagina=='administrador')
+                            if($pagina=='cargo'or$pagina=='funcionario'or$pagina=='administrador'or$pagina=='banner')
                             {echo 'show';}
                             ?>"
                                  data-bs-parent="#accordionConfig">
                                 <div class="accordion-body">
                                     <div class=" item-menu"><a class="nav-link <?php if($pagina=='cargo'){echo 'ativo';}?>" aria-current="page" href="?pagina=cargo"><span class="mdi mdi-order-bool-descending"></span><span class="ps-2"></span>Cargos</span></a></div>
                                     <div class=" item-menu"><a class="nav-link <?php if($pagina=='funcionario'){echo 'ativo';}?>" aria-current="page" href="?pagina=funcionario"><span class="mdi mdi-cart"></span><span class="ps-2"></span>Funcionários</span></a></div>
+                                    <div class=" item-menu "><a class="nav-link  <?php if($pagina=='banner'){echo 'ativo';}?>" aria-current="page" href="?pagina=banner"><span class="mdi mdi-account-tie"></span><span class="ps-2"></span> Banners</a></div>
                                     <div class=" item-menu "><a class="nav-link  <?php if($pagina=='administrador'){echo 'ativo';}?>" aria-current="page" href="?pagina=administrador"><span class="mdi mdi-account-tie"></span><span class="ps-2"></span> Administradores</a></div>
                                 </div>
                             </div>

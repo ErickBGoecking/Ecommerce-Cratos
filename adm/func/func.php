@@ -4227,12 +4227,11 @@ function formatarDataEn($data)
 
 function formatarDataExtenso()
 {
-    setlocale(LC_TIME, 'pt_BR', 'pt_BR.utf-8', 'pt_BR.utf-8', 'portuguese');
+    setlocale(LC_TIME, 'pt_BR.utf-8', 'Portuguese_Brazil.utf-8', 'pt_BR.utf-8', 'Portuguese_Brazil');
     date_default_timezone_set('America/Sao_Paulo');
-//                    echo strftime('%A, %d de %B de %Y', strtotime('today'));
     $dataFormatada = strftime('%A, %d de %B de %Y', strtotime('today'));
-    $dataFormatada = ucfirst($dataFormatada);
-    echo "<span style='font-size: small'>$dataFormatada</span>";
+    $dataFormatada = mb_convert_case($dataFormatada, MB_CASE_TITLE, 'UTF-8');
+    echo "<span style='font-size: small'>" . $dataFormatada . "</span>";
 }
 
 function uploadSimples($diretorioImg, $nameInputFile, $tipoUploadDocOUimg, $tipoUpload, $prefixoArquivo)
