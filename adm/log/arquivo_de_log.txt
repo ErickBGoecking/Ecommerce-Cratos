@@ -1,0 +1,144 @@
+Throwable: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'cratosbd.banner' doesn't exist
+Code: 42S02
+Trace: Array
+(
+    [0] => Array
+        (
+            [file] => D:\htdocs\Cratos\Ecommerce-Cratos\adm\func\func.php
+            [line] => 2438
+            [function] => execute
+            [class] => PDOStatement
+            [type] => ->
+            [args] => Array
+                (
+                )
+
+        )
+
+    [1] => Array
+        (
+            [file] => D:\htdocs\Cratos\Ecommerce-Cratos\adm\banner\listaBanner.php
+            [line] => 30
+            [function] => listarGeral
+            [args] => Array
+                (
+                    [0] => b.idbanner, b.img, b.titulo, b.datai, b.dataf, b.tipo, b.cadastro, b.alteracao, b.ativo, p.nome, p.sobrenome
+                    [1] => banner b INNER JOIN pessoa p ON p.idpessoa = b.idadm
+                )
+
+        )
+
+    [2] => Array
+        (
+            [file] => D:\htdocs\Cratos\Ecommerce-Cratos\adm\adm.php
+            [line] => 64
+            [args] => Array
+                (
+                    [0] => D:\htdocs\Cratos\Ecommerce-Cratos\adm\banner\listaBanner.php
+                )
+
+            [function] => include_once
+        )
+
+)
+
+Trace File: D:\htdocs\Cratos\Ecommerce-Cratos\adm\func\func.php
+Trace Line: 2438
+File: D:\htdocs\Cratos\Ecommerce-Cratos\adm\func\func.php
+Line: 2438
+Throwable: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'cratosbd.banner' doesn't exist
+Code: 42S02
+Trace: Array
+(
+    [0] => Array
+        (
+            [file] => D:\htdocs\Cratos\Ecommerce-Cratos\adm\func\func.php
+            [line] => 2438
+            [function] => execute
+            [class] => PDOStatement
+            [type] => ->
+            [args] => Array
+                (
+                )
+
+        )
+
+    [1] => Array
+        (
+            [file] => D:\htdocs\Cratos\Ecommerce-Cratos\adm\banner\listaBanner.php
+            [line] => 30
+            [function] => listarGeral
+            [args] => Array
+                (
+                    [0] => b.idbanner, b.img, b.titulo, b.datai, b.dataf, b.tipo, b.cadastro, b.alteracao, b.ativo, p.nome, p.sobrenome
+                    [1] => banner b INNER JOIN pessoa p ON p.idpessoa = b.idadm
+                )
+
+        )
+
+    [2] => Array
+        (
+            [file] => D:\htdocs\Cratos\Ecommerce-Cratos\adm\adm.php
+            [line] => 64
+            [args] => Array
+                (
+                    [0] => D:\htdocs\Cratos\Ecommerce-Cratos\adm\banner\listaBanner.php
+                )
+
+            [function] => include_once
+        )
+
+)
+
+Trace File: D:\htdocs\Cratos\Ecommerce-Cratos\adm\func\func.php
+Trace Line: 2438
+File: D:\htdocs\Cratos\Ecommerce-Cratos\adm\func\func.php
+Line: 2438
+Throwable: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'cratosbd.banner' doesn't exist
+Code: 42S02
+Trace: Array
+(
+    [0] => Array
+        (
+            [file] => D:\htdocs\Cratos\Ecommerce-Cratos\adm\func\func.php
+            [line] => 2438
+            [function] => execute
+            [class] => PDOStatement
+            [type] => ->
+            [args] => Array
+                (
+                )
+
+        )
+
+    [1] => Array
+        (
+            [file] => D:\htdocs\Cratos\Ecommerce-Cratos\adm\banner\listaBanner.php
+            [line] => 30
+            [function] => listarGeral
+            [args] => Array
+                (
+                    [0] => b.idbanner, b.img, b.titulo, b.datai, b.dataf, b.tipo, b.cadastro, b.alteracao, b.ativo, p.nome, p.sobrenome
+                    [1] => banner b INNER JOIN pessoa p ON p.idpessoa = b.idadm
+                )
+
+        )
+
+    [2] => Array
+        (
+            [file] => D:\htdocs\Cratos\Ecommerce-Cratos\adm\adm.php
+            [line] => 64
+            [args] => Array
+                (
+                    [0] => D:\htdocs\Cratos\Ecommerce-Cratos\adm\banner\listaBanner.php
+                )
+
+            [function] => include_once
+        )
+
+)
+
+Trace File: D:\htdocs\Cratos\Ecommerce-Cratos\adm\func\func.php
+Trace Line: 2438
+File: D:\htdocs\Cratos\Ecommerce-Cratos\adm\func\func.php
+Line: 2438
