@@ -43,7 +43,8 @@
                     $alteracao = $itemBanner->alteracao;
                     $ativo = $itemBanner->ativo;
                     if ($ativo == 'A') {
-                        $btnAtivo = '<a href="#" class="btn btn-sm btn-outline-primary" aria-current="page" title="Banner Ativado"><span class="mdi mdi-lock-open-check text-success"></span>Ativo</a>';
+                        $btnAtivo = '<a href="#" class="btn btn-sm btn-outline-primary" aria-current="page" title="Banner Ativado" id="btnStatus" onclick="statusGeral('.$idbanner.',\'bannerStatus\');"><span class="mdi mdi-lock-open-check text-success"></span>Ativo</a>';
+
                     } else {
                         $btnAtivo = '<a href="#" class="btn btn-sm btn-outline-primary" aria-current="page" title="Banner Desativado"><span class="mdi mdi-lock-check text-danger"></span> Desativado</a>';
                     }

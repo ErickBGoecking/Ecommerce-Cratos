@@ -19,6 +19,9 @@ if (isset($controle) && !empty($controle)) {
         case'bannerAdd':
             include_once 'banner/bannerAdd.php';
             break;
+        case'bannerStatus':
+            include_once 'banner/bannerStatus.php';
+            break;
         default:
             echo 'Padrão alterar';
     }

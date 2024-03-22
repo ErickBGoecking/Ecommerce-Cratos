@@ -26,7 +26,7 @@ document.getElementById('iImg').addEventListener('change', function () {
                 throw new Error('Erro de conexão.');
             })
             .then(data => {
-                if(data.sucesso){
+                if (data.sucesso) {
                     var liveToast = document.getElementById('liveToast');
                     var toast = new bootstrap.Toast(liveToast);
                     liveToast.querySelector('.toast-body').innerText = data.mensagem;
@@ -39,10 +39,10 @@ document.getElementById('iImg').addEventListener('change', function () {
                     document.body.classList.remove('modal-open');
                     document.body.style.paddingRight = '';
                     var modalBackdrop = document.getElementsByClassName('modal-backdrop')[0];
-                    if(modalBackdrop) {
+                    if (modalBackdrop) {
                         modalBackdrop.parentNode.removeChild(modalBackdrop);
                     }
-                    setTimeout(function() {
+                    setTimeout(function () {
                         location.reload();
                     }, 2000);
                 } else {
@@ -60,3 +60,18 @@ document.getElementById('iImg').addEventListener('change', function () {
     });
 
 });
+
+function statusGeral(status,controle) {
+    fetch('controle.php', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/x-www-form-urlencoded',
+        },
+        body: 'controle=' + encodeURIComponent(controle) + '&status=' + encodeURIComponent(status),
+    })
+        .then(response => response.json())
+        .then(data => {
+            console.log(data);
+        })
+        .catch(error => console.error('Erro na requisição:', error));
+}
