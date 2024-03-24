@@ -29,19 +29,19 @@
             <?php
             $listarBanner = listarGeral('b.idbanner, b.img, b.titulo, b.datai, b.dataf, b.tipo, b.cadastro, b.alteracao, b.ativo, p.nome, p.sobrenome', 'banner b INNER JOIN pessoa p ON p.idpessoa = b.idadm');
             if ($listarBanner) {
-                foreach ($listarBanner as $itemBanner) {
-                    $idbanner = $itemBanner->idbanner;
-                    $adm = $itemBanner->nome;
-                    $admSobrenome = $itemBanner->sobrenome;
+                foreach ($listarBanner as $pessoa) {
+                    $idbanner = $pessoa->idbanner;
+                    $adm = $pessoa->nome;
+                    $admSobrenome = $pessoa->sobrenome;
                     $nomeCompleto = $adm . ' ' . $admSobrenome;
-                    $img = $itemBanner->img;
-                    $titulo = $itemBanner->titulo;
-                    $datai = formatarDataHoraBr($itemBanner->datai);
-                    $dataf = formatarDataHoraBr($itemBanner->dataf);
-                    $tipo = $itemBanner->tipo;
-                    $cadastro = $itemBanner->cadastro;
-                    $alteracao = $itemBanner->alteracao;
-                    $ativo = $itemBanner->ativo;
+                    $img = $pessoa->img;
+                    $titulo = $pessoa->titulo;
+                    $datai = formatarDataHoraBr($pessoa->datai);
+                    $dataf = formatarDataHoraBr($pessoa->dataf);
+                    $tipo = $pessoa->tipo;
+                    $cadastro = $pessoa->cadastro;
+                    $alteracao = $pessoa->alteracao;
+                    $ativo = $pessoa->ativo;
                     if ($ativo == 'A') {
                         $btnAtivo = '<a href="#" class="btn btn-sm btn-outline-primary" aria-current="page" title="Banner Ativado" id="btnStatus" onclick="statusGeral('.$idbanner.',\'bannerStatus\');"><span class="mdi mdi-lock-open-check text-success"></span>Ativo</a>';
 

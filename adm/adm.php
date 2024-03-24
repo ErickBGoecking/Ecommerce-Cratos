@@ -60,8 +60,11 @@ include_once("topo.php");
                 case "fornecedor":
                     include_once('./fornecedor/listaFornecedor.php');
                     break;
-                    case "banner":
+                case "banner":
                     include_once('./banner/listaBanner.php');
+                    break;
+                case "administrador":
+                    include_once('./administrador/listaAdministrador.php');
                     break;
             }
             ?>
