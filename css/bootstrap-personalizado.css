@@ -159,6 +159,30 @@
     right: 0;
     margin: 2rem;
     z-index: 9999;
-    background-color: var(--cor-bgdanger) !important;
+    /* background-color: var(--cor-bgdanger) !important; */
+}
+.bgdanger-dark{
+    background-color: var(--cor-bgdanger-dark)!important;
+    color: white!important;
+}
+.bgdanger{
+    background-color: var(--cor-bgdanger)!important;
+    color: white!important;
+}
+.btndanger-dark{
+    background-color: var(--cor-bgdanger-dark)!important;
+    color: white!important;
+}
+.btndanger-dark:hover {
+    background-color: white!important;
+    color: var(--cor-bgdanger-dark)!important;
+    border: 1px solid var(--cor-bgdanger-dark)!important;
+}
+.custom-toast .btn-light{
+    color: var(--cor-bgdanger)!important;
+}
+.btn-close-white{
+    color: white!important;
+    font-weight: 600;
 }
 /*-----------------------------------PAINEL ADM FIM--------------------------*/

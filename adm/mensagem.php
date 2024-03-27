@@ -10,13 +10,13 @@
     </div>
 </div>
 <div id="confirmacao" class="toast custom-toast" style="display: none;" role="alert" aria-live="assertive" aria-atomic="true">
-    <div class="toast-header bg-danger text-white">
+    <div class="toast-header bgdanger-dark text-white border border-0">
         <strong class="me-auto">Confirmação de Exclusão</strong>
-        <button type="button" class="btn-close" onclick="cancelarExclusao()" aria-label="Close"></button>
+        <button type="button" class="btn-close btn-close-white" onclick="cancelarExclusao()" aria-label="Close"></button>
     </div>
-    <div class="toast-body">
+    <div class="toast-body bgdanger">
         <p>Deseja realmente excluir este item?</p>
-        <button class="btn btn-sm btn-primary" id="btnExcluir" >Confirmar</button>
-        <button class="btn btn-sm btn-secondary" onclick="cancelarExclusao()">Cancelar</button>
+        <button class="btn btn-sm btndanger-dark" id="btnExcluir" >Confirmar</button>
+        <button class="btn btn-sm btn-light" onclick="cancelarExclusao()">Cancelar</button>
     </div>
 </div>
