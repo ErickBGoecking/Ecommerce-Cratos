@@ -33,12 +33,18 @@ if (empty($dados['titulo'])) {
         $dataF = formatarDataHoraEn(addslashes(trim($dados['dataF'])));
 
         $identificador = uniqid();
-        $novo_nome = 'Exclusivy-'.$identificador . '.' . $extensao;
+        $novo_nome = 'Exclusivy-' . $identificador . '.' . $extensao;
 
         if (move_uploaded_file($_FILES['img']['tmp_name'], $caminho . $novo_nome)) {
             $retornoInsert = insertSeisId('banner', 'idadm, img, titulo, datai, dataf, tipo', $idAdmin, $novo_nome, $titulo, $dataI, $dataF, $tipo);
             if ($retornoInsert) {
-                $response = ['sucesso' => true, 'mensagem' => "Banner cadastrado com sucesso!"];
+                $acao = "Foi adicionado no sistema Banner $titulo";
+                $retornoInsertAuditoria = insertOitoId('auditoria', 'idadm, acao, tipo, tabela, datahora, ip, pcusuario, dispositivo', $idAdmin, $acao, 1, 'banner', DATATIMEATUAL, "$ip", $pc, $dispositivo);
+                if ($retornoInsertAuditoria) {
+                    $response = ['sucesso' => true, 'mensagem' => "Banner cadastrado com sucesso!"];
+                } else {
+                    $response = ['sucesso' => false, 'mensagem' => "Erro no cadastro auditoria!"];
+                }
             } else {
                 $response = ['sucesso' => false, 'mensagem' => "Erro no cadastro banco de dados!"];
             }

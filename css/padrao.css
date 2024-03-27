@@ -1,6 +1,8 @@
 :root{
-    --cor-principal: #f9d02a;
-    --cor-secundaria: black;
+
+    --cor-principal: #f9d02a; /*amarelo*/
+    --cor-secundaria: black;/*preta*/
+    --cor-segundoPlano: #ece650;/*amarelo claro*/
 
     --cor-btn-primary-fonte: black;
     --cor-btn-secondary-fonte: #f9d02a;

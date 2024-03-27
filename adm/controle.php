@@ -22,6 +22,18 @@ if (isset($controle) && !empty($controle)) {
         case'bannerStatus':
             include_once 'banner/bannerStatus.php';
             break;
+        case'bannerExc':
+            include_once 'banner/bannerExc.php';
+            break;
+        case'bannerVerMais':
+            include_once 'banner/bannerVerMais.php';
+            break;
+        case'bannerDadosAlt':
+            include_once 'banner/bannerVerMais.php';
+            break;
+        case'bannerAlt':
+            include_once 'banner/bannerAlt.php';
+            break;
         default:
             echo 'Padrão alterar';
     }

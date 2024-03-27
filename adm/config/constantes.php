@@ -36,6 +36,20 @@ define('FRETEUNICOSTATUS', 'TODOS');
 //SIM, NÃO, TODOS
 define('FRETEUNICO', '14.90');
 define('FRETEUNICOVALADARES', '9.90');
+$ip = $_SERVER['REMOTE_ADDR'];
+$usuarioPc = get_current_user();
+if(isset($usuarioPc)){
+    $pc = $usuarioPc;
+}else{
+    $pc='Desconhecido';
+}
+$user_agent = $_SERVER['HTTP_USER_AGENT'];
+// Verifica se o User-Agent contém strings comuns para determinar o tipo de dispositivo
+if (strpos($user_agent, 'Mobile') !== false || strpos($user_agent, 'Android') !== false || strpos($user_agent, 'iPhone') !== false || strpos($user_agent, 'iPad') !== false) {
+    $dispositivo = $user_agent;
+} else {
+    $dispositivo = 'Computador';
+}
 
 $servidorLocal = true;
 if ($servidorLocal) {

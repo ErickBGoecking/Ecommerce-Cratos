@@ -2276,30 +2276,7 @@ function listarRegistroUnico($tabela, $campos, $idcampo, $idparametro, $ativo, $
     $conn = null;
 }
 
-//Listar Registro Unico não importa se é ativo ou desativado
-function listarRegistroU($tabela, $campos, $idcampo, $idparametro)
-{
-    $conn = conectar();
-    try {
-        $conn->beginTransaction();
-        $sqlLista = $conn->prepare("SELECT $campos "
-            . "FROM $tabela "
-            . "WHERE $idcampo = ? ");
-        $sqlLista->bindValue(1, $idparametro, PDO::PARAM_STR);
-        $sqlLista->execute();
-        if ($sqlLista->rowCount() > 0) {
-            return $sqlLista->fetchAll(PDO::FETCH_OBJ);
-        } else {
-            return 'Vazio';
-        };
-    } catch
-    (PDOExecption $e) {
-        echo 'Exception -> ';
-        return ($e->getMessage());
-        $conn->rollback();
-    };
-    $conn = null;
-}
+
 
 function listarRegistroUAssoc($tabela, $campos, $idcampo, $idparametro)
 {
@@ -2466,8 +2443,47 @@ function listarGeral($campos, $tabela)
         $conn = null;
     }
 }
+//Listar Registro Unico não importa se é ativo ou desativado
+function listarRegistroU($tabela, $campos, $idcampo, $idparametro)
+{
+    $conn = conectar();
+    try {
+        $conn->beginTransaction();
+        $sqlLista = $conn->prepare("SELECT $campos "
+            . "FROM $tabela "
+            . "WHERE $idcampo = ? ");
+        $sqlLista->bindValue(1, $idparametro, PDO::PARAM_STR);
+        $sqlLista->execute();
+        $retornoLista = $sqlLista->fetchAll(PDO::FETCH_OBJ);
+        if ($retornoLista) {
+            return $retornoLista;
+        } else {
+            return [];
+        }
+    } catch (Throwable $e) {
+        $conn->rollback();
+        $error_message = '';
 
+        $previousException = $e->getPrevious();
+        if ($previousException) {
+            $error_message .= 'Previous Exception: ' . $previousException->getMessage() . PHP_EOL;
+        }
 
+        $error_message .= 'Throwable: ' . $e->getMessage() . PHP_EOL;
+        $error_message .= 'Code: ' . $e->getCode() . PHP_EOL;
+        $trace = $e->getTrace();
+        $error_message .= 'Trace: ' . print_r($trace, true) . PHP_EOL;
+        $error_message .= 'Trace File: ' . $trace[0]['file'] . PHP_EOL;
+        $error_message .= 'Trace Line: ' . $trace[0]['line'] . PHP_EOL;
+        $error_message .= 'File: ' . $e->getFile() . PHP_EOL;
+        $error_message .= 'Line: ' . $e->getLine() . PHP_EOL;
+
+        error_log($error_message, 3, 'log/arquivo_de_log.txt');
+        throw $e;
+    } finally {
+        $conn = null;
+    }
+}
 //Listar CEP
 function listarCepFrete($idcliente, $entrega = 'S')
 {
@@ -2852,6 +2868,7 @@ function insertCincoId($tabela, $campos, $value1, $value2, $value3, $value4, $va
     };
     $conn = null;
 }
+
 function insertSeisId($tabela, $campos, $value1, $value2, $value3, $value4, $value5, $value6)
 {
     $conn = conectar();
@@ -2880,7 +2897,6 @@ function insertSeisId($tabela, $campos, $value1, $value2, $value3, $value4, $val
     }
     $conn = null;
 }
-
 function insertSeis($tabela, $campos, $value1, $value2, $value3, $value4, $value5, $value6)
 {
     $conn = conectar();
@@ -2908,7 +2924,65 @@ function insertSeis($tabela, $campos, $value1, $value2, $value3, $value4, $value
     };
     $conn = null;
 }
+function insertSeteId($tabela, $campos, $value1, $value2, $value3, $value4, $value5, $value6, $value7)
+{
+    $conn = conectar();
+    try {
+        $conn->beginTransaction();
+        $sqInsert = $conn->prepare("INSERT INTO $tabela($campos) VALUES(?,?,?,?,?,?,?)");
+        $sqInsert->bindValue(1, $value1, PDO::PARAM_STR);
+        $sqInsert->bindValue(2, $value2, PDO::PARAM_STR);
+        $sqInsert->bindValue(3, $value3, PDO::PARAM_STR);
+        $sqInsert->bindValue(4, $value4, PDO::PARAM_STR);
+        $sqInsert->bindValue(5, $value5, PDO::PARAM_STR);
+        $sqInsert->bindValue(6, $value6, PDO::PARAM_STR);
+        $sqInsert->bindValue(7, $value7, PDO::PARAM_STR);
 
+        $sqInsert->execute();
+        $idInsertRetorno = $conn->lastInsertId();
+        $conn->commit();
+        if ($sqInsert->rowCount() > 0) {
+            return $idInsertRetorno;
+        } else {
+            return [];
+        }
+    } catch (PDOException $e) {
+        echo 'Exception -> ';
+        echo $e->getMessage();
+        $conn->rollback();
+    }
+    $conn = null;
+}
+function insertOitoId($tabela, $campos, $value1, $value2, $value3, $value4, $value5, $value6, $value7, $value8)
+{
+    $conn = conectar();
+    try {
+        $conn->beginTransaction();
+        $sqInsert = $conn->prepare("INSERT INTO $tabela($campos) VALUES(?,?,?,?,?,?,?,?)");
+        $sqInsert->bindValue(1, $value1, PDO::PARAM_STR);
+        $sqInsert->bindValue(2, $value2, PDO::PARAM_STR);
+        $sqInsert->bindValue(3, $value3, PDO::PARAM_STR);
+        $sqInsert->bindValue(4, $value4, PDO::PARAM_STR);
+        $sqInsert->bindValue(5, $value5, PDO::PARAM_STR);
+        $sqInsert->bindValue(6, $value6, PDO::PARAM_STR);
+        $sqInsert->bindValue(7, $value7, PDO::PARAM_STR);
+        $sqInsert->bindValue(8, $value8, PDO::PARAM_STR);
+
+        $sqInsert->execute();
+        $idInsertRetorno = $conn->lastInsertId();
+        $conn->commit();
+        if ($sqInsert->rowCount() > 0) {
+            return $idInsertRetorno;
+        } else {
+            return [];
+        }
+    } catch (PDOException $e) {
+        echo 'Exception -> ';
+        echo $e->getMessage();
+        $conn->rollback();
+    }
+    $conn = null;
+}
 function insertOito($tabela, $campos, $value1, $value2, $value3, $value4, $value5, $value6, $value7, $value8)
 {
     $conn = conectar();
@@ -3298,7 +3372,7 @@ function updateAtivar($tabela, $idcampo, $idparametro)
         if ($sqUpdate->rowCount() > 0) {
             return $ativadoDesativado;
         } else {
-            return 'nAtualizado';
+            return [];
         };
     } catch
     (PDOExecption $e) {
@@ -3497,7 +3571,8 @@ function altUm($tabela, $campoBd, $valorReceberInput, $campoBdId, $inputInivisiv
         $conn = null;
     }
 }
-function altDois($tabela, $campoBd, $valorReceberInput,$campoBd2,$valorReceberInput2, $campoBdId, $inputInivisivelVeioDoInput)
+
+function altDois($tabela, $campoBd, $valorReceberInput, $campoBd2, $valorReceberInput2, $campoBdId, $inputInivisivelVeioDoInput)
 {
     {
         $conn = conectar();
@@ -3523,6 +3598,7 @@ function altDois($tabela, $campoBd, $valorReceberInput,$campoBd2,$valorReceberIn
         $conn = null;
     }
 }
+
 function altTres($tabela, $campoBd, $campoBd2, $campoBd3, $valorReceberInput1, $valorReceberInput2, $valorReceberInput3, $campoBdId, $inputInivisivelVeioDoInput)
 {
     {
@@ -3550,6 +3626,7 @@ function altTres($tabela, $campoBd, $campoBd2, $campoBd3, $valorReceberInput1, $
         $conn = null;
     }
 }
+
 function upUm($tabela, $campo1, $campoId, $valor1, $valorId)
 {
     $conn = conectar();
@@ -3667,10 +3744,10 @@ function upCinco($tabela, $campo1, $campo2, $campo3, $campo4, $campo5, $campoId,
         $sqUpdate->execute();
         $conn->commit();
         if ($sqUpdate->rowCount() > 0) {
-            return 'Atualizado';
+            return $valeuId;
         } else {
-            return 'nAtualizado';
-        };
+            return false;
+        }
     } catch
     (PDOExecption $e) {
         echo 'Exception -> ';
@@ -3685,7 +3762,7 @@ function upSeis($tabela, $campo1, $campo2, $campo3, $campo4, $campo5, $campo6, $
     $conn = conectar();
     try {
         $conn->beginTransaction();
-        $sqUpdate = $conn->prepare("UPDATE $tabela SET $campo1 = ?, $campo2 = ?, $campo3 = ?, $campo4 = ?, $campo5 = ?, $campo6 = ? WHERE $campoId = ? ");
+        $sqUpdate = $conn->prepare("UPDATE $tabela SET $campo1 = ?, $campo2 = ?, $campo3 = ?, $campo4 = ?, $campo5 = ?, $campo6 = ? WHERE $campoId = ?");
         $sqUpdate->bindValue(1, $valeu1, PDO::PARAM_STR);
         $sqUpdate->bindValue(2, $valeu2, PDO::PARAM_STR);
         $sqUpdate->bindValue(3, $valeu3, PDO::PARAM_STR);
@@ -3696,18 +3773,16 @@ function upSeis($tabela, $campo1, $campo2, $campo3, $campo4, $campo5, $campo6, $
         $sqUpdate->execute();
         $conn->commit();
         if ($sqUpdate->rowCount() > 0) {
-            return 'Atualizado';
+            return $valeuId;
         } else {
-            return 'nAtualizado';
-        };
-    } catch
-    (PDOExecption $e) {
-        echo 'Exception -> ';
-        return ($e->getMessage());
+            return false;
+        }
+    } catch (PDOExecption $e) {
         $conn->rollback();
-    };
-    $conn = null;
+        return false;
+    }
 }
+
 
 function upSete($tabela, $campo1, $campo2, $campo3, $campo4, $campo5, $campo6, $campo7, $campoId, $valeu1, $valeu2, $valeu3, $valeu4, $valeu5, $valeu6, $valeu7, $valeuId)
 {
@@ -3972,9 +4047,9 @@ function deleteRegistroUnico($tabela, $campoReferencia, $idparametro)
         $sqUpdate->execute();
         $conn->commit();
         if ($sqUpdate->rowCount() > 0) {
-            return 'Deletado com Sucesso';
+            return true;
         } else {
-            return 'Nao Deletado';
+            return [];
         };
     } catch
     (PDOExecption $e) {

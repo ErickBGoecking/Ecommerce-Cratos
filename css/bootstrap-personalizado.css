@@ -152,4 +152,12 @@
     --bs-pagination-color: gray!important;
     --bs-pagination-border-color: gray!important;
 }
+.custom-toast {
+    position: fixed;
+    top: 0;
+    right: 0;
+    margin: 2rem;
+    z-index: 9999;
+    background-color: var(--cor-segundoPlano) !important;
+}
 /*-----------------------------------PAINEL ADM FIM--------------------------*/
