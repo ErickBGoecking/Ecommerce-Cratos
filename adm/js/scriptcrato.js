@@ -28,6 +28,22 @@ if (generoModalAlt) {
     });
 }
 
+const tipoCargoModal = document.getElementById('modalTipoCargoAdd');
+const cargoTipoModalAlt = document.getElementById('cargoTipoModalAlt');
+if (tipoCargoModal) {
+    tipoCargoModal.addEventListener('shown.bs.modal', () => {
+        const inTipoCargo = document.getElementById('inTipoCargo');
+        inTipoCargo.focus();
+    });
+}
+if (cargoTipoModalAlt) {
+    cargoTipoModalAlt.addEventListener('shown.bs.modal', () => {
+        const inCargoTipoAlt = document.getElementById('inCargoTipoAlt');
+        inCargoTipoAlt.focus();
+    });
+}
+
+
 function mensagem(msg) {
     var liveToast = document.getElementById('liveToast');
     var toast = new bootstrap.Toast(liveToast);
@@ -210,7 +226,39 @@ function generoVeMais(vermais, controle) {
         })
         .catch(error => console.error('Erro na requisição:', error));
 }
-
+function cargoTipoVeMais(vermais, controle) {
+    fetch('controle.php', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/x-www-form-urlencoded',
+        },
+        body: 'controle=' + encodeURIComponent(controle) + '&vermais=' + encodeURIComponent(vermais),
+    })
+        .then(response => response.json())
+        .then(data => {
+            if (data) {
+                var estatus = '';
+                data.cadastro = formatarDataBrasileira(data.cadastro);
+                data.alteracao = formatarDataBrasileira(data.alteracao);
+                if (data.ativo == 'A') {
+                    estatus = 'Ativado';
+                    document.getElementById('iEstatus').classList.add('text-success');
+                    document.getElementById('iEstatus').classList.remove('text-danger');
+                } else {
+                    estatus = 'Desativado';
+                    document.getElementById('iEstatus').classList.add('text-danger');
+                    document.getElementById('iEstatus').classList.remove('text-success');
+                }
+                document.getElementById('iCargoTipoTitulo').innerText = data.tipocargo;
+                document.getElementById('iCadastro').innerText = data.cadastro;
+                document.getElementById('iAlteracao').innerText = data.alteracao;
+                document.getElementById('iEstatus').innerText = estatus;
+            } else {
+                mensagem(data.mensagem);
+            }
+        })
+        .catch(error => console.error('Erro na requisição:', error));
+}
 function bannerDadosAlterar(alterar, controle) {
     fetch('controle.php', {
         method: 'POST',
@@ -272,7 +320,25 @@ function generoDadosAlterar(alterar, controle) {
         })
         .catch(error => console.error('Erro na requisição:', error));
 }
-
+function cargoTipoDadosAlterar(alterar, controle) {
+    fetch('controle.php', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/x-www-form-urlencoded',
+        },
+        body: 'controle=' + encodeURIComponent(controle) + '&vermais=' + encodeURIComponent(alterar),
+    })
+        .then(response => response.json())
+        .then(data => {
+            if (data) {
+                document.getElementById('idCargoTipoAlt').value = data.idcargotipo;
+                document.getElementById('inCargoTipoAlt').value = data.tipocargo;
+            } else {
+                mensagem(data.mensagem);
+            }
+        })
+        .catch(error => console.error('Erro na requisição:', error));
+}
 function alterarGeral(controle, modalAlt, frm) {
     var form = document.getElementById(frm);
     var formData = new FormData(form);

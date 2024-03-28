@@ -52,6 +52,24 @@ if (isset($controle) && !empty($controle)) {
         case'generoAlt':
             include_once 'genero/generoAlt.php';
             break;
+        case'cargoTipoAdd':
+            include_once 'cargo/cargoTipoAdd.php';
+            break;
+        case'cartoTipoStatus':
+            include_once 'cargo/cartoTipoStatus.php';
+            break;
+        case'cargoTipoExc':
+            include_once 'cargo/cargoTipoExc.php';
+            break;
+        case'cargoTipoVerMais':
+            include_once 'cargo/cargoTipoVerMais.php';
+            break;
+        case'cargoTipoDadosAlt':
+            include_once 'cargo/cargoTipoVerMais.php';
+            break;
+        case'cargoTipoAlt':
+            include_once 'cargo/cargoTipoDadosAlt.php';
+            break;
         default:
             echo 'Padrão alterar';
     }

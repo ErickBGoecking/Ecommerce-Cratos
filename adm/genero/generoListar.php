@@ -75,8 +75,6 @@
             <?php
         }
         ?>
-        <!--            </tbody>-->
-        <!--        </table>-->
         <div class="row float-end">
             <div class="col-8">
                 <nav aria-label="Page navigation example">
