@@ -13,6 +13,8 @@ $menu = array(
     "Configurações" => array(
         "icone" => "mdi mdi-cog",
         "subMenu" => array(
+            "Genero" => array("icone" => "mdi mdi-card-account-details-star", "link" => "genero"),
+            "Cargos Tipos" => array("icone" => "mdi mdi-card-account-details-star", "link" => "cargoTipo"),
             "Cargos" => array("icone" => "mdi mdi-card-account-details-star", "link" => "cargo"),
             "Funcionários" => array("icone" => "mdi mdi-card-account-details", "link" => "funcionario"),
             "Banners" => array("icone" => "mdi mdi-panorama", "link" => "banner"),

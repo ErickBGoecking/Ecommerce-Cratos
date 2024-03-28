@@ -1,42 +1,32 @@
 <nav aria-label="breadcrumb">
     <ol class="breadcrumb">
         <li class="breadcrumb-item"><a href="adm.php">Home</a></li>
-        <li class="breadcrumb-item active"><a href="?pagina=banner">Banners</a></li>
-        <!--        <li class="breadcrumb-item active" aria-current="page">Data</li>-->
+        <li class="breadcrumb-item active"><a href="?pagina=cargoTipo">Cargos</a></li>
+<!--                <li class="breadcrumb-item active" aria-current="page">Cargos Tipos</li>-->
     </ol>
 </nav>
 <div class="card">
     <div class="card-header">
-        #Listar Banners
+        #Listar Tipos de Cargos
         <button type="button" class="btn btn-sm btn-primary float-end" data-bs-toggle="modal"
-                data-bs-target="#modalBannerAdd">Cadastrar
+                data-bs-target="#modalCargotipoAdd">Cadastrar
         </button>
     </div>
     <div class="card-body">
         <?php
-        $listarBanner = listarGeral('b.idbanner, b.img, b.titulo, b.datai, b.dataf, b.tipo, b.cadastro, b.alteracao, b.ativo, p.nome, p.sobrenome', 'banner b INNER JOIN pessoa p ON p.idpessoa = b.idadm ORDER BY b.idbanner DESC');
-        if ($listarBanner) {
-            foreach ($listarBanner as $itemBanner) {
-                $idbanner = $itemBanner->idbanner;
-                $adm = $itemBanner->nome;
-                $admSobrenome = $itemBanner->sobrenome;
-                $nomeCompleto = $adm . ' ' . $admSobrenome;
-                $img = $itemBanner->img;
-                if (empty($img)) {
-                    $img = 'sem-imagem.png';
-                }
-                $titulo = $itemBanner->titulo;
-                $datai = formatarDataHoraBr($itemBanner->datai);
-                $dataf = formatarDataHoraBr($itemBanner->dataf);
-                $tipo = $itemBanner->tipo;
-                $cadastro = $itemBanner->cadastro;
-                $alteracao = $itemBanner->alteracao;
-                $ativo = $itemBanner->ativo;
+        $listarCargoTipo = listarGeral('idcargotipo, tipocargo, cadastro, alteracao, ativo', 'cargotipo ORDER BY idcargotipo DESC');
+        if ($listarCargoTipo) {
+            foreach ($listarCargoTipo as $itemCargoTipo) {
+                $idCargoTipo = $itemCargoTipo->idcargotipo;
+                $tipoCargo = $itemCargoTipo->tipocargo;
+                $cadastro = $itemCargoTipo->cadastro;
+                $alteracao = $itemCargoTipo->alteracao;
+                $ativo = $itemCargoTipo->ativo;
                 if ($ativo == 'A') {
-                    $btnAtivo = '<a href="#" class="btn btn-sm btn-outline-primary" aria-current="page" title="Banner Ativado. Clique para Desativar" id="btnStatus" onclick="statusGeral(' . $idbanner . ',\'bannerStatus\');"><span class="mdi mdi-lock-open-check text-success"></span>Ativo</a>';
+                    $btnAtivo = '<a href="#" class="btn btn-sm btn-outline-primary" aria-current="page" title="Banner Ativado. Clique para Desativar" id="btnStatus" onclick="statusGeral(' . $idCargoTipo . ',\'bannerStatus\');"><span class="mdi mdi-lock-open-check text-success"></span>Ativo</a>';
 
                 } else {
-                    $btnAtivo = '<a href="#" class="btn btn-sm btn-outline-primary" aria-current="page" title="Banner Desativado. Clique para Ativar" id="btnStatus" onclick="statusGeral(' . $idbanner . ',\'bannerStatus\');"><span class="mdi mdi-lock-check text-danger"></span> Desativado</a>';
+                    $btnAtivo = '<a href="#" class="btn btn-sm btn-outline-primary" aria-current="page" title="Banner Desativado. Clique para Ativar" id="btnStatus" onclick="statusGeral(' . $idCargoTipo . ',\'bannerStatus\');"><span class="mdi mdi-lock-check text-danger"></span> Desativado</a>';
                 }
                 ?>
                 <div class="card card-lista mt-2 border border-0 shadow-sm">
@@ -46,7 +36,7 @@
                                 <img src="./banner/img/<?php echo $img; ?>" class="rounded-circle"
                                      style="width:50px;height:50px;">
                                 <div class="d-flex flex-column ps-2">
-                                    <div><strong>Títiulo:</strong> <?php echo $titulo ?></div>
+                                    <div><strong>Títiulo:</strong> <?php echo $tipoCargo ?></div>
                                     <div class="d-flex flex-md-row flex-column">
                                         <div class=""><strong>Data Início:</strong> <?php echo $datai ?></div>
                                         <div class="ps-md-2"><strong>Data Fim:</strong> <?php echo $dataf ?></div>
@@ -63,17 +53,17 @@
                                 <a href="#" class="btn btn-sm btn-outline-primary" aria-current="page"
                                    data-bs-toggle="modal" data-bs-target="#modalBannerVerMais"
                                    title="Ver detalhes do banner"
-                                   onclick="bannerVeMais(<?php echo $idbanner ?>,'bannerVerMais')"><span
-                                            class="mdi mdi-monitor-eye"></span> Ver Mais</a>
+                                   onclick="bannerVeMais(<?php echo $idCargoTipo ?>,'bannerVerMais')"><span
+                                        class="mdi mdi-monitor-eye"></span> Ver Mais</a>
                                 <a href="#" class="btn btn-sm btn-outline-primary"
                                    title="Alterar informações do Banner" data-bs-toggle="modal"
                                    data-bs-target="#modalBannerAlt"
-                                   onclick="bannerDadosAlterar(<?php echo $idbanner ?>,'bannerDadosAlt');"><span
-                                            class="mdi mdi-file-document-edit"></span>
+                                   onclick="bannerDadosAlterar(<?php echo $idCargoTipo ?>,'bannerDadosAlt');"><span
+                                        class="mdi mdi-file-document-edit"></span>
                                     Alterar</a>
                                 <a href="#" class="btn btn-sm btn-outline-primary" title="Excluir Banner"
-                                   onclick="excGeral(<?php echo $idbanner ?>,'bannerExc','btnExcluir');"><span
-                                            class="mdi mdi-delete-alert"></span> Excluir</a>
+                                   onclick="excGeral(<?php echo $idCargoTipo ?>,'bannerExc','btnExcluir');"><span
+                                        class="mdi mdi-delete-alert"></span> Excluir</a>
                             </div>
                         </div>
                     </div>
@@ -287,17 +277,17 @@
                         <div class="card-body">
                             <h5 class="card-title"><span id="iBannerTitulo"></span></h5>
                             <p class=" d-flex flex-md-row flex-column gap-2"><span
-                                        class="mdi mdi-calendar"></span><strong>Data Início:</strong> <span
-                                        id="iDataInicio"></span></p>
+                                    class="mdi mdi-calendar"></span><strong>Data Início:</strong> <span
+                                    id="iDataInicio"></span></p>
                             <p class="card-text d-flex flex-md-row flex-column gap-2"><span
-                                        class="mdi mdi-calendar"></span><strong>Data Fim:</strong> <span
-                                        id="iDataFim"></span></p>
+                                    class="mdi mdi-calendar"></span><strong>Data Fim:</strong> <span
+                                    id="iDataFim"></span></p>
                             <p class="card-text"><span class="mdi mdi-account-check"></span><strong>Adm: </strong><span
-                                        id="iAdm"></span></p>
+                                    id="iAdm"></span></p>
                             <p class="card-text"><span class="mdi mdi-calendar"></span><strong>Cadastro: </strong><span
-                                        id="iCadastro"></span></p>
+                                    id="iCadastro"></span></p>
                             <p class="card-text"><span class="mdi mdi-calendar"></span><strong>Alteração: </strong><span
-                                        id="iAlteracao"></span></p>
+                                    id="iAlteracao"></span></p>
                             <p class="card-text"><span class="mdi mdi-lock-open-check"></span><strong>Estatus:</strong>
                                 <span id="iEstatus"></span></p>
                         </div>

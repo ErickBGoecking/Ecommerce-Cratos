@@ -14,16 +14,16 @@ if (empty($dados['excluir'])) {
 } else {
     $idbanner = $dados['excluir'];
     $retornoListarImg = listarRegistroU('banner', 'img, titulo', 'idbanner', $idbanner);
-
     if ($retornoListarImg) {
         foreach ($retornoListarImg as $itemListarImg) {
             $img = $itemListarImg->img;
             $titulo = $itemListarImg->titulo;
         }
         $caminho = "banner/img/$img";
-        $acao = "Foi Excluido do sistema Banner $titulo";
+    } else {
+        $titulo = '';
     }
-
+    $acao = "Foi Excluido do sistema Banner $titulo";
     if (isset($caminho) && file_exists($caminho)) {
         if (unlink($caminho)) {
             $retornoExcluir = deleteRegistroUnico('banner', 'idbanner', $idbanner);

@@ -13,6 +13,20 @@ function previewImg(idimg, imgPreview) {
     });
 }
 
+const generoModal = document.getElementById('modalGeneroAdd');
+const generoModalAlt = document.getElementById('modalGeneroAlt');
+if (generoModal) {
+    generoModal.addEventListener('shown.bs.modal', () => {
+        const inGenero = document.getElementById('inGenero');
+        inGenero.focus();
+    });
+}
+if (generoModalAlt) {
+    generoModalAlt.addEventListener('shown.bs.modal', () => {
+        const inGeneroAlt = document.getElementById('inGeneroAlt');
+        inGeneroAlt.focus();
+    });
+}
 
 function mensagem(msg) {
     var liveToast = document.getElementById('liveToast');
@@ -163,6 +177,40 @@ function bannerVeMais(vermais, controle) {
         .catch(error => console.error('Erro na requisição:', error));
 }
 
+function generoVeMais(vermais, controle) {
+    fetch('controle.php', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/x-www-form-urlencoded',
+        },
+        body: 'controle=' + encodeURIComponent(controle) + '&vermais=' + encodeURIComponent(vermais),
+    })
+        .then(response => response.json())
+        .then(data => {
+            if (data) {
+                var estatus = '';
+                data.cadastro = formatarDataBrasileira(data.cadastro);
+                data.alteracao = formatarDataBrasileira(data.alteracao);
+                if (data.ativo == 'A') {
+                    estatus = 'Ativado';
+                    document.getElementById('iEstatus').classList.add('text-success');
+                    document.getElementById('iEstatus').classList.remove('text-danger');
+                } else {
+                    estatus = 'Desativado';
+                    document.getElementById('iEstatus').classList.add('text-danger');
+                    document.getElementById('iEstatus').classList.remove('text-success');
+                }
+                document.getElementById('iGeneroTitulo').innerText = data.genero;
+                document.getElementById('iCadastro').innerText = data.cadastro;
+                document.getElementById('iAlteracao').innerText = data.alteracao;
+                document.getElementById('iEstatus').innerText = estatus;
+            } else {
+                mensagem(data.mensagem);
+            }
+        })
+        .catch(error => console.error('Erro na requisição:', error));
+}
+
 function bannerDadosAlterar(alterar, controle) {
     fetch('controle.php', {
         method: 'POST',
@@ -205,6 +253,26 @@ function bannerDadosAlterar(alterar, controle) {
         .catch(error => console.error('Erro na requisição:', error));
 }
 
+function generoDadosAlterar(alterar, controle) {
+    fetch('controle.php', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/x-www-form-urlencoded',
+        },
+        body: 'controle=' + encodeURIComponent(controle) + '&vermais=' + encodeURIComponent(alterar),
+    })
+        .then(response => response.json())
+        .then(data => {
+            if (data) {
+                document.getElementById('idGeneroAlt').value = data.idgenero;
+                document.getElementById('inGeneroAlt').value = data.genero;
+            } else {
+                mensagem(data.mensagem);
+            }
+        })
+        .catch(error => console.error('Erro na requisição:', error));
+}
+
 function alterarGeral(controle, modalAlt, frm) {
     var form = document.getElementById(frm);
     var formData = new FormData(form);
@@ -215,7 +283,6 @@ function alterarGeral(controle, modalAlt, frm) {
     })
         .then(response => response.json())
         .then(data => {
-            console.log(data);
             if (data.sucesso) {
                 mensagem(data.mensagem);
                 var modal = document.getElementById(modalAlt);

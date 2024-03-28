@@ -24,7 +24,7 @@ if (empty($dados['idBanner'])) {
     $tipo = addslashes(trim($dados['sTipoAlt']));
     $dataI = formatarDataHoraEn(addslashes(trim($dados['dataIAlt'])));
     $dataF = formatarDataHoraEn(addslashes(trim($dados['dataFAlt'])));
-    $acao = "Foi Alterado $titulo no sistema!";
+    $acao = "Foi Alterado banner $titulo no sistema!";
     if (!isset($_FILES['imgAlt']) || $_FILES['imgAlt']['error'] !== UPLOAD_ERR_OK) {
         $retornoUpdage = upCinco('banner', 'idadm', 'titulo', 'datai', 'dataf', 'tipo', 'idbanner', "$idAdmin", "$titulo", "$dataI", "$dataF", "$tipo", "$idbanner");
         if ($retornoUpdage) {

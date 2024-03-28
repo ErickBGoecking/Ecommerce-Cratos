@@ -34,6 +34,24 @@ if (isset($controle) && !empty($controle)) {
         case'bannerAlt':
             include_once 'banner/bannerAlt.php';
             break;
+        case'generoAdd':
+            include_once 'genero/generoAdd.php';
+            break;
+        case'generoStatus':
+            include_once 'genero/generoStatus.php';
+            break;
+        case'generoExc':
+            include_once 'genero/generoExc.php';
+            break;
+        case'generoVerMais':
+            include_once 'genero/generoVerMais.php';
+            break;
+        case'generoDadosAlt':
+            include_once 'genero/generoVerMais.php';
+            break;
+        case'generoAlt':
+            include_once 'genero/generoAlt.php';
+            break;
         default:
             echo 'Padrão alterar';
     }

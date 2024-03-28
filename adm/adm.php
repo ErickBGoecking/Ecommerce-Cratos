@@ -77,6 +77,12 @@ include_once("topo.php");
                 case "administrador":
                     include_once('./administrador/listaAdministrador.php');
                     break;
+                case "cargoTipo":
+                    include_once('./cargo/cargoTipoListar.php');
+                    break;
+                case "genero":
+                    include_once('./genero/generoListar.php');
+                    break;
             }
             ?>
         </div>

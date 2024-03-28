@@ -2658,7 +2658,29 @@ function insertAuditoria($idsis, $responsavel, $acao, $idafetado, $nomeafetado, 
     };
     $conn = null;
 }
+function insertUmId($tabela, $campos, $value1)
+{
+    $conn = conectar();
+    try {
+        $conn->beginTransaction();
+        $sqInsert = $conn->prepare("INSERT INTO $tabela($campos) VALUES(?)");
+        $sqInsert->bindValue(1, $value1, PDO::PARAM_STR);
 
+        $sqInsert->execute();
+        $idInsertRetorno = $conn->lastInsertId();
+        $conn->commit();
+        if ($sqInsert->rowCount() > 0) {
+            return $idInsertRetorno;
+        } else {
+            return [];
+        }
+    } catch (PDOException $e) {
+        echo 'Exception -> ';
+        echo $e->getMessage();
+        $conn->rollback();
+    }
+    $conn = null;
+}
 function insertDois($tabela, $campos, $valeu1, $valeu2)
 {
     $conn = conectar();
@@ -4041,7 +4063,6 @@ function deleteRegistroUnico($tabela, $campoReferencia, $idparametro)
     $conn = conectar();
     try {
         $conn->beginTransaction();
-
         $sqUpdate = $conn->prepare("DELETE FROM $tabela WHERE $campoReferencia = ?");
         $sqUpdate->bindValue(1, $idparametro, PDO::PARAM_INT);
         $sqUpdate->execute();
