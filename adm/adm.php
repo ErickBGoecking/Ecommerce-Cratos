@@ -7,6 +7,17 @@ include_once './config/conexao.php';
 //    session_start();
 //}
 validarSessaoExterna('index.php');
+$idAdmin = $_SESSION['idsis'];
+$retornoAdm = listarGeral('idpessoa', "pessoa WHERE idpessoa = $idAdmin AND ativo = 'A'");
+if ($retornoAdm) {
+    foreach ($retornoAdm as $itemAdm) {
+        $idAdmin = $itemAdm->idpessoa;
+    }
+} else {
+    session_destroy();
+    header("Location: index.php");
+    exit();
+}
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">

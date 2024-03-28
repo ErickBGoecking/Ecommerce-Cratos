@@ -281,7 +281,7 @@
 
                 <div class="card mb-3">
                     <div class="row g-0">
-                        <img src="./banner/img/Exclusivy-660358388556a.jpeg" style="max-height: 300px;"
+                        <img src="./banner/img/sem-imagem.png" style="max-height: 300px;"
                              class="img-fluid rounded-start" alt="Detalhes do banner!" title="Detalhes do banner!"
                              id="imgBanner">
                         <div class="card-body">
