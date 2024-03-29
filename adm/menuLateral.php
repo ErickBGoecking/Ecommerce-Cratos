@@ -10,13 +10,18 @@ $menu = array(
             "Fornecedores" => array("icone" => "mdi mdi-account-tie", "link" => "fornecedor"),
         )
     ),
+    "Administrador" => array(
+        "icone" => "mdi mdi-content-save-move",
+        "subMenu" => array(
+            "Usuarios" => array("icone" => "mdi mdi-account", "link" => "usuarios"),
+        )
+    ),
     "Configurações" => array(
         "icone" => "mdi mdi-cog",
         "subMenu" => array(
             "Cargos" => array("icone" => "mdi mdi-card-account-details-star", "link" => "cargo"),
             "Funcionários" => array("icone" => "mdi mdi-card-account-details", "link" => "funcionario"),
-            "Banners" => array("icone" => "mdi mdi-panorama", "link" => "banner"),
-            "Administradores" => array("icone" => "mdi mdi-account-tie", "link" => "administrador"),
+            "Banners" => array("icone" => "mdi mdi-panorama", "link" => "banner")
         )
     ),
     "Mensagens" => array("icone" => "mdi mdi-email", "link" => "mensagem"),

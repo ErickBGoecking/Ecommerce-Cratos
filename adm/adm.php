@@ -74,8 +74,8 @@ include_once("topo.php");
                 case "banner":
                     include_once('./banner/listaBanner.php');
                     break;
-                case "administrador":
-                    include_once('./administrador/listaAdministrador.php');
+                case "usuarios":
+                    include_once('./user/listaUsuarios.php');
                     break;
             }
             ?>

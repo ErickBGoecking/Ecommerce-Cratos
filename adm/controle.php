@@ -34,6 +34,12 @@ if (isset($controle) && !empty($controle)) {
         case'bannerAlt':
             include_once 'banner/bannerAlt.php';
             break;
+        case'usuarioAdd':
+            include_once 'user/usuarioAdd.php';
+            break;
+        case'usuarioExc':
+            include_once 'user/usuarioExc.php';
+            break;
         default:
             echo 'Padrão alterar';
     }
