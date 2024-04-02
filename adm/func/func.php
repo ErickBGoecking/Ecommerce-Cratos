@@ -35,7 +35,7 @@ function validarSessao($redirecionar)
             exit();
         };
     } catch
-    (PDOExecption $e) {
+    (PDOException $e) {
         echo 'Exception -> ';
         return ($e->getMessage());
         $conn->rollback();
@@ -202,7 +202,7 @@ function validarNivelAcesso($idNivel, $idSis)
             return 'varFalse';
         };
     } catch
-    (PDOExecption $e) {
+    (PDOException $e) {
         echo 'Exception -> ';
         return ($e->getMessage());
         $conn->rollback();
@@ -227,7 +227,7 @@ function NivelAcessoCategoria()
             return 'Vazio';
         };
     } catch
-    (PDOExecption $e) {
+    (PDOException $e) {
         echo 'Exception -> ';
         return ($e->getMessage());
         $conn->rollback();
@@ -251,7 +251,7 @@ function NivelNomeCategoria($categoria)
             return 'Vazio';
         };
     } catch
-    (PDOExecption $e) {
+    (PDOException $e) {
         echo 'Exception -> ';
         return ($e->getMessage());
         $conn->rollback();
@@ -277,7 +277,7 @@ function NivelBtnSelecionado($idnivel, $idsis)
             return 'Vazio';
         };
     } catch
-    (PDOExecption $e) {
+    (PDOException $e) {
         echo 'Exception -> ';
         return ($e->getMessage());
         $conn->rollback();
@@ -303,7 +303,7 @@ function verificarDoisCampo($tabela, $campo, $campoId, $campoId2, $campoParament
             return 'Vazio';
         };
     } catch
-    (PDOExecption $e) {
+    (PDOException $e) {
         echo 'Exception -> ';
         return ($e->getMessage());
         $conn->rollback();
@@ -328,7 +328,7 @@ function verificarCampo($tabela, $campo, $campoId, $campoParamentro)
             return 'Vazio';
         };
     } catch
-    (PDOExecption $e) {
+    (PDOException $e) {
         echo 'Exception -> ';
         return ($e->getMessage());
         $conn->rollback();
@@ -355,7 +355,7 @@ function verificarCampoTresParametros($tabela, $campo, $campoId, $campoId2, $cam
             return 'Vazio';
         };
     } catch
-    (PDOExecption $e) {
+    (PDOException $e) {
         echo 'Exception -> ';
         return ($e->getMessage());
         $conn->rollback();
@@ -383,7 +383,7 @@ function verificarCampoQuatroParametros($tabela, $campo, $campoId, $campoId2, $c
             return 'Vazio';
         };
     } catch
-    (PDOExecption $e) {
+    (PDOException $e) {
         echo 'Exception -> ';
         return ($e->getMessage());
         $conn->rollback();
@@ -411,7 +411,7 @@ function verificarCampoQuatroParametrosRetornaObjeto($tabela, $campo, $campoId, 
             return 'Vazio';
         };
     } catch
-    (PDOExecption $e) {
+    (PDOException $e) {
         echo 'Exception -> ';
         return ($e->getMessage());
         $conn->rollback();
@@ -472,7 +472,7 @@ function listarRegistroParam($tabela, $campos, $campoComparacao, $campoParametro
             return 'false';
         }
     } catch
-    (PDOExecption $e) {
+    (PDOException $e) {
         echo 'Exception -> ';
         return ($e->getMessage());
         $conn->rollback();
@@ -508,7 +508,7 @@ function listarRegistroParamMaiorMenor($tabela, $campos, $campoComparacao, $camp
             return 'false';
         }
     } catch
-    (PDOExecption $e) {
+    (PDOException $e) {
         echo 'Exception -> ';
         return ($e->getMessage());
         $conn->rollback();
@@ -543,7 +543,7 @@ function listarRegistroParamMaiorMenorNativo($tabela, $campos, $campoComparacao,
             return 'false';
         }
     } catch
-    (PDOExecption $e) {
+    (PDOException $e) {
         echo 'Exception -> ';
         return ($e->getMessage());
         $conn->rollback();
@@ -569,7 +569,7 @@ function listarRegPagi($tabela, $campos, $orderby, $inicio, $maximo)
             return 'false';
         };
     } catch
-    (PDOExecption $e) {
+    (PDOException $e) {
         echo 'Exception -> ';
         return ($e->getMessage());
         $conn->rollback();
@@ -595,7 +595,7 @@ function listarRegPagiParametro($tabela, $campos, $inicio, $maximo, $campoCondic
             return 'false';
         };
     } catch
-    (PDOExecption $e) {
+    (PDOException $e) {
         echo 'Exception -> ';
         return ($e->getMessage());
         $conn->rollback();
@@ -620,7 +620,7 @@ function contadorRegistro($tabela, $campo, $condicao)
             return false;
         };
     } catch
-    (PDOExecption $e) {
+    (PDOException $e) {
         echo 'Exception -> ';
         return ($e->getMessage());
         $conn->rollback();
@@ -646,7 +646,7 @@ function contadorRegistroUnico($tabela, $campo, $condicao)
             return false;
         };
     } catch
-    (PDOExecption $e) {
+    (PDOException $e) {
         echo 'Exception -> ';
         return ($e->getMessage());
         $conn->rollback();
@@ -671,7 +671,7 @@ function contadorRegistroParametros($tabela, $campoCondicaoJuntos)
             return false;
         };
     } catch
-    (PDOExecption $e) {
+    (PDOException $e) {
         echo 'Exception -> ';
         return ($e->getMessage());
         $conn->rollback();
@@ -697,7 +697,7 @@ function contadorRegistroTodos($tabela)
             return false;
         };
     } catch
-    (PDOExecption $e) {
+    (PDOException $e) {
         echo 'Exception -> ';
         return ($e->getMessage());
         $conn->rollback();
@@ -726,7 +726,7 @@ function contadorRegistroLive()
             return false;
         };
     } catch
-    (PDOExecption $e) {
+    (PDOException $e) {
         echo 'Exception -> ';
         return ($e->getMessage());
         $conn->rollback();
@@ -756,7 +756,7 @@ function contadorRegistroLiveId($idConfigLive)
             return false;
         };
     } catch
-    (PDOExecption $e) {
+    (PDOException $e) {
         echo 'Exception -> ';
         return ($e->getMessage());
         $conn->rollback();
@@ -783,7 +783,7 @@ function contadorRegistroCXreservaLive($idAdmOperador)
             return false;
         };
     } catch
-    (PDOExecption $e) {
+    (PDOException $e) {
         echo 'Exception -> ';
         return ($e->getMessage());
         $conn->rollback();
@@ -815,7 +815,7 @@ function contadorRelatorioVendasGeral($condicao)
             return false;
         };
     } catch
-    (PDOExecption $e) {
+    (PDOException $e) {
         echo 'Exception -> ';
         return ($e->getMessage());
         $conn->rollback();
@@ -848,7 +848,7 @@ function contadorRelatorioVendasGeralProduto($condicao, $dataInicio, $dataFim)
             return false;
         };
     } catch
-    (PDOExecption $e) {
+    (PDOException $e) {
         echo 'Exception -> ';
         return ($e->getMessage());
         $conn->rollback();
@@ -880,7 +880,7 @@ function contadorRelatorioVendasGeralData($condicao, $dataInicio, $dataFim)
             return false;
         };
     } catch
-    (PDOExecption $e) {
+    (PDOException $e) {
         echo 'Exception -> ';
         return ($e->getMessage());
         $conn->rollback();
@@ -909,7 +909,7 @@ function contadorRegistroLocalizar($tabela, $campoCondicao, $campoCondicao2, $in
             return false;
         };
     } catch
-    (PDOExecption $e) {
+    (PDOException $e) {
         echo 'Exception -> ';
         return ($e->getMessage());
         $conn->rollback();
@@ -936,7 +936,7 @@ function popularGeral($tabela, $campos, $idCampo, $idparametro, $campoAtivo, $at
             return 'Vazio';
         };
     } catch
-    (PDOExecption $e) {
+    (PDOException $e) {
         echo 'Exception -> ';
         return ($e->getMessage());
         $conn->rollback();
@@ -965,7 +965,7 @@ function buscarAdministrador($localizar)
             return 'Vazio';
         };
     } catch
-    (PDOExecption $e) {
+    (PDOException $e) {
         echo 'Exception -> ';
         return ($e->getMessage());
         $conn->rollback();
@@ -995,7 +995,7 @@ function buscarEstrutura($localizar)
             return 'Vazio';
         };
     } catch
-    (PDOExecption $e) {
+    (PDOException $e) {
         echo 'Exception -> ';
         return ($e->getMessage());
         $conn->rollback();
@@ -1022,7 +1022,7 @@ function buscarMarca($localizar)
             return 'Vazio';
         };
     } catch
-    (PDOExecption $e) {
+    (PDOException $e) {
         echo 'Exception -> ';
         return ($e->getMessage());
         $conn->rollback();
@@ -1053,7 +1053,7 @@ function buscarProdutoConfeitaria($localizar)
             return 'Vazio';
         };
     } catch
-    (PDOExecption $e) {
+    (PDOException $e) {
         echo 'Exception -> ';
         return ($e->getMessage());
         $conn->rollback();
@@ -1079,7 +1079,7 @@ function buscarReceitaConfeitaria($localizar)
             return 'Vazio';
         };
     } catch
-    (PDOExecption $e) {
+    (PDOException $e) {
         echo 'Exception -> ';
         return ($e->getMessage());
         $conn->rollback();
@@ -1105,7 +1105,7 @@ function buscarTipoEstrutura($localizar)
             return 'Vazio';
         };
     } catch
-    (PDOExecption $e) {
+    (PDOException $e) {
         echo 'Exception -> ';
         return ($e->getMessage());
         $conn->rollback();
@@ -1131,7 +1131,7 @@ function buscarDepartamento($localizar)
             return 'Vazio';
         };
     } catch
-    (PDOExecption $e) {
+    (PDOException $e) {
         echo 'Exception -> ';
         return ($e->getMessage());
         $conn->rollback();
@@ -1158,7 +1158,7 @@ function buscarColaborador($localizar)
             return 'Vazio';
         };
     } catch
-    (PDOExecption $e) {
+    (PDOException $e) {
         echo 'Exception -> ';
         return ($e->getMessage());
         $conn->rollback();
@@ -1184,7 +1184,7 @@ function buscarFoto($localizar)
             return 'Vazio';
         };
     } catch
-    (PDOExecption $e) {
+    (PDOException $e) {
         echo 'Exception -> ';
         return ($e->getMessage());
         $conn->rollback();
@@ -1211,7 +1211,7 @@ function buscarPergunta($localizar)
             return 'Vazio';
         };
     } catch
-    (PDOExecption $e) {
+    (PDOException $e) {
         echo 'Exception -> ';
         return ($e->getMessage());
         $conn->rollback();
@@ -1238,7 +1238,7 @@ function buscarEmail($localizar)
             return 'Vazio';
         };
     } catch
-    (PDOExecption $e) {
+    (PDOException $e) {
         echo 'Exception -> ';
         return ($e->getMessage());
         $conn->rollback();
@@ -1266,7 +1266,7 @@ function buscarDepoimento($localizar)
             return 'Vazio';
         };
     } catch
-    (PDOExecption $e) {
+    (PDOException $e) {
         echo 'Exception -> ';
         return ($e->getMessage());
         $conn->rollback();
@@ -1292,7 +1292,7 @@ function buscarBanner($localizar)
             return 'Vazio';
         };
     } catch
-    (PDOExecption $e) {
+    (PDOException $e) {
         echo 'Exception -> ';
         return ($e->getMessage());
         $conn->rollback();
@@ -1318,7 +1318,7 @@ function buscarPeriodo($localizar)
             return 'Vazio';
         };
     } catch
-    (PDOExecption $e) {
+    (PDOException $e) {
         echo 'Exception -> ';
         return ($e->getMessage());
         $conn->rollback();
@@ -1345,7 +1345,7 @@ function buscarRevista($localizar)
             return 'Vazio';
         };
     } catch
-    (PDOExecption $e) {
+    (PDOException $e) {
         echo 'Exception -> ';
         return ($e->getMessage());
         $conn->rollback();
@@ -1373,7 +1373,7 @@ function buscarArtigo($localizar)
             return 'Vazio';
         };
     } catch
-    (PDOExecption $e) {
+    (PDOException $e) {
         echo 'Exception -> ';
         return ($e->getMessage());
         $conn->rollback();
@@ -1404,7 +1404,7 @@ function buscarAdministradorCount($localizar)
             return false;
         };
     } catch
-    (PDOExecption $e) {
+    (PDOException $e) {
         echo 'Exception -> ';
         return ($e->getMessage());
         $conn->rollback();
@@ -1435,7 +1435,7 @@ function buscarEstruturaCount($localizar)
             return false;
         };
     } catch
-    (PDOExecption $e) {
+    (PDOException $e) {
         echo 'Exception -> ';
         return ($e->getMessage());
         $conn->rollback();
@@ -1464,7 +1464,7 @@ function buscarMarcaCount($localizar)
             return false;
         };
     } catch
-    (PDOExecption $e) {
+    (PDOException $e) {
         echo 'Exception -> ';
         return ($e->getMessage());
         $conn->rollback();
@@ -1493,7 +1493,7 @@ function buscarCountTabela2Campo($tabela, $idTabela, $nomeCampoBuscar, $localiza
             return false;
         };
     } catch
-    (PDOExecption $e) {
+    (PDOException $e) {
         echo 'Exception -> ';
         return ($e->getMessage());
         $conn->rollback();
@@ -1524,7 +1524,7 @@ function buscarCountTabela4Campo($tabela, $idTabela1, $nomeCampoBuscar2, $nomeCa
             return false;
         };
     } catch
-    (PDOExecption $e) {
+    (PDOException $e) {
         echo 'Exception -> ';
         return ($e->getMessage());
         $conn->rollback();
@@ -1552,7 +1552,7 @@ function buscarGeral2Campos($tabela, $idTabela, $nomeCampoBuscar, $localizar)
             return 'Vazio';
         };
     } catch
-    (PDOExecption $e) {
+    (PDOException $e) {
         echo 'Exception -> ';
         return ($e->getMessage());
         $conn->rollback();
@@ -1580,7 +1580,7 @@ function buscarGeral4Campos($tabela, $campos, $idTabela1, $nomeCampoBuscar2, $no
             return 'Vazio';
         };
     } catch
-    (PDOExecption $e) {
+    (PDOException $e) {
         echo 'Exception -> ';
         return ($e->getMessage());
         $conn->rollback();
@@ -1609,7 +1609,7 @@ function buscarProdutoCount($localizar)
             return false;
         };
     } catch
-    (PDOExecption $e) {
+    (PDOException $e) {
         echo 'Exception -> ';
         return ($e->getMessage());
         $conn->rollback();
@@ -1638,7 +1638,7 @@ function buscarReceitaCount($localizar)
             return false;
         };
     } catch
-    (PDOExecption $e) {
+    (PDOException $e) {
         echo 'Exception -> ';
         return ($e->getMessage());
         $conn->rollback();
@@ -1667,7 +1667,7 @@ function buscarTipoEstruturaCount($localizar)
             return false;
         };
     } catch
-    (PDOExecption $e) {
+    (PDOException $e) {
         echo 'Exception -> ';
         return ($e->getMessage());
         $conn->rollback();
@@ -1697,7 +1697,7 @@ function buscarColaboradorCount($localizar)
             return false;
         };
     } catch
-    (PDOExecption $e) {
+    (PDOException $e) {
         echo 'Exception -> ';
         return ($e->getMessage());
         $conn->rollback();
@@ -1726,7 +1726,7 @@ function buscarFotoCount($localizar)
             return false;
         };
     } catch
-    (PDOExecption $e) {
+    (PDOException $e) {
         echo 'Exception -> ';
         return ($e->getMessage());
         $conn->rollback();
@@ -1757,7 +1757,7 @@ function buscarDepoimentoCount($localizar)
             return false;
         };
     } catch
-    (PDOExecption $e) {
+    (PDOException $e) {
         echo 'Exception -> ';
         return ($e->getMessage());
         $conn->rollback();
@@ -1787,7 +1787,7 @@ function buscarPerguntaCount($localizar)
             return false;
         };
     } catch
-    (PDOExecption $e) {
+    (PDOException $e) {
         echo 'Exception -> ';
         return ($e->getMessage());
         $conn->rollback();
@@ -1817,7 +1817,7 @@ function buscarEmailCount($localizar)
             return false;
         };
     } catch
-    (PDOExecption $e) {
+    (PDOException $e) {
         echo 'Exception -> ';
         return ($e->getMessage());
         $conn->rollback();
@@ -1846,7 +1846,7 @@ function buscarPeriodoCount($localizar)
             return false;
         };
     } catch
-    (PDOExecption $e) {
+    (PDOException $e) {
         echo 'Exception -> ';
         return ($e->getMessage());
         $conn->rollback();
@@ -1876,7 +1876,7 @@ function buscarRevsitaCount($localizar)
             return false;
         };
     } catch
-    (PDOExecption $e) {
+    (PDOException $e) {
         echo 'Exception -> ';
         return ($e->getMessage());
         $conn->rollback();
@@ -1906,7 +1906,7 @@ function buscarArtigoCount($localizar)
             return false;
         };
     } catch
-    (PDOExecption $e) {
+    (PDOException $e) {
         echo 'Exception -> ';
         return ($e->getMessage());
         $conn->rollback();
@@ -1934,7 +1934,7 @@ function buscarCliente($localizar)
             return 'Vazio';
         };
     } catch
-    (PDOExecption $e) {
+    (PDOException $e) {
         echo 'Exception -> ';
         return ($e->getMessage());
         $conn->rollback();
@@ -1971,7 +1971,7 @@ function buscarProduto($localizar)
             return 'Vazio';
         };
     } catch
-    (PDOExecption $e) {
+    (PDOException $e) {
         echo 'Exception -> ';
         return ($e->getMessage());
         $conn->rollback();
@@ -2001,7 +2001,7 @@ function contadorRegistroVendasEstoque()
             return false;
         };
     } catch
-    (PDOExecption $e) {
+    (PDOException $e) {
         echo 'Exception -> ';
         return ($e->getMessage());
         $conn->rollback();
@@ -2033,7 +2033,7 @@ function contadorRegistroVendasEstoqueData($dataInicio, $dataFim)
             return false;
         };
     } catch
-    (PDOExecption $e) {
+    (PDOException $e) {
         echo 'Exception -> ';
         return ($e->getMessage());
         $conn->rollback();
@@ -2060,7 +2060,7 @@ function contadorSimples($campoSomar, $tabela, $campoCondiacao, $parametroId, $c
             return 0;
         }
     } catch
-    (PDOExecption $e) {
+    (PDOException $e) {
         echo 'Exception -> ';
         return ($e->getMessage());
         $conn->rollback();
@@ -2087,7 +2087,7 @@ function contadorRegistroVendasEstoqueUnificado()
             return 'Vazio';
         };
     } catch
-    (PDOExecption $e) {
+    (PDOException $e) {
         echo 'Exception -> ';
         return ($e->getMessage());
         $conn->rollback();
@@ -2116,7 +2116,7 @@ function produtoEstoqueConfeitaria()
             return 'Vazio';
         };
     } catch
-    (PDOExecption $e) {
+    (PDOException $e) {
         echo 'Exception -> ';
         return ($e->getMessage());
         $conn->rollback();
@@ -2145,7 +2145,7 @@ function produtoEstoqueConfeitariaGroupBy()
             return 'Vazio';
         };
     } catch
-    (PDOExecption $e) {
+    (PDOException $e) {
         echo 'Exception -> ';
         return ($e->getMessage());
         $conn->rollback();
@@ -2177,7 +2177,7 @@ function listarProdReceitaGroupBy($idreceita, $ativo)
             return 'Vazio';
         };
     } catch
-    (PDOExecption $e) {
+    (PDOException $e) {
         echo 'Exception -> ';
         return ($e->getMessage());
         $conn->rollback();
@@ -2210,7 +2210,7 @@ function listarProdAddBaixaEstoque($idreceita, $ativo)
             return 'Vazio';
         };
     } catch
-    (PDOExecption $e) {
+    (PDOException $e) {
         echo 'Exception -> ';
         return ($e->getMessage());
         $conn->rollback();
@@ -2239,7 +2239,7 @@ function listarContadorRegistroUnicoPDO($tabela, $campoConsulta, $idRegistroPara
             return 'Variável Não é aceita!';
         }
     } catch
-    (PDOExecption $e) {
+    (PDOException $e) {
         echo 'Exception -> ';
         return ($e->getMessage());
         $conn->rollback();
@@ -2268,7 +2268,7 @@ function listarRegistroUnico($tabela, $campos, $idcampo, $idparametro, $ativo, $
             return 'Variável Não é aceita!';
         }
     } catch
-    (PDOExecption $e) {
+    (PDOException $e) {
         echo 'Exception -> ';
         return ($e->getMessage());
         $conn->rollback();
@@ -2294,7 +2294,7 @@ function listarRegistroUAssoc($tabela, $campos, $idcampo, $idparametro)
             return null;
         };
     } catch
-    (PDOExecption $e) {
+    (PDOException $e) {
         echo 'Exception -> ';
         return ($e->getMessage());
         $conn->rollback();
@@ -2324,7 +2324,7 @@ function listarReservaEstrutura($idEstrutura, $dataInicio, $dataFim)
             return 'Vazio';
         };
     } catch
-    (PDOExecption $e) {
+    (PDOException $e) {
         echo 'Exception -> ';
         return ($e->getMessage());
         $conn->rollback();
@@ -2348,7 +2348,7 @@ function listarRegUnAssoc($tabela, $campos, $idcampo, $idparametro)
             return 'Vazio';
         };
     } catch
-    (PDOExecption $e) {
+    (PDOException $e) {
         echo 'Exception -> ';
         return ($e->getMessage());
         $conn->rollback();
@@ -2373,7 +2373,7 @@ function listarTodosRegistroU($tabela, $campos, $idcampo, $idparametro)
             return 'Vazio';
         };
     } catch
-    (PDOExecption $e) {
+    (PDOException $e) {
         echo 'Exception -> ';
         return ($e->getMessage());
         $conn->rollback();
@@ -2397,7 +2397,7 @@ function listarTodosRegistroUorder($tabela, $campos, $idcampo, $idparametro, $Or
             return 'Vazio';
         };
     } catch
-    (PDOExecption $e) {
+    (PDOException $e) {
         echo 'Exception -> ';
         return ($e->getMessage());
         $conn->rollback();
@@ -2502,7 +2502,7 @@ function listarCepFrete($idcliente, $entrega = 'S')
             return 'Vazio';
         };
     } catch
-    (PDOExecption $e) {
+    (PDOException $e) {
         echo 'Exception -> ';
         return ($e->getMessage());
         $conn->rollback();
@@ -2525,7 +2525,7 @@ function listarTodosTabela($tabela)
             return 'Vazio';
         };
     } catch
-    (PDOExecption $e) {
+    (PDOException $e) {
         echo 'Exception -> ';
         return ($e->getMessage());
         $conn->rollback();
@@ -2548,7 +2548,7 @@ function listarTodosTabelaOrdem($tabela, $Ordem = 'ASC')
             return 'Vazio';
         };
     } catch
-    (PDOExecption $e) {
+    (PDOException $e) {
         echo 'Exception -> ';
         return ($e->getMessage());
         $conn->rollback();
@@ -2572,7 +2572,7 @@ function listarTodosTabelaDiferenteID($campo, $id, $tabela)
             return 'Vazio';
         };
     } catch
-    (PDOExecption $e) {
+    (PDOException $e) {
         echo 'Exception -> ';
         return ($e->getMessage());
         $conn->rollback();
@@ -2596,7 +2596,7 @@ function listarTodos($campo, $tabela, $campoAtivo, $campoOrdem, $ativo)
             return 'Vazio';
         };
     } catch
-    (PDOExecption $e) {
+    (PDOException $e) {
         echo 'Exception -> ';
         return ($e->getMessage());
         $conn->rollback();
@@ -2619,7 +2619,7 @@ function qtdPerguntaApectoRespondida()
             return 'Vazio';
         };
     } catch
-    (PDOExecption $e) {
+    (PDOException $e) {
         echo 'Exception -> ';
         return ($e->getMessage());
         $conn->rollback();
@@ -2651,7 +2651,7 @@ function insertAuditoria($idsis, $responsavel, $acao, $idafetado, $nomeafetado, 
             return 'Auditoria Não Gravada';
         };
     } catch
-    (PDOExecption $e) {
+    (PDOException $e) {
         echo 'Exception -> ';
         return ($e->getMessage());
         $conn->rollback();
@@ -2659,6 +2659,35 @@ function insertAuditoria($idsis, $responsavel, $acao, $idafetado, $nomeafetado, 
     $conn = null;
 }
 
+
+function insert($tabela, $campos, $values) {
+    $conn = conectar();
+    try {
+        $conn->beginTransaction();
+        $interrogacoes = rtrim(str_repeat('?,', count($values)), ',');
+        $sqlInsert = $conn->prepare("INSERT INTO $tabela ($campos) VALUES ($interrogacoes)");
+
+        foreach ($values as $i => $value) {
+            $sqlInsert->bindParam($i + 1, $values[$i], PDO::PARAM_STR);
+        }
+
+        $sqlInsert->execute();
+
+        if ($sqlInsert->rowCount() > 0) {
+            $idRetorno = $conn->lastInsertId();
+            $conn->commit();
+            return $idRetorno;
+        } else {
+            $conn->rollback();
+            return False;
+        }
+    } catch (PDOException $e) {
+        $conn->rollback();
+        return 'Exception -> ' . $e->getMessage();
+    } finally {
+        $conn = null;
+    }
+}
 function insertDois($tabela, $campos, $valeu1, $valeu2)
 {
     $conn = conectar();
@@ -2675,7 +2704,7 @@ function insertDois($tabela, $campos, $valeu1, $valeu2)
             return 'nGravado';
         };
     } catch
-    (PDOExecption $e) {
+    (PDOException $e) {
         echo 'Exception -> ';
         return ($e->getMessage());
         $conn->rollback();
@@ -2700,7 +2729,7 @@ function insertDoisId($tabela, $campos, $valeu1, $valeu2)
             return 'nGravado';
         };
     } catch
-    (PDOExecption $e) {
+    (PDOException $e) {
         echo 'Exception -> ';
         return ($e->getMessage());
         $conn->rollback();
@@ -2725,7 +2754,7 @@ function insertTres($tabela, $campos, $valeu1, $valeu2, $valeu3)
             return 'nGravado';
         };
     } catch
-    (PDOExecption $e) {
+    (PDOException $e) {
         echo 'Exception -> ';
         return ($e->getMessage());
         $conn->rollback();
@@ -2751,7 +2780,7 @@ function insertTresId($tabela, $campos, $valeu1, $valeu2, $valeu3)
             return 'nGravado';
         };
     } catch
-    (PDOExecption $e) {
+    (PDOException $e) {
         echo 'Exception -> ';
         return ($e->getMessage());
         $conn->rollback();
@@ -2777,7 +2806,7 @@ function insertQuatro($tabela, $campos, $valeu1, $valeu2, $valeu3, $valeu4)
             return 'nGravado';
         };
     } catch
-    (PDOExecption $e) {
+    (PDOException $e) {
         echo 'Exception -> ';
         return ($e->getMessage());
         $conn->rollback();
@@ -2805,7 +2834,7 @@ function insertQuatroId($tabela, $campos, $value1, $value2, $value3, $value4)
             return 'nGravado';
         };
     } catch
-    (PDOExecption $e) {
+    (PDOException $e) {
         echo 'Exception -> ';
         return ($e->getMessage());
         $conn->rollback();
@@ -2832,7 +2861,7 @@ function insertCinco($tabela, $campos, $valeu1, $valeu2, $valeu3, $valeu4, $vale
             return 'nGravado';
         };
     } catch
-    (PDOExecption $e) {
+    (PDOException $e) {
         echo 'Exception -> ';
         return ($e->getMessage());
         $conn->rollback();
@@ -2861,7 +2890,7 @@ function insertCincoId($tabela, $campos, $value1, $value2, $value3, $value4, $va
             return 'nGravado';
         };
     } catch
-    (PDOExecption $e) {
+    (PDOException $e) {
         echo 'Exception -> ';
         return ($e->getMessage());
         $conn->rollback();
@@ -3004,7 +3033,7 @@ function insertOito($tabela, $campos, $value1, $value2, $value3, $value4, $value
             return 'nGravado';
         };
     } catch
-    (PDOExecption $e) {
+    (PDOException $e) {
         echo 'Exception -> ';
         return ($e->getMessage());
         $conn->rollback();
@@ -3073,7 +3102,7 @@ function insertQuinze($tabela, $campos, $value1, $value2, $value3, $value4, $val
             return 'nGravado';
         };
     } catch
-    (PDOExecption $e) {
+    (PDOException $e) {
         echo 'Exception -> ';
         return ($e->getMessage());
         $conn->rollback();
@@ -3111,7 +3140,7 @@ function insertDezesseis($tabela, $campos, $value1, $value2, $value3, $value4, $
             return 'nGravado';
         };
     } catch
-    (PDOExecption $e) {
+    (PDOException $e) {
         echo 'Exception -> ';
         return ($e->getMessage());
         $conn->rollback();
@@ -3146,7 +3175,7 @@ function insertDozeId($tabela, $campos, $value1, $value2, $value3, $value4, $val
             return 'nGravado';
         };
     } catch
-    (PDOExecption $e) {
+    (PDOException $e) {
         echo 'Exception -> ';
         return ($e->getMessage());
         $conn->rollback();
@@ -3185,7 +3214,7 @@ function insertDezesseisId($tabela, $campos, $value1, $value2, $value3, $value4,
             return 'nGravado';
         };
     } catch
-    (PDOExecption $e) {
+    (PDOException $e) {
         echo 'Exception -> ';
         return ($e->getMessage());
         $conn->rollback();
@@ -3224,7 +3253,7 @@ function insertDezessete($tabela, $campos, $value1, $value2, $value3, $value4, $
             return 'nGravado';
         };
     } catch
-    (PDOExecption $e) {
+    (PDOException $e) {
         echo 'Exception -> ';
         return ($e->getMessage());
         $conn->rollback();
@@ -3264,7 +3293,7 @@ function insertDezesseteId($tabela, $campos, $value1, $value2, $value3, $value4,
             return 'nGravado';
         };
     } catch
-    (PDOExecption $e) {
+    (PDOException $e) {
         echo 'Exception -> ';
         return ($e->getMessage());
         $conn->rollback();
@@ -3305,7 +3334,7 @@ function insertDezoitoId($tabela, $campos, $value1, $value2, $value3, $value4, $
             return 'nGravado';
         };
     } catch
-    (PDOExecption $e) {
+    (PDOException $e) {
         echo 'Exception -> ';
         return ($e->getMessage());
         $conn->rollback();
@@ -3359,7 +3388,7 @@ function insertTrintaUmId($tabela, $campos, $value1, $value2, $value3, $value4, 
             return 'nGravado';
         };
     } catch
-    (PDOExecption $e) {
+    (PDOException $e) {
         echo 'Exception -> ';
         return ($e->getMessage());
         $conn->rollback();
@@ -3406,7 +3435,7 @@ function updateAtivar($tabela, $idcampo, $idparametro)
             return [];
         };
     } catch
-    (PDOExecption $e) {
+    (PDOException $e) {
         echo 'Exception -> ';
         return ($e->getMessage());
         $conn->rollback();
@@ -3432,7 +3461,7 @@ function updateFoto($tabela, $campoAlterado, $img, $campoIdReferencia, $campoIdP
             return 'nAtualizado';
         };
     } catch
-    (PDOExecption $e) {
+    (PDOException $e) {
         echo 'Exception -> ';
         return ($e->getMessage());
         $conn->rollback();
@@ -3470,7 +3499,7 @@ function upAdmComSenha($idsis, $nome, $cpf, $nascimento, $email, $senha, $celula
             return 'Nao Cadastrado';
         };
     } catch
-    (PDOExecption $e) {
+    (PDOException $e) {
         echo 'Exception -> ';
         return ($e->getMessage());
         $conn->rollback();
@@ -3507,7 +3536,7 @@ function upAdmSemSenha($idsis, $nome, $cpf, $nascimento, $email, $celular, $rua,
             return 'Nao Cadastrado';
         };
     } catch
-    (PDOExecption $e) {
+    (PDOException $e) {
         echo 'Exception -> ';
         return ($e->getMessage());
         $conn->rollback();
@@ -3538,7 +3567,7 @@ function upClienteAdm($nome, $nascimento, $gernero, $cpf, $celular, $email, $sen
             return 'Nao Cadastrado';
         };
     } catch
-    (PDOExecption $e) {
+    (PDOException $e) {
         echo 'Exception -> ';
         return ($e->getMessage());
         $conn->rollback();
@@ -3568,7 +3597,7 @@ function upClienteAdmSemSenha($nome, $nascimento, $gernero, $cpf, $celular, $ema
             return 'Nao Cadastrado';
         };
     } catch
-    (PDOExecption $e) {
+    (PDOException $e) {
         echo 'Exception -> ';
         return ($e->getMessage());
         $conn->rollback();
@@ -3594,7 +3623,7 @@ function altUm($tabela, $campoBd, $valorReceberInput, $campoBdId, $inputInivisiv
                 return null;
             };
         } catch
-        (PDOExecption $e) {
+        (PDOException $e) {
             echo 'Exception -> ';
             return ($e->getMessage());
             $conn->rollback();
@@ -3621,7 +3650,7 @@ function altDois($tabela, $campoBd, $valorReceberInput, $campoBd2, $valorReceber
                 return null;
             };
         } catch
-        (PDOExecption $e) {
+        (PDOException $e) {
             echo 'Exception -> ';
             return ($e->getMessage());
             $conn->rollback();
@@ -3649,7 +3678,7 @@ function altTres($tabela, $campoBd, $campoBd2, $campoBd3, $valorReceberInput1, $
                 return null;
             };
         } catch
-        (PDOExecption $e) {
+        (PDOException $e) {
             echo 'Exception -> ';
             return ($e->getMessage());
             $conn->rollback();
@@ -3699,7 +3728,7 @@ function upDois($tabela, $campo1, $campo2, $campoId, $valeu1, $valeu2, $valeuId)
             return 'nAtualizado';
         };
     } catch
-    (PDOExecption $e) {
+    (PDOException $e) {
         echo 'Exception -> ';
         return ($e->getMessage());
         $conn->rollback();
@@ -3725,7 +3754,7 @@ function upTres($tabela, $campo1, $campo2, $campo3, $campoId, $valeu1, $valeu2, 
             return 'nAtualizado';
         };
     } catch
-    (PDOExecption $e) {
+    (PDOException $e) {
         echo 'Exception -> ';
         return ($e->getMessage());
         $conn->rollback();
@@ -3752,7 +3781,7 @@ function upQuatro($tabela, $campo1, $campo2, $campo3, $campo4, $campoId, $valeu1
             return 'nAtualizado';
         };
     } catch
-    (PDOExecption $e) {
+    (PDOException $e) {
         echo 'Exception -> ';
         return ($e->getMessage());
         $conn->rollback();
@@ -3780,7 +3809,7 @@ function upCinco($tabela, $campo1, $campo2, $campo3, $campo4, $campo5, $campoId,
             return false;
         }
     } catch
-    (PDOExecption $e) {
+    (PDOException $e) {
         echo 'Exception -> ';
         return ($e->getMessage());
         $conn->rollback();
@@ -3808,7 +3837,7 @@ function upSeis($tabela, $campo1, $campo2, $campo3, $campo4, $campo5, $campo6, $
         } else {
             return false;
         }
-    } catch (PDOExecption $e) {
+    } catch (PDOException $e) {
         $conn->rollback();
         return false;
     }
@@ -3837,7 +3866,7 @@ function upSete($tabela, $campo1, $campo2, $campo3, $campo4, $campo5, $campo6, $
             return 'nAtualizado';
         };
     } catch
-    (PDOExecption $e) {
+    (PDOException $e) {
         echo 'Exception -> ';
         return ($e->getMessage());
         $conn->rollback();
@@ -3874,7 +3903,7 @@ function upQuatorze($tabela, $campo1, $campo2, $campo3, $campo4, $campo5, $campo
             return 'nAtualizado';
         };
     } catch
-    (PDOExecption $e) {
+    (PDOException $e) {
         echo 'Exception -> ';
         return ($e->getMessage());
         $conn->rollback();
@@ -3912,7 +3941,7 @@ function upQuinze($tabela, $campo1, $campo2, $campo3, $campo4, $campo5, $campo6,
             return 'nAtualizado';
         };
     } catch
-    (PDOExecption $e) {
+    (PDOException $e) {
         echo 'Exception -> ';
         return ($e->getMessage());
         $conn->rollback();
@@ -3951,7 +3980,7 @@ function upDezesseis($tabela, $campo1, $campo2, $campo3, $campo4, $campo5, $camp
             return 'nAtualizado';
         };
     } catch
-    (PDOExecption $e) {
+    (PDOException $e) {
         echo 'Exception -> ';
         return ($e->getMessage());
         $conn->rollback();
@@ -3991,7 +4020,7 @@ function upDezessete($tabela, $campo1, $campo2, $campo3, $campo4, $campo5, $camp
             return 'nAtualizado';
         };
     } catch
-    (PDOExecption $e) {
+    (PDOException $e) {
         echo 'Exception -> ';
         return ($e->getMessage());
         $conn->rollback();
@@ -4032,7 +4061,7 @@ function upDezoito($tabela, $campo1, $campo2, $campo3, $campo4, $campo5, $campo6
             return 'nAtualizado';
         };
     } catch
-    (PDOExecption $e) {
+    (PDOException $e) {
         echo 'Exception -> ';
         return ($e->getMessage());
         $conn->rollback();
@@ -4058,7 +4087,7 @@ function deleteRegistro($tabela, $campoReferencia, $idparametro)
             return null;
         };
     } catch
-    (PDOExecption $e) {
+    (PDOException $e) {
         echo 'Exception -> ';
         return ($e->getMessage());
         $conn->rollback();
@@ -4083,7 +4112,7 @@ function deleteRegistroUnico($tabela, $campoReferencia, $idparametro)
             return [];
         };
     } catch
-    (PDOExecption $e) {
+    (PDOException $e) {
         echo 'Exception -> ';
         return ($e->getMessage());
         $conn->rollback();
