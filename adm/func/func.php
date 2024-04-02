@@ -2718,81 +2718,18 @@ function validarCampos($dados, $camposObrigatorios) {
     }
     return ['sucesso' => true, 'mensagem' => "Campo Validado"];
 }
-function listarLimitPaginacao($tabela,$getpaginacao,$limite=10){
+function listarLimitPaginacao($tabela,$getpaginacao,$limite=10,$condicao=""){
     $conn = conectar();
     $pagina = isset($getpaginacao) ? (int)$getpaginacao : 1;
     $inicio = ($pagina - 1) * $limite;
+ 
+    $stmt = $conn->prepare("SELECT * FROM $tabela $condicao LIMIT :inicio, :limite");
 
-    // Consulta SQL para buscar os dados
-    $stmt = $conn->prepare("SELECT * FROM $tabela LIMIT :inicio, :limite");
     $stmt->bindParam(':inicio', $inicio, PDO::PARAM_INT);
     $stmt->bindParam(':limite', $limite, PDO::PARAM_INT);
     $stmt->execute();
     return $stmt;
 }
-
-// function botoesPaginacao($caminho, $totalRegistros,$limite,$paginaAtual){
-//     $divisao = $totalRegistros/$limite;
-//     echo <<<EOT
-//     <div class="row float-end mt-3">
-//         <div class="col-8">
-//             <nav aria-label="Page navigation example">
-//                 <ul class="pagination">
-//                     <li class="page-item">
-//                         <a class="page-link" aria-label="Previous" onclick="carregarDadosPaginacao('$caminho',1)">
-//                             <span aria-hidden="true">&laquo;</span>
-//                         </a>
-//                     </li>
-//     EOT;
-
-//     $x = 4;
-//     while($x>=1){
-//         if(($paginaAtual-$x)>0){
-//             $pag = $paginaAtual-$x;
-//             // echo "<li class='page-item'><a class='page-link'  onclick='carregarDados('".strval($caminho)."',$pag)'>$pag</a></li>";
-//             echo <<<EOT
-//             <li class="page-item">
-//                 <a class="page-link" aria-label="Previous" onclick="carregarDadosPaginacao('$caminho',$pag)">
-//                     $pag
-//                 </a>
-//             </li>
-//             EOT;
-//         }
-//         $x= $x - 1;
-//     }   
-
-//     echo "<li class='page-item active' aria-current='page'><span class='page-link'>$paginaAtual</span></li>";
-
-    
-//     $x = 1;
-//     while($x<=4){
-//         if(($paginaAtual+$x)<$limite){
-//             $pag = $paginaAtual+$x;
-//             // echo "<li class='page-item'><a class='page-link'  onclick='carregarDados('$caminho',$pag)'>$pag</a></li>";
-//             echo <<<EOT
-//             <li class="page-item">
-//                 <a class="page-link" aria-label="Previous" onclick="carregarDadosPaginacao('$caminho',$pag)">
-//                     $pag
-//                 </a>
-//             </li>
-//             EOT;
-//         }
-//         $x++;
-//     }  
-//     $divisao++;
-//     $divisao = intval($divisao);
-//     echo <<<EOT
-//                     <li class="page-item">
-//                         <a class="page-link" aria-label="Next" onclick="carregarDadosPaginacao('$caminho',$divisao)">
-//                             <span aria-hidden="true">&raquo;</span>
-//                         </a>
-//                     </li>
-//                 </ul>
-//             </nav>
-//         </div>
-//     </div>
-//     EOT;
-// }
 function botoesPaginacao($caminho, $totalRegistros,$limite,$paginaAtual){
     $divisao = $totalRegistros/$limite;
     echo <<<EOT

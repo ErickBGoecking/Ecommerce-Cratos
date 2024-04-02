@@ -48,7 +48,6 @@ while ($row = $dados->fetch()) {
         <div class="p-2">
             <div class="d-flex flex-md-row flex-column gap-2">
 
-
                 <a href="#" class="btn btn-sm btn-outline-primary" aria-current="page" data-bs-toggle="modal"
                     data-bs-target="#modalUsuariosVerMais" title="Ver detalhes do usuario"
                     onclick="bannerVeMais(<?php echo $idPessoa ?>,'usuarioVerMais')"><span
@@ -69,7 +68,8 @@ while ($row = $dados->fetch()) {
 <?php 
 }
 
-$totalRegistros = contadorRegistroTodos('pessoa');
+$totalRegistros = listarGeral('idpessoa','pessoa');
+$totalRegistros = count($totalRegistros);
 botoesPaginacao("user/carregar_dados.php",$totalRegistros,$limite,$getPaginacao);
 
 ?>
