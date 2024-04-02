@@ -2680,7 +2680,44 @@ function insertUmId($tabela, $campos, $value1)
     }
     $conn = null;
 }
-
+function recebeForm($dadosForm, $tipoCampo = 'campos')
+{
+    $dados = $dadosForm;
+    if ($tipoCampo == 'campos') {
+        $campos = '';
+        foreach ($dados as $tituloDados => $valueDados) {
+            $campos .= $tituloDados . ',';
+        }
+        $campos = rtrim($campos, ',');
+        $campos = str_replace(',controle', '', $campos);
+        return $campos;
+    } elseif ($tipoCampo == 'value') {
+        $value = [];
+        foreach ($dados as $tituloDados => $valueDados) {
+            switch($tituloDados){
+                case 'datai':
+                    $valueDados = formatarDataHoraEn($dados['datai']);
+                    break;
+                case 'dataf':
+                    $valueDados = formatarDataHoraEn($dados['dataf']);
+                    break;
+            }
+            $value[] = $valueDados;
+        }
+        array_pop($value);
+        return $value;
+    }
+}
+function validarCampos($dados, $camposObrigatorios) {
+    $listaCampos = explode(',', $camposObrigatorios);
+    foreach ($dados as $nome => $valor) {
+        if (in_array($nome, $listaCampos) && empty($valor)) {
+            $resposta = ['sucesso' => false, 'mensagem' => "Verifique o $nome vazio!"];
+            return $resposta;
+        }
+    }
+    return ['sucesso' => true, 'mensagem' => "Campo Validado"];
+}
 function insert($tabela, $campos, $values) {
     $conn = conectar();
     try {

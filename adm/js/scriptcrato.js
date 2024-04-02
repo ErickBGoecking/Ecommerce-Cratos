@@ -69,6 +69,7 @@ function addGeral(btnAdd, frm, controle, modalAdd) {
             throw new Error('Erro de conexão.');
         })
         .then(data => {
+            console.log(data);
             if (data.sucesso) {
                 mensagem(data.mensagem);
                 var modal = document.getElementById(modalAdd);

@@ -148,7 +148,7 @@
                                     <div class="mb-3">
                                         <label for="sTipo" class="form-label">Tipo:</label>
                                         <select class="form-select" aria-label="Default select example" id="sTipo"
-                                                name="sTipo">
+                                                name="tipo">
                                             <option value="Rotativo" selected>Rotativo</option>
                                             <option value="Central">Central</option>
                                         </select>
@@ -160,7 +160,7 @@
                                         <?php
                                         $dataAtualFormatada = date('Y-m-d\TH:i:s');
                                         ?>
-                                        <input type="datetime-local" class="form-control" name="dataI" id="iDataI"
+                                        <input type="datetime-local" class="form-control" name="datai" id="iDataI"
                                                value="<?php echo $dataAtualFormatada; ?>">
                                     </div>
                                 </div>
@@ -171,7 +171,7 @@
                                         $dataAtual = date('Y-m-d H:i:s');
                                         $dataFinal = date('Y-m-d\TH:i:s', strtotime('+1 month', strtotime($dataAtual)));
                                         ?>
-                                        <input type="datetime-local" class="form-control" name="dataF" id="iDataF"
+                                        <input type="datetime-local" class="form-control" name="dataf" id="iDataF"
                                                value="<?php echo $dataFinal; ?>">
                                     </div>
                                 </div>
