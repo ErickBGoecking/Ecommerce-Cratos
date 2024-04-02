@@ -2679,7 +2679,7 @@ function insertUmId($tabela, $campos, $value1)
         $conn->rollback();
     }
     $conn = null;
-
+}
 
 function insert($tabela, $campos, $values) {
     $conn = conectar();
@@ -4658,5 +4658,3 @@ function possuiCamposVaziosArray(array $arrayCampos): bool
 
     return count($dif) === 0 ? false : true;
 }
-
-?>
