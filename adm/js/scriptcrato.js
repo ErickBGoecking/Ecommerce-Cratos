@@ -366,3 +366,16 @@ function alterarGeral(controle, modalAlt, frm) {
         .catch(error => console.error('Erro na requisição:', error));
 }
 
+
+// ------------------------PAGINAÇÃO---------------------------------------------
+function carregarDadosPaginacao(caminho,pagina) {
+    var xhr = new XMLHttpRequest();
+    xhr.open('GET', caminho + "?paginacao=" + pagina, true);
+    xhr.onload = function() {
+        if (this.status == 200) {
+            document.getElementById('conteudo').innerHTML = this.responseText;
+            criarBotoesPaginacao(pagina);
+        }
+    }
+    xhr.send();
+}
