@@ -13,7 +13,7 @@ if (empty($dados['vermais'])) {
     $response = ['sucesso' => false, 'mensagem' => "O tipo de cargo não foi reconhecido!"];
 } else {
     $idCargoTipo = $dados['vermais'];
-    $listarCargoTipo = listarGeral('idcargotipo, tipocargo, cadastro, alteracao, ativo', "cargotipo WHERE idcargotipo = $idCargoTipo ORDER BY idcargotipo DESC");
+    $listarCargoTipo = listarGeral('IdCargoTipo, TipoCargo, Cadastro, Alteracao, Ativo', "cargotipo WHERE IdCargoTipo = $idCargoTipo ORDER BY IdCargoTipo DESC");
     if ($listarCargoTipo) {
         $cargotipoData = reset($listarCargoTipo);
         echo json_encode($cargotipoData);

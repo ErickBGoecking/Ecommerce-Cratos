@@ -14,19 +14,19 @@
     </div>
     <div class="card-body">
         <?php
-        $listarTipoCargo = listarGeral('idcargotipo, tipocargo, cadastro, alteracao, ativo', 'cargotipo ORDER BY idcargotipo DESC');
+        $listarTipoCargo = listarGeral('IdCargoTipo, TipoCargo, Cadastro, Alteracao, Ativo', 'cargotipo ORDER BY IdCargoTipo DESC');
         if ($listarTipoCargo) {
             foreach ($listarTipoCargo as $itemTipoCargo) {
-                $idCargoTipo = $itemTipoCargo->idcargotipo;
-                $tipoCargo = $itemTipoCargo->tipocargo;
-                $cadastro = formatarDataHoraBr($itemTipoCargo->cadastro);
-                $alteracao = formatarDataHoraBr($itemTipoCargo->alteracao);
-                $ativo = $itemTipoCargo->ativo;
-                if ($ativo == 'A') {
-                    $btnAtivo = '<a href="#" class="btn btn-sm btn-outline-primary" aria-current="page" title="Tipo de Cargo Ativado. Clique para Desativar" id="btnStatus" onclick="statusGeral(' . $idCargoTipo . ',\'cartoTipoStatus\');"><span class="mdi mdi-lock-open-check text-success"></span>Ativo</a>';
+                $idCargoTipo = $itemTipoCargo->IdCargoTipo;
+                $tipoCargo = $itemTipoCargo->TipoCargo;
+                $Cadastro = formatarDataHoraBr($itemTipoCargo->Cadastro);
+                $Alteracao = formatarDataHoraBr($itemTipoCargo->Alteracao);
+                $Ativo = $itemTipoCargo->Ativo;
+                if ($Ativo == 'A') {
+                    $btnAtivo = '<a href="#" class="btn btn-sm btn-outline-primary" aria-current="page" title="Tipo de Cargo Ativado. Clique para Desativar" id="btnStatus" onclick="statusGeral(' . $idCargoTipo . ',\'cargoTipoStatus\');"><span class="mdi mdi-lock-open-check text-success"></span>Ativo</a>';
 
                 } else {
-                    $btnAtivo = '<a href="#" class="btn btn-sm btn-outline-primary" aria-current="page" title="Tipo de Cargo Desativado. Clique para Ativar" id="btnStatus" onclick="statusGeral(' . $idCargoTipo . ',\'cartoTipoStatus\');"><span class="mdi mdi-lock-check text-danger"></span> Desativado</a>';
+                    $btnAtivo = '<a href="#" class="btn btn-sm btn-outline-primary" aria-current="page" title="Tipo de Cargo Desativado. Clique para Ativar" id="btnStatus" onclick="statusGeral(' . $idCargoTipo . ',\'cargoTipoStatus\');"><span class="mdi mdi-lock-check text-danger"></span> Desativado</a>';
                 }
                 ?>
                 <div class="card card-lista mt-2 border border-0 shadow-sm">
@@ -36,8 +36,8 @@
                                 <div class="d-flex flex-column ps-2">
                                     <div><strong>Tipo Cargo:</strong> <?php echo $tipoCargo ?></div>
                                     <div class="d-flex flex-md-row flex-column">
-                                        <div class=""><strong>Cadastro:</strong> <?php echo $cadastro ?></div>
-                                        <div class="ps-md-2"><strong>Alteração:</strong> <?php echo $alteracao ?></div>
+                                        <div class=""><strong>Cadastro:</strong> <?php echo $Cadastro ?></div>
+                                        <div class="ps-md-2"><strong>Alteração:</strong> <?php echo $Alteracao ?></div>
                                     </div>
                                 </div>
                             </div>
@@ -119,7 +119,7 @@
                                 <div class="col-12">
                                     <div class="mb-3">
                                         <label for="inTipoCargo" class="form-label">Tipo Cargo:</label>
-                                        <input type="text" class="form-control" id="inTipoCargo" name="cargoTipo"
+                                        <input type="text" class="form-control" id="inTipoCargo" name="CargoTipo"
                                                aria-describedby="tipoCargoHelp">
                                     </div>
                                 </div>
@@ -155,12 +155,12 @@
                     </div>
                     <div class="card-body">
                         <form id="frmCargoTipoAlt" name="frmCargoTipoAlt" method="post" action="#">
-                            <input type="hidden" id="idCargoTipoAlt" name="inCargoTipoAlt" value="">
+                            <input type="hidden" id="idCargoTipoAlt" name="IdCargoTipo" value="">
                             <div class="row">
                                 <div class="col-12">
                                     <div class="mb-3">
                                         <label for="inCargoTipoAlt" class="form-label">Tipo Cargo:</label>
-                                        <input type="text" class="form-control" id="inCargoTipoAlt" name="cargoTipoAlt"
+                                        <input type="text" class="form-control" id="inCargoTipoAlt" name="TipoCargo"
                                                aria-describedby="cargoTipoHelp">
                                     </div>
                                 </div>

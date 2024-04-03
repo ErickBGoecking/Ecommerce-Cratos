@@ -15,8 +15,8 @@ if (empty($dados['excluir'])) {
 } else {
     $acao = "Foi Excluido do sistema Genero";
     $idGenero = $dados['excluir'];
-    $retornoExcluir = deleteRegistroUnico('genero', 'idgenero', $idGenero);
-    $retornoInsertAuditoria = insertOitoId('auditoria', 'idadm, acao, tipo, tabela, datahora, ip, pcusuario, dispositivo', $idAdmin, $acao, 3, 'genero', DATATIMEATUAL, "$ip", $pc, $dispositivo);
+    $retornoExcluir = deleteRegistroUnico('genero', 'IdGenero', $idGenero);
+    $retornoInsertAuditoria = insertOitoId('auditoria', 'IdAdm, Acao, Tipo, Tabela, DataHora, Ip, PcUsuario, Dispositivo', $idAdmin, $acao, 3, 'Genero', DATATIMEATUAL, "$ip", $pc, $dispositivo);
     if ($retornoExcluir) {
         $response = ['sucesso' => true, 'mensagem' => "Genero deletado com sucesso!"];
     } else {

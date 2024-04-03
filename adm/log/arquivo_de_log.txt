@@ -5614,3 +5614,99 @@ Trace File: D:\htdocs\Cratos\Ecommerce-Cratos\adm\func\func.php
 Trace Line: 2456
 File: D:\htdocs\Cratos\Ecommerce-Cratos\adm\func\func.php
 Line: 2456
+Throwable: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'b.datai' in 'field list'
+Code: 42S22
+Trace: Array
+(
+    [0] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\adm\func\func.php
+            [line] => 2415
+            [function] => execute
+            [class] => PDOStatement
+            [type] => ->
+            [args] => Array
+                (
+                )
+
+        )
+
+    [1] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\adm\banner\bannerVerMais.php
+            [line] => 16
+            [function] => listarGeral
+            [args] => Array
+                (
+                    [0] => b.idbanner, b.img, b.titulo, b.datai, b.dataf, b.tipo, b.cadastro, b.alteracao, b.ativo, p.nome, p.sobrenome
+                    [1] => banner b INNER JOIN pessoa p ON p.idpessoa = b.idadm WHERE b.idbanner = 1 ORDER BY b.idbanner DESC
+                )
+
+        )
+
+    [2] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\adm\controle.php
+            [line] => 29
+            [args] => Array
+                (
+                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\adm\banner\bannerVerMais.php
+                )
+
+            [function] => include_once
+        )
+
+)
+
+Trace File: D:\htdocs\cratos\Ecommerce-Cratos\adm\func\func.php
+Trace Line: 2415
+File: D:\htdocs\cratos\Ecommerce-Cratos\adm\func\func.php
+Line: 2415
+Throwable: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'b.datai' in 'field list'
+Code: 42S22
+Trace: Array
+(
+    [0] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\adm\func\func.php
+            [line] => 2415
+            [function] => execute
+            [class] => PDOStatement
+            [type] => ->
+            [args] => Array
+                (
+                )
+
+        )
+
+    [1] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\adm\banner\bannerVerMais.php
+            [line] => 16
+            [function] => listarGeral
+            [args] => Array
+                (
+                    [0] => b.idbanner, b.img, b.titulo, b.datai, b.dataf, b.tipo, b.cadastro, b.alteracao, b.ativo, p.nome, p.sobrenome
+                    [1] => banner b INNER JOIN pessoa p ON p.idpessoa = b.idadm WHERE b.idbanner = 1 ORDER BY b.idbanner DESC
+                )
+
+        )
+
+    [2] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\adm\controle.php
+            [line] => 32
+            [args] => Array
+                (
+                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\adm\banner\bannerVerMais.php
+                )
+
+            [function] => include_once
+        )
+
+)
+
+Trace File: D:\htdocs\cratos\Ecommerce-Cratos\adm\func\func.php
+Trace Line: 2415
+File: D:\htdocs\cratos\Ecommerce-Cratos\adm\func\func.php
+Line: 2415

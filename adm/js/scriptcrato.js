@@ -69,7 +69,6 @@ function addGeral(btnAdd, frm, controle, modalAdd) {
             throw new Error('Erro de conexão.');
         })
         .then(data => {
-            console.log(data);
             if (data.sucesso) {
                 mensagem(data.mensagem);
                 var modal = document.getElementById(modalAdd);
@@ -166,11 +165,11 @@ function bannerVeMais(vermais, controle) {
         .then(data => {
             if (data) {
                 var estatus = '';
-                data.datai = formatarDataBrasileira(data.datai);
-                data.dataf = formatarDataBrasileira(data.dataf);
-                data.cadastro = formatarDataBrasileira(data.cadastro);
-                data.alteracao = formatarDataBrasileira(data.alteracao);
-                if (data.ativo == 'A') {
+                data.DataInicial = formatarDataBrasileira(data.DataInicial);
+                data.DataFinal = formatarDataBrasileira(data.DataFinal);
+                data.Cadastro = formatarDataBrasileira(data.Cadastro);
+                data.Alteracao = formatarDataBrasileira(data.Alteracao);
+                if (data.Ativo == 'A') {
                     estatus = 'Ativado';
                     document.getElementById('iEstatus').classList.add('text-success');
                     document.getElementById('iEstatus').classList.remove('text-danger');
@@ -179,13 +178,13 @@ function bannerVeMais(vermais, controle) {
                     document.getElementById('iEstatus').classList.add('text-danger');
                     document.getElementById('iEstatus').classList.remove('text-success');
                 }
-                document.getElementById('imgBanner').src = './banner/img/' + data.img;
-                document.getElementById('iBannerTitulo').innerText = data.titulo;
-                document.getElementById('iDataInicio').innerText = data.datai;
-                document.getElementById('iDataFim').innerText = data.dataf;
-                document.getElementById('iAdm').innerText = data.nome + ' ' + data.sobrenome;
-                document.getElementById('iCadastro').innerText = data.cadastro;
-                document.getElementById('iAlteracao').innerText = data.alteracao;
+                document.getElementById('imgBanner').src = './banner/img/' + data.Img;
+                document.getElementById('iBannerTitulo').innerText = data.Titulo;
+                document.getElementById('iDataInicio').innerText = data.DataInicial;
+                document.getElementById('iDataFim').innerText = data.DataFinal;
+                document.getElementById('iAdm').innerText = data.Nome + ' ' + data.Sobrenome;
+                document.getElementById('iCadastro').innerText = data.Cadastro;
+                document.getElementById('iAlteracao').innerText = data.Alteracao;
                 document.getElementById('iEstatus').innerText = estatus;
             } else {
                 mensagem(data.mensagem);
@@ -206,9 +205,9 @@ function generoVeMais(vermais, controle) {
         .then(data => {
             if (data) {
                 var estatus = '';
-                data.cadastro = formatarDataBrasileira(data.cadastro);
-                data.alteracao = formatarDataBrasileira(data.alteracao);
-                if (data.ativo == 'A') {
+                data.Cadastro = formatarDataBrasileira(data.Cadastro);
+                data.Alteracao = formatarDataBrasileira(data.Alteracao);
+                if (data.Ativo == 'A') {
                     estatus = 'Ativado';
                     document.getElementById('iEstatus').classList.add('text-success');
                     document.getElementById('iEstatus').classList.remove('text-danger');
@@ -217,9 +216,9 @@ function generoVeMais(vermais, controle) {
                     document.getElementById('iEstatus').classList.add('text-danger');
                     document.getElementById('iEstatus').classList.remove('text-success');
                 }
-                document.getElementById('iGeneroTitulo').innerText = data.genero;
-                document.getElementById('iCadastro').innerText = data.cadastro;
-                document.getElementById('iAlteracao').innerText = data.alteracao;
+                document.getElementById('iGeneroTitulo').innerText = data.Genero;
+                document.getElementById('iCadastro').innerText = data.Cadastro;
+                document.getElementById('iAlteracao').innerText = data.Alteracao;
                 document.getElementById('iEstatus').innerText = estatus;
             } else {
                 mensagem(data.mensagem);
@@ -239,9 +238,9 @@ function cargoTipoVeMais(vermais, controle) {
         .then(data => {
             if (data) {
                 var estatus = '';
-                data.cadastro = formatarDataBrasileira(data.cadastro);
-                data.alteracao = formatarDataBrasileira(data.alteracao);
-                if (data.ativo == 'A') {
+                data.Cadastro = formatarDataBrasileira(data.Cadastro);
+                data.Alteracao = formatarDataBrasileira(data.Alteracao);
+                if (data.Ativo == 'A') {
                     estatus = 'Ativado';
                     document.getElementById('iEstatus').classList.add('text-success');
                     document.getElementById('iEstatus').classList.remove('text-danger');
@@ -250,9 +249,9 @@ function cargoTipoVeMais(vermais, controle) {
                     document.getElementById('iEstatus').classList.add('text-danger');
                     document.getElementById('iEstatus').classList.remove('text-success');
                 }
-                document.getElementById('iCargoTipoTitulo').innerText = data.tipocargo;
-                document.getElementById('iCadastro').innerText = data.cadastro;
-                document.getElementById('iAlteracao').innerText = data.alteracao;
+                document.getElementById('iCargoTipoTitulo').innerText = data.TipoCargo;
+                document.getElementById('iCadastro').innerText = data.Cadastro;
+                document.getElementById('iAlteracao').innerText = data.Alteracao;
                 document.getElementById('iEstatus').innerText = estatus;
             } else {
                 mensagem(data.mensagem);
@@ -272,25 +271,25 @@ function bannerDadosAlterar(alterar, controle) {
         .then(data => {
             if (data) {
                 var imagemExiste = 'sem-imagem.png'
-                if (data.img) {
-                    document.getElementById('imgPreviewAlt').src = './banner/img/' + data.img;
+                if (data.Img) {
+                    document.getElementById('imgPreviewAlt').src = './banner/img/' + data.Img;
                 } else {
                     document.getElementById('imgPreviewAlt').src = './banner/img/' + imagemExiste;
                 }
-                document.getElementById('idBannerAlt').value = data.idbanner;
-                document.getElementById('iTituloAlt').value = data.titulo;
-                document.getElementById('iDataIAlt').value = data.datai;
-                document.getElementById('iDataFAlt').value = data.dataf;
+                document.getElementById('idBannerAlt').value = data.IdBanner;
+                document.getElementById('iTituloAlt').value = data.Titulo;
+                document.getElementById('iDataIAlt').value = data.DataInicial;
+                document.getElementById('iDataFAlt').value = data.DataFinal;
                 var selectTipo = document.getElementById('sTipoAlt');
                 selectTipo.innerHTML = '';
                 var tiposDisponiveis = ['Rotativo', 'Central'];
-                tiposDisponiveis.forEach(tipo => {
+                tiposDisponiveis.forEach(Tipo => {
                     var option = document.createElement('option');
-                    option.value = tipo;
-                    option.text = tipo;
+                    option.value = Tipo;
+                    option.text = Tipo;
                     selectTipo.appendChild(option);
                 });
-                var tipoRetornado = data.tipo;
+                var tipoRetornado = data.Tipo;
                 var optionSelecionada = selectTipo.querySelector('option[value="' + tipoRetornado + '"]');
                 if (optionSelecionada) {
                     optionSelecionada.selected = true;
@@ -313,8 +312,8 @@ function generoDadosAlterar(alterar, controle) {
         .then(response => response.json())
         .then(data => {
             if (data) {
-                document.getElementById('idGeneroAlt').value = data.idgenero;
-                document.getElementById('inGeneroAlt').value = data.genero;
+                document.getElementById('idGeneroAlt').value = data.IdGenero;
+                document.getElementById('inGeneroAlt').value = data.Genero;
             } else {
                 mensagem(data.mensagem);
             }
@@ -332,8 +331,8 @@ function cargoTipoDadosAlterar(alterar, controle) {
         .then(response => response.json())
         .then(data => {
             if (data) {
-                document.getElementById('idCargoTipoAlt').value = data.idcargotipo;
-                document.getElementById('inCargoTipoAlt').value = data.tipocargo;
+                document.getElementById('idCargoTipoAlt').value = data.IdCargoTipo;
+                document.getElementById('inCargoTipoAlt').value = data.TipoCargo;
             } else {
                 mensagem(data.mensagem);
             }

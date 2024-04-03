@@ -12,14 +12,14 @@ if (empty($dados['status'])) {
     $response = ['sucesso' => false, 'mensagem' => "O status não foi reconhecido!"];
 } else {
     $idCargoTipo = $dados['status'];
-    $retornoStatus = updateAtivar('cargotipo', 'idcargotipo', $idCargoTipo);
+    $retornoStatus = updateAtivar('cargotipo', 'IdCargoTipo', $idCargoTipo);
     if($retornoStatus=='Desativado'){
         $acao = "Foi Desativado o tipo de cargo no sistema! Id=$idCargoTipo";
-        $retornoInsertAuditoria = insertOitoId('auditoria', 'idadm, acao, tipo, tabela, datahora, ip, pcusuario, dispositivo', $idAdmin, $acao, 2, 'cargotipo', DATATIMEATUAL, "$ip", $pc, $dispositivo);
+        $retornoInsertAuditoria = insertOitoId('auditoria', 'IdAdm, Acao, Tipo, Tabela, DataHora, Ip, PcUsuario, Dispositivo', $idAdmin, $acao, 2, 'cargotipo', DATATIMEATUAL, "$ip", $pc, $dispositivo);
         $response = ['sucesso' => true, 'mensagem' => "Tipo de Cargo Desativado com sucesso!"];
     }elseif($retornoStatus=='Ativado'){
         $acao = "Foi Ativado o tipo de cargo no sistema! Id=$idCargoTipo";
-        $retornoInsertAuditoria = insertOitoId('auditoria', 'idadm, acao, tipo, tabela, datahora, ip, pcusuario, dispositivo', $idAdmin, $acao, 2, 'cargotipo', DATATIMEATUAL, "$ip", $pc, $dispositivo);
+        $retornoInsertAuditoria = insertOitoId('auditoria', 'IdAdm, Acao, Tipo, Tabela, DataHora, Ip, PcUsuario, Dispositivo', $idAdmin, $acao, 2, 'cargotipo', DATATIMEATUAL, "$ip", $pc, $dispositivo);
         $response = ['sucesso' => true, 'mensagem' => "Tipo de Cargo Ativado com sucesso!"];
     }else{
         $response = ['sucesso' => false, 'mensagem' => "Error, Tipo de Cargo não sofreu alteração!"];

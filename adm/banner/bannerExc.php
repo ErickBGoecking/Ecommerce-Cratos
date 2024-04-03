@@ -13,11 +13,11 @@ if (empty($dados['excluir'])) {
     $response = ['sucesso' => false, 'mensagem' => "O banner não foi reconhecido!"];
 } else {
     $idbanner = $dados['excluir'];
-    $retornoListarImg = listarRegistroU('banner', 'img, titulo', 'idbanner', $idbanner);
+    $retornoListarImg = listarRegistroU('banner', 'Img, Titulo', 'IdBanner', $idbanner);
     if ($retornoListarImg) {
         foreach ($retornoListarImg as $itemListarImg) {
-            $img = $itemListarImg->img;
-            $titulo = $itemListarImg->titulo;
+            $img = $itemListarImg->Img;
+            $titulo = $itemListarImg->Titulo;
         }
         $caminho = "banner/img/$img";
     } else {
@@ -26,9 +26,9 @@ if (empty($dados['excluir'])) {
     $acao = "Foi Excluido do sistema Banner $titulo";
     if (isset($caminho) && file_exists($caminho)) {
         if (unlink($caminho)) {
-            $retornoExcluir = deleteRegistroUnico('banner', 'idbanner', $idbanner);
+            $retornoExcluir = deleteRegistroUnico('banner', 'IdBanner', $idbanner);
             if ($retornoExcluir) {
-                $retornoInsertAuditoria = insertOitoId('auditoria', 'idadm, acao, tipo, tabela, datahora, ip, pcusuario, dispositivo', $idAdmin, $acao, 3, 'banner', DATATIMEATUAL, "$ip", $pc, $dispositivo);
+                $retornoInsertAuditoria = insertOitoId('auditoria', 'IdAdm, Acao, Tipo, Tabela, DataHora, Ip, PcUsuario, Dispositivo', $idAdmin, $acao, 3, 'banner', DATATIMEATUAL, "$ip", $pc, $dispositivo);
                 $response = ['sucesso' => true, 'mensagem' => "Banner deletado com sucesso!"];
             } else {
                 $response = ['sucesso' => false, 'mensagem' => "Falha ao excluir registro de banner!"];
@@ -37,9 +37,9 @@ if (empty($dados['excluir'])) {
             $response = ['sucesso' => false, 'mensagem' => "Falha ao excluir arquivo de imagem!"];
         }
     } else {
-        $retornoExcluir = deleteRegistroUnico('banner', 'idbanner', $idbanner);
+        $retornoExcluir = deleteRegistroUnico('banner', 'IdBanner', $idbanner);
         if ($retornoExcluir) {
-            $retornoInsertAuditoria = insertOitoId('auditoria', 'idadm, acao, tipo, tabela, datahora, ip, pcusuario, dispositivo', $idAdmin, $acao, 3, 'banner', DATATIMEATUAL, "$ip", $pc, $dispositivo);
+            $retornoInsertAuditoria = insertOitoId('auditoria', 'IdAdm, Acao, Tipo, Tabela, DataHora, Ip, PcUsuario, Dispositivo', $idAdmin, $acao, 3, 'banner', DATATIMEATUAL, "$ip", $pc, $dispositivo);
             $response = ['sucesso' => true, 'mensagem' => "Banner deletado com sucesso!"];
         } else {
             $response = ['sucesso' => false, 'mensagem' => "Falha ao excluir registro de banner!"];

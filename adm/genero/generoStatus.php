@@ -12,14 +12,14 @@ if (empty($dados['status'])) {
     $response = ['sucesso' => false, 'mensagem' => "O status não foi reconhecido!"];
 } else {
     $idGenero = $dados['status'];
-    $retornoStatus = updateAtivar('genero', 'idgenero', $idGenero);
+    $retornoStatus = updateAtivar('genero', 'IdGenero', $idGenero);
     if($retornoStatus=='Desativado'){
         $acao = "Foi Desativado o genero no sistema! Id=$idGenero";
-        $retornoInsertAuditoria = insertOitoId('auditoria', 'idadm, acao, tipo, tabela, datahora, ip, pcusuario, dispositivo', $idAdmin, $acao, 2, 'genero', DATATIMEATUAL, "$ip", $pc, $dispositivo);
+        $retornoInsertAuditoria = insertOitoId('auditoria', 'IdAdm, Acao, Tipo, Tabela, DataHora, Ip, PcUsuario, Dispositivo', $idAdmin, $acao, 2, 'Genero', DATATIMEATUAL, "$ip", $pc, $dispositivo);
         $response = ['sucesso' => true, 'mensagem' => "Genero Desativado com sucesso!"];
     }elseif($retornoStatus=='Ativado'){
         $acao = "Foi Ativado o genero no sistema! Id=$idGenero";
-        $retornoInsertAuditoria = insertOitoId('auditoria', 'idadm, acao, tipo, tabela, datahora, ip, pcusuario, dispositivo', $idAdmin, $acao, 2, 'genero', DATATIMEATUAL, "$ip", $pc, $dispositivo);
+        $retornoInsertAuditoria = insertOitoId('auditoria', 'IdAdm, Acao, Tipo, Tabela, DataHora, Ip, PcUsuario, Dispositivo', $idAdmin, $acao, 2, 'Genero', DATATIMEATUAL, "$ip", $pc, $dispositivo);
         $response = ['sucesso' => true, 'mensagem' => "Genero Ativado com sucesso!"];
     }else{
         $response = ['sucesso' => false, 'mensagem' => "Error, Genero não sofreu alteração!"];
