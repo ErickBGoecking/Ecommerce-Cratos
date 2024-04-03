@@ -13,7 +13,7 @@ if (empty($dados['vermais'])) {
     $response = ['sucesso' => false, 'mensagem' => "O banner não foi reconhecido!"];
 } else {
     $idbanner = $dados['vermais'];
-    $listarBanner = listarGeral('b.idbanner, b.img, b.titulo, b.datai, b.dataf, b.tipo, b.cadastro, b.alteracao, b.ativo, p.nome, p.sobrenome', "banner b INNER JOIN pessoa p ON p.idpessoa = b.idadm WHERE b.idbanner = $idbanner ORDER BY b.idbanner DESC");
+    $listarBanner = listarGeral('b.IdBanner, b.Img, b.Titulo, b.DataInicial, b.DataFinal, b.Tipo, b.Cadastro, b.Alteracao, b.Ativo, p.Nome, p.Sobrenome', "banner b INNER JOIN pessoa p ON p.IdPessoa = b.IdAdm WHERE b.IdBanner = $idbanner ORDER BY b.IdBanner DESC");
     if ($listarBanner) {
         $bannerData = reset($listarBanner);
         echo json_encode($bannerData);

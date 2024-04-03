@@ -55,8 +55,8 @@ if (isset($controle) && !empty($controle)) {
         case'cargoTipoAdd':
             include_once 'cargo/cargoTipoAdd.php';
             break;
-        case'cartoTipoStatus':
-            include_once 'cargo/cartoTipoStatus.php';
+        case'cargoTipoStatus':
+            include_once 'cargo/cargoTipoStatus.php';
             break;
         case'cargoTipoExc':
             include_once 'cargo/cargoTipoExc.php';
@@ -69,6 +69,7 @@ if (isset($controle) && !empty($controle)) {
             break;
         case'cargoTipoAlt':
             include_once 'cargo/cargoTipoDadosAlt.php';
+            break;
         case'usuarioAdd':
             include_once 'user/usuarioAdd.php';
             break;

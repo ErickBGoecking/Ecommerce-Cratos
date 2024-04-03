@@ -7,14 +7,14 @@ $conn = conectar();
 $dados = filter_input_array(INPUT_POST, FILTER_DEFAULT);
 
 $response = array();
-if (empty($dados['cargoTipo'])) {
+if (empty($dados['CargoTipo'])) {
     $response = ['sucesso' => false, 'mensagem' => "O Tipo de Cargo deve ser preenchido!"];
 } else {
-    $cargoTipo = addslashes(trim($dados['cargoTipo']));
-    $retornoInsert = insertUmId('cargotipo', 'tipocargo', $cargoTipo);
+    $cargoTipo = addslashes(trim($dados['CargoTipo']));
+    $retornoInsert = insertUmId('cargotipo', 'TipoCargo', $cargoTipo);
     if ($retornoInsert) {
         $acao = "Foi adicionado no sistema Tipo de Cargo $cargoTipo";
-        $retornoInsertAuditoria = insertOitoId('auditoria', 'idadm, acao, tipo, tabela, datahora, ip, pcusuario, dispositivo', $idAdmin, $acao, 1, 'cargotipo', DATATIMEATUAL, "$ip", $pc, $dispositivo);
+        $retornoInsertAuditoria = insertOitoId('auditoria', 'IdAdm, Acao, Tipo, Tabela, DataHora, Ip, PcUsuario, Dispositivo', $idAdmin, $acao, 1, 'cargotipo', DATATIMEATUAL, "$ip", $pc, $dispositivo);
         if ($retornoInsertAuditoria) {
             $response = ['sucesso' => true, 'mensagem' => "Tipo de Cargo  cadastrado com sucesso!"];
         } else {

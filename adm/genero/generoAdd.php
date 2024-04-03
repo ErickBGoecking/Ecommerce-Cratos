@@ -8,14 +8,14 @@ $dados = filter_input_array(INPUT_POST, FILTER_DEFAULT);
 
 $response = array();
 
-if (empty($dados['genero'])) {
+if (empty($dados['Genero'])) {
     $response = ['sucesso' => false, 'mensagem' => "O gênero deve ser preenchido!"];
 } else {
-    $genero = addslashes(trim($dados['genero']));
-    $retornoInsert = insertUmId('genero', 'genero', $genero);
+    $Genero = addslashes(trim($dados['Genero']));
+    $retornoInsert = insertUmId('genero', 'Genero', $Genero);
     if ($retornoInsert) {
-        $acao = "Foi adicionado no sistema Genero $genero";
-        $retornoInsertAuditoria = insertOitoId('auditoria', 'idadm, acao, tipo, tabela, datahora, ip, pcusuario, dispositivo', $idAdmin, $acao, 1, 'genero', DATATIMEATUAL, "$ip", $pc, $dispositivo);
+        $acao = "Foi adicionado no sistema Genero $Genero";
+        $retornoInsertAuditoria = insertOitoId('auditoria', 'IdAdm, Acao, Tipo, Tabela, DataHora, Ip, PcUsuario, Dispositivo', $idAdmin, $acao, 1, 'Genero', DATATIMEATUAL, "$ip", $pc, $dispositivo);
         if ($retornoInsertAuditoria) {
             $response = ['sucesso' => true, 'mensagem' => "Genero cadastrado com sucesso!"];
         } else {
