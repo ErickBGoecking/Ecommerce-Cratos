@@ -15,15 +15,15 @@ echo "<div class='card-body'>";
 $dados = listarLimitPaginacao('pessoa',$getPaginacao,$limite);
 while ($row = $dados->fetch()) {
 
-    $idPessoa = $row['idpessoa'];
-    $nome = $row['nome'];
-    $email = $row['email'];
-    $nomeCompleto =  $row['nome'] ." ".$row['sobrenome'];
-    $foto = $row['foto'];
-    $cpf = $row['cpf'];
-    $cadastro = $row['cadastro'];
-    $alteracao = $row['alteracao'];
-    $ativo = $row['ativo'];
+    $idPessoa = $row['IdPessoa'];
+    $nome = $row['Nome'];
+    $email = $row['Email'];
+    $nomeCompleto =  $row['Nome'] ." ".$row['Sobrenome'];
+    $foto = $row['Foto'];
+    $cpf = $row['Cpf'];
+    $cadastro = $row['Cadastro'];
+    $alteracao = $row['Alteracao'];
+    $ativo = $row['Ativo'];
     if ($ativo == 'A') {
         $btnAtivo = '<a href="#" class="btn btn-sm btn-outline-primary" aria-current="page" title="Banner Ativado"><span class="mdi mdi-lock-open-check text-success"></span>Ativo</a>';
     } else {
@@ -52,16 +52,18 @@ while ($row = $dados->fetch()) {
 
                 <a href="#" class="btn btn-sm btn-outline-primary" aria-current="page" data-bs-toggle="modal"
                     data-bs-target="#modalUsuariosVerMais" title="Ver detalhes do usuario"
-                    onclick="bannerVeMais(<?php echo $idPessoa ?>,'usuarioVerMais')"><span
+                    onclick="bannerVeMais(<?php echo $idPessoa ?>,'verMais')"><span
                         class="mdi mdi-monitor-eye"></span> Ver Mais</a>
 
-                <a href="?pagina=administrador&entrada=alterar" class="btn btn-sm btn-outline-primary"
-                    title="Alterar informações do Banner"><span class="mdi mdi-file-document-edit"></span>
-                    Alterar</a>
-
-                <a href="#" class="btn btn-sm btn-outline-primary" title="Excluir Usuário"
-                    onclick="excGeral(<?php echo $idPessoa ?>,'usuarioExc','btnExcluir');"><span
-                        class="mdi mdi-delete-alert"></span> Excluir</a>
+                <a href="#" class="btn btn-sm btn-outline-primary"
+                            title="Alterar informações do Banner" data-bs-toggle="modal"
+                            data-bs-target="#modalBannerAlt"
+                            onclick="bannerDadosAlterar(<?php echo $idPessoa ?>,'usuarioDadosAlt');"><span
+                                    class="mdi mdi-file-document-edit"></span>
+                            Alterar</a>
+                <a href="#" class="btn btn-sm btn-outline-primary" title="Excluir Usuario"
+                    onclick="excGeral2(<?php echo $idPessoa ?>,'usuarioExc','btnExcluir','listarUsuario',<?php echo $getPaginacao ?>);"><span
+                            class="mdi mdi-delete-alert"></span> Excluir</a>
             </div>
         </div>
     </div>

@@ -10,3 +10,5 @@
 
 <script src="js/scriptcrato.js"></script>
 <script>window.onload = function() {carregarDadosPaginacao('listarUsuario',1)};</script>
+
+<?php include_once 'mensagem.php';?>

@@ -145,6 +145,39 @@ function excGeral(excluir, controle, btnAdd) {
     }
 }
 
+function excGeral2(excluir, controle, btnAdd,recarregar,pagina) {
+    if (excluir > 0) {
+        document.getElementById("confirmacao").style.display = "block";
+        document.getElementById(btnAdd).addEventListener('click', function () {
+            fetch('controle.php', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/x-www-form-urlencoded',
+                },
+                body: 'controle=' + encodeURIComponent(controle) + '&excluir=' + encodeURIComponent(excluir),
+            })
+                .then(response => response.json())
+                .then(data => {
+                    if (data.sucesso) {
+                        document.getElementById("confirmacao").style.display = "none";
+                        carregarDadosPaginacao(recarregar,pagina);
+                        mensagem(data.mensagem);
+                        setTimeout(function () {
+                        }, 2000);
+                        // setTimeout(function () {
+                        //     location.reload();
+                        // }, 2000);
+                    } else {
+                        mensagem(data.mensagem);
+                    }
+                })
+                .catch(error => console.error('Erro na requisição:', error));
+        });
+    } else {
+        mensagem('Error na exclusão');
+    }
+}
+
 function cancelarExclusao() {
     document.getElementById("confirmacao").style.display = "none";
 }
