@@ -1,10 +1,12 @@
 <?php
-include_once('../config/constantes.php');
-include_once('../config/conexao.php');
-include_once('../func/func.php');
+include_once('config/constantes.php');
+include_once('config/conexao.php');
+include_once('func/func.php');
 
 
-$getPaginacao=$_GET['paginacao'];
+$dados = filter_input_array(INPUT_POST, FILTER_DEFAULT);
+
+$getPaginacao=$dados['paginacao'];
 $limite = 10;
 
 echo "<div class='card border border-0 shadow'>";
@@ -68,9 +70,8 @@ while ($row = $dados->fetch()) {
 <?php 
 }
 
-$totalRegistros = listarGeral('idpessoa','pessoa');
-$totalRegistros = count($totalRegistros);
-botoesPaginacao("user/carregar_dados.php",$totalRegistros,$limite,$getPaginacao);
+$totalRegistros = count(listarGeral('idpessoa','pessoa'));
+botoesPaginacao("listarUsuario",$totalRegistros,$limite,$getPaginacao);
 
 ?>
 

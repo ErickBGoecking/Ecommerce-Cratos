@@ -367,14 +367,22 @@ function alterarGeral(controle, modalAlt, frm) {
 
 
 // ------------------------PAGINAÇÃO---------------------------------------------
-function carregarDadosPaginacao(caminho,pagina) {
-    var xhr = new XMLHttpRequest();
-    xhr.open('GET', caminho + "?paginacao=" + pagina, true);
-    xhr.onload = function() {
-        if (this.status == 200) {
-            document.getElementById('conteudo').innerHTML = this.responseText;
-            criarBotoesPaginacao(pagina);
+
+function carregarDadosPaginacao(controle, pagina) {
+    fetch('controle.php', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/x-www-form-urlencoded',
+        },
+        body: 'controle=' + encodeURIComponent(controle) + '&paginacao=' + encodeURIComponent(pagina),
+    })
+    .then(response => response.text())
+    .then(data => {
+        if (data) {
+            document.getElementById('conteudo').innerHTML = data;
+        } else {
+            mensagem(data.mensagem);
         }
-    }
-    xhr.send();
+    })
+    .catch(error => console.error('Erro na requisição:', error));
 }

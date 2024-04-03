@@ -73,6 +73,9 @@ if (isset($controle) && !empty($controle)) {
         case'usuarioAdd':
             include_once 'user/usuarioAdd.php';
             break;
+        case'listarUsuario':
+            include_once 'user/carregar_dados.php';
+            break;
         case'usuarioExc':
             include_once 'user/usuarioExc.php';
             break;
