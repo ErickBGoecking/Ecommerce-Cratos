@@ -70,15 +70,29 @@ if (isset($controle) && !empty($controle)) {
         case'cargoTipoAlt':
             include_once 'cargo/cargoTipoDadosAlt.php';
             break;
+        case'listarUsuario':
+            include_once 'user/lista.php';
+            break;
         case'usuarioAdd':
             include_once 'user/usuarioAdd.php';
             break;
-        case'listarUsuario':
-            include_once 'user/carregar_dados.php';
+        case'usuarioVerMais':
+            include_once 'user/usuarioVerMais.php';
             break;
         case'usuarioExc':
             include_once 'user/usuarioExc.php';
             break;
+        case'usuarioDadosAlt':
+            include_once 'user/usuarioVerMais.php';
+            break;
+        case'usuarioAlt':
+            include_once 'user/usuarioAlt.php';
+            break;
+        case'usuarioStatus':
+            include_once 'user/usuarioStatus.php';
+            break;
+            
+            
         default:
             echo 'Padrão alterar';
     }

@@ -1,3 +1,4 @@
+
 function previewImg(idimg, imgPreview) {
     document.getElementById(idimg).addEventListener('change', function () {
         var arquivo = this.files[0];
@@ -162,11 +163,7 @@ function excGeral2(excluir, controle, btnAdd,recarregar,pagina) {
                         document.getElementById("confirmacao").style.display = "none";
                         carregarDadosPaginacao(recarregar,pagina);
                         mensagem(data.mensagem);
-                        setTimeout(function () {
-                        }, 2000);
-                        // setTimeout(function () {
-                        //     location.reload();
-                        // }, 2000);
+                        setTimeout(2000);
                     } else {
                         mensagem(data.mensagem);
                     }
@@ -396,26 +393,4 @@ function alterarGeral(controle, modalAlt, frm) {
             }
         })
         .catch(error => console.error('Erro na requisição:', error));
-}
-
-
-// ------------------------PAGINAÇÃO---------------------------------------------
-
-function carregarDadosPaginacao(controle, pagina) {
-    fetch('controle.php', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/x-www-form-urlencoded',
-        },
-        body: 'controle=' + encodeURIComponent(controle) + '&paginacao=' + encodeURIComponent(pagina),
-    })
-    .then(response => response.text())
-    .then(data => {
-        if (data) {
-            document.getElementById('conteudo').innerHTML = data;
-        } else {
-            mensagem(data.mensagem);
-        }
-    })
-    .catch(error => console.error('Erro na requisição:', error));
 }

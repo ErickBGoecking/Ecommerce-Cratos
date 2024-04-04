@@ -2731,7 +2731,7 @@ function listarLimitPaginacao($tabela,$getpaginacao,$limite=10,$condicao=""){
     return $stmt;
 }
 function botoesPaginacao($caminho, $totalRegistros,$limite,$paginaAtual){
-    $divisao = $totalRegistros/$limite;
+    $divisao = ceil($totalRegistros/$limite);
     echo <<<EOT
     <div class="row float-end mt-3">
         <div class="col-8">
@@ -2778,7 +2778,6 @@ function botoesPaginacao($caminho, $totalRegistros,$limite,$paginaAtual){
         }
         $x++;
     } 
-    $divisao=intval($divisao)+1;
     echo <<<EOT
                     <li class="page-item">
                         <a class="page-link" aria-label="Next" onclick="carregarDadosPaginacao('$caminho',$divisao)">
@@ -2808,6 +2807,32 @@ function insert($tabela, $campos, $values) {
             $idRetorno = $conn->lastInsertId();
             $conn->commit();
             return $idRetorno;
+        } else {
+            $conn->rollback();
+            return False;
+        }
+    } catch (PDOException $e) {
+        $conn->rollback();
+        return 'Exception -> ' . $e->getMessage();
+    } finally {
+        $conn = null;
+    }
+}
+function updateGeral($tabela, $campos, $values,$where,$id) {
+    $conn = conectar();
+    try {
+        $conn->beginTransaction();
+        $interrogacoes = rtrim(str_repeat('?,', count($values)), ',');
+        $sqlInsert = $conn->prepare("UPDATE $tabela SET ($campos) VALUES ($interrogacoes) WHERE $where = $id ");
+
+        foreach ($values as $i => $value) {
+            $sqlInsert->bindParam($i + 1, $values[$i], PDO::PARAM_STR);
+        }
+
+        $sqlInsert->execute();
+
+        if ($sqlInsert->rowCount() > 0) {
+            return False;
         } else {
             $conn->rollback();
             return False;
