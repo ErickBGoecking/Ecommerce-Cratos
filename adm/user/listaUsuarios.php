@@ -282,6 +282,22 @@
         if(document.getElementById('iImgAlt')){previewImg('iImgAlt', 'imgPreviewAlt')}
     }
 
+    // document.getElementById('inputCPF').addEventListener('input', function() {
+    // document.getElementById('inputSenha').value = this.value;});
+
+    function limparCadastroUsuario(){
+        document.getElementById('iImg').value = "";
+        document.getElementById('imgPreview').src = "./banner/img/sem-imagem.png";
+        document.getElementById('inputNome').value = "";
+        document.getElementById('inputSobrenome').value = "";
+        document.getElementById('inputCPF').value = "";
+        document.getElementById('inputNascimento').value = "";
+        document.getElementById('inputGenero').value = "";
+        document.getElementById('inputTelefone').value = "";
+        document.getElementById('inputEmail').value = "";
+        document.getElementById('inputSenha').value = "";
+    }
+
     mascaraCPF('inputCPF');
     mascaraCPF('iCpfAlt');
     mascaraTelefone('inputTelefone');

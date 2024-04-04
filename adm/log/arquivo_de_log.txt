@@ -5998,3 +5998,1251 @@ Trace File: D:\htdocs\Cratos\Ecommerce-Cratos\adm\func\func.php
 Trace Line: 2415
 File: D:\htdocs\Cratos\Ecommerce-Cratos\adm\func\func.php
 Line: 2415
+Throwable: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '@hotmail.com' at line 1
+Code: 42000
+Trace: Array
+(
+    [0] => Array
+        (
+            [file] => D:\htdocs\Cratos\Ecommerce-Cratos\adm\func\func.php
+            [line] => 2415
+            [function] => execute
+            [class] => PDOStatement
+            [type] => ->
+            [args] => Array
+                (
+                )
+
+        )
+
+    [1] => Array
+        (
+            [file] => D:\htdocs\Cratos\Ecommerce-Cratos\adm\user\usuarioAdd.php
+            [line] => 33
+            [function] => listarGeral
+            [args] => Array
+                (
+                    [0] => Email
+                    [1] => pessoa WHERE Email = fernandosalvinogv@hotmail.com
+                )
+
+        )
+
+    [2] => Array
+        (
+            [file] => D:\htdocs\Cratos\Ecommerce-Cratos\adm\controle.php
+            [line] => 77
+            [args] => Array
+                (
+                    [0] => D:\htdocs\Cratos\Ecommerce-Cratos\adm\user\usuarioAdd.php
+                )
+
+            [function] => include_once
+        )
+
+)
+
+Trace File: D:\htdocs\Cratos\Ecommerce-Cratos\adm\func\func.php
+Trace Line: 2415
+File: D:\htdocs\Cratos\Ecommerce-Cratos\adm\func\func.php
+Line: 2415
+Throwable: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '@hotmail.com' at line 1
+Code: 42000
+Trace: Array
+(
+    [0] => Array
+        (
+            [file] => D:\htdocs\Cratos\Ecommerce-Cratos\adm\func\func.php
+            [line] => 2415
+            [function] => execute
+            [class] => PDOStatement
+            [type] => ->
+            [args] => Array
+                (
+                )
+
+        )
+
+    [1] => Array
+        (
+            [file] => D:\htdocs\Cratos\Ecommerce-Cratos\adm\user\usuarioAdd.php
+            [line] => 33
+            [function] => listarGeral
+            [args] => Array
+                (
+                    [0] => Email
+                    [1] => pessoa WHERE Email = fernandosalvinogv@hotmail.com
+                )
+
+        )
+
+    [2] => Array
+        (
+            [file] => D:\htdocs\Cratos\Ecommerce-Cratos\adm\controle.php
+            [line] => 77
+            [args] => Array
+                (
+                    [0] => D:\htdocs\Cratos\Ecommerce-Cratos\adm\user\usuarioAdd.php
+                )
+
+            [function] => include_once
+        )
+
+)
+
+Trace File: D:\htdocs\Cratos\Ecommerce-Cratos\adm\func\func.php
+Trace Line: 2415
+File: D:\htdocs\Cratos\Ecommerce-Cratos\adm\func\func.php
+Line: 2415
+Throwable: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '@hotmail.com' at line 1
+Code: 42000
+Trace: Array
+(
+    [0] => Array
+        (
+            [file] => D:\htdocs\Cratos\Ecommerce-Cratos\adm\func\func.php
+            [line] => 2415
+            [function] => execute
+            [class] => PDOStatement
+            [type] => ->
+            [args] => Array
+                (
+                )
+
+        )
+
+    [1] => Array
+        (
+            [file] => D:\htdocs\Cratos\Ecommerce-Cratos\adm\user\usuarioAdd.php
+            [line] => 33
+            [function] => listarGeral
+            [args] => Array
+                (
+                    [0] => Email
+                    [1] => pessoa WHERE Email = fernandosalvinogv@hotmail.com
+                )
+
+        )
+
+    [2] => Array
+        (
+            [file] => D:\htdocs\Cratos\Ecommerce-Cratos\adm\controle.php
+            [line] => 77
+            [args] => Array
+                (
+                    [0] => D:\htdocs\Cratos\Ecommerce-Cratos\adm\user\usuarioAdd.php
+                )
+
+            [function] => include_once
+        )
+
+)
+
+Trace File: D:\htdocs\Cratos\Ecommerce-Cratos\adm\func\func.php
+Trace Line: 2415
+File: D:\htdocs\Cratos\Ecommerce-Cratos\adm\func\func.php
+Line: 2415
+Throwable: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '@hotmail.com' at line 1
+Code: 42000
+Trace: Array
+(
+    [0] => Array
+        (
+            [file] => D:\htdocs\Cratos\Ecommerce-Cratos\adm\func\func.php
+            [line] => 2415
+            [function] => execute
+            [class] => PDOStatement
+            [type] => ->
+            [args] => Array
+                (
+                )
+
+        )
+
+    [1] => Array
+        (
+            [file] => D:\htdocs\Cratos\Ecommerce-Cratos\adm\user\usuarioAdd.php
+            [line] => 33
+            [function] => listarGeral
+            [args] => Array
+                (
+                    [0] => Email
+                    [1] => pessoa WHERE Email = fernandosalvinogv@hotmail.com
+                )
+
+        )
+
+    [2] => Array
+        (
+            [file] => D:\htdocs\Cratos\Ecommerce-Cratos\adm\controle.php
+            [line] => 77
+            [args] => Array
+                (
+                    [0] => D:\htdocs\Cratos\Ecommerce-Cratos\adm\user\usuarioAdd.php
+                )
+
+            [function] => include_once
+        )
+
+)
+
+Trace File: D:\htdocs\Cratos\Ecommerce-Cratos\adm\func\func.php
+Trace Line: 2415
+File: D:\htdocs\Cratos\Ecommerce-Cratos\adm\func\func.php
+Line: 2415
+Throwable: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '@hotmail.com' at line 1
+Code: 42000
+Trace: Array
+(
+    [0] => Array
+        (
+            [file] => D:\htdocs\Cratos\Ecommerce-Cratos\adm\func\func.php
+            [line] => 2415
+            [function] => execute
+            [class] => PDOStatement
+            [type] => ->
+            [args] => Array
+                (
+                )
+
+        )
+
+    [1] => Array
+        (
+            [file] => D:\htdocs\Cratos\Ecommerce-Cratos\adm\user\usuarioAdd.php
+            [line] => 33
+            [function] => listarGeral
+            [args] => Array
+                (
+                    [0] => Email
+                    [1] => pessoa WHERE Email = fernandosalvrrnogv@hotmail.com
+                )
+
+        )
+
+    [2] => Array
+        (
+            [file] => D:\htdocs\Cratos\Ecommerce-Cratos\adm\controle.php
+            [line] => 77
+            [args] => Array
+                (
+                    [0] => D:\htdocs\Cratos\Ecommerce-Cratos\adm\user\usuarioAdd.php
+                )
+
+            [function] => include_once
+        )
+
+)
+
+Trace File: D:\htdocs\Cratos\Ecommerce-Cratos\adm\func\func.php
+Trace Line: 2415
+File: D:\htdocs\Cratos\Ecommerce-Cratos\adm\func\func.php
+Line: 2415
+Throwable: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '' at line 1
+Code: 42000
+Trace: Array
+(
+    [0] => Array
+        (
+            [file] => D:\htdocs\Cratos\Ecommerce-Cratos\adm\func\func.php
+            [line] => 2415
+            [function] => execute
+            [class] => PDOStatement
+            [type] => ->
+            [args] => Array
+                (
+                )
+
+        )
+
+    [1] => Array
+        (
+            [file] => D:\htdocs\Cratos\Ecommerce-Cratos\adm\user\usuarioAdd.php
+            [line] => 12
+            [function] => listarGeral
+            [args] => Array
+                (
+                    [0] => Email
+                    [1] => pessoa WHERE Email = 
+                )
+
+        )
+
+    [2] => Array
+        (
+            [file] => D:\htdocs\Cratos\Ecommerce-Cratos\adm\controle.php
+            [line] => 77
+            [args] => Array
+                (
+                    [0] => D:\htdocs\Cratos\Ecommerce-Cratos\adm\user\usuarioAdd.php
+                )
+
+            [function] => include_once
+        )
+
+)
+
+Trace File: D:\htdocs\Cratos\Ecommerce-Cratos\adm\func\func.php
+Trace Line: 2415
+File: D:\htdocs\Cratos\Ecommerce-Cratos\adm\func\func.php
+Line: 2415
+Throwable: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '@hotmail.com' at line 1
+Code: 42000
+Trace: Array
+(
+    [0] => Array
+        (
+            [file] => D:\htdocs\Cratos\Ecommerce-Cratos\adm\func\func.php
+            [line] => 2415
+            [function] => execute
+            [class] => PDOStatement
+            [type] => ->
+            [args] => Array
+                (
+                )
+
+        )
+
+    [1] => Array
+        (
+            [file] => D:\htdocs\Cratos\Ecommerce-Cratos\adm\user\usuarioAdd.php
+            [line] => 33
+            [function] => listarGeral
+            [args] => Array
+                (
+                    [0] => Email
+                    [1] => pessoa WHERE Email = fernandosalvinogv@hotmail.com
+                )
+
+        )
+
+    [2] => Array
+        (
+            [file] => D:\htdocs\Cratos\Ecommerce-Cratos\adm\controle.php
+            [line] => 77
+            [args] => Array
+                (
+                    [0] => D:\htdocs\Cratos\Ecommerce-Cratos\adm\user\usuarioAdd.php
+                )
+
+            [function] => include_once
+        )
+
+)
+
+Trace File: D:\htdocs\Cratos\Ecommerce-Cratos\adm\func\func.php
+Trace Line: 2415
+File: D:\htdocs\Cratos\Ecommerce-Cratos\adm\func\func.php
+Line: 2415
+Throwable: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '@hotmail.com' at line 1
+Code: 42000
+Trace: Array
+(
+    [0] => Array
+        (
+            [file] => D:\htdocs\Cratos\Ecommerce-Cratos\adm\func\func.php
+            [line] => 2415
+            [function] => execute
+            [class] => PDOStatement
+            [type] => ->
+            [args] => Array
+                (
+                )
+
+        )
+
+    [1] => Array
+        (
+            [file] => D:\htdocs\Cratos\Ecommerce-Cratos\adm\user\usuarioAdd.php
+            [line] => 33
+            [function] => listarGeral
+            [args] => Array
+                (
+                    [0] => Email
+                    [1] => pessoa WHERE Email = fernandosalvindddogv@hotmail.com
+                )
+
+        )
+
+    [2] => Array
+        (
+            [file] => D:\htdocs\Cratos\Ecommerce-Cratos\adm\controle.php
+            [line] => 77
+            [args] => Array
+                (
+                    [0] => D:\htdocs\Cratos\Ecommerce-Cratos\adm\user\usuarioAdd.php
+                )
+
+            [function] => include_once
+        )
+
+)
+
+Trace File: D:\htdocs\Cratos\Ecommerce-Cratos\adm\func\func.php
+Trace Line: 2415
+File: D:\htdocs\Cratos\Ecommerce-Cratos\adm\func\func.php
+Line: 2415
+Throwable: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '@sdfsd.com' at line 1
+Code: 42000
+Trace: Array
+(
+    [0] => Array
+        (
+            [file] => D:\htdocs\Cratos\Ecommerce-Cratos\adm\func\func.php
+            [line] => 2415
+            [function] => execute
+            [class] => PDOStatement
+            [type] => ->
+            [args] => Array
+                (
+                )
+
+        )
+
+    [1] => Array
+        (
+            [file] => D:\htdocs\Cratos\Ecommerce-Cratos\adm\user\usuarioAdd.php
+            [line] => 33
+            [function] => listarGeral
+            [args] => Array
+                (
+                    [0] => Email
+                    [1] => pessoa WHERE Email = werwer@sdfsd.com
+                )
+
+        )
+
+    [2] => Array
+        (
+            [file] => D:\htdocs\Cratos\Ecommerce-Cratos\adm\controle.php
+            [line] => 77
+            [args] => Array
+                (
+                    [0] => D:\htdocs\Cratos\Ecommerce-Cratos\adm\user\usuarioAdd.php
+                )
+
+            [function] => include_once
+        )
+
+)
+
+Trace File: D:\htdocs\Cratos\Ecommerce-Cratos\adm\func\func.php
+Trace Line: 2415
+File: D:\htdocs\Cratos\Ecommerce-Cratos\adm\func\func.php
+Line: 2415
+Throwable: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'Email =' at line 1
+Code: 42000
+Trace: Array
+(
+    [0] => Array
+        (
+            [file] => D:\htdocs\Cratos\Ecommerce-Cratos\adm\func\func.php
+            [line] => 2415
+            [function] => execute
+            [class] => PDOStatement
+            [type] => ->
+            [args] => Array
+                (
+                )
+
+        )
+
+    [1] => Array
+        (
+            [file] => D:\htdocs\Cratos\Ecommerce-Cratos\adm\user\usuarioAdd.php
+            [line] => 11
+            [function] => listarGeral
+            [args] => Array
+                (
+                    [0] => *
+                    [1] => pessoa wherer Email = 
+                )
+
+        )
+
+    [2] => Array
+        (
+            [file] => D:\htdocs\Cratos\Ecommerce-Cratos\adm\controle.php
+            [line] => 77
+            [args] => Array
+                (
+                    [0] => D:\htdocs\Cratos\Ecommerce-Cratos\adm\user\usuarioAdd.php
+                )
+
+            [function] => include_once
+        )
+
+)
+
+Trace File: D:\htdocs\Cratos\Ecommerce-Cratos\adm\func\func.php
+Trace Line: 2415
+File: D:\htdocs\Cratos\Ecommerce-Cratos\adm\func\func.php
+Line: 2415
+Throwable: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'Email = ''' at line 1
+Code: 42000
+Trace: Array
+(
+    [0] => Array
+        (
+            [file] => D:\htdocs\Cratos\Ecommerce-Cratos\adm\func\func.php
+            [line] => 2415
+            [function] => execute
+            [class] => PDOStatement
+            [type] => ->
+            [args] => Array
+                (
+                )
+
+        )
+
+    [1] => Array
+        (
+            [file] => D:\htdocs\Cratos\Ecommerce-Cratos\adm\user\usuarioAdd.php
+            [line] => 11
+            [function] => listarGeral
+            [args] => Array
+                (
+                    [0] => *
+                    [1] => pessoa wherer Email = ''
+                )
+
+        )
+
+    [2] => Array
+        (
+            [file] => D:\htdocs\Cratos\Ecommerce-Cratos\adm\controle.php
+            [line] => 77
+            [args] => Array
+                (
+                    [0] => D:\htdocs\Cratos\Ecommerce-Cratos\adm\user\usuarioAdd.php
+                )
+
+            [function] => include_once
+        )
+
+)
+
+Trace File: D:\htdocs\Cratos\Ecommerce-Cratos\adm\func\func.php
+Trace Line: 2415
+File: D:\htdocs\Cratos\Ecommerce-Cratos\adm\func\func.php
+Line: 2415
+Throwable: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'Email = 'fernando@email.com' at line 1
+Code: 42000
+Trace: Array
+(
+    [0] => Array
+        (
+            [file] => D:\htdocs\Cratos\Ecommerce-Cratos\adm\func\func.php
+            [line] => 2415
+            [function] => execute
+            [class] => PDOStatement
+            [type] => ->
+            [args] => Array
+                (
+                )
+
+        )
+
+    [1] => Array
+        (
+            [file] => D:\htdocs\Cratos\Ecommerce-Cratos\adm\user\usuarioAdd.php
+            [line] => 11
+            [function] => listarGeral
+            [args] => Array
+                (
+                    [0] => *
+                    [1] => pessoa wherer Email = 'fernando@email.com
+                )
+
+        )
+
+    [2] => Array
+        (
+            [file] => D:\htdocs\Cratos\Ecommerce-Cratos\adm\controle.php
+            [line] => 77
+            [args] => Array
+                (
+                    [0] => D:\htdocs\Cratos\Ecommerce-Cratos\adm\user\usuarioAdd.php
+                )
+
+            [function] => include_once
+        )
+
+)
+
+Trace File: D:\htdocs\Cratos\Ecommerce-Cratos\adm\func\func.php
+Trace Line: 2415
+File: D:\htdocs\Cratos\Ecommerce-Cratos\adm\func\func.php
+Line: 2415
+Throwable: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'Email = 'fernando@email.com' at line 1
+Code: 42000
+Trace: Array
+(
+    [0] => Array
+        (
+            [file] => D:\htdocs\Cratos\Ecommerce-Cratos\adm\func\func.php
+            [line] => 2415
+            [function] => execute
+            [class] => PDOStatement
+            [type] => ->
+            [args] => Array
+                (
+                )
+
+        )
+
+    [1] => Array
+        (
+            [file] => D:\htdocs\Cratos\Ecommerce-Cratos\adm\user\usuarioAdd.php
+            [line] => 11
+            [function] => listarGeral
+            [args] => Array
+                (
+                    [0] => *
+                    [1] => pessoa wherer Email = 'fernando@email.com
+                )
+
+        )
+
+    [2] => Array
+        (
+            [file] => D:\htdocs\Cratos\Ecommerce-Cratos\adm\controle.php
+            [line] => 77
+            [args] => Array
+                (
+                    [0] => D:\htdocs\Cratos\Ecommerce-Cratos\adm\user\usuarioAdd.php
+                )
+
+            [function] => include_once
+        )
+
+)
+
+Trace File: D:\htdocs\Cratos\Ecommerce-Cratos\adm\func\func.php
+Trace Line: 2415
+File: D:\htdocs\Cratos\Ecommerce-Cratos\adm\func\func.php
+Line: 2415
+Throwable: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'Email = 'fernando@email.com' at line 1
+Code: 42000
+Trace: Array
+(
+    [0] => Array
+        (
+            [file] => D:\htdocs\Cratos\Ecommerce-Cratos\adm\func\func.php
+            [line] => 2415
+            [function] => execute
+            [class] => PDOStatement
+            [type] => ->
+            [args] => Array
+                (
+                )
+
+        )
+
+    [1] => Array
+        (
+            [file] => D:\htdocs\Cratos\Ecommerce-Cratos\adm\user\usuarioAdd.php
+            [line] => 11
+            [function] => listarGeral
+            [args] => Array
+                (
+                    [0] => *
+                    [1] => pessoa wherer Email = 'fernando@email.com
+                )
+
+        )
+
+    [2] => Array
+        (
+            [file] => D:\htdocs\Cratos\Ecommerce-Cratos\adm\controle.php
+            [line] => 77
+            [args] => Array
+                (
+                    [0] => D:\htdocs\Cratos\Ecommerce-Cratos\adm\user\usuarioAdd.php
+                )
+
+            [function] => include_once
+        )
+
+)
+
+Trace File: D:\htdocs\Cratos\Ecommerce-Cratos\adm\func\func.php
+Trace Line: 2415
+File: D:\htdocs\Cratos\Ecommerce-Cratos\adm\func\func.php
+Line: 2415
+Throwable: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''fernando@email.com' at line 1
+Code: 42000
+Trace: Array
+(
+    [0] => Array
+        (
+            [file] => D:\htdocs\Cratos\Ecommerce-Cratos\adm\func\func.php
+            [line] => 2415
+            [function] => execute
+            [class] => PDOStatement
+            [type] => ->
+            [args] => Array
+                (
+                )
+
+        )
+
+    [1] => Array
+        (
+            [file] => D:\htdocs\Cratos\Ecommerce-Cratos\adm\user\usuarioAdd.php
+            [line] => 11
+            [function] => listarGeral
+            [args] => Array
+                (
+                    [0] => *
+                    [1] => pessoa where Email = 'fernando@email.com
+                )
+
+        )
+
+    [2] => Array
+        (
+            [file] => D:\htdocs\Cratos\Ecommerce-Cratos\adm\controle.php
+            [line] => 77
+            [args] => Array
+                (
+                    [0] => D:\htdocs\Cratos\Ecommerce-Cratos\adm\user\usuarioAdd.php
+                )
+
+            [function] => include_once
+        )
+
+)
+
+Trace File: D:\htdocs\Cratos\Ecommerce-Cratos\adm\func\func.php
+Trace Line: 2415
+File: D:\htdocs\Cratos\Ecommerce-Cratos\adm\func\func.php
+Line: 2415
+Throwable: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'idpesso' in 'where clause'
+Code: 42S22
+Trace: Array
+(
+    [0] => Array
+        (
+            [file] => D:\htdocs\Cratos\Ecommerce-Cratos\adm\func\func.php
+            [line] => 2415
+            [function] => execute
+            [class] => PDOStatement
+            [type] => ->
+            [args] => Array
+                (
+                )
+
+        )
+
+    [1] => Array
+        (
+            [file] => D:\htdocs\Cratos\Ecommerce-Cratos\adm\user\usuarioAdd.php
+            [line] => 11
+            [function] => listarGeral
+            [args] => Array
+                (
+                    [0] => email
+                    [1] => pessoa where idpesso = 1
+                )
+
+        )
+
+    [2] => Array
+        (
+            [file] => D:\htdocs\Cratos\Ecommerce-Cratos\adm\controle.php
+            [line] => 77
+            [args] => Array
+                (
+                    [0] => D:\htdocs\Cratos\Ecommerce-Cratos\adm\user\usuarioAdd.php
+                )
+
+            [function] => include_once
+        )
+
+)
+
+Trace File: D:\htdocs\Cratos\Ecommerce-Cratos\adm\func\func.php
+Trace Line: 2415
+File: D:\htdocs\Cratos\Ecommerce-Cratos\adm\func\func.php
+Line: 2415
+Throwable: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'idpesso' in 'where clause'
+Code: 42S22
+Trace: Array
+(
+    [0] => Array
+        (
+            [file] => D:\htdocs\Cratos\Ecommerce-Cratos\adm\func\func.php
+            [line] => 2415
+            [function] => execute
+            [class] => PDOStatement
+            [type] => ->
+            [args] => Array
+                (
+                )
+
+        )
+
+    [1] => Array
+        (
+            [file] => D:\htdocs\Cratos\Ecommerce-Cratos\adm\user\usuarioAdd.php
+            [line] => 11
+            [function] => listarGeral
+            [args] => Array
+                (
+                    [0] => email
+                    [1] => pessoa where idpesso = 1
+                )
+
+        )
+
+    [2] => Array
+        (
+            [file] => D:\htdocs\Cratos\Ecommerce-Cratos\adm\controle.php
+            [line] => 77
+            [args] => Array
+                (
+                    [0] => D:\htdocs\Cratos\Ecommerce-Cratos\adm\user\usuarioAdd.php
+                )
+
+            [function] => include_once
+        )
+
+)
+
+Trace File: D:\htdocs\Cratos\Ecommerce-Cratos\adm\func\func.php
+Trace Line: 2415
+File: D:\htdocs\Cratos\Ecommerce-Cratos\adm\func\func.php
+Line: 2415
+Throwable: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'idpesso' in 'where clause'
+Code: 42S22
+Trace: Array
+(
+    [0] => Array
+        (
+            [file] => D:\htdocs\Cratos\Ecommerce-Cratos\adm\func\func.php
+            [line] => 2415
+            [function] => execute
+            [class] => PDOStatement
+            [type] => ->
+            [args] => Array
+                (
+                )
+
+        )
+
+    [1] => Array
+        (
+            [file] => D:\htdocs\Cratos\Ecommerce-Cratos\adm\user\usuarioAdd.php
+            [line] => 11
+            [function] => listarGeral
+            [args] => Array
+                (
+                    [0] => email
+                    [1] => pessoa where idpesso = '1'
+                )
+
+        )
+
+    [2] => Array
+        (
+            [file] => D:\htdocs\Cratos\Ecommerce-Cratos\adm\controle.php
+            [line] => 77
+            [args] => Array
+                (
+                    [0] => D:\htdocs\Cratos\Ecommerce-Cratos\adm\user\usuarioAdd.php
+                )
+
+            [function] => include_once
+        )
+
+)
+
+Trace File: D:\htdocs\Cratos\Ecommerce-Cratos\adm\func\func.php
+Trace Line: 2415
+File: D:\htdocs\Cratos\Ecommerce-Cratos\adm\func\func.php
+Line: 2415
+Throwable: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'idpesso' in 'where clause'
+Code: 42S22
+Trace: Array
+(
+    [0] => Array
+        (
+            [file] => D:\htdocs\Cratos\Ecommerce-Cratos\adm\func\func.php
+            [line] => 2415
+            [function] => execute
+            [class] => PDOStatement
+            [type] => ->
+            [args] => Array
+                (
+                )
+
+        )
+
+    [1] => Array
+        (
+            [file] => D:\htdocs\Cratos\Ecommerce-Cratos\adm\user\usuarioAdd.php
+            [line] => 11
+            [function] => listarGeral
+            [args] => Array
+                (
+                    [0] => email
+                    [1] => pessoa where idpesso = '1'
+                )
+
+        )
+
+    [2] => Array
+        (
+            [file] => D:\htdocs\Cratos\Ecommerce-Cratos\adm\controle.php
+            [line] => 77
+            [args] => Array
+                (
+                    [0] => D:\htdocs\Cratos\Ecommerce-Cratos\adm\user\usuarioAdd.php
+                )
+
+            [function] => include_once
+        )
+
+)
+
+Trace File: D:\htdocs\Cratos\Ecommerce-Cratos\adm\func\func.php
+Trace Line: 2415
+File: D:\htdocs\Cratos\Ecommerce-Cratos\adm\func\func.php
+Line: 2415
+Throwable: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '' at line 1
+Code: 42000
+Trace: Array
+(
+    [0] => Array
+        (
+            [file] => D:\htdocs\Cratos\Ecommerce-Cratos\adm\func\func.php
+            [line] => 2415
+            [function] => execute
+            [class] => PDOStatement
+            [type] => ->
+            [args] => Array
+                (
+                )
+
+        )
+
+    [1] => Array
+        (
+            [file] => D:\htdocs\Cratos\Ecommerce-Cratos\adm\user\usuarioAdd.php
+            [line] => 11
+            [function] => listarGeral
+            [args] => Array
+                (
+                    [0] => *
+                    [1] => pessoa WHERE Email = 
+                )
+
+        )
+
+    [2] => Array
+        (
+            [file] => D:\htdocs\Cratos\Ecommerce-Cratos\adm\controle.php
+            [line] => 77
+            [args] => Array
+                (
+                    [0] => D:\htdocs\Cratos\Ecommerce-Cratos\adm\user\usuarioAdd.php
+                )
+
+            [function] => include_once
+        )
+
+)
+
+Trace File: D:\htdocs\Cratos\Ecommerce-Cratos\adm\func\func.php
+Trace Line: 2415
+File: D:\htdocs\Cratos\Ecommerce-Cratos\adm\func\func.php
+Line: 2415
+Throwable: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '' at line 1
+Code: 42000
+Trace: Array
+(
+    [0] => Array
+        (
+            [file] => D:\htdocs\Cratos\Ecommerce-Cratos\adm\func\func.php
+            [line] => 2415
+            [function] => execute
+            [class] => PDOStatement
+            [type] => ->
+            [args] => Array
+                (
+                )
+
+        )
+
+    [1] => Array
+        (
+            [file] => D:\htdocs\Cratos\Ecommerce-Cratos\adm\user\usuarioAdd.php
+            [line] => 11
+            [function] => listarGeral
+            [args] => Array
+                (
+                    [0] => *
+                    [1] => pessoa WHERE Email = 
+                )
+
+        )
+
+    [2] => Array
+        (
+            [file] => D:\htdocs\Cratos\Ecommerce-Cratos\adm\controle.php
+            [line] => 77
+            [args] => Array
+                (
+                    [0] => D:\htdocs\Cratos\Ecommerce-Cratos\adm\user\usuarioAdd.php
+                )
+
+            [function] => include_once
+        )
+
+)
+
+Trace File: D:\htdocs\Cratos\Ecommerce-Cratos\adm\func\func.php
+Trace Line: 2415
+File: D:\htdocs\Cratos\Ecommerce-Cratos\adm\func\func.php
+Line: 2415
+Throwable: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '' at line 1
+Code: 42000
+Trace: Array
+(
+    [0] => Array
+        (
+            [file] => D:\htdocs\Cratos\Ecommerce-Cratos\adm\func\func.php
+            [line] => 2415
+            [function] => execute
+            [class] => PDOStatement
+            [type] => ->
+            [args] => Array
+                (
+                )
+
+        )
+
+    [1] => Array
+        (
+            [file] => D:\htdocs\Cratos\Ecommerce-Cratos\adm\user\usuarioAdd.php
+            [line] => 11
+            [function] => listarGeral
+            [args] => Array
+                (
+                    [0] => *
+                    [1] => pessoa WHERE Email = 
+                )
+
+        )
+
+    [2] => Array
+        (
+            [file] => D:\htdocs\Cratos\Ecommerce-Cratos\adm\controle.php
+            [line] => 77
+            [args] => Array
+                (
+                    [0] => D:\htdocs\Cratos\Ecommerce-Cratos\adm\user\usuarioAdd.php
+                )
+
+            [function] => include_once
+        )
+
+)
+
+Trace File: D:\htdocs\Cratos\Ecommerce-Cratos\adm\func\func.php
+Trace Line: 2415
+File: D:\htdocs\Cratos\Ecommerce-Cratos\adm\func\func.php
+Line: 2415
+Throwable: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '' at line 1
+Code: 42000
+Trace: Array
+(
+    [0] => Array
+        (
+            [file] => D:\htdocs\Cratos\Ecommerce-Cratos\adm\func\func.php
+            [line] => 2415
+            [function] => execute
+            [class] => PDOStatement
+            [type] => ->
+            [args] => Array
+                (
+                )
+
+        )
+
+    [1] => Array
+        (
+            [file] => D:\htdocs\Cratos\Ecommerce-Cratos\adm\user\usuarioAdd.php
+            [line] => 11
+            [function] => listarGeral
+            [args] => Array
+                (
+                    [0] => *
+                    [1] => pessoa WHERE Email = 
+                )
+
+        )
+
+    [2] => Array
+        (
+            [file] => D:\htdocs\Cratos\Ecommerce-Cratos\adm\controle.php
+            [line] => 77
+            [args] => Array
+                (
+                    [0] => D:\htdocs\Cratos\Ecommerce-Cratos\adm\user\usuarioAdd.php
+                )
+
+            [function] => include_once
+        )
+
+)
+
+Trace File: D:\htdocs\Cratos\Ecommerce-Cratos\adm\func\func.php
+Trace Line: 2415
+File: D:\htdocs\Cratos\Ecommerce-Cratos\adm\func\func.php
+Line: 2415
+Throwable: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '' at line 1
+Code: 42000
+Trace: Array
+(
+    [0] => Array
+        (
+            [file] => D:\htdocs\Cratos\Ecommerce-Cratos\adm\func\func.php
+            [line] => 2415
+            [function] => execute
+            [class] => PDOStatement
+            [type] => ->
+            [args] => Array
+                (
+                )
+
+        )
+
+    [1] => Array
+        (
+            [file] => D:\htdocs\Cratos\Ecommerce-Cratos\adm\user\usuarioAdd.php
+            [line] => 11
+            [function] => listarGeral
+            [args] => Array
+                (
+                    [0] => *
+                    [1] => pessoa WHERE Email = 
+                )
+
+        )
+
+    [2] => Array
+        (
+            [file] => D:\htdocs\Cratos\Ecommerce-Cratos\adm\controle.php
+            [line] => 77
+            [args] => Array
+                (
+                    [0] => D:\htdocs\Cratos\Ecommerce-Cratos\adm\user\usuarioAdd.php
+                )
+
+            [function] => include_once
+        )
+
+)
+
+Trace File: D:\htdocs\Cratos\Ecommerce-Cratos\adm\func\func.php
+Trace Line: 2415
+File: D:\htdocs\Cratos\Ecommerce-Cratos\adm\func\func.php
+Line: 2415
+Throwable: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '' at line 1
+Code: 42000
+Trace: Array
+(
+    [0] => Array
+        (
+            [file] => D:\htdocs\Cratos\Ecommerce-Cratos\adm\func\func.php
+            [line] => 2415
+            [function] => execute
+            [class] => PDOStatement
+            [type] => ->
+            [args] => Array
+                (
+                )
+
+        )
+
+    [1] => Array
+        (
+            [file] => D:\htdocs\Cratos\Ecommerce-Cratos\adm\user\usuarioAdd.php
+            [line] => 11
+            [function] => listarGeral
+            [args] => Array
+                (
+                    [0] => *
+                    [1] => pessoa WHERE Email = 
+                )
+
+        )
+
+    [2] => Array
+        (
+            [file] => D:\htdocs\Cratos\Ecommerce-Cratos\adm\controle.php
+            [line] => 77
+            [args] => Array
+                (
+                    [0] => D:\htdocs\Cratos\Ecommerce-Cratos\adm\user\usuarioAdd.php
+                )
+
+            [function] => include_once
+        )
+
+)
+
+Trace File: D:\htdocs\Cratos\Ecommerce-Cratos\adm\func\func.php
+Trace Line: 2415
+File: D:\htdocs\Cratos\Ecommerce-Cratos\adm\func\func.php
+Line: 2415
+Throwable: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '' at line 1
+Code: 42000
+Trace: Array
+(
+    [0] => Array
+        (
+            [file] => D:\htdocs\Cratos\Ecommerce-Cratos\adm\func\func.php
+            [line] => 2415
+            [function] => execute
+            [class] => PDOStatement
+            [type] => ->
+            [args] => Array
+                (
+                )
+
+        )
+
+    [1] => Array
+        (
+            [file] => D:\htdocs\Cratos\Ecommerce-Cratos\adm\user\usuarioAdd.php
+            [line] => 11
+            [function] => listarGeral
+            [args] => Array
+                (
+                    [0] => *
+                    [1] => pessoa WHERE Email = 
+                )
+
+        )
+
+    [2] => Array
+        (
+            [file] => D:\htdocs\Cratos\Ecommerce-Cratos\adm\controle.php
+            [line] => 77
+            [args] => Array
+                (
+                    [0] => D:\htdocs\Cratos\Ecommerce-Cratos\adm\user\usuarioAdd.php
+                )
+
+            [function] => include_once
+        )
+
+)
+
+Trace File: D:\htdocs\Cratos\Ecommerce-Cratos\adm\func\func.php
+Trace Line: 2415
+File: D:\htdocs\Cratos\Ecommerce-Cratos\adm\func\func.php
+Line: 2415

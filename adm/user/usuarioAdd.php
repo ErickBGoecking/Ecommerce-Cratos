@@ -7,6 +7,7 @@ $conn = conectar();
 $dados = filter_input_array(INPUT_POST, FILTER_DEFAULT);
 
 $response = array();
+$email = $dados['email'];
 
 if (empty($dados['nome'])) {
     $response = ['sucesso' => false, 'mensagem' => "O nome deve ser preenchido!"];
@@ -26,9 +27,11 @@ if (empty($dados['nome'])) {
     $response = ['sucesso' => false, 'mensagem' => "O telefone deve ser preenchido!"];
 } elseif (!filter_var($dados['email'], FILTER_VALIDATE_EMAIL)) {
     $response = ['sucesso' => false, 'mensagem' => "Email inválido!"];
-}elseif (empty($dados['email'])) {
+} elseif (empty($dados['email'])) {
     $response = ['sucesso' => false, 'mensagem' => "O email deve ser preenchido!"];
-} elseif (empty($dados['senha'])) {
+} elseif(listarGeral("*", "pessoa WHERE Email = '$email'")){
+    $response = ['sucesso' => false, 'mensagem' => "O email já existe no banco de dados!"];
+}elseif (empty($dados['senha'])) {
     $response = ['sucesso' => false, 'mensagem' => "A senha deve ser preenchida!"];
 } else {
     $idgenero = $dados['genero'];

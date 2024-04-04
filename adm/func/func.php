@@ -2417,7 +2417,7 @@ function listarGeral($campos, $tabela)
         if ($retornoLista) {
             return $retornoLista;
         } else {
-            return [];
+            return false;
         }
     } catch (Throwable $e) {
         $conn->rollback();
