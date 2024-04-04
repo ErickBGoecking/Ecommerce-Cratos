@@ -136,7 +136,6 @@ function validarSenhaCriptografia($campos, $tabela, $campoBdString, $campoBdStri
     }
 }
 
-
 //causar erro intencional para testar o try catch-------------------------------
 function testeTrayCatch()
 {

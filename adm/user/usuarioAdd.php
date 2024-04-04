@@ -8,6 +8,7 @@ $dados = filter_input_array(INPUT_POST, FILTER_DEFAULT);
 
 $response = array();
 $email = $dados['email'];
+$cpf = $dados['cpf'];
 
 if (empty($dados['nome'])) {
     $response = ['sucesso' => false, 'mensagem' => "O nome deve ser preenchido!"];
@@ -17,6 +18,10 @@ if (empty($dados['nome'])) {
     $response = ['sucesso' => false, 'mensagem' => "O CPF deve ser preenchido!"];
 } elseif (mb_strlen($dados['cpf'])<14) {
     $response = ['sucesso' => false, 'mensagem' => "O CPF deve ser preenchido completamente!"];
+} elseif(!validaCPF($cpf)){
+    $response = ['sucesso' => false, 'mensagem' => "O CPF é inválido!"];
+} elseif (listarGeral("*", "pessoa WHERE Cpf = '$cpf'")){
+    $response = ['sucesso' => false, 'mensagem' => "O CPF já é cadastrado!"];
 } elseif (empty($dados['genero'])) {
     $response = ['sucesso' => false, 'mensagem' => "O genero deve ser selecionado!"];
 } elseif (empty($dados['nascimento'])) {
@@ -37,9 +42,7 @@ if (empty($dados['nome'])) {
     $idgenero = $dados['genero'];
     $nome = $dados['nome'];
     $sobrenome = $dados['sobrenome'];
-    $cpf = $dados['cpf'];
     $telefone = $dados['telefone'];
-    $email = $dados['email'];
     $senha = $dados['senha'];
     $senha = password_hash($senha, PASSWORD_DEFAULT);
     $foto = $_FILES['img']['name'];
