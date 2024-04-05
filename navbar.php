@@ -23,7 +23,7 @@
         <div id="responsive-nav">
             <ul class="main-nav nav navbar-nav">
                 <li class="active"><a href="#">Início</a></li>
-                <?php $repeticao=0;while($repeticao<5){$repeticao++;?>
+                    <?php $repeticao=0;while($repeticao<5){$repeticao++;?>
                 <li>
                     <a href="#">Whey Protein</a>
                     <ul class="drop">
