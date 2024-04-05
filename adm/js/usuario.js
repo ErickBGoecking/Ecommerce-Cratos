@@ -45,7 +45,6 @@ function usuarioVerMais(verMais, controle) {
         })
         .catch(error => console.error('Erro na requisição:', error));
 }
-
 function usuarioDadosAlterar(alterar, controle) {
     fetch('controle.php', {
         method: 'POST',
@@ -91,7 +90,6 @@ function usuarioDadosAlterar(alterar, controle) {
 }
 // ----------------------------FUNÇÕES GENERICAS----------------------------------
 
-
 function mascaraCPF(id){
     var campoCPF = document.getElementById(id);
     campoCPF.addEventListener('input',function(){
@@ -123,7 +121,6 @@ function mascaraTelefone(id){
         campoTelefone.value =telefone
     })
 }
-
 function alterarGeral2(controle, modalAlt, frm,recarregar,pagina=1) {
     var form = document.getElementById(frm);
     var formData = new FormData(form);
@@ -181,7 +178,6 @@ function addGeral2(frm, controle,modalAdd,recarregar,pagina) {
             console.error(error.message);
         });
 }
-
 function carregarDadosPaginacao(controle, pagina) {
     
     fetch('controle.php', {
@@ -202,9 +198,6 @@ function carregarDadosPaginacao(controle, pagina) {
     })
     .catch(error => console.error('Erro na requisição:', error));
 }
-
-
-
 function abrirConteudo(idDiv, controle,post) {
     fetch('controle.php', {
         method: 'POST',
@@ -223,8 +216,6 @@ function abrirConteudo(idDiv, controle,post) {
     })
     .catch(error => console.error('Erro na requisição:', error));
 }
-
-
 function statusGeral2(status, controle,atualizar,pagina) {
     fetch('controle.php', {
         method: 'POST',

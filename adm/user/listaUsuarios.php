@@ -96,8 +96,6 @@
                                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
                                 <button type="button" class="btn btn-primary" id="btnEnviar">
                                     Cadastrar
-                                    
-                                    <!-- onclick="addGeral('btnEnviar','frmUsuarioAdd','usuarioAdd', 'frmUsuarioAdd');" -->
                                 </button>
                             </div>
 
@@ -126,7 +124,7 @@
                             <input type="hidden" id="idPessoaAlt" class="form-control" name="idPessoa">
                             <div class="row">
                                 <div class="col-md-6 text-center">
-                                    <input type="file" name="img" id="iImgAlt" style="display: none;">
+                                    <input type="file" name="Foto" id="iImgAlt" style="display: none;">
                                     <label for="iImgAlt" style="cursor: pointer;">
                                         <div id="imagemPreview">
                                             <img id="imgPreviewAlt" src="user/img/semfoto.png"
@@ -138,36 +136,36 @@
                                 <div class="col-md-6">
                                     <div class="mb-3">
                                         <label for="inputNome" class="form-label">Nome</label>
-                                        <input type="text" id="iNomeAlt" class="form-control" name="nome">
+                                        <input type="text" id="iNomeAlt" class="form-control" name="Nome">
                                     </div>
                                     <div class="mb-3">
                                         <label for="inputSobrenome" class="form-label">Sobrenome</label>
-                                        <input type="text" id="iSobrenomeAlt" class="form-control" name="sobrenome">
+                                        <input type="text" id="iSobrenomeAlt" class="form-control" name="Sobrenome">
                                     </div>
                                     <div class="mb-3">
                                         <label for="inputCPF" class="form-label">CPF</label>
-                                        <input type="text" id="iCpfAlt" class="form-control" name="cpf">
+                                        <input type="text" id="iCpfAlt" class="form-control" name="Cpf">
                                     </div>
                                 </div>
                                 <div class="d-flex flex-wrap">
                                     <div class="col-md-4 mb-3">
                                         <label for="inputNascimento" class="form-label">Gênero</label>
-                                        <select class="form-select" aria-label="Default select example" name="genero" id="iGeneroAlt">
+                                        <select class="form-select" aria-label="Default select example" name="IdGenero" id="iGeneroAlt">
                                             <option selected value="1">Masculino</option>
                                             
                                         </select>
                                     </div>
                                     <div class="col-md-4 mb-3 px-2">
                                         <label for="inputNascimento" class="form-label">Nascimento</label>
-                                        <input type="date" id="iNascimentoAlt" class="form-control" name="nascimento">
+                                        <input type="date" id="iNascimentoAlt" class="form-control" name="Nascimento">
                                     </div>
                                     <div class="col-md-4 mb-3 px-2">
                                         <label for="inputTelefone" class="form-label">Telefone</label>
-                                        <input type="text" id="iTelefoneAlt" class="form-control" name="telefone">
+                                        <input type="text" id="iTelefoneAlt" class="form-control" name="Telefone">
                                     </div>
                                     <div class="col-md-6 mb-3 px-2">
                                         <label for="inputEmail" class="form-label">E-mail</label>
-                                        <input type="email" id="iEmailAlt" class="form-control" name="email">
+                                        <input type="email" id="iEmailAlt" class="form-control" name="Email">
                                     </div>
                                 </div>
                             </div>

@@ -7246,3 +7246,151 @@ Trace File: D:\htdocs\Cratos\Ecommerce-Cratos\adm\func\func.php
 Trace Line: 2415
 File: D:\htdocs\Cratos\Ecommerce-Cratos\adm\func\func.php
 Line: 2415
+Throwable: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '!=' at line 1
+Code: 42000
+Trace: Array
+(
+    [0] => Array
+        (
+            [file] => D:\htdocs\Cratos\Ecommerce-Cratos\adm\func\func.php
+            [line] => 2414
+            [function] => execute
+            [class] => PDOStatement
+            [type] => ->
+            [args] => Array
+                (
+                )
+
+        )
+
+    [1] => Array
+        (
+            [file] => D:\htdocs\Cratos\Ecommerce-Cratos\adm\func\func.php
+            [line] => 2738
+            [function] => listarGeral
+            [args] => Array
+                (
+                    [0] => Cpf
+                    [1] => pessoa WHERE Cpf = '903.870.400-30' and  != 
+                )
+
+        )
+
+    [2] => Array
+        (
+            [file] => D:\htdocs\Cratos\Ecommerce-Cratos\adm\user\usuarioAlt.php
+            [line] => 12
+            [function] => validarCampos
+            [args] => Array
+                (
+                    [0] => Array
+                        (
+                            [idPessoa] => 5
+                            [Nome] => Terezinhawww
+                            [Sobrenome] => Lacerda
+                            [Cpf] => 903.870.400-30
+                            [Genero] => 2
+                            [Nascimento] => 2024-04-07
+                            [Telefone] => (33)98852-2496
+                            [Email] => fernandjhfcufyrfrhodigitalarte@gmail.com
+                            [controle] => usuarioAlt
+                        )
+
+                    [1] => IdGenero,Nome,Sobrenome,Nascimento,Cpf,Telefone,Email,Senha
+                    [2] => 1
+                )
+
+        )
+
+    [3] => Array
+        (
+            [file] => D:\htdocs\Cratos\Ecommerce-Cratos\adm\controle.php
+            [line] => 89
+            [args] => Array
+                (
+                    [0] => D:\htdocs\Cratos\Ecommerce-Cratos\adm\user\usuarioAlt.php
+                )
+
+            [function] => include_once
+        )
+
+)
+
+Trace File: D:\htdocs\Cratos\Ecommerce-Cratos\adm\func\func.php
+Trace Line: 2414
+File: D:\htdocs\Cratos\Ecommerce-Cratos\adm\func\func.php
+Line: 2414
+Throwable: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '!=' at line 1
+Code: 42000
+Trace: Array
+(
+    [0] => Array
+        (
+            [file] => D:\htdocs\Cratos\Ecommerce-Cratos\adm\func\func.php
+            [line] => 2414
+            [function] => execute
+            [class] => PDOStatement
+            [type] => ->
+            [args] => Array
+                (
+                )
+
+        )
+
+    [1] => Array
+        (
+            [file] => D:\htdocs\Cratos\Ecommerce-Cratos\adm\func\func.php
+            [line] => 2738
+            [function] => listarGeral
+            [args] => Array
+                (
+                    [0] => Cpf
+                    [1] => pessoa WHERE Cpf = '903.870.400-30' and  != 
+                )
+
+        )
+
+    [2] => Array
+        (
+            [file] => D:\htdocs\Cratos\Ecommerce-Cratos\adm\user\usuarioAlt.php
+            [line] => 12
+            [function] => validarCampos
+            [args] => Array
+                (
+                    [0] => Array
+                        (
+                            [idPessoa] => 5
+                            [Nome] => Terezinhawww
+                            [Sobrenome] => Lacerda
+                            [Cpf] => 903.870.400-30
+                            [Genero] => 2
+                            [Nascimento] => 2024-04-07
+                            [Telefone] => (33)98852-2496
+                            [Email] => fernandjhfcufyrfrhodigitalarte@gmail.com
+                            [controle] => usuarioAlt
+                        )
+
+                    [1] => IdGenero,Nome,Sobrenome,Nascimento,Cpf,Telefone,Email,Senha
+                    [2] => 1
+                )
+
+        )
+
+    [3] => Array
+        (
+            [file] => D:\htdocs\Cratos\Ecommerce-Cratos\adm\controle.php
+            [line] => 89
+            [args] => Array
+                (
+                    [0] => D:\htdocs\Cratos\Ecommerce-Cratos\adm\user\usuarioAlt.php
+                )
+
+            [function] => include_once
+        )
+
+)
+
+Trace File: D:\htdocs\Cratos\Ecommerce-Cratos\adm\func\func.php
+Trace Line: 2414
+File: D:\htdocs\Cratos\Ecommerce-Cratos\adm\func\func.php
+Line: 2414
