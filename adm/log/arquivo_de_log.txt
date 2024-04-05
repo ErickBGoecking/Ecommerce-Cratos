@@ -7246,13 +7246,29 @@ Trace File: D:\htdocs\Cratos\Ecommerce-Cratos\adm\func\func.php
 Trace Line: 2415
 File: D:\htdocs\Cratos\Ecommerce-Cratos\adm\func\func.php
 Line: 2415
+<<<<<<< HEAD
 Throwable: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'FROM pessoa WHERE IdPessoa = 1 AND ativo = 'A'' at line 1
+=======
+<<<<<<< HEAD
+Throwable: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '!=' at line 1
+=======
+Throwable: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'FROM pessoa WHERE IdPessoa = 1 AND ativo = 'A'' at line 1
+>>>>>>> luciano
+>>>>>>> d5b7e20c2785514d00c92ed275f5daa51a1ac702
 Code: 42000
 Trace: Array
 (
     [0] => Array
         (
+<<<<<<< HEAD
             [file] => D:\htdocs\cratos\Ecommerce-Cratos\adm\func\func.php
+=======
+<<<<<<< HEAD
+            [file] => D:\htdocs\Cratos\Ecommerce-Cratos\adm\func\func.php
+=======
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\adm\func\func.php
+>>>>>>> luciano
+>>>>>>> d5b7e20c2785514d00c92ed275f5daa51a1ac702
             [line] => 2414
             [function] => execute
             [class] => PDOStatement
@@ -7265,6 +7281,18 @@ Trace: Array
 
     [1] => Array
         (
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+            [file] => D:\htdocs\Cratos\Ecommerce-Cratos\adm\func\func.php
+            [line] => 2738
+            [function] => listarGeral
+            [args] => Array
+                (
+                    [0] => Cpf
+                    [1] => pessoa WHERE Cpf = '903.870.400-30' and  != 
+=======
+>>>>>>> d5b7e20c2785514d00c92ed275f5daa51a1ac702
             [file] => D:\htdocs\cratos\Ecommerce-Cratos\adm\adm.php
             [line] => 11
             [function] => listarGeral
@@ -7272,10 +7300,64 @@ Trace: Array
                 (
                     [0] => IdPessoa, Foto, Nome, Sobrenome,
                     [1] => pessoa WHERE IdPessoa = 1 AND ativo = 'A'
+<<<<<<< HEAD
+=======
+>>>>>>> luciano
+>>>>>>> d5b7e20c2785514d00c92ed275f5daa51a1ac702
                 )
 
         )
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    [2] => Array
+        (
+            [file] => D:\htdocs\Cratos\Ecommerce-Cratos\adm\user\usuarioAlt.php
+            [line] => 12
+            [function] => validarCampos
+            [args] => Array
+                (
+                    [0] => Array
+                        (
+                            [idPessoa] => 5
+                            [Nome] => Terezinhawww
+                            [Sobrenome] => Lacerda
+                            [Cpf] => 903.870.400-30
+                            [Genero] => 2
+                            [Nascimento] => 2024-04-07
+                            [Telefone] => (33)98852-2496
+                            [Email] => fernandjhfcufyrfrhodigitalarte@gmail.com
+                            [controle] => usuarioAlt
+                        )
+
+                    [1] => IdGenero,Nome,Sobrenome,Nascimento,Cpf,Telefone,Email,Senha
+                    [2] => 1
+                )
+
+        )
+
+    [3] => Array
+        (
+            [file] => D:\htdocs\Cratos\Ecommerce-Cratos\adm\controle.php
+            [line] => 89
+            [args] => Array
+                (
+                    [0] => D:\htdocs\Cratos\Ecommerce-Cratos\adm\user\usuarioAlt.php
+                )
+
+            [function] => include_once
+        )
+
+)
+
+Trace File: D:\htdocs\Cratos\Ecommerce-Cratos\adm\func\func.php
+Trace Line: 2414
+File: D:\htdocs\Cratos\Ecommerce-Cratos\adm\func\func.php
+Line: 2414
+Throwable: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '!=' at line 1
+=======
+>>>>>>> d5b7e20c2785514d00c92ed275f5daa51a1ac702
 )
 
 Trace File: D:\htdocs\cratos\Ecommerce-Cratos\adm\func\func.php
@@ -7283,12 +7365,24 @@ Trace Line: 2414
 File: D:\htdocs\cratos\Ecommerce-Cratos\adm\func\func.php
 Line: 2414
 Throwable: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'FROM pessoa WHERE IdPessoa = 1 AND ativo = 'A'' at line 1
+<<<<<<< HEAD
+=======
+>>>>>>> luciano
+>>>>>>> d5b7e20c2785514d00c92ed275f5daa51a1ac702
 Code: 42000
 Trace: Array
 (
     [0] => Array
         (
+<<<<<<< HEAD
             [file] => D:\htdocs\cratos\Ecommerce-Cratos\adm\func\func.php
+=======
+<<<<<<< HEAD
+            [file] => D:\htdocs\Cratos\Ecommerce-Cratos\adm\func\func.php
+=======
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\adm\func\func.php
+>>>>>>> luciano
+>>>>>>> d5b7e20c2785514d00c92ed275f5daa51a1ac702
             [line] => 2414
             [function] => execute
             [class] => PDOStatement
@@ -7301,6 +7395,18 @@ Trace: Array
 
     [1] => Array
         (
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+            [file] => D:\htdocs\Cratos\Ecommerce-Cratos\adm\func\func.php
+            [line] => 2738
+            [function] => listarGeral
+            [args] => Array
+                (
+                    [0] => Cpf
+                    [1] => pessoa WHERE Cpf = '903.870.400-30' and  != 
+=======
+>>>>>>> d5b7e20c2785514d00c92ed275f5daa51a1ac702
             [file] => D:\htdocs\cratos\Ecommerce-Cratos\adm\adm.php
             [line] => 11
             [function] => listarGeral
@@ -7308,10 +7414,62 @@ Trace: Array
                 (
                     [0] => IdPessoa, Foto, Nome, Sobrenome,
                     [1] => pessoa WHERE IdPessoa = 1 AND ativo = 'A'
+<<<<<<< HEAD
+=======
+>>>>>>> luciano
+>>>>>>> d5b7e20c2785514d00c92ed275f5daa51a1ac702
                 )
 
         )
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    [2] => Array
+        (
+            [file] => D:\htdocs\Cratos\Ecommerce-Cratos\adm\user\usuarioAlt.php
+            [line] => 12
+            [function] => validarCampos
+            [args] => Array
+                (
+                    [0] => Array
+                        (
+                            [idPessoa] => 5
+                            [Nome] => Terezinhawww
+                            [Sobrenome] => Lacerda
+                            [Cpf] => 903.870.400-30
+                            [Genero] => 2
+                            [Nascimento] => 2024-04-07
+                            [Telefone] => (33)98852-2496
+                            [Email] => fernandjhfcufyrfrhodigitalarte@gmail.com
+                            [controle] => usuarioAlt
+                        )
+
+                    [1] => IdGenero,Nome,Sobrenome,Nascimento,Cpf,Telefone,Email,Senha
+                    [2] => 1
+                )
+
+        )
+
+    [3] => Array
+        (
+            [file] => D:\htdocs\Cratos\Ecommerce-Cratos\adm\controle.php
+            [line] => 89
+            [args] => Array
+                (
+                    [0] => D:\htdocs\Cratos\Ecommerce-Cratos\adm\user\usuarioAlt.php
+                )
+
+            [function] => include_once
+        )
+
+)
+
+Trace File: D:\htdocs\Cratos\Ecommerce-Cratos\adm\func\func.php
+Trace Line: 2414
+File: D:\htdocs\Cratos\Ecommerce-Cratos\adm\func\func.php
+=======
+>>>>>>> d5b7e20c2785514d00c92ed275f5daa51a1ac702
 )
 
 Trace File: D:\htdocs\cratos\Ecommerce-Cratos\adm\func\func.php
@@ -7425,4 +7583,8 @@ Trace: Array
 Trace File: D:\htdocs\cratos\Ecommerce-Cratos\adm\func\func.php
 Trace Line: 2414
 File: D:\htdocs\cratos\Ecommerce-Cratos\adm\func\func.php
+<<<<<<< HEAD
+=======
+>>>>>>> luciano
+>>>>>>> d5b7e20c2785514d00c92ed275f5daa51a1ac702
 Line: 2414

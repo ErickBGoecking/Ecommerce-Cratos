@@ -117,7 +117,10 @@
 </header>
 
 <!-- MENU -->
-<nav id="navigation">
+<?php include_once('navbar.php')?>
+
+<!-- MENU -->
+<!-- <nav id="navigation">
     <div class="container">
         <div id="responsive-nav">
             <ul class="main-nav nav navbar-nav">
@@ -133,7 +136,7 @@
             </ul>
         </div>
     </div>
-</nav>
+</nav> -->
 
 <!-- CARROUSEL INICIO -->
 <!-- <div class="container"> CARROUSEL RETIRADO DA CLASSE -->
