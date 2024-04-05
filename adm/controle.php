@@ -16,6 +16,9 @@ if (isset($controle) && !empty($controle)) {
         case'login':
             include_once 'logar.php';
             break;
+        case'listaBanner':
+            include_once 'banner/lista.php';
+            break;
         case'bannerAdd':
             include_once 'banner/bannerAdd.php';
             break;

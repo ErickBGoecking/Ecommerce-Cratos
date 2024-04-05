@@ -1,3 +1,21 @@
+<?php
+if (isset($idAdmin)) {
+    $idAdmin = $idAdmin;
+}else{
+    $idAdmin = 0;
+}
+if (isset($FotoAdmin)) {
+    $FotoAdmin = $FotoAdmin;
+}else{
+    $FotoAdmin = 'semfoto.png';
+}
+if (isset($NomeAdmin)) {
+    $NomeAdmin = $NomeAdmin;
+}else{
+    $NomeAdmin = '';
+}
+?>
+
 <style>
     .search-btn {
         color: black !important;
@@ -9,14 +27,18 @@
             <ul class="header-links pull-right" style="margin-top: -20px">
                 <li>
                     <div class="dropdown">
-                        <img src="./user/img/luciano.jpg" class="rounded-circle" alt="Luciano Pettersen" title="Luciano Pettersen" width="35px">
-                        <button class="btn texto-dourado dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            Luciano Pettersen
+                        <img src="./user/img/<?php echo $FotoAdmin?>" class="rounded-circle" alt="<?php echo $NomeAdmin?>"
+                             title="<?php echo $NomeAdmin?>" width="35px">
+                        <button class="btn texto-dourado dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                            <?php echo $NomeAdmin?>
                         </button>
                         <ul class="dropdown-menu">
                             <div class="d-flex flex-column">
-                                <li><a class="dropdown-item" href="#"><span class="mdi mdi-account"></span> Perfil</a></li>
-                                <li><a class="dropdown-item" href="logout.php"><span class="mdi mdi-door-closed"></span> Sair</a></li>
+                                <li><a class="dropdown-item" href="#"><span class="mdi mdi-account"></span> Perfil</a>
+                                </li>
+                                <li><a class="dropdown-item" href="logout.php"><span class="mdi mdi-door-closed"></span>
+                                        Sair</a></li>
                             </div>
                         </ul>
                     </div>
