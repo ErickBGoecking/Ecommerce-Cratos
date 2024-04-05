@@ -8,10 +8,8 @@ $conn = conectar();
 $dados = filter_input_array(INPUT_POST, FILTER_DEFAULT);
 $response = validarCampos($dados, 'IdGenero,Nome,Sobrenome,Nascimento,Cpf,Telefone,Email,Senha');
 if ($response['sucesso']) {
-    
     $value = recebeForm($dados, 'value');
     $campos = recebeForm($dados, 'campos');
-    
     $foto = validaFoto('Foto','user/img/');
     if($foto){  
         $campos .= ',Foto';

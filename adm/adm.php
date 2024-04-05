@@ -8,10 +8,12 @@ include_once './config/conexao.php';
 //}
 validarSessaoExterna('index.php');
 $idAdmin = $_SESSION['idsis'];
-$retornoAdm = listarGeral('idpessoa', "pessoa WHERE idpessoa = $idAdmin AND ativo = 'A'");
+$retornoAdm = listarGeral('IdPessoa, Foto, Nome, Sobrenome', "pessoa WHERE IdPessoa = $idAdmin AND Ativo = 'A'");
 if ($retornoAdm) {
     foreach ($retornoAdm as $itemAdm) {
-        $idAdmin = $itemAdm->idpessoa;
+        $idAdmin = $itemAdm->IdPessoa;
+        $FotoAdmin = $itemAdm->Foto;
+        $NomeAdmin = $itemAdm->Nome.' '.$itemAdm->Sobrenome;
     }
 } else {
     session_destroy();
