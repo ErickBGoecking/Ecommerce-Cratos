@@ -162,7 +162,6 @@ function addGeral2(frm, controle,modalAdd,recarregar,pagina) {
         })
         .then(data => {
             if (data.sucesso) {
-
                 mensagem(data.mensagem);
                 var modal = document.getElementById(modalAdd);
                 var bsModal = bootstrap.Modal.getInstance(modal);
