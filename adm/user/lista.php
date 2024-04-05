@@ -39,7 +39,7 @@ while ($row = $dados->fetch()) {
                         if(empty($foto)){echo "semfoto.png";}else{ echo $foto;}?>" class="rounded-circle"
                     style="width:50px;height:50px;">
                 <div class="d-flex flex-column ps-2">
-                    <div>Nome: <strong><?php echo $nomeCompleto?></strong></div>
+                    <div>Nome: <strong><?php echo $nomeCompleto ." / ".$idPessoa?></strong></div>
                     <div>CPF: <strong><?php echo $cpf?></strong></div>
                 </div>
             </div>

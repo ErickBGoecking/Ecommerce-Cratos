@@ -252,8 +252,8 @@ function NivelNomeCategoria($categoria)
     } catch
     (PDOException $e) {
         echo 'Exception -> ';
-        return ($e->getMessage());
         $conn->rollback();
+        return ($e->getMessage());
     };
     $conn = null;
 }

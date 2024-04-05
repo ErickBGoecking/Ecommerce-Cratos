@@ -7,24 +7,36 @@ $conn = conectar();
 $dados = filter_input_array(INPUT_POST, FILTER_DEFAULT);
 
 $response = array();
+$email = $dados['email'];
+$cpf = $dados['cpf'];
 
 if (empty($dados['nome'])) {
     $response = ['sucesso' => false, 'mensagem' => "O nome deve ser preenchido!"];
-} elseif (empty($dados['idPessoa'])) {
-    $response = ['sucesso' => false, 'mensagem' => "O idPessoa deve ser preenchido!"];
 } elseif (empty($dados['sobrenome'])) {
     $response = ['sucesso' => false, 'mensagem' => "O sobrenome deve ser preenchido!"];
 } elseif (empty($dados['cpf'])) {
     $response = ['sucesso' => false, 'mensagem' => "O CPF deve ser preenchido!"];
+} elseif (mb_strlen($dados['cpf'])<14) {
+    $response = ['sucesso' => false, 'mensagem' => "O CPF deve ser preenchido completamente!"];
+} elseif(!validaCPF($cpf)){
+    $response = ['sucesso' => false, 'mensagem' => "O CPF é inválido!"];
+} elseif (listarGeral("*", "pessoa WHERE Cpf = '$cpf'")){
+    $response = ['sucesso' => false, 'mensagem' => "O CPF já é cadastrado!"];
 } elseif (empty($dados['genero'])) {
     $response = ['sucesso' => false, 'mensagem' => "O genero deve ser selecionado!"];
 } elseif (empty($dados['nascimento'])) {
     $response = ['sucesso' => false, 'mensagem' => "A data de nascimento deve ser preenchida!"];
 } elseif (empty($dados['telefone'])) {
     $response = ['sucesso' => false, 'mensagem' => "O telefone deve ser preenchido!"];
+} elseif (mb_strlen($dados['telefone'])<13) {
+    $response = ['sucesso' => false, 'mensagem' => "O telefone deve ser preenchido!"];
+} elseif (!filter_var($dados['email'], FILTER_VALIDATE_EMAIL)) {
+    $response = ['sucesso' => false, 'mensagem' => "Email inválido!"];
 } elseif (empty($dados['email'])) {
     $response = ['sucesso' => false, 'mensagem' => "O email deve ser preenchido!"];
-}else {
+} elseif(listarGeral("*", "pessoa WHERE Email = '$email'")){
+    $response = ['sucesso' => false, 'mensagem' => "O email já existe no banco de dados!"];
+} else {
     $idPessoa = $dados['idPessoa'];
     $idgenero = $dados['genero'];
     $nome = $dados['nome'];

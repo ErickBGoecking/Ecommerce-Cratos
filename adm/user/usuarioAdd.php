@@ -54,14 +54,14 @@ if (empty($dados['nome'])) {
 
     if (!isset($_FILES['img']) || $_FILES['img']['error'] !== UPLOAD_ERR_OK) {
     
-        $retornoInsert = insertOito("pessoa", "idgenero, nome, sobrenome, nascimento, cpf, telefone, email, senha", $idgenero, $nome, $sobrenome, $nascimento, $cpf, $telefone, $email, $senha);
+        $retornoInsert = insert("pessoa", "idgenero, nome, sobrenome, nascimento, cpf, telefone, email, senha", array("$idgenero", "$nome", "$sobrenome", "$nascimento", "$cpf", "$telefone", "$email", "$senha"));
 
         if ($retornoInsert) {
-            $acao = "Foi adicionado no sistema o usuário".$nome." ".$sobrenome;
+            $acao = "Foi adicionado no sistema o usuário $nome $sobrenome";
 
             $response = ['sucesso' => true, 'mensagem' => "Usuário cadastrado com sucesso!"];
 
-            $retornoInsertAuditoria =  insertOitoId('auditoria', 'idadm, acao, tipo, tabela, datahora, ip, pcusuario, dispositivo', $idAdmin, $acao, 1, 'pessoa', DATATIMEATUAL, "$ip", $pc, $dispositivo);
+            $retornoInsertAuditoria =  insert('auditoria', 'idadm, acao, tipo, tabela, datahora, ip, pcusuario, dispositivo', array("$idAdmin", "$acao", "1", "pessoa", "DATATIMEATUAL", "$ip", "$pc", "$dispositivo"));
             if (!$retornoInsertAuditoria) {
                 $response = ['sucesso' => false, 'mensagem' => "Erro no cadastro auditoria!"];
             }
@@ -87,11 +87,11 @@ if (empty($dados['nome'])) {
     
             if (move_uploaded_file($_FILES['img']['tmp_name'], $caminho . $novo_nome)) {
     
-                $retornoInsert = insertNove("pessoa", "idgenero, foto, nome, sobrenome, nascimento, cpf, telefone, email, senha", $idgenero, $novo_nome, $nome, $sobrenome, $nascimento, $cpf, $telefone, $email, $senha);
+                $retornoInsert = insert("pessoa", "idgenero, foto, nome, sobrenome, nascimento, cpf, telefone, email, senha", array("$idgenero", "$novo_nome", "$nome", "$sobrenome", "$nascimento", "$cpf", "$telefone", "$email", "$senha"));
     
                 if ($retornoInsert) {
                     $acao = "Foi adicionado no sistema o usuário".$nome." ".$sobrenome;
-                    $retornoInsertAuditoria =  insertOitoId('auditoria', 'idadm, acao, tipo, tabela, datahora, ip, pcusuario, dispositivo', $idAdmin, $acao, 1, 'pessoa', DATATIMEATUAL, "$ip", $pc, $dispositivo);
+                    $retornoInsertAuditoria =  insert('auditoria', 'idadm, acao, tipo, tabela, datahora, ip, pcusuario, dispositivo', array("$idAdmin", "$acao", "1", "pessoa", "DATATIMEATUAL", "$ip", "$pc", "$dispositivo"));
                    
                     $response = ['sucesso' => true, 'mensagem' => "Usuário cadastrado com sucesso!"];
                     if (!$retornoInsertAuditoria){
