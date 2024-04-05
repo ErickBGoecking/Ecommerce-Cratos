@@ -1,118 +1,13 @@
-<nav aria-label="breadcrumb">
-    <ol class="breadcrumb">
-        <li class="breadcrumb-item"><a href="adm.php">Home</a></li>
-        <li class="breadcrumb-item active"><a href="?pagina=banner">Banners</a></li>
-        <!--        <li class="breadcrumb-item active" aria-current="page">Data</li>-->
-    </ol>
-</nav>
-<div class="card">
-    <div class="card-header">
-        #Listar Banners
-        <button type="button" class="btn btn-sm btn-primary float-end" data-bs-toggle="modal"
-                data-bs-target="#modalBannerAdd">Cadastrar
-        </button>
-    </div>
-    <div class="card-body">
-        <?php
-        $listarBanner = listarGeral('b.IdBanner, b.Img, b.Titulo, b.DataInicial, b.DataFinal, b.Tipo, b.Cadastro, b.Alteracao, b.Ativo, p.Nome, p.Sobrenome', 'banner b INNER JOIN pessoa p ON p.IdPessoa = b.IdAdm ORDER BY b.IdBanner DESC');
-        if ($listarBanner) {
-            foreach ($listarBanner as $itemBanner) {
-                $idbanner = $itemBanner->IdBanner;
-                $adm = $itemBanner->Nome;
-                $admSobrenome = $itemBanner->Sobrenome;
-                $nomeCompleto = $adm . ' ' . $admSobrenome;
-                $img = $itemBanner->Img;
-                if (empty($img)) {
-                    $img = 'sem-imagem.png';
-                }
-                $titulo = $itemBanner->Titulo;
-                $datai = formatarDataHoraBr($itemBanner->DataInicial);
-                $dataf = formatarDataHoraBr($itemBanner->DataFinal);
-                $tipo = $itemBanner->Tipo;
-                $cadastro = $itemBanner->Cadastro;
-                $alteracao = $itemBanner->Alteracao;
-                $ativo = $itemBanner->Ativo;
-                if ($ativo == 'A') {
-                    $btnAtivo = '<a href="#" class="btn btn-sm btn-outline-primary" aria-current="page" title="Banner Ativado. Clique para Desativar" id="btnStatus" onclick="statusGeral(' . $idbanner . ',\'bannerStatus\');"><span class="mdi mdi-lock-open-check text-success"></span>Ativo</a>';
-
-                } else {
-                    $btnAtivo = '<a href="#" class="btn btn-sm btn-outline-primary" aria-current="page" title="Banner Desativado. Clique para Ativar" id="btnStatus" onclick="statusGeral(' . $idbanner . ',\'bannerStatus\');"><span class="mdi mdi-lock-check text-danger"></span> Desativado</a>';
-                }
-                ?>
-                <div class="card card-lista mt-2 border border-0 shadow-sm">
-                    <div class="card-body d-flex flex-column flex-md-row justify-content-between">
-                        <div class="d-flex flex-column flex-md-row flex-fill">
-                            <div class="d-flex col-md-6">
-                                <Img src="./banner/Img/<?php echo $img; ?>" class="rounded-circle"
-                                     style="width:50px;height:50px;">
-                                <div class="d-flex flex-column ps-2">
-                                    <div><strong>Títiulo:</strong> <?php echo $titulo ?></div>
-                                    <div class="d-flex flex-md-row flex-column">
-                                        <div class=""><strong>Data Início:</strong> <?php echo $datai ?></div>
-                                        <div class="ps-md-2"><strong>Data Fim:</strong> <?php echo $dataf ?></div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="d-flex flex-column ps-2  col-md-6">
-                                <div><strong>Tipo:</strong> <?php echo $tipo ?></div>
-                                <div><strong>Ativo:</strong> <?php echo $btnAtivo ?></div>
-                            </div>
-                        </div>
-                        <div class="p-2">
-                            <div class="d-flex flex-md-row flex-column gap-2">
-                                <a href="#" class="btn btn-sm btn-outline-primary" aria-current="page"
-                                   data-bs-toggle="modal" data-bs-target="#modalBannerVerMais"
-                                   title="Ver detalhes do banner"
-                                   onclick="bannerVeMais(<?php echo $idbanner ?>,'bannerVerMais')"><span
-                                            class="mdi mdi-monitor-eye"></span> Ver Mais</a>
-                                <a href="#" class="btn btn-sm btn-outline-primary"
-                                   title="Alterar informações do Banner" data-bs-toggle="modal"
-                                   data-bs-target="#modalBannerAlt"
-                                   onclick="bannerDadosAlterar(<?php echo $idbanner ?>,'bannerDadosAlt');"><span
-                                            class="mdi mdi-file-document-edit"></span>
-                                    Alterar</a>
-                                <a href="#" class="btn btn-sm btn-outline-primary" title="Excluir Banner"
-                                   onclick="excGeral(<?php echo $idbanner ?>,'bannerExc','btnExcluir');"><span
-                                            class="mdi mdi-delete-alert"></span> Excluir</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <?php
-            }
-        } else {
-            ?>
-            <div class="text-center">
-                Nenhum banner para apresentar!
-            </div>
-            <?php
-        }
-        ?>
-        <div class="row float-end">
-            <div class="col-8">
-                <nav aria-label="Page navigation example">
-                    <ul class="pagination">
-                        <li class="page-item">
-                            <a class="page-link" href="#" aria-label="Previous">
-                                <span aria-hidden="true">&laquo;</span>
-                            </a>
-                        </li>
-                        <li class="page-item"><a class="page-link" href="#">1</a></li>
-                        <li class="page-item active" aria-current="page">
-                            <span class="page-link">2</span>
-                        </li>
-                        <li class="page-item"><a class="page-link" href="#">3</a></li>
-                        <li class="page-item">
-                            <a class="page-link" href="#" aria-label="Next">
-                                <span aria-hidden="true">&raquo;</span>
-                            </a>
-                        </li>
-                    </ul>
-                </nav>
-            </div>
-        </div>
-    </div>
+<div id="conteudo">
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="adm.php">Home</a></li>
+            <li class="breadcrumb-item active"><a href="?pagina=banner">Banners</a></li>
+            <!--        <li class="breadcrumb-item active" aria-current="page">Data</li>-->
+        </ol>
+    </nav>
 </div>
+
 <div class="modal fade" id="modalBannerAdd" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered modal-lg">
         <div class="modal-content">
@@ -178,9 +73,8 @@
                             </div>
                             <div class="float-end">
                                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
-                                <button type="button" class="btn btn-primary" id="btnEnviar"
-                                        onclick="addGeral('btnEnviar','frmBannerAdd','bannerAdd', 'modalBannerAdd');">
-                                    Cadastrar
+                                <button type="button" class="btn btn-primary" id="btnEnviar">
+                                        Cadastrar
                                 </button>
                             </div>
                         </form>
@@ -311,8 +205,33 @@
 <?php
 include_once 'mensagem.php';
 ?>
+<script src="js/usuario.js"></script>
 <script src="js/scriptcrato.js"></script>
 <script>
     previewImg('iImg', 'imgPreview');
     previewImg('iImgAlt', 'imgPreviewAlt');
+</script>
+<script>
+    window.onload = function () {
+        carregarDadosPaginacao('listaBanner', 1)
+    };
+
+    function configurarOnclickBotoes(controle, pagina) {
+        if (document.getElementById('btnSalvarAlt')) {
+            document.getElementById('btnSalvarAlt').onclick = function () {
+                alterarGeral2('usuarioAlt', 'modalUsuarioAlt', 'frmUsuarioAlt', controle, pagina)
+            }
+        }
+        if (document.getElementById('btnEnviar')) {
+            document.getElementById('btnEnviar').onclick = function () {
+                addGeral2('frmBannerAdd', 'bannerAdd', 'modalBannerAdd', controle, pagina)
+            }
+        }
+        if (document.getElementById('iImg')) {
+            previewImg('iImg', 'imgPreview')
+        }
+        if (document.getElementById('iImgAlt')) {
+            previewImg('iImgAlt', 'imgPreviewAlt')
+        }
+    }
 </script>

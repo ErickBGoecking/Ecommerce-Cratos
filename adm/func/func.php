@@ -2739,8 +2739,20 @@ function listarLimitPaginacao($tabela,$getpaginacao,$limite=10,$condicao=""){
     $conn = conectar();
     $pagina = isset($getpaginacao) ? (int)$getpaginacao : 1;
     $inicio = ($pagina - 1) * $limite;
- 
+
     $stmt = $conn->prepare("SELECT * FROM $tabela $condicao LIMIT :inicio, :limite");
+
+    $stmt->bindParam(':inicio', $inicio, PDO::PARAM_INT);
+    $stmt->bindParam(':limite', $limite, PDO::PARAM_INT);
+    $stmt->execute();
+    return $stmt;
+}
+function listarLimitPaginacao2($tabela,$campos,$getpaginacao,$limite=10,$condicao=""){
+    $conn = conectar();
+    $pagina = isset($getpaginacao) ? (int)$getpaginacao : 1;
+    $inicio = ($pagina - 1) * $limite;
+
+    $stmt = $conn->prepare("SELECT $campos FROM $tabela $condicao LIMIT :inicio, :limite");
 
     $stmt->bindParam(':inicio', $inicio, PDO::PARAM_INT);
     $stmt->bindParam(':limite', $limite, PDO::PARAM_INT);

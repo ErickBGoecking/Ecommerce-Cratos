@@ -7246,3 +7246,183 @@ Trace File: D:\htdocs\Cratos\Ecommerce-Cratos\adm\func\func.php
 Trace Line: 2415
 File: D:\htdocs\Cratos\Ecommerce-Cratos\adm\func\func.php
 Line: 2415
+Throwable: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'FROM pessoa WHERE IdPessoa = 1 AND ativo = 'A'' at line 1
+Code: 42000
+Trace: Array
+(
+    [0] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\adm\func\func.php
+            [line] => 2414
+            [function] => execute
+            [class] => PDOStatement
+            [type] => ->
+            [args] => Array
+                (
+                )
+
+        )
+
+    [1] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\adm\adm.php
+            [line] => 11
+            [function] => listarGeral
+            [args] => Array
+                (
+                    [0] => IdPessoa, Foto, Nome, Sobrenome,
+                    [1] => pessoa WHERE IdPessoa = 1 AND ativo = 'A'
+                )
+
+        )
+
+)
+
+Trace File: D:\htdocs\cratos\Ecommerce-Cratos\adm\func\func.php
+Trace Line: 2414
+File: D:\htdocs\cratos\Ecommerce-Cratos\adm\func\func.php
+Line: 2414
+Throwable: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'FROM pessoa WHERE IdPessoa = 1 AND ativo = 'A'' at line 1
+Code: 42000
+Trace: Array
+(
+    [0] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\adm\func\func.php
+            [line] => 2414
+            [function] => execute
+            [class] => PDOStatement
+            [type] => ->
+            [args] => Array
+                (
+                )
+
+        )
+
+    [1] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\adm\adm.php
+            [line] => 11
+            [function] => listarGeral
+            [args] => Array
+                (
+                    [0] => IdPessoa, Foto, Nome, Sobrenome,
+                    [1] => pessoa WHERE IdPessoa = 1 AND ativo = 'A'
+                )
+
+        )
+
+)
+
+Trace File: D:\htdocs\cratos\Ecommerce-Cratos\adm\func\func.php
+Trace Line: 2414
+File: D:\htdocs\cratos\Ecommerce-Cratos\adm\func\func.php
+Line: 2414
+Throwable: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'FROM pessoa WHERE IdPessoa = 1 AND Ativo = 'A'' at line 1
+Code: 42000
+Trace: Array
+(
+    [0] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\adm\func\func.php
+            [line] => 2414
+            [function] => execute
+            [class] => PDOStatement
+            [type] => ->
+            [args] => Array
+                (
+                )
+
+        )
+
+    [1] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\adm\adm.php
+            [line] => 11
+            [function] => listarGeral
+            [args] => Array
+                (
+                    [0] => IdPessoa, Foto, Nome, Sobrenome,
+                    [1] => pessoa WHERE IdPessoa = 1 AND Ativo = 'A'
+                )
+
+        )
+
+)
+
+Trace File: D:\htdocs\cratos\Ecommerce-Cratos\adm\func\func.php
+Trace Line: 2414
+File: D:\htdocs\cratos\Ecommerce-Cratos\adm\func\func.php
+Line: 2414
+Throwable: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'FROM pessoa WHERE IdPessoa = 1 AND Ativo = 'A'' at line 1
+Code: 42000
+Trace: Array
+(
+    [0] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\adm\func\func.php
+            [line] => 2414
+            [function] => execute
+            [class] => PDOStatement
+            [type] => ->
+            [args] => Array
+                (
+                )
+
+        )
+
+    [1] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\adm\adm.php
+            [line] => 11
+            [function] => listarGeral
+            [args] => Array
+                (
+                    [0] => IdPessoa, Foto, Nome, Sobrenome,
+                    [1] => pessoa WHERE IdPessoa = 1 AND Ativo = 'A'
+                )
+
+        )
+
+)
+
+Trace File: D:\htdocs\cratos\Ecommerce-Cratos\adm\func\func.php
+Trace Line: 2414
+File: D:\htdocs\cratos\Ecommerce-Cratos\adm\func\func.php
+Line: 2414
+Throwable: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'FROM pessoa WHERE IdPessoa = 1 AND Ativo = 'A'' at line 1
+Code: 42000
+Trace: Array
+(
+    [0] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\adm\func\func.php
+            [line] => 2414
+            [function] => execute
+            [class] => PDOStatement
+            [type] => ->
+            [args] => Array
+                (
+                )
+
+        )
+
+    [1] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\adm\adm.php
+            [line] => 11
+            [function] => listarGeral
+            [args] => Array
+                (
+                    [0] => IdPessoa, Foto, Nome, Sobrenome,
+                    [1] => pessoa WHERE IdPessoa = 1 AND Ativo = 'A'
+                )
+
+        )
+
+)
+
+Trace File: D:\htdocs\cratos\Ecommerce-Cratos\adm\func\func.php
+Trace Line: 2414
+File: D:\htdocs\cratos\Ecommerce-Cratos\adm\func\func.php
+Line: 2414
