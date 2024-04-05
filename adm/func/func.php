@@ -2694,12 +2694,30 @@ function recebeForm($dadosForm, $tipoCampo = 'campos')
         $value = [];
         foreach ($dados as $tituloDados => $valueDados) {
             switch($tituloDados){
-                case 'datai':
-                    $valueDados = formatarDataHoraEn($dados['datai']);
+                case 'DataInicio':
+                    $valueDados = formatarDataHoraEn($dados['DataInicio']);
                     break;
-                case 'dataf':
-                    $valueDados = formatarDataHoraEn($dados['dataf']);
+                case 'DataFinal':
+                    $valueDados = formatarDataHoraEn($dados['DataFinal']);
                     break;
+                    case 'Cpf':
+                    if(!validaCPF($valueDados)){
+                        return ['sucesso' => false, 'mensagem' => "O CPF é inválido!"];
+                    }elseif (listarGeral("*", "pessoa WHERE Cpf = '$valueDados'")){
+                        return ['sucesso' => false, 'mensagem' => "O CPF já é cadastrado!"];
+                    }
+                    break;
+                    case 'Email':
+                        if(listarGeral("*", "pessoa WHERE Email = '$valueDados'")){
+                            return ['sucesso' => false, 'mensagem' => "O email já existe no banco de dados!"];
+                        }
+                        break;
+                        case 'Telefone':
+                            if (mb_strlen($valueDados)<13) {
+                                return ['sucesso' => false, 'mensagem' => "O telefone deve ser preenchido!"];
+                            }
+                        break;
+                        
             }
             $value[] = $valueDados;
         }

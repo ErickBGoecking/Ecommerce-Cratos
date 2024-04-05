@@ -38,7 +38,7 @@
 
                             <div class="row">
                                 <div class="col-md-6 text-center">
-                                    <input type="file" name="img" id="iImg" style="display: none;">
+                                    <input type="file" name="Foto" id="iImg" style="display: none;">
                                     <label for="iImg" style="cursor: pointer;">
                                         <div id="imagemPreview">
                                             <img id="imgPreview" src="./banner/img/sem-imagem.png"
@@ -50,21 +50,21 @@
                                 <div class="col-md-6">
                                     <div class="mb-3">
                                         <label for="inputNome" class="form-label">Nome</label>
-                                        <input type="text" id="inputNome" class="form-control" name="nome">
+                                        <input type="text" id="inputNome" class="form-control" name="Nome">
                                     </div>
                                     <div class="mb-3">
                                         <label for="inputSobrenome" class="form-label">Sobrenome</label>
-                                        <input type="text" id="inputSobrenome" class="form-control" name="sobrenome">
+                                        <input type="text" id="inputSobrenome" class="form-control" name="Sobrenome">
                                     </div>
                                     <div class="mb-3">
                                         <label for="inputCPF" class="form-label">CPF</label>
-                                        <input type="text" id="inputCPF" class="form-control" name="cpf">
+                                        <input type="text" id="inputCPF" class="form-control" name="Cpf">
                                     </div>
                                 </div>
                                 <div class="d-flex flex-wrap">
                                     <div class="col-md-4 mb-3">
                                         <label for="inputNascimento" class="form-label">Gênero</label>
-                                        <select class="form-select" aria-label="Default select example" name="genero" id="inputGenero">
+                                        <select class="form-select" aria-label="Default select example" name="IdGenero" id="inputGenero">
                                         <option selected></option>
                                             <?php 
                                                 $generos = listarGeral('*', 'genero');
@@ -76,19 +76,19 @@
                                     </div>
                                     <div class="col-md-4 mb-3 px-2">
                                         <label for="inputNascimento" class="form-label">Nascimento</label>
-                                        <input type="date" id="inputNascimento" class="form-control" name="nascimento">
+                                        <input type="date" id="inputNascimento" class="form-control" name="Nascimento">
                                     </div>
                                     <div class="col-md-4 mb-3 px-2">
                                         <label for="inputTelefone" class="form-label">Telefone</label>
-                                        <input type="text" id="inputTelefone" class="form-control" name="telefone">
+                                        <input type="text" id="inputTelefone" class="form-control" name="Telefone">
                                     </div>
                                     <div class="col-md-6 mb-3 px-2">
                                         <label for="inputEmail" class="form-label">E-mail</label>
-                                        <input type="email" id="inputEmail" class="form-control" name="email">
+                                        <input type="email" id="inputEmail" class="form-control" name="Email">
                                     </div>
                                     <div class="col-md-6 mb-3 px-2">
                                         <label for="inputSenha" class="form-label">Senha</label>
-                                        <input type="password" id="inputSenha" class="form-control" name="senha">
+                                        <input type="password" id="inputSenha" class="form-control" name="Senha">
                                     </div>
                                 </div>
                             </div>
