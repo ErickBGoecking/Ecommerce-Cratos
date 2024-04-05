@@ -2694,6 +2694,15 @@ function recebeForm($dadosForm, $tipoCampo = 'campos')
         $value = [];
         foreach ($dados as $tituloDados => $valueDados) {
             
+            switch($tituloDados){
+                case 'DataInicio':
+                    $valueDados = formatarDataHoraEn($dados['DataInicio']);
+                    break;
+                case 'DataFinal':
+                    $valueDados = formatarDataHoraEn($dados['DataFinal']);
+                    break;
+            }
+
             $value[] = $valueDados;
         }
         array_pop($value);
@@ -2725,12 +2734,6 @@ function validarCampos($dados, $camposObrigatorios,$alt=false,$campo="",$id="") 
             return $resposta;
         }
         switch($nome){
-            // case 'DataInicio':
-            //     $valueDados = formatarDataHoraEn($dados['DataInicio']);
-            //     break;
-            // case 'DataFinal':
-            //     $valueDados = formatarDataHoraEn($dados['DataFinal']);
-            //     break;
             case 'Cpf':
                 if(!validaCPF($valor)){
                     return ['sucesso' => false, 'mensagem' => "O CPF é inválido!"];
