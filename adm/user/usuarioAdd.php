@@ -4,97 +4,27 @@ include_once './config/conexao.php';
 include_once './func/func.php';
 $idAdmin = $_SESSION['idsis'];
 $conn = conectar();
+
 $dados = filter_input_array(INPUT_POST, FILTER_DEFAULT);
-
-$response = array();
-
-if (empty($dados['nome'])) {
-    $response = ['sucesso' => false, 'mensagem' => "O nome deve ser preenchido!"];
-} elseif (empty($dados['sobrenome'])) {
-    $response = ['sucesso' => false, 'mensagem' => "O sobrenome deve ser preenchido!"];
-} elseif (empty($dados['cpf'])) {
-    $response = ['sucesso' => false, 'mensagem' => "O CPF deve ser preenchido!"];
-} elseif (empty($dados['genero'])) {
-    $response = ['sucesso' => false, 'mensagem' => "O genero deve ser selecionado!"];
-} elseif (empty($dados['nascimento'])) {
-    $response = ['sucesso' => false, 'mensagem' => "A data de nascimento deve ser preenchida!"];
-} elseif (empty($dados['telefone'])) {
-    $response = ['sucesso' => false, 'mensagem' => "O telefone deve ser preenchido!"];
-} elseif (empty($dados['email'])) {
-    $response = ['sucesso' => false, 'mensagem' => "O email deve ser preenchido!"];
-} elseif (empty($dados['senha'])) {
-    $response = ['sucesso' => false, 'mensagem' => "A senha deve ser preenchida!"];
-} else {
-    $idgenero = $dados['genero'];
-    $nome = $dados['nome'];
-    $sobrenome = $dados['sobrenome'];
-    $cpf = $dados['cpf'];
-    $telefone = $dados['telefone'];
-    $email = $dados['email'];
-    $senha = $dados['senha'];
-    $senha = password_hash($senha, PASSWORD_DEFAULT);
-    $foto = $_FILES['img']['name'];
-    $nascimento = formatarDataHoraEn(addslashes(trim($dados['nascimento'])));
-
+$response = validarCampos($dados, 'IdGenero,Nome,Sobrenome,Nascimento,Cpf,Telefone,Email,Senha');
+if ($response['sucesso']) {
     
-    $response = ['sucesso' => false, 'mensagem' => "ANTES DO IF"];
+    $value = recebeForm($dados, 'value');
+    $campos = recebeForm($dados, 'campos');
     
-
-    if (!isset($_FILES['img']) || $_FILES['img']['error'] !== UPLOAD_ERR_OK) {
-    
-        $retornoInsert = insertOito("pessoa", "idgenero, nome, sobrenome, nascimento, cpf, telefone, email, senha", $idgenero, $foto, $nome, $sobrenome, $nascimento, $cpf, $telefone, $email, $senha);
-
-        if ($retornoInsert) {
-            $acao = "Foi adicionado no sistema o usuário".$nome." ".$sobrenome;
-
-            $retornoInsertAuditoria =  insertOitoId('auditoria', 'idadm, acao, tipo, tabela, datahora, ip, pcusuario, dispositivo', $idAdmin, $acao, 1, 'pessoa', DATATIMEATUAL, "$ip", $pc, $dispositivo);
-            if ($retornoInsertAuditoria) {
-                $response = ['sucesso' => true, 'mensagem' => "Usuário cadastrado com sucesso!"];
-            } else {
-                $response = ['sucesso' => false, 'mensagem' => "Erro no cadastro auditoria!"];
-            }
-        } else {
-            $response = ['sucesso' => false, 'mensagem' => "Erro no cadastro banco de dados!"];
-        }
-
-    } else{
-    
-        $extensaoArquivo = array('jpg', 'jpeg', 'png');
-        $caminho = 'user/img/';
-        $nome_original = $_FILES['img']['name'];
-        $extensao = strtolower(pathinfo($nome_original, PATHINFO_EXTENSION));
-    
-        if (!in_array($extensao, $extensaoArquivo)) {
-            $response = ['sucesso' => false, 'mensagem' => "Apenas arquivos JPG, JPEG e PNG são permitidos!"];
-        } else {
-        
-            $identificador = uniqid();
-            $novo_nome = 'Exclusivy-' . $identificador . '.' . $extensao;
-            
-            $foto = $novo_nome;
-    
-            if (move_uploaded_file($_FILES['img']['tmp_name'], $caminho . $novo_nome)) {
-    
-                $retornoInsert = insertNove("pessoa", "idgenero, foto, nome, sobrenome, nascimento, cpf, telefone, email, senha", $idgenero, $novo_nome, $nome, $sobrenome, $nascimento, $cpf, $telefone, $email, $senha);
-    
-                if ($retornoInsert) {
-                    $acao = "Foi adicionado no sistema o usuário".$nome." ".$sobrenome;
-                    $retornoInsertAuditoria =  insertOitoId('auditoria', 'idadm, acao, tipo, tabela, datahora, ip, pcusuario, dispositivo', $idAdmin, $acao, 1, 'pessoa', DATATIMEATUAL, "$ip", $pc, $dispositivo);
-                    if ($retornoInsertAuditoria) {
-                        $response = ['sucesso' => true, 'mensagem' => "Usuário cadastrado com sucesso!"];
-                    } else {
-                        $response = ['sucesso' => false, 'mensagem' => "Erro no cadastro auditoria!"];
-                    }
-                } else {
-                    $response = ['sucesso' => false, 'mensagem' => "Erro no cadastro banco de dados!"];
-                }
-            } else {
-                $response = ['sucesso' => false, 'mensagem' => "Erro ao enviar o arquivo!"];
-            }
-        }
+    $foto = validaFoto('Foto','user/img/');
+    if($foto){  
+        $campos .= ',Foto';
+        $value[] = $foto;
+    }
+    $insert = insert('pessoa', $campos, $value);
+    if ($insert) {
+        $acao = "Foi adicionado no sistema Pessoa ";
+        $retornoInsertAuditoria = insert('auditoria', 'IdAdm, Acao, Tipo, Tabela, DataHora, Ip, PcUsuario, Dispositivo', array("$idAdmin", "$acao", "1", 'pessoa', "DATATIMEATUAL", "$ip", "$pc", "$dispositivo"));
+        $response = ['sucesso' => true, 'mensagem' => "Pessoa cadastrado com sucesso!"];
+    } else {
+        $response = ['sucesso' => false, 'mensagem' => "Erro no cadastro!"];
     }
 }
-
-
 echo json_encode($response);
 ?>

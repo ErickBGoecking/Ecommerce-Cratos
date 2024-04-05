@@ -9,14 +9,14 @@ $varEmail = addslashes(trim($dados['emailLogar']));
 $email = preg_replace('/[^[:alnum:]_.-@]/', '', $varEmail);
 $pass = addslashes(trim($dados['senhaLogar']));
 
-$retornoLogar = validarSenhaCriptografia('idpessoa, senha', 'pessoa', 'email', 'senha', $email, $pass, 'Ativo', 'A');
+$retornoLogar = validarSenhaCriptografia('IdPessoa, Senha', 'pessoa', 'Email', 'Senha', $email, $pass, 'Ativo', 'A');
 if ($retornoLogar) {
     if ($retornoLogar === 'usuario') {
         echo json_encode(['sucesso' => false, 'mensagem' => "Usuário Errado!"]);
     } else if ($retornoLogar === 'senha') {
         echo json_encode(['sucesso' => false, 'mensagem' => "Senha Errada!"]);
     } else {
-        $_SESSION['idsis'] = $retornoLogar->idpessoa;
+        $_SESSION['idsis'] = $retornoLogar->IdPessoa;
         echo json_encode(['sucesso' => true, 'mensagem' => "Logado com Sucesso!"]);
     }
 } else {

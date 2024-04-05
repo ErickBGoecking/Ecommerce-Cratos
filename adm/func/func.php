@@ -136,7 +136,6 @@ function validarSenhaCriptografia($campos, $tabela, $campoBdString, $campoBdStri
     }
 }
 
-
 //causar erro intencional para testar o try catch-------------------------------
 function testeTrayCatch()
 {
@@ -253,8 +252,8 @@ function NivelNomeCategoria($categoria)
     } catch
     (PDOException $e) {
         echo 'Exception -> ';
-        return ($e->getMessage());
         $conn->rollback();
+        return ($e->getMessage());
     };
     $conn = null;
 }
@@ -2417,7 +2416,7 @@ function listarGeral($campos, $tabela)
         if ($retornoLista) {
             return $retornoLista;
         } else {
-            return [];
+            return false;
         }
     } catch (Throwable $e) {
         $conn->rollback();
@@ -2694,29 +2693,142 @@ function recebeForm($dadosForm, $tipoCampo = 'campos')
     } elseif ($tipoCampo == 'value') {
         $value = [];
         foreach ($dados as $tituloDados => $valueDados) {
-            switch($tituloDados){
-                case 'datai':
-                    $valueDados = formatarDataHoraEn($dados['datai']);
-                    break;
-                case 'dataf':
-                    $valueDados = formatarDataHoraEn($dados['dataf']);
-                    break;
-            }
+            
             $value[] = $valueDados;
         }
         array_pop($value);
         return $value;
     }
 }
-function validarCampos($dados, $camposObrigatorios) {
+
+function validaFoto($nomeCampo, $caminho){
+    $extensaoArquivo = array('jpg', 'jpeg', 'png');
+    $nome_original = $_FILES[$nomeCampo]['name'];
+    $extensao = strtolower(pathinfo($nome_original, PATHINFO_EXTENSION));
+    if (!in_array($extensao, $extensaoArquivo)) {
+        return false;
+    }else {
+        $identificador = uniqid();
+        $novo_nome = 'Exclusivy-' . $identificador . '.' . $extensao;
+    if (move_uploaded_file($_FILES[$nomeCampo]['tmp_name'], $caminho . $novo_nome)) {
+            return $novo_nome;     
+        } else {
+            return $novo_nome;
+        }
+    }
+}
+function validarCampos($dados, $camposObrigatorios,$alt=false,$campo="",$id="") {
     $listaCampos = explode(',', $camposObrigatorios);
     foreach ($dados as $nome => $valor) {
         if (in_array($nome, $listaCampos) && empty($valor)) {
             $resposta = ['sucesso' => false, 'mensagem' => "Verifique o $nome vazio!"];
             return $resposta;
         }
+        switch($nome){
+            // case 'DataInicio':
+            //     $valueDados = formatarDataHoraEn($dados['DataInicio']);
+            //     break;
+            // case 'DataFinal':
+            //     $valueDados = formatarDataHoraEn($dados['DataFinal']);
+            //     break;
+            case 'Cpf':
+                if(!validaCPF($valor)){
+                    return ['sucesso' => false, 'mensagem' => "O CPF é inválido!"];
+                }elseif($alt){   
+                    if(listarGeral("Cpf", "pessoa WHERE Cpf = '$valor' and $campo != $id")){
+                        return ['sucesso' => false, 'mensagem' => "O CPF ja cadastrado!"];
+                }}elseif(listarGeral("*", "pessoa WHERE Cpf = '$valor'")){
+                    return ['sucesso' => false, 'mensagem' => "O CPF já é cadastrado!"];
+                }
+                break;
+            case 'Email':
+                if($alt){
+                    if(listarGeral("Email", "pessoa WHERE Email = '$valor' and $campo != $id")){
+                    return ['sucesso' => false, 'mensagem' => "O email Já cadastrado ja cadastrado!"];}
+                }elseif(listarGeral("*", "pessoa WHERE Email = '$valor'")){
+                    return ['sucesso' => false, 'mensagem' => "O email já existe no banco de dados!"];
+                }
+                break;
+            case 'Telefone':
+                if (mb_strlen($valor)<13) {
+                    return ['sucesso' => false, 'mensagem' => "O telefone deve ser preenchido!"];
+                }
+                break;      
+        }
     }
     return ['sucesso' => true, 'mensagem' => "Campo Validado"];
+}
+function listarLimitPaginacao($tabela,$getpaginacao,$limite=10,$condicao=""){
+    $conn = conectar();
+    $pagina = isset($getpaginacao) ? (int)$getpaginacao : 1;
+    $inicio = ($pagina - 1) * $limite;
+ 
+    $stmt = $conn->prepare("SELECT * FROM $tabela $condicao LIMIT :inicio, :limite");
+
+    $stmt->bindParam(':inicio', $inicio, PDO::PARAM_INT);
+    $stmt->bindParam(':limite', $limite, PDO::PARAM_INT);
+    $stmt->execute();
+    return $stmt;
+}
+function botoesPaginacao($caminho, $totalRegistros,$limite,$paginaAtual){
+    $divisao = ceil($totalRegistros/$limite);
+    echo <<<EOT
+    <div class="row float-end mt-3">
+        <div class="col-8">
+            <nav aria-label="Page navigation example">
+                <ul class="pagination">
+                    <li class="page-item">
+                        <a class="page-link" aria-label="Previous" onclick="carregarDadosPaginacao('$caminho',1)">
+                            <span aria-hidden="true">&laquo;</span>
+                        </a>
+                    </li>
+    EOT;
+
+    $x = 4;
+    while($x>=1){
+        if(($paginaAtual-$x)>0){
+            $pag = $paginaAtual-$x;
+            // echo "<li class='page-item'><a class='page-link'  onclick='carregarDados('".strval($caminho)."',$pag)'>$pag</a></li>";
+            echo <<<EOT
+            <li class="page-item">
+                <a class="page-link" aria-label="Previous" onclick="carregarDadosPaginacao('$caminho',$pag)">
+                    $pag
+                </a>
+            </li>
+            EOT;
+        }
+        $x= $x - 1;
+    }   
+
+    echo "<li class='page-item active' aria-current='page'><span class='page-link'>$paginaAtual</span></li>";
+
+    
+    $x = 1;
+    while($x<=4){
+        if(($paginaAtual+$x)<($divisao+1)){
+            $pag = $paginaAtual+$x;
+            // echo "<li class='page-item'><a class='page-link'  onclick='carregarDados('$caminho',$pag)'>$pag</a></li>";
+            echo <<<EOT
+            <li class="page-item">
+                <a class="page-link" aria-label="Previous" onclick="carregarDadosPaginacao('$caminho',$pag)">
+                    $pag
+                </a>
+            </li>
+            EOT;
+        }
+        $x++;
+    } 
+    echo <<<EOT
+                    <li class="page-item">
+                        <a class="page-link" aria-label="Next" onclick="carregarDadosPaginacao('$caminho',$divisao)">
+                            <span aria-hidden="true">&raquo;</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+    EOT;
 }
 function insert($tabela, $campos, $values) {
     $conn = conectar();
@@ -2746,6 +2858,67 @@ function insert($tabela, $campos, $values) {
         $conn = null;
     }
 }
+function upGeral($tabela, $campos, $values, $condicao="") {
+    $conn = conectar();
+    try {
+        $conn->beginTransaction();
+        
+        $campos = explode(',', $campos);
+        $i = 0;
+        $encaixar = "";
+        foreach ($campos as $c) {
+            if ($i == 0) {
+                $encaixar = "$c = ?";
+            } else {
+                $encaixar .= ", $c = ?";
+            }
+            $i++;
+        }
+
+        $sqlUpdate = $conn->prepare("UPDATE $tabela SET $encaixar $condicao");
+
+        foreach ($values as $indice => $value) {
+            $sqlUpdate->bindValue($indice + 1, $value, PDO::PARAM_STR);
+        }
+        $sqlUpdate->execute();
+        $conn->commit();
+        if ($sqlUpdate->rowCount() > 0) {
+            return true;
+        } else {
+            return false;
+        }
+    } catch (PDOException $e) {
+        $conn->rollback();
+        return $e;
+    }
+}
+
+// function updateGeral($tabela, $campos, $values,$where,$id) {
+//     $conn = conectar();
+//     try {
+//         $conn->beginTransaction();
+//         $interrogacoes = rtrim(str_repeat('?,', count($values)), ',');
+//         $sqlInsert = $conn->prepare("UPDATE $tabela SET ($campos) VALUES ($interrogacoes) WHERE $where = $id ");
+
+//         foreach ($values as $i => $value) {
+//             $sqlInsert->bindParam($i + 1, $values[$i], PDO::PARAM_STR);
+//         }
+
+//         $sqlInsert->execute();
+
+//         if ($sqlInsert->rowCount() > 0) {
+//             return False;
+//         } else {
+//             $conn->rollback();
+//             return False;
+//         }
+//     } catch (PDOException $e) {
+//         $conn->rollback();
+//         return 'Exception -> ' . $e->getMessage();
+//     } finally {
+//         $conn = null;
+//     }
+// }
 function insertDois($tabela, $campos, $valeu1, $valeu2)
 {
     $conn = conectar();

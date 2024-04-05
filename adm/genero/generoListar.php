@@ -1,7 +1,7 @@
 <nav aria-label="breadcrumb">
     <ol class="breadcrumb">
         <li class="breadcrumb-item"><a href="adm.php">Home</a></li>
-        <li class="breadcrumb-item active"><a href="?pagina=genero">Generos</a></li>
+        <li class="breadcrumb-item active"><a href="?pagina=Genero">Generos</a></li>
         <!--        <li class="breadcrumb-item active" aria-current="page">Data</li>-->
     </ol>
 </nav>
@@ -14,14 +14,14 @@
     </div>
     <div class="card-body">
         <?php
-        $listarGenero = listarGeral('idgenero, genero, cadastro, alteracao, ativo', 'genero ORDER BY idgenero DESC');
+        $listarGenero = listarGeral('IdGenero, Genero, Cadastro, Alteracao, Ativo', 'Genero ORDER BY IdGenero DESC');
         if ($listarGenero) {
             foreach ($listarGenero as $itemGenero) {
-                $idGenero = $itemGenero->idgenero;
-                $genero = $itemGenero->genero;
-                $cadastro = formatarDataHoraBr($itemGenero->cadastro);
-                $alteracao = formatarDataHoraBr($itemGenero->alteracao);
-                $ativo = $itemGenero->ativo;
+                $idGenero = $itemGenero->IdGenero;
+                $genero = $itemGenero->Genero;
+                $cadastro = formatarDataHoraBr($itemGenero->Cadastro);
+                $alteracao = formatarDataHoraBr($itemGenero->Alteracao);
+                $ativo = $itemGenero->Ativo;
                 if ($ativo == 'A') {
                     $btnAtivo = '<a href="#" class="btn btn-sm btn-outline-primary" aria-current="page" title="Genero Ativado. Clique para Desativar" id="btnStatus" onclick="statusGeral(' . $idGenero . ',\'generoStatus\');"><span class="mdi mdi-lock-open-check text-success"></span>Ativo</a>';
 
@@ -49,7 +49,7 @@
                             <div class="d-flex flex-md-row flex-column gap-2">
                                 <a href="#" class="btn btn-sm btn-outline-primary" aria-current="page"
                                    data-bs-toggle="modal" data-bs-target="#modalGeneroVerMais"
-                                   title="Ver detalhes do genero"
+                                   title="Ver detalhes do Genero"
                                    onclick="generoVeMais(<?php echo $idGenero ?>,'generoVerMais')"><span
                                             class="mdi mdi-monitor-eye"></span> Ver Mais</a>
                                 <a href="#" class="btn btn-sm btn-outline-primary"
@@ -70,7 +70,7 @@
         } else {
             ?>
             <div class="text-center">
-                Nenhum genero para apresentar!
+                Nenhum Genero para apresentar!
             </div>
             <?php
         }
@@ -118,7 +118,7 @@
                                 <div class="col-12">
                                     <div class="mb-3">
                                         <label for="inGenero" class="form-label">Gênero:</label>
-                                        <input type="text" class="form-control" id="inGenero" name="genero"
+                                        <input type="text" class="form-control" id="inGenero" name="Genero"
                                                aria-describedby="generoHelp">
                                     </div>
                                 </div>
@@ -154,12 +154,12 @@
                     </div>
                     <div class="card-body">
                         <form id="frmGeneroAlt" name="frmGeneroAlt" method="post" action="#">
-                            <input type="hidden" id="idGeneroAlt" name="generoAlt" value="">
+                            <input type="hidden" id="idGeneroAlt" name="IdGenero" value="">
                             <div class="row">
                                 <div class="col-12">
                                     <div class="mb-3">
                                         <label for="inGeneroAlt" class="form-label">Gênero:</label>
-                                        <input type="text" class="form-control" id="inGeneroAlt" name="genero"
+                                        <input type="text" class="form-control" id="inGeneroAlt" name="Genero"
                                                aria-describedby="generoHelp">
                                     </div>
                                 </div>

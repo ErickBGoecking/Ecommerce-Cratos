@@ -9,8 +9,6 @@ $dados = filter_input_array(INPUT_POST, FILTER_DEFAULT);
 
 $response = array();
 
-
-
 if (empty($dados['excluir'])) {
     $response = ['sucesso' => false, 'mensagem' => "O usuário não foi reconhecido!"];
 } 

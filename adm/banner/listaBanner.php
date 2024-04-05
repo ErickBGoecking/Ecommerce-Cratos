@@ -14,24 +14,24 @@
     </div>
     <div class="card-body">
         <?php
-        $listarBanner = listarGeral('b.idbanner, b.img, b.titulo, b.datai, b.dataf, b.tipo, b.cadastro, b.alteracao, b.ativo, p.nome, p.sobrenome', 'banner b INNER JOIN pessoa p ON p.idpessoa = b.idadm ORDER BY b.idbanner DESC');
+        $listarBanner = listarGeral('b.IdBanner, b.Img, b.Titulo, b.DataInicial, b.DataFinal, b.Tipo, b.Cadastro, b.Alteracao, b.Ativo, p.Nome, p.Sobrenome', 'banner b INNER JOIN pessoa p ON p.IdPessoa = b.IdAdm ORDER BY b.IdBanner DESC');
         if ($listarBanner) {
             foreach ($listarBanner as $itemBanner) {
-                $idbanner = $itemBanner->idbanner;
-                $adm = $itemBanner->nome;
-                $admSobrenome = $itemBanner->sobrenome;
+                $idbanner = $itemBanner->IdBanner;
+                $adm = $itemBanner->Nome;
+                $admSobrenome = $itemBanner->Sobrenome;
                 $nomeCompleto = $adm . ' ' . $admSobrenome;
-                $img = $itemBanner->img;
+                $img = $itemBanner->Img;
                 if (empty($img)) {
                     $img = 'sem-imagem.png';
                 }
-                $titulo = $itemBanner->titulo;
-                $datai = formatarDataHoraBr($itemBanner->datai);
-                $dataf = formatarDataHoraBr($itemBanner->dataf);
-                $tipo = $itemBanner->tipo;
-                $cadastro = $itemBanner->cadastro;
-                $alteracao = $itemBanner->alteracao;
-                $ativo = $itemBanner->ativo;
+                $titulo = $itemBanner->Titulo;
+                $datai = formatarDataHoraBr($itemBanner->DataInicial);
+                $dataf = formatarDataHoraBr($itemBanner->DataFinal);
+                $tipo = $itemBanner->Tipo;
+                $cadastro = $itemBanner->Cadastro;
+                $alteracao = $itemBanner->Alteracao;
+                $ativo = $itemBanner->Ativo;
                 if ($ativo == 'A') {
                     $btnAtivo = '<a href="#" class="btn btn-sm btn-outline-primary" aria-current="page" title="Banner Ativado. Clique para Desativar" id="btnStatus" onclick="statusGeral(' . $idbanner . ',\'bannerStatus\');"><span class="mdi mdi-lock-open-check text-success"></span>Ativo</a>';
 
@@ -43,7 +43,7 @@
                     <div class="card-body d-flex flex-column flex-md-row justify-content-between">
                         <div class="d-flex flex-column flex-md-row flex-fill">
                             <div class="d-flex col-md-6">
-                                <img src="./banner/img/<?php echo $img; ?>" class="rounded-circle"
+                                <Img src="./banner/Img/<?php echo $img; ?>" class="rounded-circle"
                                      style="width:50px;height:50px;">
                                 <div class="d-flex flex-column ps-2">
                                     <div><strong>Títiulo:</strong> <?php echo $titulo ?></div>
@@ -129,10 +129,10 @@
                         <form id="frmBannerAdd" name="frmBannerAdd" method="post" action="#">
                             <div class="row">
                                 <div class="col-12 text-center">
-                                    <input type="file" name="img" id="iImg" style="display: none;">
+                                    <input type="file" name="Img" id="iImg" style="display: none;">
                                     <label for="iImg" style="cursor: pointer;">
                                         <div id="imagemPreview">
-                                            <img id="imgPreview" src="./banner/img/sem-imagem.png"
+                                            <Img id="imgPreview" src="./banner/Img/sem-imagem.png"
                                                  alt="Preview da Imagem" style="max-width: 100%; height: 200px;">
                                         </div>
                                     </label>
@@ -140,7 +140,7 @@
                                 <div class="col-12">
                                     <div class="mb-3">
                                         <label for="iTitulo" class="form-label">Título:</label>
-                                        <input type="text" class="form-control" id="iTitulo" name="titulo"
+                                        <input type="text" class="form-control" id="iTitulo" name="Titulo"
                                                aria-describedby="tituloHelp">
                                     </div>
                                 </div>
@@ -148,7 +148,7 @@
                                     <div class="mb-3">
                                         <label for="sTipo" class="form-label">Tipo:</label>
                                         <select class="form-select" aria-label="Default select example" id="sTipo"
-                                                name="tipo">
+                                                name="Tipo">
                                             <option value="Rotativo" selected>Rotativo</option>
                                             <option value="Central">Central</option>
                                         </select>
@@ -160,7 +160,7 @@
                                         <?php
                                         $dataAtualFormatada = date('Y-m-d\TH:i:s');
                                         ?>
-                                        <input type="datetime-local" class="form-control" name="datai" id="iDataI"
+                                        <input type="datetime-local" class="form-control" name="DataInicial" id="iDataI"
                                                value="<?php echo $dataAtualFormatada; ?>">
                                     </div>
                                 </div>
@@ -171,7 +171,7 @@
                                         $dataAtual = date('Y-m-d H:i:s');
                                         $dataFinal = date('Y-m-d\TH:i:s', strtotime('+1 month', strtotime($dataAtual)));
                                         ?>
-                                        <input type="datetime-local" class="form-control" name="dataf" id="iDataF"
+                                        <input type="datetime-local" class="form-control" name="DataFinal" id="iDataF"
                                                value="<?php echo $dataFinal; ?>">
                                     </div>
                                 </div>
@@ -207,13 +207,13 @@
                     </div>
                     <div class="card-body">
                         <form id="frmBannerAlt" name="frmBannerAlt" method="post" action="#">
-                            <input type="hidden" id="idBannerAlt" name="idBanner" value="">
+                            <input type="hidden" id="idBannerAlt" name="IdBanner" value="">
                             <div class="row">
                                 <div class="col-12 text-center">
-                                    <input type="file" name="imgAlt" id="iImgAlt" style="display: none;">
+                                    <input type="file" name="Img" id="iImgAlt" style="display: none;">
                                     <label for="iImgAlt" style="cursor: pointer;">
                                         <div id="imagemPreviewAlt">
-                                            <img id="imgPreviewAlt" src="./banner/img/sem-imagem.png"
+                                            <Img id="imgPreviewAlt" src="./banner/Img/sem-imagem.png"
                                                  alt="Preview da Imagem" style="max-width: 100%; height: 200px;">
                                         </div>
                                     </label>
@@ -221,7 +221,7 @@
                                 <div class="col-12">
                                     <div class="mb-3">
                                         <label for="iTituloAlt" class="form-label">Título:</label>
-                                        <input type="text" class="form-control" id="iTituloAlt" name="titulo"
+                                        <input type="text" class="form-control" id="iTituloAlt" name="Titulo"
                                                aria-describedby="tituloHelp">
                                     </div>
                                 </div>
@@ -229,7 +229,7 @@
                                     <div class="mb-3">
                                         <label for="sTipoAlt" class="form-label">Tipo:</label>
                                         <select class="form-select" aria-label="Default select example" id="sTipoAlt"
-                                                name="sTipoAlt">
+                                                name="Tipo">
                                             <option value="Rotativo" selected>Rotativo</option>
                                             <option value="Central">Central</option>
                                         </select>
@@ -238,14 +238,14 @@
                                 <div class="col-4">
                                     <div class="mb-3">
                                         <label for="iDataIAlt" class="form-label">Data Inicial:</label>
-                                        <input type="datetime-local" class="form-control" name="dataIAlt"
+                                        <input type="datetime-local" class="form-control" name="DataInicial"
                                                id="iDataIAlt">
                                     </div>
                                 </div>
                                 <div class="col-4">
                                     <div class="mb-3">
                                         <label for="iDataF" class="form-label">Data Final:</label>
-                                        <input type="datetime-local" class="form-control" name="dataFAlt"
+                                        <input type="datetime-local" class="form-control" name="DataFinal"
                                                id="iDataFAlt">
                                     </div>
                                 </div>
@@ -279,8 +279,8 @@
 
                 <div class="card mb-3">
                     <div class="row g-0">
-                        <img src="./banner/img/sem-imagem.png" style="max-height: 300px;"
-                             class="img-fluid rounded-start" alt="Detalhes do banner!" title="Detalhes do banner!"
+                        <Img src="./banner/Img/sem-imagem.png" style="max-height: 300px;"
+                             class="Img-fluid rounded-start" alt="Detalhes do banner!" title="Detalhes do banner!"
                              id="imgBanner">
                         <div class="card-body">
                             <h5 class="card-title"><span id="iBannerTitulo"></span></h5>
