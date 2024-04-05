@@ -146,8 +146,7 @@
                             </div>
                             <div class="float-end">
                                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
-                                <button type="button" class="btn btn-primary" id="btnSalvarAlt"
-                                        onclick="alterarGeral('bannerAlt','modalBannerAlt','frmBannerAlt');">
+                                <button type="button" class="btn btn-primary" id="btnSalvarAlt">
                                     Salvar Alterações
                                 </button>
                             </div>
@@ -219,7 +218,7 @@ include_once 'mensagem.php';
     function configurarOnclickBotoes(controle, pagina) {
         if (document.getElementById('btnSalvarAlt')) {
             document.getElementById('btnSalvarAlt').onclick = function () {
-                alterarGeral2('usuarioAlt', 'modalUsuarioAlt', 'frmUsuarioAlt', controle, pagina)
+                alterarGeral2('bannerAlt', 'modalBannerAlt', 'frmBannerAlt', controle, pagina)
             }
         }
         if (document.getElementById('btnEnviar')) {
