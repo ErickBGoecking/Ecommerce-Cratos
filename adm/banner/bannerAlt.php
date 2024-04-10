@@ -15,10 +15,8 @@ if ($response['sucesso']){
         $campos .= ',Img';
         $value[] = $foto;
     }
-
     $update = upGeral('banner', $campos, $value,"WHERE IdBanner = $idBanner");
     $response = auditoria($update,'Foi alterado no sistema Banner ','banner');
-    
 }
 echo json_encode($response);
 ?>

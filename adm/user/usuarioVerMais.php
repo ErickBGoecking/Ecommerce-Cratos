@@ -7,24 +7,17 @@ $idAdmin = $_SESSION['idsis'];
 $conn = conectar();
 $dados = filter_input_array(INPUT_POST, FILTER_DEFAULT);
 
-$response = array();
-
-if (empty($dados['vermais'])) {
-    $response = ['sucesso' => false, 'mensagem' => "O banner não foi reconhecido!"];
-} else {
+if (!empty($dados['vermais'])) {
     $idPessoa = $dados['vermais'];
-    $listarPessoa = listarGeral("*", "pessoa WHERE IdPessoa = $idPessoa");
-    if ($listarPessoa) {
-        
+    if ($listarPessoa = listarGeral("*", "pessoa WHERE IdPessoa = $idPessoa")) {
         $Generos = listarGeral("IdGenero,Genero", "genero");
         $listarPessoa[0]->Generos = $Generos;
-        
-        $pessoaData = reset($listarPessoa);
-        echo json_encode($pessoaData);
-        exit();
-    }
-    
-    else {
+        $response = reset($listarPessoa);
+    }else {
         $response = ['sucesso' => false, 'mensagem' => "Nenhum Usuario Encontrado para mostrar mais detalhes!"];
     }
+} else {
+    $response = ['sucesso' => false, 'mensagem' => "O banner não foi reconhecido!"];
 }
+
+echo json_encode($response);
