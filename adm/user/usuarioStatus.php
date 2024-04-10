@@ -6,24 +6,12 @@ $idAdmin = $_SESSION['idsis'];
 $conn = conectar();
 $dados = filter_input_array(INPUT_POST, FILTER_DEFAULT);
 
-$response = array();
-
-if (empty($dados['status'])) {
-    $response = ['sucesso' => false, 'mensagem' => "O status não foi reconhecido!"];
-} else {
+if (!empty($dados['status'])) {
     $idPessoa = $dados['status'];
     $retornoStatus = updateAtivar('pessoa', 'IdPessoa', $idPessoa);
-    if($retornoStatus=='Desativado'){
-        $acao = "Foi Desativado o usuario no sistema! Id=$idPessoa";
-        $retornoInsertAuditoria = insertOitoId('auditoria', 'IdAdm, Acao, Tipo, Tabela, DataHora, Ip, PcUsuario, Dispositivo', $idAdmin, $acao, 2, 'usuario', DATATIMEATUAL, "$ip", $pc, $dispositivo);
-        $response = ['sucesso' => true, 'mensagem' => "usuario Desativado com sucesso!"];
-    }elseif($retornoStatus=='Ativado'){
-        $acao = "Foi Ativado o usuario no sistema! Id=$idPessoa";
-        $retornoInsertAuditoria = insertOitoId('auditoria', 'IdAdm, Acao, Tipo, Tabela, DataHora, Ip, PcUsuario, Dispositivo', $idAdmin, $acao, 2, 'usuario', DATATIMEATUAL, "$ip", $pc, $dispositivo);
-        $response = ['sucesso' => true, 'mensagem' => "usuario Ativado com sucesso!"];
-    }else{
-        $response = ['sucesso' => false, 'mensagem' => "Error, usuario não sofreu alteração!"];
-    }
+    $response = auditoria($retornoStatus,'Foi alterado o Status ','pessoa');
+} else {
+    $response = ['sucesso' => false, 'mensagem' => "O status não foi reconhecido!"];
 }
 
 echo json_encode($response);

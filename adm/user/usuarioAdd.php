@@ -10,19 +10,15 @@ $response = validarCampos($dados, 'IdGenero,Nome,Sobrenome,Nascimento,Cpf,Telefo
 if ($response['sucesso']) {
     $value = recebeForm($dados, 'value');
     $campos = recebeForm($dados, 'campos');
-    $foto = validaFoto('Foto','user/img/');
-    if($foto){  
+    
+    if($foto = validaFoto('Foto','user/img/')){  
         $campos .= ',Foto';
         $value[] = $foto;
     }
+
     $insert = insert('pessoa', $campos, $value);
-    if ($insert) {
-        $acao = "Foi adicionado no sistema Pessoa ";
-        $retornoInsertAuditoria = insert('auditoria', 'IdAdm, Acao, Tipo, Tabela, DataHora, Ip, PcUsuario, Dispositivo', array("$idAdmin", "$acao", "1", 'pessoa', "DATATIMEATUAL", "$ip", "$pc", "$dispositivo"));
-        $response = ['sucesso' => true, 'mensagem' => "Pessoa cadastrado com sucesso!"];
-    } else {
-        $response = ['sucesso' => false, 'mensagem' => "Erro no cadastro!"];
-    }
+    $response = auditoria($insert,'O novo usuario foi adicionado no sistema','pessoa');
 }
 echo json_encode($response);
 ?>
+

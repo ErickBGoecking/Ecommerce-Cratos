@@ -2726,6 +2726,19 @@ function validaFoto($nomeCampo, $caminho){
         }
     }
 }
+
+function auditoria($validacao,$acao,$tabela){
+    if ($validacao) {
+        global $idAdmin;
+        global $ip;
+        global $pc;
+        global $dispositivo;
+        insert('auditoria', 'IdAdm, Acao, Tipo, Tabela, DataHora, Ip, PcUsuario, Dispositivo', array("$idAdmin", "$acao", "1", "$tabela", "DATATIMEATUAL", "$ip", "$pc", "$dispositivo"));
+        return ['sucesso' => true, 'mensagem' => "$tabela cadastrado com sucesso!"];
+    } else {
+            return ['sucesso' => false, 'mensagem' => "Erro ao alterar o cadastro cadastro!"];
+    }
+};
 function validarCampos($dados, $camposObrigatorios,$alt=false,$campo="",$id="") {
     $listaCampos = explode(',', $camposObrigatorios);
     foreach ($dados as $nome => $valor) {
@@ -2734,20 +2747,20 @@ function validarCampos($dados, $camposObrigatorios,$alt=false,$campo="",$id="") 
             return $resposta;
         }
         switch($nome){
-            case 'Cpf':
-                if(!validaCPF($valor)){
-                    return ['sucesso' => false, 'mensagem' => "O CPF é inválido!"];
-                }elseif($alt){   
-                    if(listarGeral("Cpf", "pessoa WHERE Cpf = '$valor' and $campo != $id")){
-                        return ['sucesso' => false, 'mensagem' => "O CPF ja cadastrado!"];
-                }}elseif(listarGeral("*", "pessoa WHERE Cpf = '$valor'")){
-                    return ['sucesso' => false, 'mensagem' => "O CPF já é cadastrado!"];
-                }
-                break;
+            // case 'Cpf':
+            //     if(!validaCPF($valor)){
+            //         return ['sucesso' => false, 'mensagem' => "O CPF é inválido!"];
+            //     }elseif($alt){   
+            //         if(listarGeral("Cpf", "pessoa WHERE Cpf = '$valor' and $campo != $id")){
+            //             return ['sucesso' => false, 'mensagem' => "O CPF ja cadastrado!"];
+            //     }}elseif(listarGeral("*", "pessoa WHERE Cpf = '$valor'")){
+            //         return ['sucesso' => false, 'mensagem' => "O CPF já é cadastrado!"];
+            //     }
+            //     break;
             case 'Email':
                 if($alt){
                     if(listarGeral("Email", "pessoa WHERE Email = '$valor' and $campo != $id")){
-                    return ['sucesso' => false, 'mensagem' => "O email Já cadastrado ja cadastrado!"];}
+                        return ['sucesso' => false, 'mensagem' => "O email Já cadastrado ja cadastrado!"];}
                 }elseif(listarGeral("*", "pessoa WHERE Email = '$valor'")){
                     return ['sucesso' => false, 'mensagem' => "O email já existe no banco de dados!"];
                 }
@@ -2756,7 +2769,14 @@ function validarCampos($dados, $camposObrigatorios,$alt=false,$campo="",$id="") 
                 if (mb_strlen($valor)<13) {
                     return ['sucesso' => false, 'mensagem' => "O telefone deve ser preenchido!"];
                 }
-                break;      
+                break;
+        }
+        
+        if (in_array('Foto', $listaCampos) && empty($_FILES['Foto']['name'])&& !$alt) {
+            return ['sucesso' => false, 'mensagem' => "Verifique a Imagem!"];
+        }
+        if (in_array('Img', $listaCampos) && empty($_FILES['Img']['name'])&& !$alt) {
+            return ['sucesso' => false, 'mensagem' => "Verifique a Imagem!"];
         }
     }
     return ['sucesso' => true, 'mensagem' => "Campo Validado"];
@@ -2873,6 +2893,7 @@ function insert($tabela, $campos, $values) {
         $conn = null;
     }
 }
+
 function upGeral($tabela, $campos, $values, $condicao="") {
     $conn = conectar();
     try {
@@ -2907,33 +2928,6 @@ function upGeral($tabela, $campos, $values, $condicao="") {
         return $e;
     }
 }
-
-// function updateGeral($tabela, $campos, $values,$where,$id) {
-//     $conn = conectar();
-//     try {
-//         $conn->beginTransaction();
-//         $interrogacoes = rtrim(str_repeat('?,', count($values)), ',');
-//         $sqlInsert = $conn->prepare("UPDATE $tabela SET ($campos) VALUES ($interrogacoes) WHERE $where = $id ");
-
-//         foreach ($values as $i => $value) {
-//             $sqlInsert->bindParam($i + 1, $values[$i], PDO::PARAM_STR);
-//         }
-
-//         $sqlInsert->execute();
-
-//         if ($sqlInsert->rowCount() > 0) {
-//             return False;
-//         } else {
-//             $conn->rollback();
-//             return False;
-//         }
-//     } catch (PDOException $e) {
-//         $conn->rollback();
-//         return 'Exception -> ' . $e->getMessage();
-//     } finally {
-//         $conn = null;
-//     }
-// }
 function insertDois($tabela, $campos, $valeu1, $valeu2)
 {
     $conn = conectar();
