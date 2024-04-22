@@ -1,7 +1,3 @@
-<?php
-session_start();
-session_destroy();
-?>
 <!doctype html>
 <html lang="pt-br">
 <head>
