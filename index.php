@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="css/font-awesome.min.css">
     <link type="text/css" rel="stylesheet" href="css/style.css"/>
     <link rel="stylesheet" href="css/slide.css">
+    <link rel="stylesheet" href="css/logoSlide/logoSlide.css">
 
 </head>
 <body>
@@ -333,7 +334,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div id="slick-nav-1" class="products-slick-nav"></div>
+                            <!-- <div id="slick-nav-1" class="products-slick-nav"></div> -->
                         </div>
                     </div>
                 </div>
