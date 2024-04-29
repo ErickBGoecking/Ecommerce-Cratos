@@ -340,6 +340,18 @@
 							</ul>
 						</div> -->
 					<!-- /store top filter -->
+					<div class="container">
+						<div class="row">
+							<div class="col-md-4 col-xs-6">
+								<div class="section-title">
+									<h4 class="title">Suplementos Mais Vendidos</h4>
+									<div class="section-nav">
+										<div id="slick-nav-3" class="products-slick-nav"></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
 
 					<!-- store products -->
 					<div class="row">
@@ -382,10 +394,10 @@
 							<div class="product">
 								<div class="product-img">
 									<img src="./img/whey-dux.png" alt="">
-									<div class="product-label">
+									<!-- <div class="product-label">
 										<span class="sale">-30%</span>
 										<span class="new">NEW</span>
-									</div>
+									</div> -->
 								</div>
 								<div class="product-body">
 									<!-- <p class="product-category">Category</p> -->
@@ -449,7 +461,7 @@
 
 						<div class="clearfix visible-lg visible-md"></div>
 						<br><br><br>
-						
+
 						<!-- product -->
 						<div class="col-md-4 col-xs-6">
 							<div class="product">
