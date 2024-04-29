@@ -21,16 +21,11 @@
 
 <body>
 
+    <!-- CABEÇALHO -->
     <header>
         <div id="top-header">
             <div class="container">
-                <!-- <ul class="header-links pull-left">
-                <li><a href="#"><i class="fa fa-phone"></i> +021-95-51-84</a></li>
-                <li><a href="#"><i class="fa fa-envelope-o"></i> email@email.com</a></li>
-                <li><a href="#"><i class="fa fa-map-marker"></i> 1734 Stonecoal Road</a></li>
-            </ul> -->
                 <ul class="header-links pull-right">
-                    <!-- <li><a href="#"><i class="fa fa-dollar"></i> USD</a></li> -->
                     <li><a href="#"><i class="fa fa-user-o"></i> Meu Acesso</a></li>
                 </ul>
             </div>
@@ -50,7 +45,12 @@
                             <form>
                                 <select class="input-select">
                                     <option value="0">Categorias</option>
-                                    <option value="1">Category 01</option>
+                                    <option value="1">Whey Protein</option>
+                                    <option value="1">Category 02</option>
+                                    <option value="1">Category 02</option>
+                                    <option value="1">Category 02</option>
+                                    <option value="1">Category 02</option>
+                                    <option value="1">Category 02</option>
                                     <option value="1">Category 02</option>
                                 </select>
                                 <input class="input" placeholder="O que você procura?">
@@ -103,7 +103,7 @@
                                     </div>
                                     <div class="cart-btns">
                                         <a href="#">Meu Carrinho</a>
-                                        <a href="#">Checkout <i class="fa fa-arrow-circle-right"></i></a>
+                                        <a href="#">Pagar <i class="fa fa-arrow-circle-right"></i></a>
                                     </div>
                                 </div>
                             </div>
@@ -123,52 +123,9 @@
     <!-- MENU -->
     <?php include_once('navbarERICK.php') ?>
 
-
-    <!-- MENU -->
-    <!-- <nav id="navigation">
-    <div class="container">
-        <div id="responsive-nav">
-            <ul class="main-nav nav navbar-nav">
-                <li class="active"><a href="#">Início</a></li>
-                <li>
-                    <a href="#">Whey Protein</a>
-                </li>
-                <li>
-                    <a href="#">Top 20</a>
-                </li>
-                <li>
-                    <a href="#">Marcas</a>
-                </li>
-                <li>
-                    <a href="#">Kits</a>
-                </li>
-                <li>
-                    <a href="#">Objetivos</a>
-                </li>
-                <li>
-                    <a href="#">Combos</a>
-                </li>
-                <li>
-                    <a href="#">Clube Cratos</a>
-                </li>
-
-            </ul>
-        </div>
-    </div>
-</nav> -->
-
     <!-- CARROUSEL INICIO -->
-    <!-- <div class="container"> CARROUSEL RETIRADO DA CLASSE -->
     <div class="">
-
-
         <div id="myCarousel" class="carousel slide" data-ride="carousel">
-            <!-- Indicators -->
-            <!-- <ol class="carousel-indicators">
-        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-        <li data-target="#myCarousel" data-slide-to="1"></li>
-        <li data-target="#myCarousel" data-slide-to="2"></li>
-        </ol> -->
 
             <!-- Wrapper for slides -->
             <div class="carousel-inner">
@@ -206,14 +163,6 @@
                 <div class="col-md-12">
                     <div class="section-title text-center">
                         <h3 class="title">Produtos Mais Vendidos</h3>
-                        <!-- <div class="section-nav">
-                        <ul class="section-tab-nav tab-nav">
-                            <li class="active"><a data-toggle="tab" href="#tab1">Laptops</a></li>
-                            <li><a data-toggle="tab" href="#tab1">Smartphones</a></li>
-                            <li><a data-toggle="tab" href="#tab1">Cameras</a></li>
-                            <li><a data-toggle="tab" href="#tab1">Accessories</a></li>
-                        </ul>
-                    </div> -->
                     </div>
                 </div>
                 <div class="col-md-12">
@@ -224,14 +173,10 @@
                                     <div class="product">
                                         <div class="product-img">
                                             <img src="./img/product01.jpg" alt="">
-                                            <div class="product-label">
-                                                <span class="sale">-30%</span>
-                                                <span class="new">NEW</span>
-                                            </div>
                                         </div>
                                         <div class="product-body">
-                                            <p class="product-category">Category</p>
-                                            <h3 class="product-name"><a href="#">product name goes here</a></h3>
+                                            <p class="product-category">Max Titânio</p>
+                                            <h3 class="product-name"><a href="#">100% Whey</a></h3>
                                             <h4 class="product-price">$980.00 <del class="product-old-price">$990.00</del></h4>
                                             <div class="product-rating">
                                                 <i class="fa fa-star"></i>
@@ -352,7 +297,6 @@
                                         </div>
                                     </div>
                                 </div>
-                                <!-- <div id="slick-nav-1" class="products-slick-nav"></div> -->
                             </div>
                         </div>
                     </div>
@@ -413,8 +357,6 @@
         </div>
     </div>
 
-
-
     <!-- MARCA -->
     <div class="section">
         <div class="container">
@@ -441,9 +383,6 @@
         <br><br>
     </div>
 
-
-
-
     <!-- SUPLEMENTOS PROTEINA -->
     <div class="section">
         <div class="container">
@@ -451,14 +390,6 @@
                 <div class="col-md-12">
                     <div class="section-title text-center">
                         <h3 class="title">Suplementos Proteína</h3>
-                        <!-- <div class="section-nav">
-                        <ul class="section-tab-nav tab-nav">
-                            <li class="active"><a data-toggle="tab" href="#tab1">Laptops</a></li>
-                            <li><a data-toggle="tab" href="#tab2">Smartphones</a></li>
-                            <li><a data-toggle="tab" href="#tab3">Cameras</a></li>
-                            <li><a data-toggle="tab" href="#tab4">Accessories</a></li>
-                        </ul>
-                    </div> -->
                     </div>
                 </div>
                 <div class="col-md-12">
@@ -597,7 +528,6 @@
                                         </div>
                                     </div>
                                 </div>
-                                <!-- <div id="slick-nav-1" class="products-slick-nav"></div> -->
                             </div>
                         </div>
                     </div>
@@ -613,14 +543,6 @@
                 <div class="col-md-12">
                     <div class="section-title text-center">
                         <h3 class="title">Suplementos Creatina</h3>
-                        <!-- <div class="section-nav">
-                        <ul class="section-tab-nav tab-nav">
-                            <li class="active"><a data-toggle="tab" href="#tab1">Laptops</a></li>
-                            <li><a data-toggle="tab" href="#tab1">Smartphones</a></li>
-                            <li><a data-toggle="tab" href="#tab1">Cameras</a></li>
-                            <li><a data-toggle="tab" href="#tab1">Accessories</a></li>
-                        </ul>
-                    </div> -->
                     </div>
                 </div>
                 <div class="col-md-12">
@@ -759,7 +681,6 @@
                                         </div>
                                     </div>
                                 </div>
-                                <!-- <div id="slick-nav-1" class="products-slick-nav"></div> -->
                             </div>
                         </div>
                     </div>
@@ -775,14 +696,6 @@
                 <div class="col-md-12">
                     <div class="section-title text-center">
                         <h3 class="title">Suplementos Pré-Treino</h3>
-                        <!-- <div class="section-nav">
-                        <ul class="section-tab-nav tab-nav">
-                            <li class="active"><a data-toggle="tab" href="#tab1">Laptops</a></li>
-                            <li><a data-toggle="tab" href="#tab1">Smartphones</a></li>
-                            <li><a data-toggle="tab" href="#tab1">Cameras</a></li>
-                            <li><a data-toggle="tab" href="#tab1">Accessories</a></li>
-                        </ul>
-                    </div> -->
                     </div>
                 </div>
                 <div class="col-md-12">
@@ -921,7 +834,6 @@
                                         </div>
                                     </div>
                                 </div>
-                                <!-- <div id="slick-nav-1" class="products-slick-nav"></div> -->
                             </div>
                         </div>
                     </div>
@@ -970,167 +882,6 @@
             </div>
         </div>
     </div>
-
-    <!-- <div class="section">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12">
-                <div class="section-title">
-                    <h3 class="title">Top selling</h3>
-                    <div class="section-nav">
-                        <ul class="section-tab-nav tab-nav">
-                            <li class="active"><a data-toggle="tab" href="#tab2">Laptops</a></li>
-                            <li><a data-toggle="tab" href="#tab2">Smartphones</a></li>
-                            <li><a data-toggle="tab" href="#tab2">Cameras</a></li>
-                            <li><a data-toggle="tab" href="#tab2">Accessories</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-12">
-                <div class="row">
-                    <div class="products-tabs">
-                        <div id="tab2" class="tab-pane fade in active">
-                            <div class="products-slick" data-nav="#slick-nav-2">
-                                <div class="product">
-                                    <div class="product-img">
-                                        <img src="./img/product06.png" alt="">
-                                        <div class="product-label">
-                                            <span class="sale">-30%</span>
-                                            <span class="new">NEW</span>
-                                        </div>
-                                    </div>
-                                    <div class="product-body">
-                                        <p class="product-category">Category</p>
-                                        <h3 class="product-name"><a href="#">product name goes here</a></h3>
-                                        <h4 class="product-price">$980.00 <del class="product-old-price">$990.00</del></h4>
-                                        <div class="product-rating">
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                        </div>
-                                        <div class="product-btns">
-                                            <button class="add-to-wishlist"><i class="fa fa-heart-o"></i><span class="tooltipp">add to wishlist</span></button>
-                                            <button class="add-to-compare"><i class="fa fa-exchange"></i><span class="tooltipp">add to compare</span></button>
-                                            <button class="quick-view"><i class="fa fa-eye"></i><span class="tooltipp">quick view</span></button>
-                                        </div>
-                                    </div>
-                                    <div class="add-to-cart">
-                                        <button class="add-to-cart-btn"><i class="fa fa-shopping-cart"></i> add to cart</button>
-                                    </div>
-                                </div>
-                                <div class="product">
-                                    <div class="product-img">
-                                        <img src="./img/product07.png" alt="">
-                                        <div class="product-label">
-                                            <span class="new">NEW</span>
-                                        </div>
-                                    </div>
-                                    <div class="product-body">
-                                        <p class="product-category">Category</p>
-                                        <h3 class="product-name"><a href="#">product name goes here</a></h3>
-                                        <h4 class="product-price">$980.00 <del class="product-old-price">$990.00</del></h4>
-                                        <div class="product-rating">
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star-o"></i>
-                                        </div>
-                                        <div class="product-btns">
-                                            <button class="add-to-wishlist"><i class="fa fa-heart-o"></i><span class="tooltipp">add to wishlist</span></button>
-                                            <button class="add-to-compare"><i class="fa fa-exchange"></i><span class="tooltipp">add to compare</span></button>
-                                            <button class="quick-view"><i class="fa fa-eye"></i><span class="tooltipp">quick view</span></button>
-                                        </div>
-                                    </div>
-                                    <div class="add-to-cart">
-                                        <button class="add-to-cart-btn"><i class="fa fa-shopping-cart"></i> add to cart</button>
-                                    </div>
-                                </div>
-                                <div class="product">
-                                    <div class="product-img">
-                                        <img src="./img/product08.png" alt="">
-                                        <div class="product-label">
-                                            <span class="sale">-30%</span>
-                                        </div>
-                                    </div>
-                                    <div class="product-body">
-                                        <p class="product-category">Category</p>
-                                        <h3 class="product-name"><a href="#">product name goes here</a></h3>
-                                        <h4 class="product-price">$980.00 <del class="product-old-price">$990.00</del></h4>
-                                        <div class="product-rating">
-                                        </div>
-                                        <div class="product-btns">
-                                            <button class="add-to-wishlist"><i class="fa fa-heart-o"></i><span class="tooltipp">add to wishlist</span></button>
-                                            <button class="add-to-compare"><i class="fa fa-exchange"></i><span class="tooltipp">add to compare</span></button>
-                                            <button class="quick-view"><i class="fa fa-eye"></i><span class="tooltipp">quick view</span></button>
-                                        </div>
-                                    </div>
-                                    <div class="add-to-cart">
-                                        <button class="add-to-cart-btn"><i class="fa fa-shopping-cart"></i> add to cart</button>
-                                    </div>
-                                </div>
-                                <div class="product">
-                                    <div class="product-img">
-                                        <img src="./img/product09.png" alt="">
-                                    </div>
-                                    <div class="product-body">
-                                        <p class="product-category">Category</p>
-                                        <h3 class="product-name"><a href="#">product name goes here</a></h3>
-                                        <h4 class="product-price">$980.00 <del class="product-old-price">$990.00</del></h4>
-                                        <div class="product-rating">
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                        </div>
-                                        <div class="product-btns">
-                                            <button class="add-to-wishlist"><i class="fa fa-heart-o"></i><span class="tooltipp">add to wishlist</span></button>
-                                            <button class="add-to-compare"><i class="fa fa-exchange"></i><span class="tooltipp">add to compare</span></button>
-                                            <button class="quick-view"><i class="fa fa-eye"></i><span class="tooltipp">quick view</span></button>
-                                        </div>
-                                    </div>
-                                    <div class="add-to-cart">
-                                        <button class="add-to-cart-btn"><i class="fa fa-shopping-cart"></i> add to cart</button>
-                                    </div>
-                                </div>
-                                <div class="product">
-                                    <div class="product-img">
-                                        <img src="./img/product01.png" alt="">
-                                    </div>
-                                    <div class="product-body">
-                                        <p class="product-category">Category</p>
-                                        <h3 class="product-name"><a href="#">product name goes here</a></h3>
-                                        <h4 class="product-price">$980.00 <del class="product-old-price">$990.00</del></h4>
-                                        <div class="product-rating">
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                        </div>
-                                        <div class="product-btns">
-                                            <button class="add-to-wishlist"><i class="fa fa-heart-o"></i><span class="tooltipp">add to wishlist</span></button>
-                                            <button class="add-to-compare"><i class="fa fa-exchange"></i><span class="tooltipp">add to compare</span></button>
-                                            <button class="quick-view"><i class="fa fa-eye"></i><span class="tooltipp">quick view</span></button>
-                                        </div>
-                                    </div>
-                                    <div class="add-to-cart">
-                                        <button class="add-to-cart-btn"><i class="fa fa-shopping-cart"></i> add to cart</button>
-                                    </div>
-                                </div>
-                            </div>
-                            <div id="slick-nav-2" class="products-slick-nav"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div> -->
 
     <!-- TOP DOS TOPS -->
     <div class="section">
@@ -1404,14 +1155,6 @@
                     <div class="col-md-4 col-xs-6">
                         <div class="footer">
                             <img src="./img/logo2.png" alt="" width="75%">
-                            <!-- <h3 class="footer-title">Categories</h3>
-                        <ul class="footer-links">
-                            <li><a href="#">Hot deals</a></li>
-                            <li><a href="#">Laptops</a></li>
-                            <li><a href="#">Smartphones</a></li>
-                            <li><a href="#">Cameras</a></li>
-                            <li><a href="#">Accessories</a></li>
-                        </ul> -->
                         </div>
                     </div>
 
@@ -1456,18 +1199,6 @@
 
                     <div class="clearfix visible-xs"></div>
 
-                    <!-- <div class="col-md-3 col-xs-6">
-                    <div class="footer">
-                        <h3 class="footer-title">Service</h3>
-                        <ul class="footer-links">
-                            <li><a href="#">My Account</a></li>
-                            <li><a href="#">View Cart</a></li>
-                            <li><a href="#">Wishlist</a></li>
-                            <li><a href="#">Track My Order</a></li>
-                            <li><a href="#">Help</a></li>
-                        </ul>
-                    </div>
-                </div> -->
                 </div>
             </div>
         </div>
