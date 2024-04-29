@@ -412,7 +412,10 @@
             </div>
         </div>
     </div>
-    <!-- SUPLEMENTOS PROTEINA -->
+
+
+
+    <!-- MARCA -->
     <div class="section">
         <div class="container">
             <div class="row">
@@ -423,23 +426,23 @@
                 </div>
             </div>
         </div>
+        <div class="container">
+            <!-- <h2>Our Partners</h2> -->
+            <section class="customer-logos slider">
+                <div class="slide"><img src="https://logospng.org/download/herbalife/logo-herbalife-1024.png" alt=""></div>
+                <div class="slide"><img src="https://logospng.org/download/dymatize-nutrition/dymatize-1024.png" alt=""></div>
+                <div class="slide"><img src="https://logospng.org/download/probiotica/probiotica-1024.png" alt=""></div>
+                <div class="slide"><img src="https://logospng.org/download/max-titanium/max-titanium-1024.png" alt=""></div>
+                <div class="slide"><img src="https://logospng.org/download/optimum-nutrition/logo-optimum-nutrition-1024.png" alt=""></div>
+                <div class="slide"><img src="https://logospng.org/download/integralmedica/integralmedica-1024.png" alt=""></div>
+                <div class="slide"><img src="https://logospng.org/download/adaptogen-science/adaptogen-science-1024.png" alt=""></div>
+            </section>
+        </div>
+        <br><br>
     </div>
 
 
-    <!-- MARCA -->
-    <div class="container">
-        <!-- <h2>Our Partners</h2> -->
-        <section class="customer-logos slider">
-            <div class="slide"><img src="https://logospng.org/download/herbalife/logo-herbalife-1024.png" alt=""></div>
-            <div class="slide"><img src="https://logospng.org/download/dymatize-nutrition/dymatize-1024.png" alt=""></div>
-            <div class="slide"><img src="https://logospng.org/download/probiotica/probiotica-1024.png" alt=""></div>
-            <div class="slide"><img src="https://logospng.org/download/max-titanium/max-titanium-1024.png" alt=""></div>
-            <div class="slide"><img src="https://logospng.org/download/optimum-nutrition/logo-optimum-nutrition-1024.png" alt=""></div>
-            <div class="slide"><img src="https://logospng.org/download/integralmedica/integralmedica-1024.png" alt=""></div>
-            <div class="slide"><img src="https://logospng.org/download/adaptogen-science/adaptogen-science-1024.png" alt=""></div>
-        </section>
-    </div>
-    <br><br>
+
 
     <!-- SUPLEMENTOS PROTEINA -->
     <div class="section">
