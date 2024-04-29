@@ -558,216 +558,8 @@
 						<div class="clearfix visible-lg visible-md visible-sm visible-xs"></div>
 						<br><br><br>
 
-						<!-- product -->
-						<div class="col-md-4 col-xs-6">
-							<div class="product">
-								<div class="product-img">
-									<img src="./img/whey-dux.png" alt="">
-									<div class="product-label">
-										<span class="sale">-30%</span>
-										<span class="new">NEW</span>
-									</div>
-								</div>
-								<div class="product-body">
-									<!-- <p class="product-category">Category</p> -->
-									<h3 class="product-name"><a href="#">WHEY PROTEIN CONCENTRADO DUX</a></h3>
-									<h4 class="product-price">R$189,00 <del class="product-old-price">R$249,000</del></h4>
-									<div class="product-rating">
-										<i class="fa fa-star"></i>
-										<i class="fa fa-star"></i>
-										<i class="fa fa-star"></i>
-										<i class="fa fa-star"></i>
-										<i class="fa fa-star"></i>
-									</div>
-									<!-- <div class="product-btns">
-											<button class="add-to-wishlist"><i class="fa fa-heart-o"></i><span class="tooltipp">add to wishlist</span></button>
-											<button class="add-to-compare"><i class="fa fa-exchange"></i><span class="tooltipp">add to compare</span></button>
-											<button class="quick-view"><i class="fa fa-eye"></i><span class="tooltipp">quick view</span></button>
-										</div> -->
-								</div>
-								<div class="add-to-cart">
-									<button class="add-to-cart-btn"><i class="fa fa-shopping-cart"></i> Comprar</button>
-								</div>
-							</div>
-						</div>
-						<!-- /product -->
-
-						<!-- product -->
-						<div class="col-md-4 col-xs-6">
-							<div class="product">
-								<div class="product-img">
-									<img src="./img/whey-dux.png" alt="">
-									<div class="product-label">
-										<span class="sale">-30%</span>
-										<span class="new">NEW</span>
-									</div>
-								</div>
-								<div class="product-body">
-									<!-- <p class="product-category">Category</p> -->
-									<h3 class="product-name"><a href="#">WHEY PROTEIN CONCENTRADO DUX</a></h3>
-									<h4 class="product-price">R$189,00 <del class="product-old-price">R$249,000</del></h4>
-									<div class="product-rating">
-										<i class="fa fa-star"></i>
-										<i class="fa fa-star"></i>
-										<i class="fa fa-star"></i>
-										<i class="fa fa-star"></i>
-										<i class="fa fa-star"></i>
-									</div>
-									<!-- <div class="product-btns">
-											<button class="add-to-wishlist"><i class="fa fa-heart-o"></i><span class="tooltipp">add to wishlist</span></button>
-											<button class="add-to-compare"><i class="fa fa-exchange"></i><span class="tooltipp">add to compare</span></button>
-											<button class="quick-view"><i class="fa fa-eye"></i><span class="tooltipp">quick view</span></button>
-										</div> -->
-								</div>
-								<div class="add-to-cart">
-									<button class="add-to-cart-btn"><i class="fa fa-shopping-cart"></i> Comprar</button>
-								</div>
-							</div>
-						</div>
-						<!-- /product -->
-
-						<div class="clearfix visible-sm visible-xs"></div>
-
-						<!-- product -->
-						<div class="col-md-4 col-xs-6">
-							<div class="product">
-								<div class="product-img">
-									<img src="./img/whey-dux.png" alt="">
-									<div class="product-label">
-										<span class="sale">-30%</span>
-										<span class="new">NEW</span>
-									</div>
-								</div>
-								<div class="product-body">
-									<!-- <p class="product-category">Category</p> -->
-									<h3 class="product-name"><a href="#">WHEY PROTEIN CONCENTRADO DUX</a></h3>
-									<h4 class="product-price">R$189,00 <del class="product-old-price">R$249,000</del></h4>
-									<div class="product-rating">
-										<i class="fa fa-star"></i>
-										<i class="fa fa-star"></i>
-										<i class="fa fa-star"></i>
-										<i class="fa fa-star"></i>
-										<i class="fa fa-star"></i>
-									</div>
-									<!-- <div class="product-btns">
-											<button class="add-to-wishlist"><i class="fa fa-heart-o"></i><span class="tooltipp">add to wishlist</span></button>
-											<button class="add-to-compare"><i class="fa fa-exchange"></i><span class="tooltipp">add to compare</span></button>
-											<button class="quick-view"><i class="fa fa-eye"></i><span class="tooltipp">quick view</span></button>
-										</div> -->
-								</div>
-								<div class="add-to-cart">
-									<button class="add-to-cart-btn"><i class="fa fa-shopping-cart"></i> Comprar</button>
-								</div>
-							</div>
-						</div>
-						<!-- /product -->
-
-						<!-- product -->
-						<div class="col-md-4 col-xs-6">
-							<div class="product">
-								<div class="product-img">
-									<img src="./img/whey-dux.png" alt="">
-									<div class="product-label">
-										<span class="sale">-30%</span>
-										<span class="new">NEW</span>
-									</div>
-								</div>
-								<div class="product-body">
-									<!-- <p class="product-category">Category</p> -->
-									<h3 class="product-name"><a href="#">WHEY PROTEIN CONCENTRADO DUX</a></h3>
-									<h4 class="product-price">R$189,00 <del class="product-old-price">R$249,000</del></h4>
-									<div class="product-rating">
-										<i class="fa fa-star"></i>
-										<i class="fa fa-star"></i>
-										<i class="fa fa-star"></i>
-										<i class="fa fa-star"></i>
-										<i class="fa fa-star"></i>
-									</div>
-									<!-- <div class="product-btns">
-											<button class="add-to-wishlist"><i class="fa fa-heart-o"></i><span class="tooltipp">add to wishlist</span></button>
-											<button class="add-to-compare"><i class="fa fa-exchange"></i><span class="tooltipp">add to compare</span></button>
-											<button class="quick-view"><i class="fa fa-eye"></i><span class="tooltipp">quick view</span></button>
-										</div> -->
-								</div>
-								<div class="add-to-cart">
-									<button class="add-to-cart-btn"><i class="fa fa-shopping-cart"></i> Comprar</button>
-								</div>
-							</div>
-						</div>
-						<!-- /product -->
-
-						<!-- product -->
-						<div class="col-md-4 col-xs-6">
-							<div class="product">
-								<div class="product-img">
-									<img src="./img/whey-dux.png" alt="">
-									<div class="product-label">
-										<span class="sale">-30%</span>
-										<span class="new">NEW</span>
-									</div>
-								</div>
-								<div class="product-body">
-									<!-- <p class="product-category">Category</p> -->
-									<h3 class="product-name"><a href="#">WHEY PROTEIN CONCENTRADO DUX</a></h3>
-									<h4 class="product-price">R$189,00 <del class="product-old-price">R$249,000</del></h4>
-									<div class="product-rating">
-										<i class="fa fa-star"></i>
-										<i class="fa fa-star"></i>
-										<i class="fa fa-star"></i>
-										<i class="fa fa-star"></i>
-										<i class="fa fa-star"></i>
-									</div>
-									<!-- <div class="product-btns">
-											<button class="add-to-wishlist"><i class="fa fa-heart-o"></i><span class="tooltipp">add to wishlist</span></button>
-											<button class="add-to-compare"><i class="fa fa-exchange"></i><span class="tooltipp">add to compare</span></button>
-											<button class="quick-view"><i class="fa fa-eye"></i><span class="tooltipp">quick view</span></button>
-										</div> -->
-								</div>
-								<div class="add-to-cart">
-									<button class="add-to-cart-btn"><i class="fa fa-shopping-cart"></i> Comprar</button>
-								</div>
-							</div>
-						</div>
-						<!-- /product -->
-
-						<div class="clearfix visible-sm visible-xs"></div>
-
-						<!-- product -->
-						<div class="col-md-4 col-xs-6">
-							<div class="product">
-								<div class="product-img">
-									<img src="./img/whey-dux.png" alt="">
-									<div class="product-label">
-										<span class="sale">-30%</span>
-										<span class="new">NEW</span>
-									</div>
-								</div>
-								<div class="product-body">
-									<!-- <p class="product-category">Category</p> -->
-									<h3 class="product-name"><a href="#">WHEY PROTEIN CONCENTRADO DUX</a></h3>
-									<h4 class="product-price">R$189,00 <del class="product-old-price">R$249,000</del></h4>
-									<div class="product-rating">
-										<i class="fa fa-star"></i>
-										<i class="fa fa-star"></i>
-										<i class="fa fa-star"></i>
-										<i class="fa fa-star"></i>
-										<i class="fa fa-star"></i>
-									</div>
-									<!-- <div class="product-btns">
-											<button class="add-to-wishlist"><i class="fa fa-heart-o"></i><span class="tooltipp">add to wishlist</span></button>
-											<button class="add-to-compare"><i class="fa fa-exchange"></i><span class="tooltipp">add to compare</span></button>
-											<button class="quick-view"><i class="fa fa-eye"></i><span class="tooltipp">quick view</span></button>
-										</div> -->
-								</div>
-								<div class="add-to-cart">
-									<button class="add-to-cart-btn"><i class="fa fa-shopping-cart"></i> Comprar</button>
-								</div>
-							</div>
-						</div>
-						<!-- /product -->
-					</div>
+	
 					<!-- /store products -->
-					<br><br><br>
 
 
 					<!-- store bottom filter -->
@@ -788,6 +580,38 @@
 			<!-- /row -->
 		</div>
 		<!-- /container -->
+
+		<div class="section">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-4 col-xs-6">
+						<div class="section-title">
+							<h4 class="title">Mais Vendidos</h4>
+							<div class="section-nav">
+								<div id="slick-nav-3" class="products-slick-nav"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+				There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.
+			</div>
+		</div>
+		<div class="section">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-4 col-xs-6">
+						<div class="section-title">
+							<h4 class="title">Mais Vendidos</h4>
+							<div class="section-nav">
+								<div id="slick-nav-3" class="products-slick-nav"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+				There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.
+			</div>
+		</div>
+
 	</div>
 	<!-- /SECTION -->
 

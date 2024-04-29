@@ -420,7 +420,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
-                    <div class="section-title">
+                    <div class="section-title text-center">
                         <h3 class="title">Principais Marcas</h3>
                     </div>
                 </div>
@@ -449,7 +449,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
-                    <div class="section-title">
+                    <div class="section-title text-center">
                         <h3 class="title">Suplementos Proteína</h3>
                         <!-- <div class="section-nav">
                         <ul class="section-tab-nav tab-nav">
@@ -611,7 +611,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
-                    <div class="section-title">
+                    <div class="section-title text-center">
                         <h3 class="title">Suplementos Creatina</h3>
                         <!-- <div class="section-nav">
                         <ul class="section-tab-nav tab-nav">
@@ -773,7 +773,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
-                    <div class="section-title">
+                    <div class="section-title text-center">
                         <h3 class="title">Suplementos Pré-Treino</h3>
                         <!-- <div class="section-nav">
                         <ul class="section-tab-nav tab-nav">
