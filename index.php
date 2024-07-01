@@ -14,17 +14,14 @@
     <link rel="stylesheet" href="css/font-awesome.min.css">
     <link type="text/css" rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/slide.css">
-<<<<<<< HEAD
     <link rel="stylesheet" href="css/logoSlide/logoSlide.css">
     <link rel="stylesheet" href="css/slideLogo.css">
-
-=======
 <?php
 include_once 'adm/config/constantes.php';
 include_once 'adm/config/conexao.php';
 include_once 'adm/func/func.php';
 ?>
->>>>>>> luciano
+
 </head>
 
 <body>
@@ -38,39 +35,38 @@ include_once 'adm/func/func.php';
                 </ul>
             </div>
         </div>
-<<<<<<< HEAD
-        <div id="header">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-3">
-                        <div class="header-logo">
-                            <a href="#" class="logo">
-                                <img src="./img/logo1.png" alt="">
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="header-search">
-                            <form>
-                                <select class="input-select">
-                                    <option value="0">Categorias</option>
-                                    <option value="1">Whey Protein</option>
-                                    <option value="1">Category 02</option>
-                                    <option value="1">Category 02</option>
-                                    <option value="1">Category 02</option>
-                                    <option value="1">Category 02</option>
-                                    <option value="1">Category 02</option>
-                                    <option value="1">Category 02</option>
-                                </select>
-                                <input class="input" placeholder="O que você procura?">
-                                <button class="search-btn">Procurar</button>
-                            </form>
-                        </div>
-                    </div>
-                    <div class="col-md-3 clearfix">
-                        <div class="header-ctn">
-=======
-    </div>
+
+<!--        <div id="header">-->
+<!--            <div class="container">-->
+<!--                <div class="row">-->
+<!--                    <div class="col-md-3">-->
+<!--                        <div class="header-logo">-->
+<!--                            <a href="#" class="logo">-->
+<!--                                <img src="./img/logo1.png" alt="">-->
+<!--                            </a>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                    <div class="col-md-6">-->
+<!--                        <div class="header-search">-->
+<!--                            <form>-->
+<!--                                <select class="input-select">-->
+<!--                                    <option value="0">Categorias</option>-->
+<!--                                    <option value="1">Whey Protein</option>-->
+<!--                                    <option value="1">Category 02</option>-->
+<!--                                    <option value="1">Category 02</option>-->
+<!--                                    <option value="1">Category 02</option>-->
+<!--                                    <option value="1">Category 02</option>-->
+<!--                                    <option value="1">Category 02</option>-->
+<!--                                    <option value="1">Category 02</option>-->
+<!--                                </select>-->
+<!--                                <input class="input" placeholder="O que você procura?">-->
+<!--                                <button class="search-btn">Procurar</button>-->
+<!--                            </form>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                    <div class="col-md-3 clearfix">-->
+<!--                        <div class="header-ctn">-->
+<!--    </div>-->
     <div id="header">
         <div class="container">
             <div class="row">
