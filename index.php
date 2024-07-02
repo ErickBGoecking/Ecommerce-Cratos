@@ -1,18 +1,3 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Cratos Nutrition</title>
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700" rel="stylesheet">
-    <link type="text/css" rel="stylesheet" href="css/bootstrap.min.css"/>
-    <link type="text/css" rel="stylesheet" href="css/slick.css"/>
-    <link type="text/css" rel="stylesheet" href="css/slick-theme.css"/>
-    <link type="text/css" rel="stylesheet" href="css/nouislider.min.css"/>
-    <link rel="stylesheet" href="css/font-awesome.min.css">
-    <link type="text/css" rel="stylesheet" href="css/style.css"/>
-    <link rel="stylesheet" href="css/slide.css">
 <?php
 include_once 'adm/config/constantes.php';
 include_once 'adm/config/conexao.php';
@@ -28,10 +13,24 @@ if(isset($_GET['url'])){
         $_PREFIXO.="../";
     }
 }
-if (!isset($_SESSION['itens']) || empty($_SESSION['itens'])) {
-    $_SESSION['sacola'] = 0;
-}
 ?>
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Cratos Nutrition</title>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="<?php echo $_PREFIXO?>css/bootstrap.min.css"/>
+    <link type="text/css" rel="stylesheet" href="<?php echo $_PREFIXO?>css/slick.css"/>
+    <link type="text/css" rel="stylesheet" href="<?php echo $_PREFIXO?>css/slick-theme.css"/>
+    <link type="text/css" rel="stylesheet" href="<?php echo $_PREFIXO?>css/nouislider.min.css"/>
+    <link rel="stylesheet" href="<?php echo $_PREFIXO?>/css/font-awesome.min.css">
+    <link type="text/css" rel="stylesheet" href="<?php echo $_PREFIXO?>css/style.css"/>
+    <link rel="stylesheet" href="<?php echo $_PREFIXO?>css/slide.css">
+
 </head>
 <body>
 
@@ -55,7 +54,7 @@ if (!isset($_SESSION['itens']) || empty($_SESSION['itens'])) {
                 <div class="col-md-3">
                     <div class="header-logo">
                         <a href="#" class="logo">
-                            <img src="./img/logo1.png" alt="">
+                            <img src="<?php echo $_PREFIXO?>img/logo1.png" alt="">
                         </a>
                     </div>
                 </div>
@@ -91,7 +90,7 @@ if (!isset($_SESSION['itens']) || empty($_SESSION['itens'])) {
                                 <div class="cart-list">
                                     <div class="product-widget">
                                         <div class="product-img">
-                                            <img src="./img/product01.png" alt="">
+                                            <img src="<?php echo $_PREFIXO?>img/product01.png" alt="">
                                         </div>
                                         <div class="product-body">
                                             <h3 class="product-name"><a href="#">product name goes here</a></h3>
@@ -102,7 +101,7 @@ if (!isset($_SESSION['itens']) || empty($_SESSION['itens'])) {
 
                                     <div class="product-widget">
                                         <div class="product-img">
-                                            <img src="./img/product02.png" alt="">
+                                            <img src="<?php echo $_PREFIXO?>img/product02.png" alt="">
                                         </div>
                                         <div class="product-body">
                                             <h3 class="product-name"><a href="#">product name goes here</a></h3>
@@ -172,7 +171,7 @@ if (!isset($_SESSION['itens']) || empty($_SESSION['itens'])) {
 
                 <div class="col-md-4 col-xs-6">
                     <div class="footer">
-                        <img src="./img/logo2.png" alt="" width="75%">
+                        <img src="<?php echo $_PREFIXO?>img/logo2.png" alt="" width="75%">
                         <!-- <h3 class="footer-title">Categories</h3>
                         <ul class="footer-links">
                             <li><a href="#">Hot deals</a></li>
@@ -262,12 +261,12 @@ if (!isset($_SESSION['itens']) || empty($_SESSION['itens'])) {
     </div>
 </footer>
 
-<script src="js/jquery.min.js"></script>
-<script src="js/bootstrap.min.js"></script>
-<script src="js/slick.min.js"></script>
-<script src="js/nouislider.min.js"></script>
-<script src="js/jquery.zoom.min.js"></script>
-<script src="js/main.js"></script>
+<script src="<?php echo $_PREFIXO?>js/jquery.min.js"></script>
+<script src="<?php echo $_PREFIXO?>js/bootstrap.min.js"></script>
+<script src="<?php echo $_PREFIXO?>js/slick.min.js"></script>
+<script src="<?php echo $_PREFIXO?>js/nouislider.min.js"></script>
+<script src="<?php echo $_PREFIXO?>js/jquery.zoom.min.js"></script>
+<script src="<?php echo $_PREFIXO?>js/main.js"></script>
 <!-- <script src="js/slide.js"></script> -->
 
 </body>
