@@ -1,0 +1,146 @@
+
+
+.carousel-rotate {
+  padding: 10px 0;
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  margin: 0 auto;
+  background-color: #fff;
+  white-space: nowrap;
+  -webkit-animation: fadeInDown 1000ms ease-in-out; /* Chrome, Safari, Opera */
+  animation: fadeInDown 1000ms ease-in-out;
+}
+/* Chrome, Safari, Opera */
+@-webkit-keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(60px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+  }
+}
+
+/* Standard syntax */
+@keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(60px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+  }
+}
+.carousel-rotate ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.carousel-rotate li {
+  float: none;
+  display: inline-block;
+  white-space: normal;
+  position: relative;
+  margin: 0px 20px;
+  width: 200px;
+  height: 200px;
+  border-radius: 10px;
+  font-weight: bold;
+  text-decoration: underline;
+  z-index: 99;
+  text-align: center;
+  background-image: none !important;
+  transition: all 0.2s ease-in 0s;
+}
+
+.carousel-rotate ul li a,
+.carousel-rotate ul li div,
+.carousel-rotate ul li img {
+  vertical-align: bottom;
+  max-height: 100%;
+  max-width: 100%;
+  width: auto;
+  height: auto;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  padding: 10px;
+}
+
+.carousel-content {
+  display: inline-block;
+  white-space: nowrap;
+}
+
+.slide-1 {
+  display: inline-block;
+  position: relative;
+  white-space: nowrap;
+  left: 0%;
+}
+
+.slide-2 {
+  display: inline-block;
+  white-space: nowrap;
+}
+
+@-webkit-keyframes swap {
+  0%,
+  50% {
+    left: 0%;
+  }
+  50.01%,
+  100% {
+    left: 100%;
+  }
+}
+@keyframes swap {
+  0%,
+  50% {
+    left: 0%;
+  }
+  50.01%,
+  100% {
+    left: 100%;
+  }
+}
+.carousel-rotate:hover .carousel-content,
+.carousel-rotate:hover .slide-1 {
+  -webkit-animation-play-state: paused !important;
+  animation-play-state: paused !important;
+}
+
+.carousel-rotate:hover ul li {
+  cursor: pointer;
+}
+/* Transition */
+
+@-webkit-keyframes marquee {
+  0% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+  100% {
+    -webkit-transform: translateX(-100%);
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes marquee {
+  0% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+  100% {
+    -webkit-transform: translateX(-100%);
+    transform: translateX(-100%);
+  }
+}
+
