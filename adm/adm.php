@@ -65,7 +65,7 @@ include_once("topo.php");
             <?php
             switch ($pagina) {
                 case "categoria":
-                    include_once('./produto/listaCategoria.php');
+                    include_once('./categorias/listaCategorias.php');
                     break;
                 case "produto":
                     include_once('./produto/listaProduto.php');

@@ -2709,6 +2709,36 @@ function recebeForm($dadosForm, $tipoCampo = 'campos')
         return $value;
     }
 }
+function recebeFormAuto($dadosForm, $tipoCampo = 'campos')
+{
+    $dados = $dadosForm;
+    if ($tipoCampo == 'campos') {
+        $campos = '';
+        foreach ($dados as $tituloDados => $valueDados) {
+            $campos .= $tituloDados . ',';
+        }
+        $campos = rtrim($campos, ',');
+        $campos = str_replace(',controle', '', $campos);
+        return $campos;
+    } elseif ($tipoCampo == 'value') {
+        $value = [];
+        foreach ($dados as $tituloDados => $valueDados) {
+            
+            switch($tituloDados){
+                case 'DataInicio':
+                    $valueDados = formatarDataHoraEn($dados['DataInicio']);
+                    break;
+                case 'DataFinal':
+                    $valueDados = formatarDataHoraEn($dados['DataFinal']);
+                    break;
+            }
+
+            $value[] = $valueDados;
+        }
+        array_pop($value);
+        return $value;
+    }
+}
 
 function validaFoto($nomeCampo, $caminho){
     $extensaoArquivo = array('jpg', 'jpeg', 'png');

@@ -94,8 +94,29 @@ if (isset($controle) && !empty($controle)) {
         case'usuarioStatus':
             include_once 'user/usuarioStatus.php';
             break;
+        case'listarCategorias':
+            include_once 'categorias/lista.php';
+            break;
+        case'categoriaAdd':
+            include_once 'categorias/add.php';
+            break;
+        case'categoriaExc':
+            include_once 'categorias/exc.php';
+            break;
+        case'categoriaAlt':
+            include_once 'categorias/alt.php';
+            break;
+        case'listarProduto':
+            include_once 'produto/lista.php';
+            break;
+        case'produtoAdd':
+            include_once 'produto/add_auto.php';
+            break;
+        case'produtoExc':
+            include_once 'produto/produtoExc.php';
+            break; 
             
-            
+    
         default:
             echo 'Padrão alterar';
     }
