@@ -11,6 +11,7 @@ include_once('crud/cadastrar.php');
 include_once('crud/alterar.php');
 ######################################
 include_once('toasts/toasts.php');
+include_once('validacao/validacao.php');
 
 
 #################

@@ -1,7 +1,9 @@
 @import url('./padrao.css');
 
 /* ------------- BOTÕES  -------------------- */
-
+a{
+    text-decoration: none;
+}
 .btn-primary {
     background-color: var(--cor-principal)!important;
     color: var(--cor-btn-primary-fonte)!important;
@@ -52,6 +54,7 @@
     padding-left: 10px;
     background-color: #f8f9fa;
     min-width:40px;
+    font-weight: 100;
 }
 
 .item-menu :hover {
