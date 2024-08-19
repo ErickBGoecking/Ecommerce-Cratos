@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="e4031bf4-ec88-4847-add9-970c57ab60d5" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/pagina/loja/pagina/conteudoloja.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pagina/loja/pagina/layout/header.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pagina/loja/pagina/layout/menu.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/source/bibliotecas/bootstrap-3/bootstrap.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/source/js/jquery.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/conteudo.php" beforeDir="false" afterPath="$PROJECT_DIR$/conteudo.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/old/pagina/indexLuciano.php" beforeDir="false" afterPath="$PROJECT_DIR$/old/pagina/indexLuciano.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pagina/loja/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/pagina/loja/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pagina/loja/pagina/banner.php" beforeDir="false" afterPath="$PROJECT_DIR$/pagina/loja/pagina/layout/banner.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pagina/loja/pagina/produto.php" beforeDir="false" afterPath="$PROJECT_DIR$/pagina/loja/pagina/produto/produto.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/funcoes/funcoes.php" beforeDir="false" afterPath="$PROJECT_DIR$/source/funcoes/funcoes.php" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings">
+    <execution />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="CSS File" />
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitToolBoxStore">
+    <option name="projectConfigVersion" value="5" />
+    <option name="recentBranches">
+      <RecentBranches>
+        <option name="branchesForRepo">
+          <list>
+            <RecentBranchesForRepo>
+              <option name="branches">
+                <list>
+                  <RecentBranch>
+                    <option name="branchName" value="luciano" />
+                    <option name="lastUsedInstant" value="1719878167" />
+                  </RecentBranch>
+                  <RecentBranch>
+                    <option name="branchName" value="main" />
+                    <option name="lastUsedInstant" value="1719877798" />
+                  </RecentBranch>
+                  <RecentBranch>
+                    <option name="branchName" value="luciano-menu" />
+                    <option name="lastUsedInstant" value="1711070339" />
+                  </RecentBranch>
+                  <RecentBranch>
+                    <option name="branchName" value="menu-luciano" />
+                    <option name="lastUsedInstant" value="1710897956" />
+                  </RecentBranch>
+                </list>
+              </option>
+              <option name="repositoryRootUrl" value="file://$PROJECT_DIR$" />
+            </RecentBranchesForRepo>
+          </list>
+        </option>
+      </RecentBranches>
+    </option>
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration" interpreter_name="C:\xampp\php\php.exe" />
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 5
+}</component>
+  <component name="ProjectId" id="2dbxX3ythP2YzMCFpo3EaDOV5mv" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "luciano",
+    "last_opened_file_path": "D:/htdocs/cratos/Ecommerce-Cratos/source/js",
+    "list.type.of.created.stylesheet": "CSS",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "MTConfigurable",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\htdocs\cratos\Ecommerce-Cratos\source\js" />
+      <recent name="D:\htdocs\cratos\Ecommerce-Cratos\source\bibliotecas\bootstrap-3" />
+      <recent name="D:\htdocs\cratos\Ecommerce-Cratos\adm\banner" />
+      <recent name="D:\htdocs\cratos\Ecommerce-Cratos\adm\forecedor" />
+      <recent name="D:\htdocs\cratos\Ecommerce-Cratos\adm\produto" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\pagina\produto" />
+      <recent name="D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\pagina\layout" />
+      <recent name="D:\htdocs\cratos\Ecommerce-Cratos\cliente" />
+      <recent name="D:\htdocs\cratos\Ecommerce-Cratos" />
+      <recent name="D:\htdocs\cratos\Ecommerce-Cratos\css" />
+    </key>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-php-predefined-ba97393d7c68-b4dcf6bb9de9-com.jetbrains.php.sharedIndexes-PS-233.13135.108" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="e4031bf4-ec88-4847-add9-970c57ab60d5" name="Changes" comment="" />
+      <created>1710290614653</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1710290614653</updated>
+      <workItem from="1710290615728" duration="5499000" />
+      <workItem from="1710353634755" duration="705000" />
+      <workItem from="1710375817255" duration="952000" />
+      <workItem from="1710421359004" duration="28570000" />
+      <workItem from="1710802045858" duration="15000" />
+      <workItem from="1710802062511" duration="3968000" />
+      <workItem from="1710847022462" duration="596000" />
+      <workItem from="1710888857880" duration="12766000" />
+      <workItem from="1710932133383" duration="612000" />
+      <workItem from="1710941531260" duration="25768000" />
+      <workItem from="1711060237257" duration="9926000" />
+      <workItem from="1711130792129" duration="11756000" />
+      <workItem from="1711476936575" duration="28766000" />
+      <workItem from="1711580291028" duration="9532000" />
+      <workItem from="1711648643489" duration="8166000" />
+      <workItem from="1712014726775" duration="12009000" />
+      <workItem from="1712029710382" duration="77000" />
+      <workItem from="1712093741956" duration="9029000" />
+      <workItem from="1712145009124" duration="4572000" />
+      <workItem from="1712230804184" duration="6228000" />
+      <workItem from="1712274893746" duration="896000" />
+      <workItem from="1712288732444" duration="362000" />
+      <workItem from="1712314591483" duration="9842000" />
+      <workItem from="1712573116245" duration="32000" />
+      <workItem from="1712718497395" duration="49000" />
+      <workItem from="1714432749331" duration="3319000" />
+      <workItem from="1714992475152" duration="2004000" />
+      <workItem from="1719946500973" duration="781000" />
+      <workItem from="1721915067150" duration="1557000" />
+      <workItem from="1722271956549" duration="34000" />
+      <workItem from="1723725363332" duration="2067000" />
+      <workItem from="1723732080510" duration="29000" />
+      <workItem from="1723732131902" duration="44000" />
+      <workItem from="1723732194968" duration="996000" />
+      <workItem from="1724068427737" duration="4360000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>

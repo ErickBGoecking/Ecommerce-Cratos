@@ -1,183 +1,10 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Cratos Nutrition</title>
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700" rel="stylesheet">
-    <link type="text/css" rel="stylesheet" href="css/bootstrap.min.css"/>
-    <link type="text/css" rel="stylesheet" href="css/slick.css"/>
-    <link type="text/css" rel="stylesheet" href="css/slick-theme.css"/>
-    <link type="text/css" rel="stylesheet" href="css/nouislider.min.css"/>
-    <link rel="stylesheet" href="css/font-awesome.min.css">
-    <link type="text/css" rel="stylesheet" href="css/style.css"/>
-    <link rel="stylesheet" href="css/slide.css">
-
-</head>
-<body>
-
-<header>
-    <div id="top-header">
-        <div class="container">
-            <!-- <ul class="header-links pull-left">
-                <li><a href="#"><i class="fa fa-phone"></i> +021-95-51-84</a></li>
-                <li><a href="#"><i class="fa fa-envelope-o"></i> email@email.com</a></li>
-                <li><a href="#"><i class="fa fa-map-marker"></i> 1734 Stonecoal Road</a></li>
-            </ul> -->
-            <ul class="header-links pull-right">
-                <!-- <li><a href="#"><i class="fa fa-dollar"></i> USD</a></li> -->
-                <li><a href="#"><i class="fa fa-user-o"></i> Meu Acesso</a></li>
-            </ul>
-        </div>
-    </div>
-    <div id="header">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-3">
-                    <div class="header-logo">
-                        <a href="#" class="logo">
-                            <img src="./img/logo1.png" alt="">
-                        </a>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="header-search">
-                        <form>
-                            <select class="input-select">
-                                <option value="0">Categorias</option>
-                                <option value="1">Category 01</option>
-                                <option value="1">Category 02</option>
-                            </select>
-                            <input class="input" placeholder="O que você procura?">
-                            <button class="search-btn">Procurar</button>
-                        </form>
-                    </div>
-                </div>
-                <div class="col-md-3 clearfix">
-                    <div class="header-ctn">
-                        <div>
-                            <a href="#">
-                                <i class="fa fa-heart-o"></i>
-                                <span>Favoritos</span>
-                                <div class="qty">2</div>
-                            </a>
-                        </div>
-                        <div class="dropdown">
-                            <a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true">
-                                <i class="fa fa-shopping-cart"></i>
-                                <span>Meu Carrinho</span>
-                                <div class="qty">3</div>
-                            </a>
-                            <div class="cart-dropdown">
-                                <div class="cart-list">
-                                    <div class="product-widget">
-                                        <div class="product-img">
-                                            <img src="./img/product01.png" alt="">
-                                        </div>
-                                        <div class="product-body">
-                                            <h3 class="product-name"><a href="#">product name goes here</a></h3>
-                                            <h4 class="product-price"><span class="qty">1x</span>$980.00</h4>
-                                        </div>
-                                        <button class="delete"><i class="fa fa-close"></i></button>
-                                    </div>
-
-                                    <div class="product-widget">
-                                        <div class="product-img">
-                                            <img src="./img/product02.png" alt="">
-                                        </div>
-                                        <div class="product-body">
-                                            <h3 class="product-name"><a href="#">product name goes here</a></h3>
-                                            <h4 class="product-price"><span class="qty">3x</span>$980.00</h4>
-                                        </div>
-                                        <button class="delete"><i class="fa fa-close"></i></button>
-                                    </div>
-                                </div>
-                                <div class="cart-summary">
-                                    <small>3 Item(s) selected</small>
-                                    <h5>SUBTOTAL: $2940.00</h5>
-                                </div>
-                                <div class="cart-btns">
-                                    <a href="#">Meu Carrinho</a>
-                                    <a href="#">Checkout  <i class="fa fa-arrow-circle-right"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="menu-toggle">
-                            <a href="#">
-                                <i class="fa fa-bars"></i>
-                                <span>Menu</span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</header>
-
-<!-- MENU -->
-<nav id="navigation">
-    <div class="container">
-        <div id="responsive-nav">
-            <ul class="main-nav nav navbar-nav">
-                <li class="active"><a href="#">Início</a></li>
-                <li><a href="#">Whey Protein</a></li>
-                <li><a href="#">Top 20</a></li>
-                <li><a href="#">Marcas</a></li>
-                <li><a href="#">Kits</a></li>
-                <li><a href="#">Objetivos</a></li>
-                <li><a href="#">Combos</a></li>
-                <li><a href="#">Clube Cratos</a></li>
-
-            </ul>
-        </div>
-    </div>
-</nav>
-
-<!-- CARROUSEL INICIO -->
-<!-- <div class="container"> CARROUSEL RETIRADO DA CLASSE -->
-<div class="">
+<?php
+include_once 'layout/header.php';
+include_once 'layout/menu.php';
+include_once 'layout/banner.php';
+?>
 
 
-    <div id="myCarousel" class="carousel slide" data-ride="carousel">
-        <!-- Indicators -->
-        <!-- <ol class="carousel-indicators">
-        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-        <li data-target="#myCarousel" data-slide-to="1"></li>
-        <li data-target="#myCarousel" data-slide-to="2"></li>
-        </ol> -->
-
-        <!-- Wrapper for slides -->
-        <div class="carousel-inner">
-
-        <div class="item active">
-            <img src="./img/banner/img11.png" alt="Los Angeles" style="width:100%;">
-        </div>
-
-        <div class="item">
-            <img src="./img/banner/img11.png" alt="Chicago" style="width:100%;">
-        </div>
-        
-        <div class="item">
-            <img src="./img/banner/img11.png" alt="New York" style="width:100%;">
-        </div>
-    
-        </div>
-
-        <!-- Left and right controls -->
-        <a class="left carousel-control" href="#myCarousel" data-slide="prev">
-        <span class="glyphicon glyphicon-chevron-left"></span>
-        <span class="sr-only">Previous</span>
-        </a>
-        <a class="right carousel-control" href="#myCarousel" data-slide="next">
-        <span class="glyphicon glyphicon-chevron-right"></span>
-        <span class="sr-only">Next</span>
-        </a>
-    </div>
-</div>
-
-<!-- PRODUTOS MAIS VENDIDOS -->
 <div class="section">
     <div class="container">
         <div class="row">
@@ -403,93 +230,93 @@
             </div>
             <div class="col-md-12">
                 <div class="row">
-                <div class="carousel-rotate" data-devicetype="desktop" data-carouselType="2" data-carouselSpeed="80">
-	<div class="wrapper carousel-content" style="animation: marquee 80s linear infinite;">
-		<div class="slide-1" style=" -webkit-animation: swap 80s linear infinite;animation: swap 80s linear infinite;">
-			<ul>
-                <li>
-                    <div>
-                        <img src="https://logospng.org/download/integralmedica/integralmedica-2048.png" />
-                    </div>
-                </li>
-                <li>
-                    <div>
-                        <img src="https://logospng.org/download/max-titanium/max-titanium-4096.png" />
-                    </div>
-                </li>
-                <li>
-                    <div>
-                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-g6ld3j_uTXEe4_zgP1uFqjQBmvoQL-Cvo2QwoRIy3zLhPZmeLaZVXQsvbWzWyLZ_xD0&usqp=CAU" />
-                    </div>
-                </li>
+                    <div class="carousel-rotate" data-devicetype="desktop" data-carouselType="2" data-carouselSpeed="80">
+                        <div class="wrapper carousel-content" style="animation: marquee 80s linear infinite;">
+                            <div class="slide-1" style=" -webkit-animation: swap 80s linear infinite;animation: swap 80s linear infinite;">
+                                <ul>
+                                    <li>
+                                        <div>
+                                            <img src="https://logospng.org/download/integralmedica/integralmedica-2048.png" />
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div>
+                                            <img src="https://logospng.org/download/max-titanium/max-titanium-4096.png" />
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div>
+                                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-g6ld3j_uTXEe4_zgP1uFqjQBmvoQL-Cvo2QwoRIy3zLhPZmeLaZVXQsvbWzWyLZ_xD0&usqp=CAU" />
+                                        </div>
+                                    </li>
 
-                <!-- <li>
-                    <div>
-                        <img src="https://cdn.dribbble.com/users/1726478/screenshots/3781908/car-dealer-loader-gif.gif" />
-                    </div>
-                </li>
-                <li>
-                    <div>
-                        <img src="https://cdn.dribbble.com/users/1726478/screenshots/3636280/gif-1.gif" />
-                    </div>
-                </li>
-                <li>
-                    <div>
-                        <img src="https://media.giphy.com/media/l0ExhgDYmserkFabm/source.gif" />
-                    </div>
-                </li><li>
-                    <div>
-                        <img src="https://cdn.dribbble.com/users/1726478/screenshots/3739184/car-dealer-gif.gif" />
-                    </div>
-                </li>
-                <li>
-                    <div>
-                        <img src="https://media.giphy.com/media/l0ExhgDYmserkFabm/source.gif" />
-                    </div>
-                </li>
-                <li>
-                    <div>
-                        <img src="https://cdn.dribbble.com/users/1726478/screenshots/3781908/car-dealer-loader-gif.gif" />
-                    </div>
-                </li>
-                <li>
-                    <div>
-                        <img src="https://cdn.dribbble.com/users/1726478/screenshots/3636280/gif-1.gif" />
-                    </div>
-                </li>
-                <li>
-                    <div>
-                        <img src="https://media.giphy.com/media/l0ExhgDYmserkFabm/source.gif" />
-                    </div>
-                </li> -->
-			</ul>
-		</div>
+                                    <!-- <li>
+                                        <div>
+                                            <img src="https://cdn.dribbble.com/users/1726478/screenshots/3781908/car-dealer-loader-gif.gif" />
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div>
+                                            <img src="https://cdn.dribbble.com/users/1726478/screenshots/3636280/gif-1.gif" />
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div>
+                                            <img src="https://media.giphy.com/media/l0ExhgDYmserkFabm/source.gif" />
+                                        </div>
+                                    </li><li>
+                                        <div>
+                                            <img src="https://cdn.dribbble.com/users/1726478/screenshots/3739184/car-dealer-gif.gif" />
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div>
+                                            <img src="https://media.giphy.com/media/l0ExhgDYmserkFabm/source.gif" />
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div>
+                                            <img src="https://cdn.dribbble.com/users/1726478/screenshots/3781908/car-dealer-loader-gif.gif" />
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div>
+                                            <img src="https://cdn.dribbble.com/users/1726478/screenshots/3636280/gif-1.gif" />
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div>
+                                            <img src="https://media.giphy.com/media/l0ExhgDYmserkFabm/source.gif" />
+                                        </div>
+                                    </li> -->
+                                </ul>
+                            </div>
 
-		<div class="slide-2">
-			<ul>
-                 <li>
-                    <div>
-                        <img src="https://www.universalusa.com/wp-content/uploads/2022/12/universal-logo-hero.png" />
+                            <div class="slide-2">
+                                <ul>
+                                    <li>
+                                        <div>
+                                            <img src="https://www.universalusa.com/wp-content/uploads/2022/12/universal-logo-hero.png" />
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div>
+                                            <img src="https://mma.prnewswire.com/media/880127/Dymatize_Logo.jpg?p=facebook" />
+                                        </div>
+                                    </li><li>
+                                        <div>
+                                            <img src="https://ftwsuplementos.com.br/wp-content/uploads/2021/01/ftwcorreto1.png" />
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div>
+                                            <img src="https://blackskullusa.vtexassets.com/arquivos/ids/157956-800-auto?v=638199668697430000&width=800&height=auto&aspect=true" />
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
-                </li>
-                <li>
-                    <div>
-                        <img src="https://mma.prnewswire.com/media/880127/Dymatize_Logo.jpg?p=facebook" />
-                    </div>
-                </li><li>
-                    <div>
-                        <img src="https://ftwsuplementos.com.br/wp-content/uploads/2021/01/ftwcorreto1.png" />
-                    </div>
-                </li>
-                <li>
-                    <div>
-                        <img src="https://blackskullusa.vtexassets.com/arquivos/ids/157956-800-auto?v=638199668697430000&width=800&height=auto&aspect=true" />
-                    </div>
-                </li>
-			</ul>
-		</div>
-	</div>
-</div>
                 </div>
             </div>
         </div>
@@ -1024,7 +851,6 @@
         </div>
     </div>
 </div>
-
 <div class="section">
     <div class="container">
         <div class="row">
@@ -1185,8 +1011,6 @@
         </div>
     </div>
 </div>
-
-<!-- TOP DOS TOPS -->
 <div class="section">
     <div class="container">
         <div class="row">
@@ -1448,16 +1272,13 @@
         </div>
     </div>
 </div>
-
-<!-- RODAPÉ -->
 <footer id="footer">
     <div class="section">
         <div class="container">
             <div class="row">
-
-                <div class="col-md-4 col-xs-6">
+                <div class="col-md-3 col-xs-6">
                     <div class="footer">
-                        <img src="./img/logo2.png" alt="" width="75%">
+                        <img src="../img/assets/logo2.png" alt="" width="75%">
                         <!-- <h3 class="footer-title">Categories</h3>
                         <ul class="footer-links">
                             <li><a href="#">Hot deals</a></li>
@@ -1494,7 +1315,7 @@
                     </div>
                 </div>
 
-                <div class="col-md-2 col-xs-6">
+                <div class="col-md-3 col-xs-6">
                     <div class="footer">
                         <h3 class="footer-title">Categorias</h3>
                         <ul class="footer-links">
@@ -1508,7 +1329,7 @@
                     </div>
                 </div>
 
-                <div class="clearfix visible-xs"></div>
+<!--                <div class="clearfix visible-xs"></div>-->
 
                 <!-- <div class="col-md-3 col-xs-6">
                     <div class="footer">
@@ -1545,14 +1366,3 @@
         </div>
     </div>
 </footer>
-
-<script src="js/jquery.min.js"></script>
-<script src="js/bootstrap.min.js"></script>
-<script src="js/slick.min.js"></script>
-<script src="js/nouislider.min.js"></script>
-<script src="js/jquery.zoom.min.js"></script>
-<script src="js/main.js"></script>
-<!-- <script src="js/slide.js"></script> -->
-
-</body>
-</html>
