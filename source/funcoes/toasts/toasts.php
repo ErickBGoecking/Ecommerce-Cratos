@@ -6,9 +6,7 @@
 
 
 <?php
-
 function mensagemBox($bg,$titulo,$mensagem){
-
     $color="text-black";
     $bgTitle= "bg-warning";
     $bgBody = "light";
@@ -75,6 +73,7 @@ function mensagemBoxVerificar($tipo,$titulo,$mensagem,$destino,$tabela,$id){
                             </div>
                         </div>
                     </div>
+                </div>
 
             </div>
         </div>
@@ -91,10 +90,10 @@ function mensagemBoxVerificar($tipo,$titulo,$mensagem,$destino,$tabela,$id){
 }
 ?>
 <!-- Flexbox container for aligning the toasts -->
-<div aria-live="polite" aria-atomic="true" class="d-flex justify-content-center align-items-center w-100">
+<!-- <div aria-live="polite" aria-atomic="true" class="d-flex justify-content-center align-items-center w-100"> -->
 
   <!-- Then put toasts within -->
-  <div class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+  <!-- <div class="toast" role="alert" aria-live="assertive" aria-atomic="true">
     <div class="toast-header">
       <img src="..." class="rounded me-2" alt="...">
       <strong class="me-auto">Bootstrap</strong>
@@ -105,7 +104,7 @@ function mensagemBoxVerificar($tipo,$titulo,$mensagem,$destino,$tabela,$id){
       Hello, world! This is a toast message.
     </div>
   </div>
-</div>
+</div> -->
 
 
 <!-- <div aria-live="polite" aria-atomic="true" class="bg-body-secondary position-relative bd-example-toasts rounded-3">

@@ -1,0 +1,22 @@
+<?php 
+if(isset($url[2])){
+    switch($url[2]){        
+        case'delete';
+        echo $url[3];
+            deletar("fornecedor",$url[3]);
+            break;
+        case"cadastrar":
+            cadastrar('fornecedor');
+            break;
+        case"alterar":
+            alterar('fornecedor');
+            break;
+        case"editar":    
+            include_once('pagina/painel/pagina/fornecedor/view/editar.php');
+            break;
+        case"produtos":   
+            include_once('pagina/painel/pagina/fornecedor/view/modalprodutos.php');
+            break;
+    }
+}
+include_once('pagina/painel/pagina/fornecedor/view/listarfornecedor.php');

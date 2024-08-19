@@ -1,0 +1,18 @@
+<?php 
+if(isset($url[3])){
+    switch($url[3]){        
+        case'delete';
+            deletar("produto",$url[3]);
+            break;
+        case"cadastrar":
+            cadastrar('produto');
+            break;
+        case"alterar":
+            alterar('produto');
+            break;
+        case"editar":    
+            include_once('pagina/painel/pagina/produto/view/editarproduto.php');
+            break;
+    }
+}
+include_once('pagina/painel/pagina/produtos/view/listarproduto.php');
