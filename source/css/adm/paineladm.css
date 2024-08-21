@@ -1,0 +1,9 @@
+/* ----------PRODUTOS CADASTRO ---------------- */
+.btnLixeira {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    margin-right: 3px;
+    margin-bottom: 3px;
+    transform: scale(0.8);
+}
