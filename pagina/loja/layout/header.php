@@ -18,7 +18,7 @@
                 <div class="col-md-3">
                     <div class="header-logo">
                         <a href="#" class="logo">
-                            <img src="./img/logo1.png" alt="">
+                            <img src="<?= $_PREFIXO?>img/assets/logo1.png" alt="Cratos Nutrition" title="Cratos Nutrition" width="75%">
                         </a>
                     </div>
                 </div>
@@ -27,8 +27,8 @@
                         <form>
                             <select class="input-select">
                                 <option value="0">Categorias</option>
-                                <option value="1">Category 01</option>
-                                <option value="1">Category 02</option>
+                                <option value="1">Categorias 01</option>
+                                <option value="1">Categorias 02</option>
                             </select>
                             <input class="input" placeholder="O que você procura?">
                             <button class="search-btn">Procurar</button>
@@ -54,7 +54,7 @@
                                 <div class="cart-list">
                                     <div class="product-widget">
                                         <div class="product-img">
-                                            <img src="./img/product01.png" alt="">
+                                            <img src="<?= $_PREFIXO?>img/product01.png" alt="">
                                         </div>
                                         <div class="product-body">
                                             <h3 class="product-name"><a href="#">product name goes here</a></h3>
@@ -65,7 +65,7 @@
 
                                     <div class="product-widget">
                                         <div class="product-img">
-                                            <img src="./img/product02.png" alt="">
+                                            <img src="<?= $_PREFIXO?>img/product02.png" alt="">
                                         </div>
                                         <div class="product-body">
                                             <h3 class="product-name"><a href="#">product name goes here</a></h3>
