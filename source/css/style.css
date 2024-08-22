@@ -349,7 +349,7 @@ textarea.input {
 }
 
 .section-title .section-nav .products-slick-nav {
-  top: 0px;
+  top: -10px;
   right: 0px;
 }
 
@@ -1158,7 +1158,7 @@ textarea.input {
 
 .products-slick .slick-list {
   padding-bottom: 60px;
-  margin-bottom: -60px;
+  margin-bottom: -20px;
   z-index: 2;
 }
 
@@ -1612,7 +1612,7 @@ textarea.input {
 \*----------------------------*/
 
 #product-tab {
-  margin-top: 60px;
+  margin-top: 360px;
 }
 
 #product-tab .tab-nav {

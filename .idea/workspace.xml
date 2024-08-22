@@ -5,22 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e4031bf4-ec88-4847-add9-970c57ab60d5" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/pagina/loja/layout/cardCategoria.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pagina/loja/layout/footer.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pagina/loja/layout/newsletter.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pagina/loja/layout/parceiro.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pagina/loja/pagina/produto/produtoBannerPromocao.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pagina/loja/pagina/produto/produtocarrosselMaisVendido.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pagina/loja/pagina/produto/detalhe.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/produto/Exclusivy-6616011e4879c.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/produto/Exclusivy-66a69326eedbd.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/old/img/banner/img22.jpg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/pagina/loja/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/pagina/loja/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pagina/loja/pagina/conteudoloja.php" beforeDir="false" afterPath="$PROJECT_DIR$/pagina/loja/conteudoloja.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pagina/loja/pagina/layout/banner.php" beforeDir="false" afterPath="$PROJECT_DIR$/pagina/loja/layout/banner.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pagina/loja/pagina/layout/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/pagina/loja/layout/header.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pagina/loja/pagina/layout/menu.php" beforeDir="false" afterPath="$PROJECT_DIR$/pagina/loja/layout/menu.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pagina/loja/pagina/produto/produto.php" beforeDir="false" afterPath="$PROJECT_DIR$/pagina/loja/pagina/produto/produto.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pagina/loja/layout/parceiro.php" beforeDir="false" afterPath="$PROJECT_DIR$/pagina/loja/layout/parceiro.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pagina/loja/pagina/produto/produtoBannerPromocao.php" beforeDir="false" afterPath="$PROJECT_DIR$/pagina/loja/pagina/produto/produtoBannerPromocao.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/bibliotecas/slick/js/slick.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/source/bibliotecas/slick/js/slick.min.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/source/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/source/css/style.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -88,22 +78,22 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "luciano",
-    "last_opened_file_path": "D:/htdocs/cratos/Ecommerce-Cratos/source/bibliotecas/novislider/css",
-    "list.type.of.created.stylesheet": "CSS",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "MTConfigurable",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;luciano&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/htdocs/cratos/Ecommerce-Cratos/source/bibliotecas/novislider/css&quot;,
+    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;MTConfigurable&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\htdocs\cratos\Ecommerce-Cratos\source\bibliotecas\novislider\css" />
@@ -169,7 +159,7 @@
       <workItem from="1723732080510" duration="29000" />
       <workItem from="1723732131902" duration="44000" />
       <workItem from="1723732194968" duration="996000" />
-      <workItem from="1724068427737" duration="32164000" />
+      <workItem from="1724068427737" duration="40612000" />
     </task>
     <servers />
   </component>
