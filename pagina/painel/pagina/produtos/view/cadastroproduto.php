@@ -1,3 +1,14 @@
+<style>
+.btnTopRight {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin-top: -15px;
+    margin-right: -15px;
+    transform: scale(0.8);
+}
+</style>
+
 <head>
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jsbarcode/3.11.6/JsBarcode.all.min.js"></script>
@@ -38,6 +49,7 @@
                     </button>
                 </div>
             </div>
+            <script src="<?= $_PREFIXO?>source/js/adm/produtos/addfotos.js"></script>
         </div>
 
         <div class="card">
@@ -63,11 +75,11 @@
                         }
                     }
                 })
-
-
                 const iframe = document.createElement('iframe');
+
                 function carregarVideo() {
-                    if (inputVideo.value.includes('youtube.com') || inputVideo.value.includes('vimeo.com')) {
+                    if (inputVideo.value.includes('youtube.com/embed') || inputVideo.value.includes(
+                            'player.vimeo.com/video')) {
                         // alert('é do youtube')
                         videoDiv.innerHTML = '';
 
@@ -196,6 +208,9 @@
                         inputEstoque.addEventListener('change', () => {
                             inputEstoque.value = inputEstoque.value.replace(/\D/g, '');
                         })
+                        inputEstoque.addEventListener('keydown', () => {
+                            inputEstoque.value = inputEstoque.value.replace(/\D/g, '');
+                        })
 
                         controleSwitch.addEventListener('change', () => {
                             if (controleSwitch.checked) {
@@ -234,7 +249,7 @@
                 <script>
                 let inputCodigoBarras = document.getElementById("input-codigo-barras");
                 let codigoDeBarras = document.getElementById("barcode")
-                inputCodigoBarras.addEventListener('keydown', () => {
+                inputCodigoBarras.addEventListener('change', () => {
                     if (codigoDeBarras.classList.contains('d-none') && inputCodigoBarras.value != "") {
                         codigoDeBarras.classList.remove('d-none')
                     }
@@ -297,19 +312,47 @@
 
             inputPeso.addEventListener('change', () => {
                 inputPeso.value = inputPeso.value.replace(/[^0-9.]/g, '');
-                inputPeso.value += " kg"
+            })
+            inputPeso.addEventListener('focusin', () => {
+                inputPeso.value = inputPeso.value.replace(/[^0-9.]/g, '');
+            })
+            inputPeso.addEventListener('focusout', () => {
+                if (inputPeso.value != "") {
+                    inputPeso.value += " kg"
+                }
             })
             inputComprimento.addEventListener('change', () => {
                 inputComprimento.value = inputComprimento.value.replace(/[^0-9.]/g, '');
-                inputComprimento.value += " cm"
+            })
+            inputComprimento.addEventListener('focusin', () => {
+                inputComprimento.value = inputComprimento.value.replace(/[^0-9.]/g, '');
+            })
+            inputComprimento.addEventListener('focusout', () => {
+                if (inputComprimento.value != "") {
+                    inputComprimento.value += " cm"
+                }
             })
             inputLargura.addEventListener('change', () => {
                 inputLargura.value = inputLargura.value.replace(/[^0-9.]/g, '');
-                inputLargura.value += " cm"
+            })
+            inputLargura.addEventListener('focusin', () => {
+                inputLargura.value = inputLargura.value.replace(/[^0-9.]/g, '');
+            })
+            inputLargura.addEventListener('focusout', () => {
+                if (inputLargura.value != "") {
+                    inputLargura.value += " cm"
+                }
             })
             inputAltura.addEventListener('change', () => {
                 inputAltura.value = inputAltura.value.replace(/[^0-9.]/g, '');
-                inputAltura.value += " cm"
+            })
+            inputAltura.addEventListener('focusin', () => {
+                inputAltura.value = inputAltura.value.replace(/[^0-9.]/g, '');
+            })
+            inputAltura.addEventListener('focusout', () => {
+                if (inputAltura.value != "") {
+                    inputAltura.value += " cm"
+                }
             })
             </script>
         </div>
@@ -318,12 +361,15 @@
             <div class="card-body d-flex flex-column gap-2">
                 <h5>Variações</h5>
                 <p>Combine diferentes propriedades do seu produto. Exemplo: cor + tamanho.</p>
+                <div class="d-flex flex-wrap gap-3" id="listaVariacoes"></div>
                 <div>
-                    <button class="btn btn-light" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                    <button class="btn btn-light" data-bs-toggle="modal" data-bs-target="#staticBackdrop"
+                        onclick="ouvindoSelecionados()">
                         <span class="mdi mdi-plus-circle-outline"></span>
                         <span class="px-2">Adicionar variações</span>
                     </button>
                 </div>
+                <button onclick="gerarVariaveis('#listaVariacoes .form-control')">Gerar</button>
             </div>
 
             <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
@@ -337,21 +383,183 @@
                         <div class="modal-body">
                             <div id="select-variacoes">
                             </div>
+                            <div id="sub-select-variacoes" class="p-2">
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Sair</button>
+                            <button type="button" class="btn btn-primary"
+                                onclick="criarArray('#sub-select-variacoes .form-check-input')">Criar</button>
                         </div>
                         <script>
                         carregarConteudo('<?= $_PREFIXO?>', 'adm/produtos/selectvariacoes', 'select-variacoes')
+
+                        var divSubVariacoes = ""
+                        var inputSelectVariacoes = ""
+                        var listaVariaveis = []
+
+                        function ouvindoSelecionados() {
+                            divSubVariacoes = document.getElementById('sub-select-variacoes')
+                            inputSelectVariacoes = document.getElementById('inputSelectVariacoes')
+
+                            inputSelectVariacoes.addEventListener('change', () => {
+                                carregarConteudo('<?= $_PREFIXO?>', 'adm/produtos/selectsubvariacoes/' +
+                                    inputSelectVariacoes.value, 'sub-select-variacoes')
+                            })
+                        }
+
+                        function criarBotoesVariacoes() {
+                            let divListaVariacoes = document.getElementById('listaVariacoes')
+                            divListaVariacoes.innerHTML = ""
+
+                            for (const titulo in listaVariaveis) {
+                                let svg = document.createElement('span')
+                                svg.classList.add('mdi')
+                                svg.classList.add('mdi-delete-outline')
+
+                                let btnExcluirTitulo = document.createElement('button')
+                                btnExcluirTitulo.classList.add('btn')
+                                btnExcluirTitulo.classList.add('btn-secondary')
+                                btnExcluirTitulo.classList.add('rounded-circle')
+                                // btnExcluirTitulo.classList.add('rounded-circle')
+                                btnExcluirTitulo.classList.add('btnTopRight')
+
+                                btnExcluirTitulo.appendChild(svg)
+
+                                let div1 = document.createElement('div')
+                                div1.classList.add('d-flex')
+                                div1.classList.add('flex-column')
+                                div1.classList.add('card')
+                                div1.classList.add('p-3')
+
+                                btnExcluirTitulo.onclick = function() {
+                                    div1.remove()
+                                };
+
+                                div1.appendChild(btnExcluirTitulo)
+
+
+                                let div2 = document.createElement('div')
+                                div2.classList.add('d-flex')
+                                div2.classList.add('flex-column')
+                                div2.classList.add('gap-1')
+
+                                if (listaVariaveis.hasOwnProperty(titulo)) {
+                                    let tituloVariacao = document.createElement('h5')
+                                    tituloVariacao.textContent = titulo
+                                    div1.appendChild(tituloVariacao)
+
+                                    listaVariaveis[titulo].forEach(sub => {
+                                        let valor = sub.split('-')
+                                        let div3 = document.createElement('div')
+                                        div3.classList.add('d-flex')
+
+                                        let svg2 = document.createElement('span')
+                                        svg2.classList.add('mdi')
+                                        svg2.classList.add('mdi-delete-outline')
+
+                                        let btnExcluirSub = document.createElement('button')
+                                        btnExcluirSub.classList.add('btn')
+                                        btnExcluirSub.classList.add('btn-outline-secondary')
+                                        btnExcluirSub.appendChild(svg2)
+
+                                        let input = document.createElement('input')
+                                        input.classList.add('form-control')
+                                        input.disabled = true
+                                        input.value = valor[2]
+                                        input.name = valor[0] + '-' + valor[1]
+
+                                        btnExcluirSub.onclick = function() {
+                                            input.remove()
+                                            btnExcluirSub.remove()
+                                        };
+
+                                        div3.appendChild(input)
+                                        div3.appendChild(btnExcluirSub)
+                                        div2.appendChild(div3)
+                                    });
+                                }
+                                div1.appendChild(div2)
+                                divListaVariacoes.appendChild(div1)
+                            }
+                        }
+
+                        function criarArray(pesquisa) {
+                            const formCheckInputs = document.querySelectorAll(
+                                pesquisa);
+                            meuArray = []
+                            formCheckInputs.forEach((input) => {
+                                if (input.checked) {
+                                    meuArray.push(input.name)
+                                }
+                            });
+                            titulo = meuArray[0].split('-')
+                            listaVariaveis[titulo[0]] = meuArray
+                            criarBotoesVariacoes()
+                        }
+
+                        function gerarCombinacoes(array, index = 0, prefixo = '') {
+                            if (index === Object.keys(array).length) {
+                                console.log(prefixo);
+                                return;
+                            }
+                            const chave = Object.keys(array)[index];
+                            const valores = array[chave];
+
+                            for (const valor of valores) {
+                                gerarCombinacoes(array, index + 1, `${prefixo} / ${valor}`);
+                            }
+                        }
+
+                        function gerarVariaveis(pesquisa) {
+                            const formCheckInputs = document.querySelectorAll(
+                                pesquisa);
+                            // meuArray = []
+                            listaVariaveis = []
+                            formCheckInputs.forEach((input) => {
+                                
+                                titulo = input.name.split('-')
+                                titulo =titulo[0]
+                                console.log(titulo)
+                                if(listaVariaveis.hasOwnProperty(titulo)){
+                                    console.log('existe')
+                                    // meuArray[titulo].push(input.name)
+                                }else{
+                                    console.log('não existe')
+                                    meuArray.push(titulo)
+                                    // meuArray[titulo].push(input.name)
+                                }
+                            });
+                            // listaVariaveis[0] = meuArray
+
+
+
+
+                            // const formCheckInputs = document.querySelectorAll(
+                            //     pesquisa);
+                            // meuArray = []
+                            // formCheckInputs.forEach((input) => {
+                            //     meuArray.push(input.name)
+                            // });
+
+                            // titulo = meuArray[0].split('-')
+                            // listaVariaveis[titulo[0]] = meuArray
+
+                            // gerarCombinacoes(listaVariaveis)
+
+                            // for (item in listaVariaveis) {
+                            //     if(item == Object.keys(listaVariaveis)[0]){
+                            //         for(index in listaVariaveis[item]){
+                            //             console.log('index')
+                            //         }
+                            //     }
+                            // }
+
+                        }
                         </script>
-                        </script>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Sair</button>
-                            <button type="button" class="btn btn-primary">Criar</button>
-                        </div>
                     </div>
                 </div>
             </div>
         </div>
-
     </div>
 </div>
-
-<script src="<?= $_PREFIXO?>source/js/adm/produtos/addfotos.js"></script>

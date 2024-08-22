@@ -1,4 +1,4 @@
-<select name="" id="" class="form-select">
+<select name="" id="inputSelectVariacoes" class="form-select">
     <option value=""></option>
     <?php 
     $variacoes = listarGeral('idtipovariacao,pai,variacao','tipovariacao where pai = 0');
