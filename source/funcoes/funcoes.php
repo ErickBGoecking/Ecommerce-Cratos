@@ -1,20 +1,20 @@
 <?php 
-// ###############CONFIG################
+// // ###############CONFIG################
 include_once("config/conexao.php");
 include_once("config/globais.php");
 
-// ###############CRUD################
+// // ###############CRUD################
 include_once("crud/crud.php");
 include_once("crud/selecionar.php");
 include_once('crud/deletar.php');
 include_once('crud/cadastrar.php');
 include_once('crud/alterar.php');
 ######################################
-include_once('toasts/toasts.php');
+// include_once('toasts/toasts.php');
 include_once('validacao/validacao.php');
 
 
-#################
+// #################
 function stringRandomica(){
     $caracteres = "abcdefghijklmnopqrstuvwxyz0123456789";
     $stringEmbaralhada = str_shuffle($caracteres);

@@ -7,5 +7,11 @@ if (isset($controle[2]) && !empty($controle[2])) {
         case'selectsubvariacoes':
             include_once '../pagina/painel/pagina/produtos/acoes/selectsubvariacoes.php';
             break;
+        case'selectcategorias':
+            include_once '../pagina/painel/pagina/produtos/acoes/selectcategorias.php';
+            break;
+        case'cadastrarproduto':
+            include_once '../pagina/painel/pagina/produtos/acoes/cadastrarproduto.php';
+            break;
     }
 }

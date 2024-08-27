@@ -99,7 +99,7 @@
 <?php 
 function inputTextoCopia($nameInput){
     $txt = <<<EOT
-    <textarea id="texto-editado" name="$nameInput" class="d-none"></textarea>
+    <textarea id="texto-editado" name="$nameInput" class=""></textarea>
     <script>
     const minhaDiv = document.getElementById('text-input');
     const textarea = document.getElementById('texto-editado');
