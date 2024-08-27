@@ -6,7 +6,8 @@ function adicionarFoto() {
     const inputFoto = document.createElement('input');
     inputFoto.type = 'file';
     inputFoto.id = 'produto_foto' + contadorDivs;
-    inputFoto.name = 'produto_foto';
+    inputFoto.name = 'foto[]';
+    inputFoto.accept = ".jpg,.jpeg,.png"
     inputFoto.classList.add('d-none');
 
     inputFoto.click()

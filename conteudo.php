@@ -9,6 +9,9 @@ if(isset($url[0])){
         case 'loja':
             include_once('pagina/loja/index.php');
             break;
+        case 'teste':
+            include_once('pagina/teste/index.php');
+            break;
         }
     }else{
     include_once('pagina/loja/index.php');
