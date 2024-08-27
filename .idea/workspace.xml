@@ -5,13 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e4031bf4-ec88-4847-add9-970c57ab60d5" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/pagina/loja/pagina/produto/detalhe.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pagina/loja/pagina/produto/lista.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/conteudo.php" beforeDir="false" afterPath="$PROJECT_DIR$/conteudo.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/old/cliente/historico.php" beforeDir="false" afterPath="$PROJECT_DIR$/old/cliente/historico.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pagina/loja/conteudoloja.php" beforeDir="false" afterPath="$PROJECT_DIR$/pagina/loja/conteudoloja.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pagina/loja/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/pagina/loja/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pagina/loja/layout/parceiro.php" beforeDir="false" afterPath="$PROJECT_DIR$/pagina/loja/layout/parceiro.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pagina/loja/pagina/produto/produtoBannerPromocao.php" beforeDir="false" afterPath="$PROJECT_DIR$/pagina/loja/pagina/produto/produtoBannerPromocao.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/bibliotecas/slick/js/slick.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/source/bibliotecas/slick/js/slick.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pagina/loja/layout/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/pagina/loja/layout/header.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pagina/loja/pagina/produto/detalhe.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pagina/loja/pagina/produto/produto.php" beforeDir="false" afterPath="$PROJECT_DIR$/pagina/loja/pagina/produto/produto.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/source/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/source/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/funcoes/crud/crud.php" beforeDir="false" afterPath="$PROJECT_DIR$/source/funcoes/crud/crud.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/funcoes/funcoes.php" beforeDir="false" afterPath="$PROJECT_DIR$/source/funcoes/funcoes.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -160,6 +165,7 @@
       <workItem from="1723732131902" duration="44000" />
       <workItem from="1723732194968" duration="996000" />
       <workItem from="1724068427737" duration="40612000" />
+      <workItem from="1724675784059" duration="15988000" />
     </task>
     <servers />
   </component>

@@ -188,6 +188,12 @@ textarea.input {
   border: 1px solid #E4E7ED;
   height: 40px;
 }
+.input-select-cor{
+  padding: 0px 15px;
+  background: #FFF;
+  border: 1px solid #E4E7ED;
+  height: 40px;
+}
 
 /*-- checkbox & radio input --*/
 
@@ -1074,7 +1080,82 @@ textarea.input {
   opacity: 1;
   visibility: visible;
 }
+/*-------------add to cart btn link--------------*/
+.product .add-to-cart .add-to-cart-btn-link {
+  position: relative;
+  border: 2px solid transparent;
+  height: 40px;
+  padding: 6px 30px;
+  background-color: #f9d02a;
+  color: #FFF;
+  text-transform: uppercase;
+  font-weight: 700;
+  border-radius: 40px;
+  -webkit-transition: 0.2s all;
+  transition: 0.2s all;
+}
 
+.product .add-to-cart .add-to-cart-btn-link>i {
+  position: absolute;
+  left: 10px;
+  top: 0;
+  width: 40px;
+  height: 40px;
+  line-height: 28px;
+  color: #f9d02a;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.product .add-to-cart .add-to-cart-btn-link:hover {
+  background-color: #FFF;
+  color: #f9d02a;
+  border-color: #f9d02a;
+  padding: 6px 30px 6px 50px;
+}
+
+.product .add-to-cart .add-to-cart-btn-link:hover>i {
+  opacity: 1;
+  visibility: visible;
+}
+.product-details .add-to-cart .add-to-cart-btn-link {
+  position: relative;
+  border: 2px solid transparent;
+  height: 40px;
+  padding: 0 30px;
+  background-color: #f9d02a;
+  color: #FFF;
+  text-transform: uppercase;
+  font-weight: 700;
+  border-radius: 40px;
+  -webkit-transition: 0.2s all;
+  transition: 0.2s all;
+}
+
+.product-details .add-to-cart .add-to-cart-btn-link>i {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 40px;
+  height: 40px;
+  line-height: 38px;
+  color: #f9d02a;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.product-details .add-to-cart .add-to-cart-btn-link:hover {
+  background-color: #FFF;
+  color: #f9d02a;
+  border-color: #f9d02a;
+  padding: 0px 30px 0px 50px;
+}
+
+.product-details .add-to-cart .add-to-cart-btn-link:hover>i {
+  opacity: 1;
+  visibility: visible;
+}
+/*-------------add to cart btn link--------------*/
 /*----------------------------*\
 	Widget product
 \*----------------------------*/
@@ -1526,7 +1607,9 @@ textarea.input {
 .product-details .product-options .input-select {
   width: 90px;
 }
-
+.product-details .product-options .input-select-cor {
+  width: 190px;
+}
 .product-details .add-to-cart {
   margin-bottom: 30px;
 }
@@ -1612,7 +1695,7 @@ textarea.input {
 \*----------------------------*/
 
 #product-tab {
-  margin-top: 360px;
+  margin-top: 480px;
 }
 
 #product-tab .tab-nav {

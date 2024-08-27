@@ -20,8 +20,8 @@ include_once 'layout/menu.php';
 <?php
 if (isset($url[1])) {
     switch ($url[1]) {
-        case 'detalhes':
-            include_once('pagina/loja/pagina/produto/detalhe.php');
+        case 'produto':
+            include_once('pagina/loja/pagina/produto/produto.php');
             break;
         default:
             include_once('pagina/loja/conteudoloja.php');

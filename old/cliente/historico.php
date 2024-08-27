@@ -65,7 +65,7 @@ function modalVerMais(modalId, idCompra, rota) {
 
     switch (rota) {
         case "mensagem":
-            pagina = 'mensagem-produto.php';
+            pagina = 'mensagem-lista.php';
             break;
         case "saibaMais":
             pagina = "verConteudoCompra.php"

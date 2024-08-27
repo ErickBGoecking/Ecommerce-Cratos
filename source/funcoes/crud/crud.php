@@ -83,7 +83,29 @@ function listarGeral($campos, $tabela)
         $conn = null;
     }
 }
-
+function listarRegistroUnico($tabela, $campos, $idcampo, $idparametro)
+{
+    $conn = conectar();
+    try {
+        $conn->beginTransaction();
+        $sqlLista = $conn->prepare("SELECT $campos "
+            . "FROM $tabela "
+            . "WHERE $idcampo = ? ");
+        $sqlLista->bindValue(1, $idparametro, PDO::PARAM_STR);
+        $sqlLista->execute();
+        if ($sqlLista->rowCount() > 0) {
+            return $sqlLista->fetchAll(PDO::FETCH_OBJ);
+        } else {
+            return false;
+        };
+    } catch
+    (PDOExecption $e) {
+        echo 'Exception -> ';
+        return ($e->getMessage());
+        $conn->rollback();
+    };
+    $conn = null;
+}
 function deleteRegistroUnico($tabela, $campoReferencia, $idparametro)
 {
     $conn = conectar();

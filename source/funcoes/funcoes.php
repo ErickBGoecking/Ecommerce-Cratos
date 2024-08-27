@@ -46,3 +46,11 @@ function validaFoto($nomeCampo, $caminho){
         }
     }
 }
+function codificar($codificar, $tipo)
+{
+    if ($tipo == 'codificar') {
+        return base64_encode($codificar);
+    } else {
+        return base64_decode($codificar);
+    };
+}

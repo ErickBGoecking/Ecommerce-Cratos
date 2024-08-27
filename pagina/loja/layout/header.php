@@ -17,7 +17,7 @@
             <div class="row">
                 <div class="col-md-3">
                     <div class="header-logo">
-                        <a href="#" class="logo">
+                        <a href="<?= $_PREFIXO?>" class="logo">
                             <img src="<?= $_PREFIXO?>img/assets/logo1.png" alt="Cratos Nutrition" title="Cratos Nutrition" width="75%">
                         </a>
                     </div>

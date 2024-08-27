@@ -6,7 +6,7 @@ if(isset($url[0])){
         case 'adm':
             include_once('pagina/painel/index.php');
             break;
-        case 'loja':
+        default:
             include_once('pagina/loja/index.php');
             break;
         }
