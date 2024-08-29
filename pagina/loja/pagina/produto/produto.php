@@ -1,9 +1,71 @@
+<style>
+    .product-preview {
+        position: relative;
+        /*width: 560px;*/
+        /*height: 315px; */
+        cursor: pointer;
+        overflow: hidden;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .preview-image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+    }
+
+    .play-button {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 44px; /* Tamanho do ícone */
+        height: 44px;
+        background: url('<?php echo $_PREFIXO ?>img/youtube/logo.webp') no-repeat center center;
+        background-size: contain;
+        opacity: 0.8;
+        transition: opacity 0.3s;
+    }
+
+    .product-preview:hover .play-button {
+        opacity: 1;
+    }
+    input[type="radio"] {
+        display: none;
+    }
+
+    input[type="radio"] + label {
+        display: inline-block;
+        padding: 4px 8px;
+        margin: 3px;
+        border: 2px solid #007bff;
+        border-radius: 5px;
+        background-color: #ffffff;
+        color: #007bff;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        text-align: center;
+        font-size: 12px;
+    }
+    input[type="radio"]:checked + label {
+        background-color: #007bff;
+        color: #ffffff;
+        border-color: #007bff;
+    }
+    input[type="radio"] + label:hover {
+        background-color: #e6f0ff;
+        border-color: #007bff;
+        color: #007bff;
+    }
+</style>
 <?php
 $produtoGet = $url[2];
 if (isset($produtoGet)) {
     $idProduto = codificar($produtoGet, 'decodificar');
     $retornoProduto = listarRegistroUnico("produto p INNER JOIN produtovariacao pv ON pv.idproduto = p.idproduto AND p.ativo = 'A'
-        INNER JOIN estoque e ON e.idprodutovariacao = pv.idprodutovariacao", 'p.idproduto, p.foto, p.produto, p.descricao, 
+        INNER JOIN estoque e ON e.idprodutovariacao = pv.idprodutovariacao", 'p.idproduto, p.foto, p.video, p.produto, p.descricao, 
         pv.idprodutovariacao, pv.detalhe as descricaoVariacao, pv.altura, pv.largura, pv.peso, pv.destaque, e.idestoque, e.qtdatual, e.qtdvendido, 
         e.vendaPrevia, e.custo, e.venda, e.lote, e.vencimento', 'p.idproduto', $idProduto);
     if ($retornoProduto) {
@@ -12,6 +74,12 @@ if (isset($produtoGet)) {
             $idprodutovariacao = $itemProduto->idprodutovariacao;
             $idestoque = $itemProduto->idestoque;
             $foto = $itemProduto->foto;
+            $video = $itemProduto->video;
+            parse_str(parse_url($video, PHP_URL_QUERY), $queryParams);
+            if (isset($queryParams['v'])) {
+                $video = 'https://www.youtube.com/embed/' . $queryParams['v'];
+                $videoId = isset($queryParams['v']) ? $queryParams['v'] : '';
+            }
             $produto = $itemProduto->produto;
             $descricao = $itemProduto->descricao;
             $descricaoVariacao = $itemProduto->descricaoVariacao;
@@ -65,6 +133,17 @@ if (isset($produtoGet)) {
                                     </div>
                                     <?php
                                 }
+                                if ($video) {
+                                    ?>
+                                    <div class="product-preview">
+                                        <iframe width="100%" height="320" src="<?php echo $video ?>"
+                                                title="YouTube video player" frameborder="0"
+                                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                                referrerpolicy="strict-origin-when-cross-origin"
+                                                allowfullscreen></iframe>
+                                    </div>
+                                    <?php
+                                }
                             }
                             ?>
                         </div>
@@ -85,7 +164,18 @@ if (isset($produtoGet)) {
                                     ?>
                                     <div class="product-preview">
                                         <img src="<?php echo $_PREFIXO ?>img/produto/<?php echo $fotoProdutoVariacao; ?>"
+                                             alt="<?php echo $produto; ?>" title="<?php echo $produto; ?> aa">
+                                    </div>
+                                    <?php
+                                }
+                                if ($video) {
+
+                                    ?>
+                                    <div class="product-preview">
+                                        <img class="preview-image"
+                                             src="https://img.youtube.com/vi/<?php echo $videoId; ?>/0.jpg"
                                              alt="<?php echo $produto; ?>" title="<?php echo $produto; ?>">
+                                        <div class="play-button"></div>
                                     </div>
                                     <?php
                                 }
@@ -114,6 +204,45 @@ if (isset($produtoGet)) {
                                 <span class="product-available"><?php echo $qtdatual; ?> estoque.</span>
                             </div>
                             <p><?php echo substr("$descricao", 0, 150) . '...'; ?></p>
+                            <?php
+                            $produtos = listarGeralPDO('idtipovariacao', 'produtovariacao', 'idproduto = ?', [$idproduto]);
+                            $variacoes = listarGeralPDO('idtipovariacao, variacao, pai', 'tipovariacao');
+                            $categorias = [];
+                            $variacoesOrganizadas = [];
+                            foreach ($variacoes as $variacao) {
+                                if ($variacao->pai == 0) {
+                                    $categorias[$variacao->idtipovariacao] = $variacao->variacao;
+                                    $variacoesOrganizadas[$variacao->variacao] = [];
+                                }
+                            }
+                            foreach ($produtos as $produto) {
+                                $tipos = explode(',', $produto->idtipovariacao);
+                                foreach ($tipos as $tipo) {
+                                    foreach ($variacoes as $variacao) {
+                                        if ($variacao->idtipovariacao == $tipo && isset($categorias[$variacao->pai])) {
+                                            $categoria = $categorias[$variacao->pai];
+                                            if (!in_array($variacao->variacao, $variacoesOrganizadas[$categoria])) {
+                                                $variacoesOrganizadas[$categoria][] = $variacao->variacao;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                            foreach ($variacoesOrganizadas as $categoria => $variacoes) {
+                                if (!empty($variacoes)) {
+                                    echo "<div><strong>$categoria:</strong></div>";
+                                    foreach ($variacoes as $variacao) {
+                                        $id = strtolower($categoria) . "_" . strtolower(str_replace(' ', '_', $variacao));
+                                        $checked = $variacao ? 'checked' : '';
+                                        echo "<div style='display: inline-block;'>";
+                                        echo "<input type='radio' id='$id' name='$categoria' value='$variacao' $checked>";
+                                        echo "<label for='$id'>$variacao</label>";
+                                        echo "</div>";
+                                    }
+                                    echo "<br>";
+                                }
+                            }
+                            ?>
                             <div class="product-options">
                                 <label>
                                     Tam:
@@ -162,12 +291,12 @@ if (isset($produtoGet)) {
                     $totalEstrela = 0;
                     $calcMediaEstrela = 0;
                     $retornoComentarioPessoa = listarGeral('c.comentario, c.estrela, c.cadastro, p.Nome', "comentarioproduto c INNER JOIN pessoa p ON p.idpessoa = c.idpessoa AND p.ativo='A' WHERE c.idprodutovariacao = $idprodutovariacao");
-                    if($retornoComentarioPessoa){
+                    if ($retornoComentarioPessoa) {
                         $totalComentario = count($retornoComentarioPessoa);
-                        foreach($retornoComentarioPessoa as $mediaEstrela){
+                        foreach ($retornoComentarioPessoa as $mediaEstrela) {
                             $calcMediaEstrela += $mediaEstrela->estrela;
                         }
-                        $totalEstrela = $calcMediaEstrela/$totalComentario;
+                        $totalEstrela = $calcMediaEstrela / $totalComentario;
                     }
                     ?>
                     <div class="col-md-12">
@@ -175,7 +304,8 @@ if (isset($produtoGet)) {
                             <ul class="tab-nav">
                                 <li class="active"><a data-toggle="tab" href="#tabDescricao">Descrição</a></li>
                                 <li><a data-toggle="tab" href="#tabDetalhes">Detalhes</a></li>
-                                <li><a data-toggle="tab" href="#tabAvaliacao">Avaliações (<?php echo $totalComentario;?>)</a></li>
+                                <li><a data-toggle="tab" href="#tabAvaliacao">Avaliações
+                                        (<?php echo $totalComentario; ?>)</a></li>
                             </ul>
                             <div class="tab-content">
                                 <div id="tabDescricao" class="tab-pane fade in active">
@@ -197,7 +327,7 @@ if (isset($produtoGet)) {
                                         <div class="col-md-3">
                                             <div id="rating">
                                                 <div class="rating-avg">
-                                                    <span><?php echo $totalEstrela;?></span>
+                                                    <span><?php echo $totalEstrela; ?></span>
                                                     <div class="rating-stars">
                                                         <i class="fa fa-star"></i>
                                                         <i class="fa fa-star"></i>

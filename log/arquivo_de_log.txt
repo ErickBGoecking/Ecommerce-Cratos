@@ -1,0 +1,65 @@
+Throwable: Erro de teste para verificar o log.
+Code: 0
+Trace: Array
+(
+    [0] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\pagina\produto\produto.php
+            [line] => 208
+            [function] => listarGeralPDO
+            [args] => Array
+                (
+                    [0] => idtipovariacao
+                    [1] => produtovariacao
+                    [2] => idproduto = ?
+                    [3] => Array
+                        (
+                            [0] => 99
+                        )
+
+                )
+
+        )
+
+    [1] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\index.php
+            [line] => 24
+            [args] => Array
+                (
+                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\pagina\produto\produto.php
+                )
+
+            [function] => include_once
+        )
+
+    [2] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\conteudo.php
+            [line] => 10
+            [args] => Array
+                (
+                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\index.php
+                )
+
+            [function] => include_once
+        )
+
+    [3] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\index.php
+            [line] => 16
+            [args] => Array
+                (
+                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\conteudo.php
+                )
+
+            [function] => include_once
+        )
+
+)
+
+Trace File: D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\pagina\produto\produto.php
+Trace Line: 208
+File: D:\htdocs\cratos\Ecommerce-Cratos\source\funcoes\crud\crud.php
+Line: 91
