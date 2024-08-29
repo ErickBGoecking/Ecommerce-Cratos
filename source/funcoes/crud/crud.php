@@ -83,6 +83,38 @@ function listarGeral($campos, $tabela)
         $conn = null;
     }
 }
+function listarGeralPDO($campos, $tabela, $condicoes = '', $parametros = [])
+{
+    $conn = conectar();
+    try {
+//                                    testar se o arquivo de log está funcionando descomente essa linha abaixo
+//                                    throw new Exception('Erro de teste para verificar o log.');
+        $query = "SELECT $campos FROM $tabela";
+        if (!empty($condicoes)) {
+            $query .= " WHERE $condicoes";
+        }
+        $stmt = $conn->prepare($query);
+        $stmt->execute($parametros);
+        $retornoLista = $stmt->fetchAll(PDO::FETCH_OBJ);
+        return $retornoLista ?: false;
+    } catch (Throwable $e) {
+        $error_message = '';
+        $previousException = $e->getPrevious();
+        if ($previousException) {
+            $error_message .= 'Previous Exception: ' . $previousException->getMessage() . PHP_EOL;
+        }
+        $error_message .= 'Throwable: ' . $e->getMessage() . PHP_EOL;
+        $error_message .= 'Code: ' . $e->getCode() . PHP_EOL;
+        $trace = $e->getTrace();
+        $error_message .= 'Trace: ' . print_r($trace, true) . PHP_EOL;
+        $error_message .= 'Trace File: ' . $trace[0]['file'] . PHP_EOL;
+        $error_message .= 'Trace Line: ' . $trace[0]['line'] . PHP_EOL;
+        $error_message .= 'File: ' . $e->getFile() . PHP_EOL;
+        $error_message .= 'Line: ' . $e->getLine() . PHP_EOL;
+        error_log($error_message, 3, 'log/arquivo_de_log.txt');
+        throw $e;
+    }
+}
 function listarRegistroUnico($tabela, $campos, $idcampo, $idparametro)
 {
     $conn = conectar();
