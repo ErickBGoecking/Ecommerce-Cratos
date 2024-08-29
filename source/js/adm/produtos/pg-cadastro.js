@@ -2,6 +2,8 @@
 const inputNomeProduto = document.getElementById('inputProduto')
 const inputDescricao = document.getElementById('texto-editado')
 
+const descricao = document.getElementById('descricao')
+const detalhes = document.getElementById('inputDetalhes')
 
 const cardPrecos = document.getElementById('cardPrecos')
 const cardEstoque = document.getElementById('cardEstoque')
@@ -20,6 +22,8 @@ const margemLucro = document.getElementById('margemLucro')
 const inputEstoque1 = document.getElementById('inputEstoque')
 const controleSwitch = document.getElementById('flexSwitchCheckDefault')
 
+const btnNovoFornecedor = document.getElementById('btnNovoFornecedor')
+
 const inputSku = document.getElementById('codigo_sku')
 const inputCodigoBarras = document.getElementById("input-codigo-barras");
 const codigoDeBarras = document.getElementById("barcode")
@@ -33,9 +37,18 @@ const divListaVariacoes = document.getElementById('listaVariacoes')
 const divVariacoesGeradas = document.getElementById('variacoesGeradas')
 
 const btnGerarVariacoes = document.getElementById('btnGerarVariacoes')
+const modalGeral = document.getElementById('modalGeral')
+const modalGeralTitulo = document.getElementById('modalGeralTitulo')
+const modalGeralConteudo = document.getElementById('modalGeralConteudo')
+
+const ferramentasEdicaoTexto = document.getElementById('ferramentasEdicaoTexto')
 
 const toastLiveExample = document.getElementById('liveToast')
 const toastBootstrap = bootstrap.Toast.getOrCreateInstance(toastLiveExample)
+
+var areaHoverList = document.querySelectorAll('#areaHover')
+
+
 // ----------------- video ------------------
 inputVideo.addEventListener('change', () => {
     if (inputVideo.value != "") {
@@ -77,6 +90,16 @@ function carregarVideo() {
         iframe.src = "";
     }
 }
+// ---------------------DESCRICAO----------------------
+const textDescricao = document.getElementById('textDescricao')
+textDescricao.addEventListener('focusout',()=>{
+    descricao.textContent = textDescricao.innerHTML
+})
+// ------------------------DETALHE--------------------------
+const textDetalhe = document.getElementById('textDetalhe')
+textDetalhe.addEventListener('focusout',()=>{
+    detalhes.textContent = textDetalhe.innerHTML
+})
 // -------------------CATEGORIAS--------------------------
 
 function addCategoria() {
@@ -172,6 +195,26 @@ controleSwitch.addEventListener('change', () => {
         inputEstoque1.disabled = false;
     }
 })
+// ------------------------FORNECEDOR-----------------------
+async function cadastrarFornecedor(){
+    const formFornecedor = document.getElementById('frmCadastrarFornecedor')
+    const btnCancelarCadastro = document.getElementById('btnCancelarCadastroFornecedor')
+    const $retorno = await postRetorno('adm/produtos/cadastronovofornecedor',formFornecedor)
+    if($retorno.sucesso == true){
+        mensagem($retorno.mensagem)
+        carregarConteudo('adm/produtos/selectfornecedor/'+$retorno.id,'divSelectFornecedor')
+        btnCancelarCadastro.click()
+    }else{
+        console.log($retorno.mensagem)
+        mensagem($retorno,'erro')
+    }
+}
+
+btnNovoFornecedor.addEventListener('click',()=>{
+    carregarConteudo('adm/produtos/formnovofornecedor','modalGeralConteudo')
+    modalGeralTitulo.innerHTML = "<h5>Adicionar Fornecedor</h5>"
+})
+
 
 // ------------------------codigos------------------------
 
@@ -347,38 +390,84 @@ function criarArray(pesquisa) {
     criarBotoesVariacoes()
 }
 function gerar(){
-        divListaVariacoes.innerHTML = ""
-        divVariacoesGeradas.innerHTML = ""
-        if(btnGerarVariacoes.value == "True"){
-            if(Object.keys(listaVariaveis).length == 0){ 
-                mensagem('Você deve primeiro adicionar uma variação!','erro')
-            }else{
-                btnGerarVariacoes.value = "False"
-                btnGerarVariacoes.textContent = "Remover Variações"
-                gerarCombinacoes(listaVariaveis)
-                listaVariaveis = []
-
-                cardPrecos.classList.add('d-none')
-                cardEstoque.classList.add('d-none')
-                cardCodigos.classList.add('d-none')
-                cardPesoDimensao.classList.add('d-none')
-                btnAdiconarVariacao.classList.add('d-none')
-            }
+    divListaVariacoes.innerHTML = ""
+    divVariacoesGeradas.innerHTML = ""
+    if(btnGerarVariacoes.value == "True"){
+        if(Object.keys(listaVariaveis).length == 0){ 
+            mensagem('Você deve primeiro adicionar uma variação!','erro')
         }else{
-            btnGerarVariacoes.value = "True"
-            btnGerarVariacoes.textContent = "Gerar Variações"
-            cardPrecos.classList.remove('d-none')
-            cardEstoque.classList.remove('d-none')
-            cardCodigos.classList.remove('d-none')
-            cardPesoDimensao.classList.remove('d-none')
-            btnAdiconarVariacao.classList.remove('d-none')
+            btnGerarVariacoes.value = "False"
+            btnGerarVariacoes.textContent = "Remover Variações"
+            gerarCombinacoes(listaVariaveis)
+            listaVariaveis = []
+
+            cardPrecos.classList.add('d-none')
+            cardEstoque.classList.add('d-none')
+            cardCodigos.classList.add('d-none')
+            cardPesoDimensao.classList.add('d-none')
+            btnAdiconarVariacao.classList.add('d-none')
         }
+    }else{
+        btnGerarVariacoes.value = "True"
+        btnGerarVariacoes.textContent = "Gerar Variações"
+        cardPrecos.classList.remove('d-none')
+        cardEstoque.classList.remove('d-none')
+        cardCodigos.classList.remove('d-none')
+        cardPesoDimensao.classList.remove('d-none')
+        btnAdiconarVariacao.classList.remove('d-none')
+    }
 }
 
-function gerarCombinacoes(array, index = 0, prefixo = '') {
+// function gerarCombinacoes(array, index = 0, prefixo = '') {
+//     if (index === Object.keys(array).length) {
+//         if(prefixo != ""){
+//             criarElementos(prefixo)
+//         }
+//         return;
+//     }
+//     const chave = Object.keys(array)[index];
+//     const valores = array[chave];
+
+//     for (const valor of valores) {
+//         let valorSeparado = valor.split('-')
+//         let valorNovo = valorSeparado[0] + ': ' + valorSeparado[2]
+//         if (prefixo == "") {
+//             gerarCombinacoes(array, index + 1, `${valorNovo}`);
+//         } else {
+//             gerarCombinacoes(array, index + 1, `${prefixo} / ${valorNovo}`);
+//         }
+
+//     }
+//     const variacoesDetalhe = document.querySelectorAll('.variacaoDetalhe')
+
+//     var contagem = 1
+//     for(const vDetalhe of variacoesDetalhe){
+//         const textAreaVDetalhe = document.getElementById('variavelDetalhe'+contagem)
+        
+//         vDetalhe.addEventListener('focusout',()=>{
+//             textAreaVDetalhe.textContent = vDetalhe.innerHTML
+//         })
+
+//         contagem++
+//     }
+       
+//     // ------------------FERRAMENTA EDITOR DE texto --------------------
+
+//     areaHoverList = document.querySelectorAll('#areaHover')
+//     areaHoverList.forEach((element) => {
+//         element.addEventListener('mouseover', (event) => {
+//             ferramentasEdicaoTexto.classList.remove('d-none');
+//             element.appendChild(ferramentasEdicaoTexto);
+//         });
+//         element.addEventListener('mouseout', (event) => {
+//             ferramentasEdicaoTexto.classList.add('d-none');
+//         });
+//     });
+// }
+function gerarCombinacoes(array, index = 0, prefixo = '',id='') {
     if (index === Object.keys(array).length) {
         if(prefixo != ""){
-            criarElementos(prefixo)
+            criarElementos(prefixo,id)
         }
         return;
     }
@@ -388,15 +477,40 @@ function gerarCombinacoes(array, index = 0, prefixo = '') {
     for (const valor of valores) {
         let valorSeparado = valor.split('-')
         let valorNovo = valorSeparado[0] + ': ' + valorSeparado[2]
+        let valorId = valorSeparado[1]
         if (prefixo == "") {
-            gerarCombinacoes(array, index + 1, `${valorNovo}`);
+            gerarCombinacoes(array, index + 1, `${valorNovo}`, `${valorId}`);
         } else {
-            gerarCombinacoes(array, index + 1, `${prefixo} / ${valorNovo}`);
+            gerarCombinacoes(array, index + 1, `${prefixo} / ${valorNovo}`,`${id},${valorId}`);
         }
 
     }
-}
+    const variacoesDetalhe = document.querySelectorAll('.variacaoDetalhe')
 
+    var contagem = 1
+    for(const vDetalhe of variacoesDetalhe){
+        const textAreaVDetalhe = document.getElementById('variavelDetalhe'+contagem)
+        
+        vDetalhe.addEventListener('focusout',()=>{
+            textAreaVDetalhe.textContent = vDetalhe.innerHTML
+        })
+
+        contagem++
+    }
+       
+    // ------------------FERRAMENTA EDITOR DE texto --------------------
+
+    areaHoverList = document.querySelectorAll('#areaHover')
+    areaHoverList.forEach((element) => {
+        element.addEventListener('mouseover', (event) => {
+            ferramentasEdicaoTexto.classList.remove('d-none');
+            element.appendChild(ferramentasEdicaoTexto);
+        });
+        element.addEventListener('mouseout', (event) => {
+            ferramentasEdicaoTexto.classList.add('d-none');
+        });
+    });
+}
 function apagarDoArrayAtributo(atributo) {
     delete listaVariaveis[atributo]
 }
@@ -430,16 +544,15 @@ function exibirMais(id,div){
         btn.innerHTML = `<span class="mdi mdi-arrow-down-drop-circle-outline" style="transform:scale(1.5);"></span>`
     }
 }
-function criarElementos(topoTitulo) {
+function criarElementos(topoTitulo,id) {
     numeroId ++
-
     let string = `
     <div class="card">
-    
         <div class="card-header">
-            Variação: ${topoTitulo}
+            Variação: <h5>${topoTitulo}</h5>
         </div>
         <div class="card-body d-flex flex-wrap gap-3 justify-content-between align-items-between" id="divMais${numeroId}" style="height:95px; overflow: hidden">
+            <input type="text" name="idTipoVariacao[]" class="d-none" value="${id}">
             <div class="d-flex flex-column flex-fill">
                 <label for="" class="form-label">Estoque</label>
                 <input type="text" class="form-control" name="VariacaoEstoque[]" value="${inputEstoque1.value}" placeholder="&#8734;">
@@ -480,6 +593,7 @@ function criarElementos(topoTitulo) {
                 <label for="" class="form-label">Código de Barras</label>
                 <input type="text" class="form-control" name="VariacaoCodigoBarras[]" value="${inputCodigoBarras.value}">
             </div>
+
         </div>
         
         <Button type="button" class="btn btn-primary rounded-circle p-1 pt-0 pb-0 d-flex gap-2" id="btn${numeroId}"
@@ -492,19 +606,44 @@ function criarElementos(topoTitulo) {
     `;
 
     divVariacoesGeradas.innerHTML += string
-}
 
+    var divAreaHover = document.createElement('div')
+    divAreaHover.style.position = 'relative'
+    divAreaHover.style.width = '100%'
+    divAreaHover.setAttribute('id','areaHover')
+
+    var tituloLabel = document.createElement('label')
+    tituloLabel.classList.add('form-label')
+    tituloLabel.innerText = 'Detalhes'
+
+    var textoInput = document.createElement('div')
+    textoInput.setAttribute('id','text-input'+numeroId)
+    textoInput.classList.add('border')
+    textoInput.classList.add('rounded')
+    textoInput.classList.add('variacaoDetalhe')
+    textoInput.classList.add('p-3')
+    textoInput.setAttribute('contenteditable','true')
+    textoInput.style.height = '250px'
+    textoInput.style.overflowY = 'scroll'
+    textoInput.innerHTML = textDetalhe.innerHTML
+
+    var inputTextoArea = document.createElement('textarea')
+    inputTextoArea.name = 'variavelDetalhe[]'
+    inputTextoArea.classList.add('d-none')
+    inputTextoArea.setAttribute('id','variavelDetalhe'+numeroId)
+    inputTextoArea.textContent = textDetalhe.innerHTML
+    
+    divAreaHover.appendChild(tituloLabel)
+    divAreaHover.appendChild(textoInput)
+
+    var divConteudo = document.getElementById('divMais'+numeroId)
+    divConteudo.appendChild(divAreaHover)
+    divConteudo.appendChild(inputTextoArea)
+}
 // -----------CADASTRAR PRODUTO -------------------
 
 async function cadastrarProduto(){
     var form = document.getElementById('formularioProduto')
-    var divDescricao = document.getElementById('text-input').innerHTML
-    var descricao = divDescricao.toString()
-    descricaoIn = document.createElement('input')
-    descricaoIn.name = "descricao"
-    descricaoIn.value = descricao
-    descricaoIn.classList.add('d-none')
-    form.appendChild(descricaoIn)
 
     const produto = await postRetorno('adm/produtos/cadastrarproduto',form)
     mensagem(produto.mensagem)

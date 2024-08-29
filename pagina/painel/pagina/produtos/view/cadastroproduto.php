@@ -18,7 +18,10 @@
     <link rel="stylesheet" href="<?= $_PREFIXO?>source/bibliotecas/textoeditor/css/style.css" />
 </head>
 
-<form action="<?= $_PREFIXO?>pagina/painel/pagina/produtos/acoes/cadastrarproduto.php" method="post" id="formularioProduto" enctype="multipart/form-data">
+
+<!-- <form action="<?= $_PREFIXO?>pagina/painel/pagina/produtos/acoes/cadastrarproduto.php" method="post" -->
+<form action="" method="post"
+    id="formularioProduto" enctype="multipart/form-data">
     <div class="container" style="max-width:780px;" id="conteudoInputs">
         <h2>Novo Produto</h2>
         <div class="d-flex flex-column gap-3 mb-0">
@@ -121,11 +124,113 @@
                                             <label for="backColor">Highlight Color</label>
                                         </div>
                                     </div>
-                                    <div id="text-input" contenteditable="true"
+                                    <div id="textDescricao" class="text-input" contenteditable="true"
                                         style="max-height:250px; overflow-y:scroll;"></div>
                                 </div>
+                            </div>
+                        </div>
+                        <textarea name="descricao" id="descricao" class="d-none"></textarea>
+                    </div>
+                </div>
+            </div>
 
-                                <script src="<?= $_PREFIXO?>source/bibliotecas/textoeditor/js/script.js"></script>
+            <div class="card">
+                <div class="card-body d-flex flex-column gap-2">
+                    <h5>Detalhes</h5>
+                    <div class="card p-3">
+                        <div>
+                            <div class="container">
+                                <div class="options">
+                                    <!-- Text Format -->
+                                    <button type="button" id="bold" class="option-button format buttonEditor">
+                                        <i class="fa-solid fa-bold"></i>
+                                    </button>
+                                    <button type="button" id="italic" class="option-button format buttonEditor">
+                                        <i class="fa-solid fa-italic"></i>
+                                    </button>
+                                    <button type="button" id="underline" class="option-button format buttonEditor">
+                                        <i class="fa-solid fa-underline"></i>
+                                    </button>
+                                    <button type="button" id="strikethrough"
+                                        class="option-button format buttonEditor">
+                                        <i class="fa-solid fa-strikethrough"></i>
+                                    </button>
+                                    <button type="button" id="superscript"
+                                        class="option-button script buttonEditor">
+                                        <i class="fa-solid fa-superscript"></i>
+                                    </button>
+                                    <button type="button" id="subscript" class="option-button script buttonEditor">
+                                        <i class="fa-solid fa-subscript"></i>
+                                    </button>
+                                    <!-- List -->
+                                    <button type="button" id="insertOrderedList" class="option-button buttonEditor">
+                                        <div class="fa-solid fa-list-ol"></div>
+                                    </button>
+                                    <button type="button" id="insertUnorderedList"
+                                        class="option-button buttonEditor">
+                                        <i class="fa-solid fa-list"></i>
+                                    </button>
+                                    <!-- Undo/Redo -->
+                                    <button type="button" id="undo" class="option-button buttonEditor">
+                                        <i class="fa-solid fa-rotate-left"></i>
+                                    </button>
+                                    <button type="button" id="redo" class="option-button buttonEditor">
+                                        <i class="fa-solid fa-rotate-right"></i>
+                                    </button>
+                                    <!-- Link -->
+                                    <button type="button" id="createLink" class="adv-option-button buttonEditor">
+                                        <i class="fa fa-link"></i>
+                                    </button>
+                                    <button type="button" id="unlink" class="option-button buttonEditor">
+                                        <i class="fa fa-unlink"></i>
+                                    </button>
+                                    <!-- Alignment -->
+                                    <button type="button" id="justifyLeft" class="option-button align buttonEditor">
+                                        <i class="fa-solid fa-align-left"></i>
+                                    </button>
+                                    <button type="button" id="justifyCenter"
+                                        class="option-button align buttonEditor">
+                                        <i class="fa-solid fa-align-center"></i>
+                                    </button>
+                                    <button type="button" id="justifyRight"
+                                        class="option-button align buttonEditor">
+                                        <i class="fa-solid fa-align-right"></i>
+                                    </button>
+                                    <button type="button" id="justifyFull" class="option-button align buttonEditor">
+                                        <i class="fa-solid fa-align-justify"></i>
+                                    </button>
+                                    <button type="button" id="indent" class="option-button spacing buttonEditor">
+                                        <i class="fa-solid fa-indent"></i>
+                                    </button>
+                                    <button type="button" id="outdent" class="option-button spacing buttonEditor">
+                                        <i class="fa-solid fa-outdent"></i>
+                                    </button>
+                                    <!-- Headings -->
+                                    <select id="formatBlock" class="adv-option-button">
+                                        <option value="H1">H1</option>
+                                        <option value="H2">H2</option>
+                                        <option value="H3">H3</option>
+                                        <option value="H4">H4</option>
+                                        <option value="H5">H5</option>
+                                        <option value="H6">H6</option>
+                                    </select>
+                                    <!-- Font -->
+                                    <select id="fontName" class="adv-option-button"></select>
+                                    <select id="fontSize" class="adv-option-button"></select>
+                                    <!-- Color -->
+                                    <div class="input-wrapper">
+                                        <input type="color" id="foreColor" class="adv-option-button" />
+                                        <label for="foreColor">Font Color</label>
+                                    </div>
+                                    <div class="input-wrapper">
+                                        <input type="color" id="backColor" class="adv-option-button" />
+                                        <label for="backColor">Highlight Color</label>
+                                    </div>
+                                </div>
+                                <div id="textDetalhe" class="text-input" contenteditable="true"
+                                    style="max-height:250px; overflow-y:scroll;">
+                                </div>
+                                <textarea name="detalhe" id="inputDetalhes" class="d-none"></textarea>
                             </div>
                         </div>
                     </div>
@@ -184,8 +289,8 @@
                         <div class="d-flex flex-fill gap-3 col-md-5">
                             <div class="flex-fill">
                                 <label for="" class="form-text">Preço de venda</label>
-                                <input type="text" class="form-control flex-fill" name="venda"
-                                    id="estoque_venda" placeholder="R$ 0.00">
+                                <input type="text" class="form-control flex-fill" name="venda" id="estoque_venda"
+                                    placeholder="R$ 0.00">
                             </div>
                             <div class="flex-fill">
                                 <label for="" class="form-text">Preço promocional</label>
@@ -196,8 +301,8 @@
                         <div class="d-flex flex-fill gap-3 col-md-5">
                             <div class="flex-fill">
                                 <label for="" class="form-text">Custo</label>
-                                <input type="text" class="form-control flex-fill" name="custo"
-                                    id="estoque_custo" placeholder="R$ 0.00">
+                                <input type="text" class="form-control flex-fill" name="custo" id="estoque_custo"
+                                    placeholder="R$ 0.00">
                             </div>
                             <div class="flex-fill">
                                 <label for="" class="form-text">Margem de lucro</label>
@@ -214,13 +319,37 @@
                     <h5>Estoque</h5>
                     <label for="estoque_estoque" class="form-text">Quantidade</label>
                     <div class="d-flex gap-3">
-                        <input type="text" class="form-control" name="estoque_estoque" id="inputEstoque" disabled
+                        <input type="text" class="form-control" name="qtdatual" id="inputEstoque" disabled
                             placeholder="&#8734;">
                         <div class="form-check form-switch">
                             <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault"
                                 checked>
                             <label class="form-check-label" for="flexSwitchCheckChecked">Infinito</label>
                         </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-body">
+                    <h5>Fornecedor</h5>
+                    <div class="d-flex gap-3">
+                        <div class="flex-fill" id="divSelectFornecedor">
+                            <select name="fornecedor" id="inputFornecedor" class="form-select form-select-sm" aria-label="Small select example">
+                                <option value="">Selecione um fornecedor</option>
+                                <?php 
+                                $fornecedores = listarGeral('f.idfornecedor,f.descricao,p.nome',
+                                'fornecedor f
+                                JOIN pessoa p ON f.idpessoa = p.idpessoa
+                                WHERE p.nome IS NOT NULL
+                                ');
+                                foreach($fornecedores as $fornecedor){
+                                echo '<option value="'. $fornecedor->idfornecedor .'">'.$fornecedor->nome.'</option>';
+                                }
+                                ?>
+                            </select>
+                        </div>
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                        data-bs-target="#modalGeral" id="btnNovoFornecedor">Novo</button>
                     </div>
                 </div>
             </div>
@@ -257,8 +386,8 @@
                         <div class="d-flex flex-fill gap-3 col-md-5">
                             <div class="flex-fill ">
                                 <label for="produtovariacao_peso" class="form-text">Peso</label>
-                                <input type="text" class="form-control" name="peso"
-                                    id="produtovariacao_peso" placeholder="0.000 Kg">
+                                <input type="text" class="form-control" name="peso" id="produtovariacao_peso"
+                                    placeholder="0.000 Kg">
                             </div>
                             <div class="flex-fill ">
                                 <label for="produtovariacao_comprimento" class="form-text">Comprimento</label>
@@ -269,13 +398,107 @@
                         <div class="d-flex flex-fill gap-3 col-md-5">
                             <div class="flex-fill ">
                                 <label for="produtovariacao_largura" class="form-text">Largura</label>
-                                <input type="text" class="form-control" name="largura"
-                                    id="produtovariacao_largura" placeholder="0 cm">
+                                <input type="text" class="form-control" name="largura" id="produtovariacao_largura"
+                                    placeholder="0 cm">
                             </div>
                             <div class="flex-fill ">
                                 <label for="produtovariacao_altura" class="form-text">Altura</label>
-                                <input type="text" class="form-control" name="altura"
-                                    id="produtovariacao_altura" placeholder="0 cm">
+                                <input type="text" class="form-control" name="altura" id="produtovariacao_altura"
+                                    placeholder="0 cm">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card p-3 d-none" style="position:absolute; bottom:0; margin-bottom:230px; transform:scale(0.8);" id="ferramentasEdicaoTexto">
+                <div>
+                    <div class="container">
+                        <div class="options";">
+                            <!-- Text Format -->
+                            <button type="button" id="bold" class="option-button format buttonEditor">
+                                <i class="fa-solid fa-bold"></i>
+                            </button>
+                            <button type="button" id="italic" class="option-button format buttonEditor">
+                                <i class="fa-solid fa-italic"></i>
+                            </button>
+                            <button type="button" id="underline" class="option-button format buttonEditor">
+                                <i class="fa-solid fa-underline"></i>
+                            </button>
+                            <button type="button" id="strikethrough"
+                                class="option-button format buttonEditor">
+                                <i class="fa-solid fa-strikethrough"></i>
+                            </button>
+                            <button type="button" id="superscript"
+                                class="option-button script buttonEditor">
+                                <i class="fa-solid fa-superscript"></i>
+                            </button>
+                            <button type="button" id="subscript" class="option-button script buttonEditor">
+                                <i class="fa-solid fa-subscript"></i>
+                            </button>
+                            <!-- List -->
+                            <button type="button" id="insertOrderedList" class="option-button buttonEditor">
+                                <div class="fa-solid fa-list-ol"></div>
+                            </button>
+                            <button type="button" id="insertUnorderedList"
+                                class="option-button buttonEditor">
+                                <i class="fa-solid fa-list"></i>
+                            </button>
+                            <!-- Undo/Redo -->
+                            <button type="button" id="undo" class="option-button buttonEditor">
+                                <i class="fa-solid fa-rotate-left"></i>
+                            </button>
+                            <button type="button" id="redo" class="option-button buttonEditor">
+                                <i class="fa-solid fa-rotate-right"></i>
+                            </button>
+                            <!-- Link -->
+                            <button type="button" id="createLink" class="adv-option-button buttonEditor">
+                                <i class="fa fa-link"></i>
+                            </button>
+                            <button type="button" id="unlink" class="option-button buttonEditor">
+                                <i class="fa fa-unlink"></i>
+                            </button>
+                            <!-- Alignment -->
+                            <button type="button" id="justifyLeft" class="option-button align buttonEditor">
+                                <i class="fa-solid fa-align-left"></i>
+                            </button>
+                            <button type="button" id="justifyCenter"
+                                class="option-button align buttonEditor">
+                                <i class="fa-solid fa-align-center"></i>
+                            </button>
+                            <button type="button" id="justifyRight"
+                                class="option-button align buttonEditor">
+                                <i class="fa-solid fa-align-right"></i>
+                            </button>
+                            <button type="button" id="justifyFull" class="option-button align buttonEditor">
+                                <i class="fa-solid fa-align-justify"></i>
+                            </button>
+                            <button type="button" id="indent" class="option-button spacing buttonEditor">
+                                <i class="fa-solid fa-indent"></i>
+                            </button>
+                            <button type="button" id="outdent" class="option-button spacing buttonEditor">
+                                <i class="fa-solid fa-outdent"></i>
+                            </button>
+                            <!-- Headings -->
+                            <select id="formatBlock" class="adv-option-button">
+                                <option value="H1">H1</option>
+                                <option value="H2">H2</option>
+                                <option value="H3">H3</option>
+                                <option value="H4">H4</option>
+                                <option value="H5">H5</option>
+                                <option value="H6">H6</option>
+                            </select>
+                            <!-- Font -->
+                            <select id="fontName" class="adv-option-button"></select>
+                            <select id="fontSize" class="adv-option-button"></select>
+                            <!-- Color -->
+                            <div class="input-wrapper">
+                                <input type="color" id="foreColor" class="adv-option-button" />
+                                <label for="foreColor">Font Color</label>
+                            </div>
+                            <div class="input-wrapper">
+                                <input type="color" id="backColor" class="adv-option-button" />
+                                <label for="backColor">Highlight Color</label>
                             </div>
                         </div>
                     </div>
@@ -305,14 +528,28 @@
 
             <div class="d-flex justify-content-end gap-3 mb-4 ">
                 <button type="button" class="btn btn-outline-secondary">Cancelar</button>
-                <button type="submit" class="btn btn-primary" >Salvar Produto</button>
-                <!-- <button type="button" class="btn btn-primary" onclick="cadastrarProduto()">Salvar Produto</button> -->
+                <!-- <button type="submit" class="btn btn-primary">Salvar Produto</button> -->
+                <button type="button" class="btn btn-primary" onclick="cadastrarProduto()">Salvar Produto</button>
             </div>
         </div>
     </div>
     </div>
 </form>
 
+<div class="modal fade" id="modalGeral" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+    aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <div id="modalGeralTitulo"></div>
+                <button type="button" type="button" class="btn-close" data-bs-dismiss="modal"
+                    aria-label="Close"></button>
+            </div>
+            <div class="modal-body" id="modalGeralConteudo">
+            </div>
+        </div>
+    </div>
+</div>
 
 
 <div class="modal fade" id="modalAdiconarCategoria" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
@@ -361,6 +598,7 @@
     </div>
 </div>
 
+<script src="<?= $_PREFIXO?>source/bibliotecas/textoeditor/js/script.js"></script>
 <script src="<?=$_PREFIXO?>source/js/adm/produtos/pg-cadastro.js"></script>
 <script>
 carregarConteudo('adm/produtos/selectvariacoes', 'select-variacoes')

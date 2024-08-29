@@ -31,6 +31,7 @@ async function postRetorno(controle,form) {
     return resposta.json()
 }
 
+
 function mensagem(msg,tipo='info') {
     switch(tipo){
         case 'info':

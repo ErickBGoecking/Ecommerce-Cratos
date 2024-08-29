@@ -71,6 +71,11 @@
     border: 1px solid #dddddd;
     padding: 20px;
     height: 50vh;
+  }.text-input {
+    margin-top: 10px;
+    border: 1px solid #dddddd;
+    padding: 20px;
+    height: 50vh;
   }
   .active {
     background-color: #e0e9ff;
