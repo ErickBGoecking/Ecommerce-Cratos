@@ -68,7 +68,7 @@ function extrairCodigoDoVideo(link) {
         const codigo = link.substring(indiceV + parametroV.length);
         return codigo;
     } else {
-        return null; // Não encontrou o parâmetro "v="
+        return null;
     }
 }
 
@@ -418,52 +418,6 @@ function gerar(){
     }
 }
 
-// function gerarCombinacoes(array, index = 0, prefixo = '') {
-//     if (index === Object.keys(array).length) {
-//         if(prefixo != ""){
-//             criarElementos(prefixo)
-//         }
-//         return;
-//     }
-//     const chave = Object.keys(array)[index];
-//     const valores = array[chave];
-
-//     for (const valor of valores) {
-//         let valorSeparado = valor.split('-')
-//         let valorNovo = valorSeparado[0] + ': ' + valorSeparado[2]
-//         if (prefixo == "") {
-//             gerarCombinacoes(array, index + 1, `${valorNovo}`);
-//         } else {
-//             gerarCombinacoes(array, index + 1, `${prefixo} / ${valorNovo}`);
-//         }
-
-//     }
-//     const variacoesDetalhe = document.querySelectorAll('.variacaoDetalhe')
-
-//     var contagem = 1
-//     for(const vDetalhe of variacoesDetalhe){
-//         const textAreaVDetalhe = document.getElementById('variavelDetalhe'+contagem)
-        
-//         vDetalhe.addEventListener('focusout',()=>{
-//             textAreaVDetalhe.textContent = vDetalhe.innerHTML
-//         })
-
-//         contagem++
-//     }
-       
-//     // ------------------FERRAMENTA EDITOR DE texto --------------------
-
-//     areaHoverList = document.querySelectorAll('#areaHover')
-//     areaHoverList.forEach((element) => {
-//         element.addEventListener('mouseover', (event) => {
-//             ferramentasEdicaoTexto.classList.remove('d-none');
-//             element.appendChild(ferramentasEdicaoTexto);
-//         });
-//         element.addEventListener('mouseout', (event) => {
-//             ferramentasEdicaoTexto.classList.add('d-none');
-//         });
-//     });
-// }
 function gerarCombinacoes(array, index = 0, prefixo = '',id='') {
     if (index === Object.keys(array).length) {
         if(prefixo != ""){
@@ -646,6 +600,12 @@ async function cadastrarProduto(){
     var form = document.getElementById('formularioProduto')
 
     const produto = await postRetorno('adm/produtos/cadastrarproduto',form)
-    mensagem(produto.mensagem)
-    console.log(produto.mensagem)
+    
+    if(produto.sucesso){
+        mensagem(produto.mensagem)
+        
+    }else{
+        mensagem(produto.mensagem,erro)
+    }
+
 }

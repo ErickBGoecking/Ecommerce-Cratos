@@ -22,6 +22,23 @@ if (isset($controle[2]) && !empty($controle[2])) {
         case'selectfornecedor':
             include_once '../pagina/painel/pagina/produtos/acoes/selectfornecedor.php';
             break;
-            
+        case'alterarativo':
+            include_once '../pagina/painel/pagina/produtos/acoes/alterarativo.php';
+            break;
+        case'alterarestoque':
+            include_once '../pagina/painel/pagina/produtos/acoes/alterarestoque.php';
+            break;
+        case'deleteproduto':
+            include_once '../pagina/painel/pagina/produtos/acoes/deletarproduto.php';
+            break;
+        case'listar':
+            include_once '../pagina/painel/pagina/produtos/acoes/listar.php';
+            break;
+        case'busca':
+            include_once '../pagina/painel/pagina/produtos/acoes/busca.php';
+            break;
+        case'buscarapida':
+            include_once '../pagina/painel/pagina/produtos/acoes/buscaRapida.php';
+            break;
     }
 }

@@ -17,6 +17,10 @@ async function carregarConteudo(controle,divConteudo) {
             }
         })
         .catch(error => console.error('Erro na requisição:', error));
+        const retorno = {
+            sucesso: true
+        }
+        return retorno
 }
 
 async function postRetorno(controle,form) {

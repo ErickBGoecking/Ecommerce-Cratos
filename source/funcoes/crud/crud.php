@@ -131,7 +131,7 @@ function listarRegistroUnico($tabela, $campos, $idcampo, $idparametro)
             return false;
         };
     } catch
-    (PDOExecption $e) {
+    (PDOException $e) {
         echo 'Exception -> ';
         return ($e->getMessage());
         $conn->rollback();
@@ -141,21 +141,12 @@ function listarRegistroUnico($tabela, $campos, $idcampo, $idparametro)
 function deleteRegistroUnico($tabela, $campoReferencia, $idparametro)
 {
     $conn = conectar();
-    try {
-        $conn->beginTransaction();
-        $sqUpdate = $conn->prepare("DELETE FROM $tabela WHERE $campoReferencia = ?");
-        $sqUpdate->bindValue(1, $idparametro, PDO::PARAM_INT);
-        $sqUpdate->execute();
-        $conn->commit();
-        if ($sqUpdate->rowCount() > 0) {
-            $conn->rollback();
-        }
-    } catch
-    (PDOException $e) {
-        echo 'Exception -> ';
-        return ($e->getMessage());
-    };
-    $conn = null;
+    
+    $conn->beginTransaction();
+    $sqUpdate = $conn->prepare("DELETE FROM $tabela WHERE $campoReferencia = ?");
+    $sqUpdate->bindValue(1, $idparametro, PDO::PARAM_INT);
+    $sqUpdate->execute();
+    $conn->commit();
 }
 
 function upGeral($tabela, $campos, $values, $condicao="") {
