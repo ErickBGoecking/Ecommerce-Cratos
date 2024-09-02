@@ -75,7 +75,7 @@
                                         </div>
                                     </div>
                                     <div class="add-to-cart">
-                                        <a href="loja/produto/<?php echo codificar($idproduto,'codificar');?>" class="add-to-cart-btn-link"><i class="fa fa-shopping-cart"></i>
+                                        <a href="loja/produto/<?php echo codificar($idproduto,'codificar');?>&id=<?php echo $idproduto?>" class="add-to-cart-btn-link"><i class="fa fa-shopping-cart"></i>
                                             Adicionar
                                         </a>
                                     </div>

@@ -32,11 +32,11 @@
     .product-preview:hover .play-button {
         opacity: 1;
     }
-    input[type="radio"] {
+    .radio-variacao {
         display: none;
     }
 
-    input[type="radio"] + label {
+    .radio-variacao + label {
         display: inline-block;
         padding: 4px 8px;
         margin: 3px;
@@ -49,12 +49,12 @@
         text-align: center;
         font-size: 12px;
     }
-    input[type="radio"]:checked + label {
+    .radio-variacao:checked + label {
         background-color: #007bff;
         color: #ffffff;
         border-color: #007bff;
     }
-    input[type="radio"] + label:hover {
+    .radio-variacao + label:hover {
         background-color: #e6f0ff;
         border-color: #007bff;
         color: #007bff;
@@ -67,7 +67,7 @@ if (isset($produtoGet)) {
     $retornoProduto = listarRegistroUnico("produto p INNER JOIN produtovariacao pv ON pv.idproduto = p.idproduto AND p.ativo = 'A'
         INNER JOIN estoque e ON e.idprodutovariacao = pv.idprodutovariacao", 'p.idproduto, p.foto, p.video, p.produto, p.descricao, 
         pv.idprodutovariacao, pv.detalhe as descricaoVariacao, pv.altura, pv.largura, pv.peso, pv.destaque, e.idestoque, e.qtdatual, e.qtdvendido, 
-        e.vendaPrevia, e.custo, e.venda, e.lote, e.vencimento', 'p.idproduto', $idProduto);
+        e.vendapromocional, e.custo, e.venda, e.lote, e.vencimento', 'p.idproduto', $idProduto);
     if ($retornoProduto) {
         foreach ($retornoProduto as $itemProduto) {
             $idproduto = $itemProduto->idproduto;
@@ -90,7 +90,7 @@ if (isset($produtoGet)) {
             $qtdatual = $itemProduto->qtdatual;
             $qtdvendido = $itemProduto->qtdvendido;
             $venda = $itemProduto->venda;
-            $vendaPrevia = $itemProduto->vendaPrevia;
+            $vendapromocional = $itemProduto->vendapromocional;
             if (empty($foto)) {
                 $foto = 'sem-imagem.jpg';
             }
@@ -119,7 +119,7 @@ if (isset($produtoGet)) {
                                      alt="<?php echo $produto; ?>" title="<?php echo $produto; ?>">
                             </div>
                             <?php
-                            $retornoFotoProduto = listarGeral('foto', "fotoproduto WHERE idprodutovariacao='$idprodutovariacao' AND ativo = 'A'");
+                            $retornoFotoProduto = listarGeral('foto', "fotoproduto WHERE idproduto='$idproduto' AND ativo = 'A'");
                             if ($retornoFotoProduto) {
                                 foreach ($retornoFotoProduto as $itemFotoProduto) {
                                     $fotoProdutoVariacao = $itemFotoProduto->foto;
@@ -169,7 +169,6 @@ if (isset($produtoGet)) {
                                     <?php
                                 }
                                 if ($video) {
-
                                     ?>
                                     <div class="product-preview">
                                         <img class="preview-image"
@@ -199,7 +198,7 @@ if (isset($produtoGet)) {
                             <div>
                                 <h3 class="product-price">R$<?php echo number_format($venda, '2', ',', '.'); ?>
                                     <del class="product-old-price">
-                                        R$<?php echo number_format($vendaPrevia, '2', ',', '.'); ?></del>
+                                        R$<?php echo number_format($vendapromocional, '2', ',', '.'); ?></del>
                                 </h3>
                                 <span class="product-available"><?php echo $qtdatual; ?> estoque.</span>
                             </div>
@@ -235,8 +234,8 @@ if (isset($produtoGet)) {
                                         $id = strtolower($categoria) . "_" . strtolower(str_replace(' ', '_', $variacao));
                                         $checked = $variacao ? 'checked' : '';
                                         echo "<div style='display: inline-block;'>";
-                                        echo "<input type='radio' id='$id' name='$categoria' value='$variacao' $checked>";
-                                        echo "<label for='$id'>$variacao</label>";
+                                        echo "<input type='radio' class='radio-variacao' id='$id' name='$categoria' value='$variacao' $checked>";
+                                        echo "<label for='$id'>$variacao $idprodutovariacao</label>";
                                         echo "</div>";
                                     }
                                     echo "<br>";
