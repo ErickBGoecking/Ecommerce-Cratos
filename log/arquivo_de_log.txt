@@ -63,3 +63,2415 @@ Trace File: D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\pagina\produto\produto
 Trace Line: 208
 File: D:\htdocs\cratos\Ecommerce-Cratos\source\funcoes\crud\crud.php
 Line: 91
+Throwable: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'e.vendaPrevia' in 'field list'
+Code: 42S22
+Trace: Array
+(
+    [0] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\source\funcoes\crud\crud.php
+            [line] => 55
+            [function] => execute
+            [class] => PDOStatement
+            [type] => ->
+            [args] => Array
+                (
+                )
+
+        )
+
+    [1] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\painel\pagina\produtos\view\listarproduto.php
+            [line] => 15
+            [function] => listarGeral
+            [args] => Array
+                (
+                    [0] => pv.altura, pv.largura,pv.peso, pv.destaque, pv.idtipovariacao,
+        e.idestoque, e.qtdatual, e.qtdvendido, e.vendaPrevia, e.custo, e.venda, e.vendapromocional, e.lote, e.vencimento
+                    [1] => produtovariacao pv 
+        INNER JOIN estoque e ON e.idprodutovariacao = pv.idprodutovariacao
+        where idproduto = 2
+        
+                )
+
+        )
+
+    [2] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\painel\pagina\produtos\produtos.php
+            [line] => 20
+            [args] => Array
+                (
+                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\painel\pagina\produtos\view\listarproduto.php
+                )
+
+            [function] => include_once
+        )
+
+    [3] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\painel\index.php
+            [line] => 86
+            [args] => Array
+                (
+                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\painel\pagina\produtos\produtos.php
+                )
+
+            [function] => include_once
+        )
+
+    [4] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\conteudo.php
+            [line] => 7
+            [args] => Array
+                (
+                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\painel\index.php
+                )
+
+            [function] => include_once
+        )
+
+    [5] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\index.php
+            [line] => 16
+            [args] => Array
+                (
+                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\conteudo.php
+                )
+
+            [function] => include_once
+        )
+
+)
+
+Trace File: D:\htdocs\cratos\Ecommerce-Cratos\source\funcoes\crud\crud.php
+Trace Line: 55
+File: D:\htdocs\cratos\Ecommerce-Cratos\source\funcoes\crud\crud.php
+Line: 55
+Throwable: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'e.vendaPrevia' in 'field list'
+Code: 42S22
+Trace: Array
+(
+    [0] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\source\funcoes\crud\crud.php
+            [line] => 55
+            [function] => execute
+            [class] => PDOStatement
+            [type] => ->
+            [args] => Array
+                (
+                )
+
+        )
+
+    [1] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\painel\pagina\produtos\view\listarproduto.php
+            [line] => 15
+            [function] => listarGeral
+            [args] => Array
+                (
+                    [0] => pv.altura, pv.largura,pv.peso, pv.destaque, pv.idtipovariacao,
+        e.idestoque, e.qtdatual, e.qtdvendido, e.vendaPrevia, e.custo, e.venda, e.vendapromocional, e.lote, e.vencimento
+                    [1] => produtovariacao pv 
+        INNER JOIN estoque e ON e.idprodutovariacao = pv.idprodutovariacao
+        where idproduto = 2
+        
+                )
+
+        )
+
+    [2] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\painel\pagina\produtos\produtos.php
+            [line] => 20
+            [args] => Array
+                (
+                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\painel\pagina\produtos\view\listarproduto.php
+                )
+
+            [function] => include_once
+        )
+
+    [3] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\painel\index.php
+            [line] => 86
+            [args] => Array
+                (
+                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\painel\pagina\produtos\produtos.php
+                )
+
+            [function] => include_once
+        )
+
+    [4] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\conteudo.php
+            [line] => 7
+            [args] => Array
+                (
+                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\painel\index.php
+                )
+
+            [function] => include_once
+        )
+
+    [5] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\index.php
+            [line] => 16
+            [args] => Array
+                (
+                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\conteudo.php
+                )
+
+            [function] => include_once
+        )
+
+)
+
+Trace File: D:\htdocs\cratos\Ecommerce-Cratos\source\funcoes\crud\crud.php
+Trace Line: 55
+File: D:\htdocs\cratos\Ecommerce-Cratos\source\funcoes\crud\crud.php
+Line: 55
+Throwable: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'e.vendaPrevia' in 'field list'
+Code: 42S22
+Trace: Array
+(
+    [0] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\source\funcoes\crud\crud.php
+            [line] => 55
+            [function] => execute
+            [class] => PDOStatement
+            [type] => ->
+            [args] => Array
+                (
+                )
+
+        )
+
+    [1] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\painel\pagina\produtos\view\listarproduto.php
+            [line] => 15
+            [function] => listarGeral
+            [args] => Array
+                (
+                    [0] => pv.altura, pv.largura,pv.peso, pv.destaque, pv.idtipovariacao,
+        e.idestoque, e.qtdatual, e.qtdvendido, e.vendaPrevia, e.custo, e.venda, e.vendapromocional, e.lote, e.vencimento
+                    [1] => produtovariacao pv 
+        INNER JOIN estoque e ON e.idprodutovariacao = pv.idprodutovariacao
+        where idproduto = 2
+        
+                )
+
+        )
+
+    [2] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\painel\pagina\produtos\produtos.php
+            [line] => 20
+            [args] => Array
+                (
+                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\painel\pagina\produtos\view\listarproduto.php
+                )
+
+            [function] => include_once
+        )
+
+    [3] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\painel\index.php
+            [line] => 86
+            [args] => Array
+                (
+                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\painel\pagina\produtos\produtos.php
+                )
+
+            [function] => include_once
+        )
+
+    [4] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\conteudo.php
+            [line] => 7
+            [args] => Array
+                (
+                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\painel\index.php
+                )
+
+            [function] => include_once
+        )
+
+    [5] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\index.php
+            [line] => 16
+            [args] => Array
+                (
+                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\conteudo.php
+                )
+
+            [function] => include_once
+        )
+
+)
+
+Trace File: D:\htdocs\cratos\Ecommerce-Cratos\source\funcoes\crud\crud.php
+Trace Line: 55
+File: D:\htdocs\cratos\Ecommerce-Cratos\source\funcoes\crud\crud.php
+Line: 55
+Throwable: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Texto' in 'field list'
+Code: 42S22
+Trace: Array
+(
+    [0] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\source\funcoes\crud\crud.php
+            [line] => 55
+            [function] => execute
+            [class] => PDOStatement
+            [type] => ->
+            [args] => Array
+                (
+                )
+
+        )
+
+    [1] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\pagina\produto\produtoBannerPromocao.php
+            [line] => 2
+            [function] => listarGeral
+            [args] => Array
+                (
+                    [0] => Img, Titulo, Texto, DataFinal
+                    [1] => banner WHERE NOW() BETWEEN DataInicial AND DataFinal AND Tipo = 'Central' AND Ativo = 'A' ORDER BY Idbanner DESC
+                )
+
+        )
+
+    [2] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\conteudoloja.php
+            [line] => 5
+            [args] => Array
+                (
+                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\pagina\produto\produtoBannerPromocao.php
+                )
+
+            [function] => include_once
+        )
+
+    [3] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\index.php
+            [line] => 31
+            [args] => Array
+                (
+                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\conteudoloja.php
+                )
+
+            [function] => include_once
+        )
+
+    [4] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\conteudo.php
+            [line] => 10
+            [args] => Array
+                (
+                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\index.php
+                )
+
+            [function] => include_once
+        )
+
+    [5] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\index.php
+            [line] => 16
+            [args] => Array
+                (
+                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\conteudo.php
+                )
+
+            [function] => include_once
+        )
+
+)
+
+Trace File: D:\htdocs\cratos\Ecommerce-Cratos\source\funcoes\crud\crud.php
+Trace Line: 55
+File: D:\htdocs\cratos\Ecommerce-Cratos\source\funcoes\crud\crud.php
+Line: 55
+Throwable: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Texto' in 'field list'
+Code: 42S22
+Trace: Array
+(
+    [0] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\source\funcoes\crud\crud.php
+            [line] => 55
+            [function] => execute
+            [class] => PDOStatement
+            [type] => ->
+            [args] => Array
+                (
+                )
+
+        )
+
+    [1] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\pagina\produto\produtoBannerPromocao.php
+            [line] => 2
+            [function] => listarGeral
+            [args] => Array
+                (
+                    [0] => Img, Titulo, Texto, DataFinal
+                    [1] => banner WHERE NOW() BETWEEN DataInicial AND DataFinal AND Tipo = 'Central' AND Ativo = 'A' ORDER BY Idbanner DESC
+                )
+
+        )
+
+    [2] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\conteudoloja.php
+            [line] => 5
+            [args] => Array
+                (
+                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\pagina\produto\produtoBannerPromocao.php
+                )
+
+            [function] => include_once
+        )
+
+    [3] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\index.php
+            [line] => 31
+            [args] => Array
+                (
+                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\conteudoloja.php
+                )
+
+            [function] => include_once
+        )
+
+    [4] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\conteudo.php
+            [line] => 10
+            [args] => Array
+                (
+                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\index.php
+                )
+
+            [function] => include_once
+        )
+
+    [5] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\index.php
+            [line] => 16
+            [args] => Array
+                (
+                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\conteudo.php
+                )
+
+            [function] => include_once
+        )
+
+)
+
+Trace File: D:\htdocs\cratos\Ecommerce-Cratos\source\funcoes\crud\crud.php
+Trace Line: 55
+File: D:\htdocs\cratos\Ecommerce-Cratos\source\funcoes\crud\crud.php
+Line: 55
+Throwable: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Texto' in 'field list'
+Code: 42S22
+Trace: Array
+(
+    [0] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\source\funcoes\crud\crud.php
+            [line] => 55
+            [function] => execute
+            [class] => PDOStatement
+            [type] => ->
+            [args] => Array
+                (
+                )
+
+        )
+
+    [1] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\pagina\produto\produtoBannerPromocao.php
+            [line] => 2
+            [function] => listarGeral
+            [args] => Array
+                (
+                    [0] => Img, Titulo, Texto, DataFinal
+                    [1] => banner WHERE NOW() BETWEEN DataInicial AND DataFinal AND Tipo = 'Central' AND Ativo = 'A' ORDER BY Idbanner DESC
+                )
+
+        )
+
+    [2] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\conteudoloja.php
+            [line] => 5
+            [args] => Array
+                (
+                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\pagina\produto\produtoBannerPromocao.php
+                )
+
+            [function] => include_once
+        )
+
+    [3] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\index.php
+            [line] => 31
+            [args] => Array
+                (
+                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\conteudoloja.php
+                )
+
+            [function] => include_once
+        )
+
+    [4] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\conteudo.php
+            [line] => 17
+            [args] => Array
+                (
+                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\index.php
+                )
+
+            [function] => include_once
+        )
+
+    [5] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\index.php
+            [line] => 16
+            [args] => Array
+                (
+                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\conteudo.php
+                )
+
+            [function] => include_once
+        )
+
+)
+
+Trace File: D:\htdocs\cratos\Ecommerce-Cratos\source\funcoes\crud\crud.php
+Trace Line: 55
+File: D:\htdocs\cratos\Ecommerce-Cratos\source\funcoes\crud\crud.php
+Line: 55
+Throwable: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Texto' in 'field list'
+Code: 42S22
+Trace: Array
+(
+    [0] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\source\funcoes\crud\crud.php
+            [line] => 55
+            [function] => execute
+            [class] => PDOStatement
+            [type] => ->
+            [args] => Array
+                (
+                )
+
+        )
+
+    [1] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\pagina\produto\produtoBannerPromocao.php
+            [line] => 2
+            [function] => listarGeral
+            [args] => Array
+                (
+                    [0] => Img, Titulo, Texto, DataFinal
+                    [1] => banner WHERE NOW() BETWEEN DataInicial AND DataFinal AND Tipo = 'Central' AND Ativo = 'A' ORDER BY Idbanner DESC
+                )
+
+        )
+
+    [2] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\conteudoloja.php
+            [line] => 5
+            [args] => Array
+                (
+                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\pagina\produto\produtoBannerPromocao.php
+                )
+
+            [function] => include_once
+        )
+
+    [3] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\index.php
+            [line] => 27
+            [args] => Array
+                (
+                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\conteudoloja.php
+                )
+
+            [function] => include_once
+        )
+
+    [4] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\conteudo.php
+            [line] => 10
+            [args] => Array
+                (
+                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\index.php
+                )
+
+            [function] => include_once
+        )
+
+    [5] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\index.php
+            [line] => 16
+            [args] => Array
+                (
+                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\conteudo.php
+                )
+
+            [function] => include_once
+        )
+
+)
+
+Trace File: D:\htdocs\cratos\Ecommerce-Cratos\source\funcoes\crud\crud.php
+Trace Line: 55
+File: D:\htdocs\cratos\Ecommerce-Cratos\source\funcoes\crud\crud.php
+Line: 55
+Throwable: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Texto' in 'field list'
+Code: 42S22
+Trace: Array
+(
+    [0] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\source\funcoes\crud\crud.php
+            [line] => 55
+            [function] => execute
+            [class] => PDOStatement
+            [type] => ->
+            [args] => Array
+                (
+                )
+
+        )
+
+    [1] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\pagina\produto\produtoBannerPromocao.php
+            [line] => 2
+            [function] => listarGeral
+            [args] => Array
+                (
+                    [0] => Img, Titulo, Texto, DataFinal
+                    [1] => banner WHERE NOW() BETWEEN DataInicial AND DataFinal AND Tipo = 'Central' AND Ativo = 'A' ORDER BY Idbanner DESC
+                )
+
+        )
+
+    [2] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\conteudoloja.php
+            [line] => 5
+            [args] => Array
+                (
+                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\pagina\produto\produtoBannerPromocao.php
+                )
+
+            [function] => include_once
+        )
+
+    [3] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\index.php
+            [line] => 27
+            [args] => Array
+                (
+                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\conteudoloja.php
+                )
+
+            [function] => include_once
+        )
+
+    [4] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\conteudo.php
+            [line] => 10
+            [args] => Array
+                (
+                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\index.php
+                )
+
+            [function] => include_once
+        )
+
+    [5] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\index.php
+            [line] => 16
+            [args] => Array
+                (
+                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\conteudo.php
+                )
+
+            [function] => include_once
+        )
+
+)
+
+Trace File: D:\htdocs\cratos\Ecommerce-Cratos\source\funcoes\crud\crud.php
+Trace Line: 55
+File: D:\htdocs\cratos\Ecommerce-Cratos\source\funcoes\crud\crud.php
+Line: 55
+Throwable: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Texto' in 'field list'
+Code: 42S22
+Trace: Array
+(
+    [0] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\source\funcoes\crud\crud.php
+            [line] => 55
+            [function] => execute
+            [class] => PDOStatement
+            [type] => ->
+            [args] => Array
+                (
+                )
+
+        )
+
+    [1] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\pagina\produto\produtoBannerPromocao.php
+            [line] => 2
+            [function] => listarGeral
+            [args] => Array
+                (
+                    [0] => Img, Titulo, Texto, DataFinal
+                    [1] => banner WHERE NOW() BETWEEN DataInicial AND DataFinal AND Tipo = 'Central' AND Ativo = 'A' ORDER BY Idbanner DESC
+                )
+
+        )
+
+    [2] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\conteudoloja.php
+            [line] => 5
+            [args] => Array
+                (
+                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\pagina\produto\produtoBannerPromocao.php
+                )
+
+            [function] => include_once
+        )
+
+    [3] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\index.php
+            [line] => 31
+            [args] => Array
+                (
+                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\conteudoloja.php
+                )
+
+            [function] => include_once
+        )
+
+    [4] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\conteudo.php
+            [line] => 10
+            [args] => Array
+                (
+                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\index.php
+                )
+
+            [function] => include_once
+        )
+
+    [5] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\index.php
+            [line] => 16
+            [args] => Array
+                (
+                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\conteudo.php
+                )
+
+            [function] => include_once
+        )
+
+)
+
+Trace File: D:\htdocs\cratos\Ecommerce-Cratos\source\funcoes\crud\crud.php
+Trace Line: 55
+File: D:\htdocs\cratos\Ecommerce-Cratos\source\funcoes\crud\crud.php
+Line: 55
+Throwable: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Texto' in 'field list'
+Code: 42S22
+Trace: Array
+(
+    [0] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\source\funcoes\crud\crud.php
+            [line] => 55
+            [function] => execute
+            [class] => PDOStatement
+            [type] => ->
+            [args] => Array
+                (
+                )
+
+        )
+
+    [1] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\pagina\produto\produtoBannerPromocao.php
+            [line] => 2
+            [function] => listarGeral
+            [args] => Array
+                (
+                    [0] => Img, Titulo, Texto, DataFinal
+                    [1] => banner WHERE NOW() BETWEEN DataInicial AND DataFinal AND Tipo = 'Central' AND Ativo = 'A' ORDER BY Idbanner DESC
+                )
+
+        )
+
+    [2] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\conteudoloja.php
+            [line] => 5
+            [args] => Array
+                (
+                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\pagina\produto\produtoBannerPromocao.php
+                )
+
+            [function] => include_once
+        )
+
+    [3] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\index.php
+            [line] => 31
+            [args] => Array
+                (
+                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\conteudoloja.php
+                )
+
+            [function] => include_once
+        )
+
+    [4] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\conteudo.php
+            [line] => 17
+            [args] => Array
+                (
+                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\index.php
+                )
+
+            [function] => include_once
+        )
+
+    [5] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\index.php
+            [line] => 16
+            [args] => Array
+                (
+                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\conteudo.php
+                )
+
+            [function] => include_once
+        )
+
+)
+
+Trace File: D:\htdocs\cratos\Ecommerce-Cratos\source\funcoes\crud\crud.php
+Trace Line: 55
+File: D:\htdocs\cratos\Ecommerce-Cratos\source\funcoes\crud\crud.php
+Line: 55
+Throwable: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Texto' in 'field list'
+Code: 42S22
+Trace: Array
+(
+    [0] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\source\funcoes\crud\crud.php
+            [line] => 55
+            [function] => execute
+            [class] => PDOStatement
+            [type] => ->
+            [args] => Array
+                (
+                )
+
+        )
+
+    [1] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\pagina\produto\produtoBannerPromocao.php
+            [line] => 2
+            [function] => listarGeral
+            [args] => Array
+                (
+                    [0] => Img, Titulo, Texto, DataFinal
+                    [1] => banner WHERE NOW() BETWEEN DataInicial AND DataFinal AND Tipo = 'Central' AND Ativo = 'A' ORDER BY Idbanner DESC
+                )
+
+        )
+
+    [2] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\conteudoloja.php
+            [line] => 5
+            [args] => Array
+                (
+                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\pagina\produto\produtoBannerPromocao.php
+                )
+
+            [function] => include_once
+        )
+
+    [3] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\index.php
+            [line] => 27
+            [args] => Array
+                (
+                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\conteudoloja.php
+                )
+
+            [function] => include_once
+        )
+
+    [4] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\conteudo.php
+            [line] => 10
+            [args] => Array
+                (
+                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\index.php
+                )
+
+            [function] => include_once
+        )
+
+    [5] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\index.php
+            [line] => 16
+            [args] => Array
+                (
+                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\conteudo.php
+                )
+
+            [function] => include_once
+        )
+
+)
+
+Trace File: D:\htdocs\cratos\Ecommerce-Cratos\source\funcoes\crud\crud.php
+Trace Line: 55
+File: D:\htdocs\cratos\Ecommerce-Cratos\source\funcoes\crud\crud.php
+Line: 55
+Throwable: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Texto' in 'field list'
+Code: 42S22
+Trace: Array
+(
+    [0] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\source\funcoes\crud\crud.php
+            [line] => 55
+            [function] => execute
+            [class] => PDOStatement
+            [type] => ->
+            [args] => Array
+                (
+                )
+
+        )
+
+    [1] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\pagina\produto\produtoBannerPromocao.php
+            [line] => 2
+            [function] => listarGeral
+            [args] => Array
+                (
+                    [0] => Img, Titulo, Texto, DataFinal
+                    [1] => banner WHERE NOW() BETWEEN DataInicial AND DataFinal AND Tipo = 'Central' AND Ativo = 'A' ORDER BY Idbanner DESC
+                )
+
+        )
+
+    [2] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\conteudoloja.php
+            [line] => 5
+            [args] => Array
+                (
+                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\pagina\produto\produtoBannerPromocao.php
+                )
+
+            [function] => include_once
+        )
+
+    [3] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\index.php
+            [line] => 27
+            [args] => Array
+                (
+                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\conteudoloja.php
+                )
+
+            [function] => include_once
+        )
+
+    [4] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\conteudo.php
+            [line] => 10
+            [args] => Array
+                (
+                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\index.php
+                )
+
+            [function] => include_once
+        )
+
+    [5] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\index.php
+            [line] => 16
+            [args] => Array
+                (
+                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\conteudo.php
+                )
+
+            [function] => include_once
+        )
+
+)
+
+Trace File: D:\htdocs\cratos\Ecommerce-Cratos\source\funcoes\crud\crud.php
+Trace Line: 55
+File: D:\htdocs\cratos\Ecommerce-Cratos\source\funcoes\crud\crud.php
+Line: 55
+Throwable: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Texto' in 'field list'
+Code: 42S22
+Trace: Array
+(
+    [0] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\source\funcoes\crud\crud.php
+            [line] => 55
+            [function] => execute
+            [class] => PDOStatement
+            [type] => ->
+            [args] => Array
+                (
+                )
+
+        )
+
+    [1] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\pagina\produto\produtoBannerPromocao.php
+            [line] => 2
+            [function] => listarGeral
+            [args] => Array
+                (
+                    [0] => Img, Titulo, Texto, DataFinal
+                    [1] => banner WHERE NOW() BETWEEN DataInicial AND DataFinal AND Tipo = 'Central' AND Ativo = 'A' ORDER BY Idbanner DESC
+                )
+
+        )
+
+    [2] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\conteudoloja.php
+            [line] => 5
+            [args] => Array
+                (
+                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\pagina\produto\produtoBannerPromocao.php
+                )
+
+            [function] => include_once
+        )
+
+    [3] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\index.php
+            [line] => 31
+            [args] => Array
+                (
+                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\conteudoloja.php
+                )
+
+            [function] => include_once
+        )
+
+    [4] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\conteudo.php
+            [line] => 10
+            [args] => Array
+                (
+                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\index.php
+                )
+
+            [function] => include_once
+        )
+
+    [5] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\index.php
+            [line] => 16
+            [args] => Array
+                (
+                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\conteudo.php
+                )
+
+            [function] => include_once
+        )
+
+)
+
+Trace File: D:\htdocs\cratos\Ecommerce-Cratos\source\funcoes\crud\crud.php
+Trace Line: 55
+File: D:\htdocs\cratos\Ecommerce-Cratos\source\funcoes\crud\crud.php
+Line: 55
+Throwable: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Texto' in 'field list'
+Code: 42S22
+Trace: Array
+(
+    [0] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\source\funcoes\crud\crud.php
+            [line] => 55
+            [function] => execute
+            [class] => PDOStatement
+            [type] => ->
+            [args] => Array
+                (
+                )
+
+        )
+
+    [1] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\pagina\produto\produtoBannerPromocao.php
+            [line] => 2
+            [function] => listarGeral
+            [args] => Array
+                (
+                    [0] => Img, Titulo, Texto, DataFinal
+                    [1] => banner WHERE NOW() BETWEEN DataInicial AND DataFinal AND Tipo = 'Central' AND Ativo = 'A' ORDER BY Idbanner DESC
+                )
+
+        )
+
+    [2] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\conteudoloja.php
+            [line] => 5
+            [args] => Array
+                (
+                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\pagina\produto\produtoBannerPromocao.php
+                )
+
+            [function] => include_once
+        )
+
+    [3] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\index.php
+            [line] => 31
+            [args] => Array
+                (
+                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\conteudoloja.php
+                )
+
+            [function] => include_once
+        )
+
+    [4] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\conteudo.php
+            [line] => 17
+            [args] => Array
+                (
+                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\index.php
+                )
+
+            [function] => include_once
+        )
+
+    [5] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\index.php
+            [line] => 16
+            [args] => Array
+                (
+                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\conteudo.php
+                )
+
+            [function] => include_once
+        )
+
+)
+
+Trace File: D:\htdocs\cratos\Ecommerce-Cratos\source\funcoes\crud\crud.php
+Trace Line: 55
+File: D:\htdocs\cratos\Ecommerce-Cratos\source\funcoes\crud\crud.php
+Line: 55
+Throwable: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Texto' in 'field list'
+Code: 42S22
+Trace: Array
+(
+    [0] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\source\funcoes\crud\crud.php
+            [line] => 55
+            [function] => execute
+            [class] => PDOStatement
+            [type] => ->
+            [args] => Array
+                (
+                )
+
+        )
+
+    [1] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\pagina\produto\produtoBannerPromocao.php
+            [line] => 2
+            [function] => listarGeral
+            [args] => Array
+                (
+                    [0] => Img, Titulo, Texto, DataFinal
+                    [1] => banner WHERE NOW() BETWEEN DataInicial AND DataFinal AND Tipo = 'Central' AND Ativo = 'A' ORDER BY Idbanner DESC
+                )
+
+        )
+
+    [2] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\conteudoloja.php
+            [line] => 5
+            [args] => Array
+                (
+                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\pagina\produto\produtoBannerPromocao.php
+                )
+
+            [function] => include_once
+        )
+
+    [3] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\index.php
+            [line] => 27
+            [args] => Array
+                (
+                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\conteudoloja.php
+                )
+
+            [function] => include_once
+        )
+
+    [4] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\conteudo.php
+            [line] => 10
+            [args] => Array
+                (
+                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\index.php
+                )
+
+            [function] => include_once
+        )
+
+    [5] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\index.php
+            [line] => 16
+            [args] => Array
+                (
+                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\conteudo.php
+                )
+
+            [function] => include_once
+        )
+
+)
+
+Trace File: D:\htdocs\cratos\Ecommerce-Cratos\source\funcoes\crud\crud.php
+Trace Line: 55
+File: D:\htdocs\cratos\Ecommerce-Cratos\source\funcoes\crud\crud.php
+Line: 55
+Throwable: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Texto' in 'field list'
+Code: 42S22
+Trace: Array
+(
+    [0] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\source\funcoes\crud\crud.php
+            [line] => 55
+            [function] => execute
+            [class] => PDOStatement
+            [type] => ->
+            [args] => Array
+                (
+                )
+
+        )
+
+    [1] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\pagina\produto\produtoBannerPromocao.php
+            [line] => 2
+            [function] => listarGeral
+            [args] => Array
+                (
+                    [0] => Img, Titulo, Texto, DataFinal
+                    [1] => banner WHERE NOW() BETWEEN DataInicial AND DataFinal AND Tipo = 'Central' AND Ativo = 'A' ORDER BY Idbanner DESC
+                )
+
+        )
+
+    [2] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\conteudoloja.php
+            [line] => 5
+            [args] => Array
+                (
+                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\pagina\produto\produtoBannerPromocao.php
+                )
+
+            [function] => include_once
+        )
+
+    [3] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\index.php
+            [line] => 27
+            [args] => Array
+                (
+                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\conteudoloja.php
+                )
+
+            [function] => include_once
+        )
+
+    [4] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\conteudo.php
+            [line] => 10
+            [args] => Array
+                (
+                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\index.php
+                )
+
+            [function] => include_once
+        )
+
+    [5] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\index.php
+            [line] => 16
+            [args] => Array
+                (
+                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\conteudo.php
+                )
+
+            [function] => include_once
+        )
+
+)
+
+Trace File: D:\htdocs\cratos\Ecommerce-Cratos\source\funcoes\crud\crud.php
+Trace Line: 55
+File: D:\htdocs\cratos\Ecommerce-Cratos\source\funcoes\crud\crud.php
+Line: 55
+Throwable: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Texto' in 'field list'
+Code: 42S22
+Trace: Array
+(
+    [0] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\source\funcoes\crud\crud.php
+            [line] => 55
+            [function] => execute
+            [class] => PDOStatement
+            [type] => ->
+            [args] => Array
+                (
+                )
+
+        )
+
+    [1] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\pagina\produto\produtoBannerPromocao.php
+            [line] => 2
+            [function] => listarGeral
+            [args] => Array
+                (
+                    [0] => Img, Titulo, Texto, DataFinal
+                    [1] => banner WHERE NOW() BETWEEN DataInicial AND DataFinal AND Tipo = 'Central' AND Ativo = 'A' ORDER BY Idbanner DESC
+                )
+
+        )
+
+    [2] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\conteudoloja.php
+            [line] => 5
+            [args] => Array
+                (
+                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\pagina\produto\produtoBannerPromocao.php
+                )
+
+            [function] => include_once
+        )
+
+    [3] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\index.php
+            [line] => 31
+            [args] => Array
+                (
+                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\conteudoloja.php
+                )
+
+            [function] => include_once
+        )
+
+    [4] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\conteudo.php
+            [line] => 10
+            [args] => Array
+                (
+                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\index.php
+                )
+
+            [function] => include_once
+        )
+
+    [5] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\index.php
+            [line] => 16
+            [args] => Array
+                (
+                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\conteudo.php
+                )
+
+            [function] => include_once
+        )
+
+)
+
+Trace File: D:\htdocs\cratos\Ecommerce-Cratos\source\funcoes\crud\crud.php
+Trace Line: 55
+File: D:\htdocs\cratos\Ecommerce-Cratos\source\funcoes\crud\crud.php
+Line: 55
+Throwable: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Texto' in 'field list'
+Code: 42S22
+Trace: Array
+(
+    [0] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\source\funcoes\crud\crud.php
+            [line] => 55
+            [function] => execute
+            [class] => PDOStatement
+            [type] => ->
+            [args] => Array
+                (
+                )
+
+        )
+
+    [1] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\pagina\produto\produtoBannerPromocao.php
+            [line] => 2
+            [function] => listarGeral
+            [args] => Array
+                (
+                    [0] => Img, Titulo, Texto, DataFinal
+                    [1] => banner WHERE NOW() BETWEEN DataInicial AND DataFinal AND Tipo = 'Central' AND Ativo = 'A' ORDER BY Idbanner DESC
+                )
+
+        )
+
+    [2] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\conteudoloja.php
+            [line] => 5
+            [args] => Array
+                (
+                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\pagina\produto\produtoBannerPromocao.php
+                )
+
+            [function] => include_once
+        )
+
+    [3] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\index.php
+            [line] => 31
+            [args] => Array
+                (
+                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\conteudoloja.php
+                )
+
+            [function] => include_once
+        )
+
+    [4] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\conteudo.php
+            [line] => 17
+            [args] => Array
+                (
+                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\index.php
+                )
+
+            [function] => include_once
+        )
+
+    [5] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\index.php
+            [line] => 16
+            [args] => Array
+                (
+                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\conteudo.php
+                )
+
+            [function] => include_once
+        )
+
+)
+
+Trace File: D:\htdocs\cratos\Ecommerce-Cratos\source\funcoes\crud\crud.php
+Trace Line: 55
+File: D:\htdocs\cratos\Ecommerce-Cratos\source\funcoes\crud\crud.php
+Line: 55
+Throwable: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Texto' in 'field list'
+Code: 42S22
+Trace: Array
+(
+    [0] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\source\funcoes\crud\crud.php
+            [line] => 55
+            [function] => execute
+            [class] => PDOStatement
+            [type] => ->
+            [args] => Array
+                (
+                )
+
+        )
+
+    [1] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\pagina\produto\produtoBannerPromocao.php
+            [line] => 2
+            [function] => listarGeral
+            [args] => Array
+                (
+                    [0] => Img, Titulo, Texto, DataFinal
+                    [1] => banner WHERE NOW() BETWEEN DataInicial AND DataFinal AND Tipo = 'Central' AND Ativo = 'A' ORDER BY Idbanner DESC
+                )
+
+        )
+
+    [2] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\conteudoloja.php
+            [line] => 5
+            [args] => Array
+                (
+                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\pagina\produto\produtoBannerPromocao.php
+                )
+
+            [function] => include_once
+        )
+
+    [3] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\index.php
+            [line] => 27
+            [args] => Array
+                (
+                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\conteudoloja.php
+                )
+
+            [function] => include_once
+        )
+
+    [4] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\conteudo.php
+            [line] => 10
+            [args] => Array
+                (
+                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\index.php
+                )
+
+            [function] => include_once
+        )
+
+    [5] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\index.php
+            [line] => 16
+            [args] => Array
+                (
+                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\conteudo.php
+                )
+
+            [function] => include_once
+        )
+
+)
+
+Trace File: D:\htdocs\cratos\Ecommerce-Cratos\source\funcoes\crud\crud.php
+Trace Line: 55
+File: D:\htdocs\cratos\Ecommerce-Cratos\source\funcoes\crud\crud.php
+Line: 55
+Throwable: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Texto' in 'field list'
+Code: 42S22
+Trace: Array
+(
+    [0] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\source\funcoes\crud\crud.php
+            [line] => 55
+            [function] => execute
+            [class] => PDOStatement
+            [type] => ->
+            [args] => Array
+                (
+                )
+
+        )
+
+    [1] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\pagina\produto\produtoBannerPromocao.php
+            [line] => 2
+            [function] => listarGeral
+            [args] => Array
+                (
+                    [0] => Img, Titulo, Texto, DataFinal
+                    [1] => banner WHERE NOW() BETWEEN DataInicial AND DataFinal AND Tipo = 'Central' AND Ativo = 'A' ORDER BY Idbanner DESC
+                )
+
+        )
+
+    [2] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\conteudoloja.php
+            [line] => 5
+            [args] => Array
+                (
+                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\pagina\produto\produtoBannerPromocao.php
+                )
+
+            [function] => include_once
+        )
+
+    [3] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\index.php
+            [line] => 27
+            [args] => Array
+                (
+                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\conteudoloja.php
+                )
+
+            [function] => include_once
+        )
+
+    [4] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\conteudo.php
+            [line] => 10
+            [args] => Array
+                (
+                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\index.php
+                )
+
+            [function] => include_once
+        )
+
+    [5] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\index.php
+            [line] => 16
+            [args] => Array
+                (
+                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\conteudo.php
+                )
+
+            [function] => include_once
+        )
+
+)
+
+Trace File: D:\htdocs\cratos\Ecommerce-Cratos\source\funcoes\crud\crud.php
+Trace Line: 55
+File: D:\htdocs\cratos\Ecommerce-Cratos\source\funcoes\crud\crud.php
+Line: 55
+Throwable: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Texto' in 'field list'
+Code: 42S22
+Trace: Array
+(
+    [0] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\source\funcoes\crud\crud.php
+            [line] => 55
+            [function] => execute
+            [class] => PDOStatement
+            [type] => ->
+            [args] => Array
+                (
+                )
+
+        )
+
+    [1] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\pagina\produto\produtoBannerPromocao.php
+            [line] => 2
+            [function] => listarGeral
+            [args] => Array
+                (
+                    [0] => Img, Titulo, Texto, DataFinal
+                    [1] => banner WHERE NOW() BETWEEN DataInicial AND DataFinal AND Tipo = 'Central' AND Ativo = 'A' ORDER BY Idbanner DESC
+                )
+
+        )
+
+    [2] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\conteudoloja.php
+            [line] => 5
+            [args] => Array
+                (
+                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\pagina\produto\produtoBannerPromocao.php
+                )
+
+            [function] => include_once
+        )
+
+    [3] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\index.php
+            [line] => 27
+            [args] => Array
+                (
+                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\conteudoloja.php
+                )
+
+            [function] => include_once
+        )
+
+    [4] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\conteudo.php
+            [line] => 10
+            [args] => Array
+                (
+                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\index.php
+                )
+
+            [function] => include_once
+        )
+
+    [5] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\index.php
+            [line] => 16
+            [args] => Array
+                (
+                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\conteudo.php
+                )
+
+            [function] => include_once
+        )
+
+)
+
+Trace File: D:\htdocs\cratos\Ecommerce-Cratos\source\funcoes\crud\crud.php
+Trace Line: 55
+File: D:\htdocs\cratos\Ecommerce-Cratos\source\funcoes\crud\crud.php
+Line: 55
+Throwable: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Texto' in 'field list'
+Code: 42S22
+Trace: Array
+(
+    [0] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\source\funcoes\crud\crud.php
+            [line] => 55
+            [function] => execute
+            [class] => PDOStatement
+            [type] => ->
+            [args] => Array
+                (
+                )
+
+        )
+
+    [1] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\pagina\produto\produtoBannerPromocao.php
+            [line] => 2
+            [function] => listarGeral
+            [args] => Array
+                (
+                    [0] => Img, Titulo, Texto, DataFinal
+                    [1] => banner WHERE NOW() BETWEEN DataInicial AND DataFinal AND Tipo = 'Central' AND Ativo = 'A' ORDER BY Idbanner DESC
+                )
+
+        )
+
+    [2] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\conteudoloja.php
+            [line] => 5
+            [args] => Array
+                (
+                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\pagina\produto\produtoBannerPromocao.php
+                )
+
+            [function] => include_once
+        )
+
+    [3] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\index.php
+            [line] => 31
+            [args] => Array
+                (
+                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\conteudoloja.php
+                )
+
+            [function] => include_once
+        )
+
+    [4] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\conteudo.php
+            [line] => 10
+            [args] => Array
+                (
+                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\index.php
+                )
+
+            [function] => include_once
+        )
+
+    [5] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\index.php
+            [line] => 16
+            [args] => Array
+                (
+                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\conteudo.php
+                )
+
+            [function] => include_once
+        )
+
+)
+
+Trace File: D:\htdocs\cratos\Ecommerce-Cratos\source\funcoes\crud\crud.php
+Trace Line: 55
+File: D:\htdocs\cratos\Ecommerce-Cratos\source\funcoes\crud\crud.php
+Line: 55
+Throwable: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Texto' in 'field list'
+Code: 42S22
+Trace: Array
+(
+    [0] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\source\funcoes\crud\crud.php
+            [line] => 55
+            [function] => execute
+            [class] => PDOStatement
+            [type] => ->
+            [args] => Array
+                (
+                )
+
+        )
+
+    [1] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\pagina\produto\produtoBannerPromocao.php
+            [line] => 2
+            [function] => listarGeral
+            [args] => Array
+                (
+                    [0] => Img, Titulo, Texto, DataFinal
+                    [1] => banner WHERE NOW() BETWEEN DataInicial AND DataFinal AND Tipo = 'Central' AND Ativo = 'A' ORDER BY Idbanner DESC
+                )
+
+        )
+
+    [2] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\conteudoloja.php
+            [line] => 5
+            [args] => Array
+                (
+                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\pagina\produto\produtoBannerPromocao.php
+                )
+
+            [function] => include_once
+        )
+
+    [3] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\index.php
+            [line] => 31
+            [args] => Array
+                (
+                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\conteudoloja.php
+                )
+
+            [function] => include_once
+        )
+
+    [4] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\conteudo.php
+            [line] => 17
+            [args] => Array
+                (
+                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\index.php
+                )
+
+            [function] => include_once
+        )
+
+    [5] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\index.php
+            [line] => 16
+            [args] => Array
+                (
+                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\conteudo.php
+                )
+
+            [function] => include_once
+        )
+
+)
+
+Trace File: D:\htdocs\cratos\Ecommerce-Cratos\source\funcoes\crud\crud.php
+Trace Line: 55
+File: D:\htdocs\cratos\Ecommerce-Cratos\source\funcoes\crud\crud.php
+Line: 55
+Throwable: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Texto' in 'field list'
+Code: 42S22
+Trace: Array
+(
+    [0] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\source\funcoes\crud\crud.php
+            [line] => 55
+            [function] => execute
+            [class] => PDOStatement
+            [type] => ->
+            [args] => Array
+                (
+                )
+
+        )
+
+    [1] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\pagina\produto\produtoBannerPromocao.php
+            [line] => 2
+            [function] => listarGeral
+            [args] => Array
+                (
+                    [0] => Img, Titulo, Texto, DataFinal
+                    [1] => banner WHERE NOW() BETWEEN DataInicial AND DataFinal AND Tipo = 'Central' AND Ativo = 'A' ORDER BY Idbanner DESC
+                )
+
+        )
+
+    [2] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\conteudoloja.php
+            [line] => 5
+            [args] => Array
+                (
+                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\pagina\produto\produtoBannerPromocao.php
+                )
+
+            [function] => include_once
+        )
+
+    [3] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\index.php
+            [line] => 27
+            [args] => Array
+                (
+                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\conteudoloja.php
+                )
+
+            [function] => include_once
+        )
+
+    [4] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\conteudo.php
+            [line] => 10
+            [args] => Array
+                (
+                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\index.php
+                )
+
+            [function] => include_once
+        )
+
+    [5] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\index.php
+            [line] => 16
+            [args] => Array
+                (
+                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\conteudo.php
+                )
+
+            [function] => include_once
+        )
+
+)
+
+Trace File: D:\htdocs\cratos\Ecommerce-Cratos\source\funcoes\crud\crud.php
+Trace Line: 55
+File: D:\htdocs\cratos\Ecommerce-Cratos\source\funcoes\crud\crud.php
+Line: 55
+Throwable: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Texto' in 'field list'
+Code: 42S22
+Trace: Array
+(
+    [0] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\source\funcoes\crud\crud.php
+            [line] => 55
+            [function] => execute
+            [class] => PDOStatement
+            [type] => ->
+            [args] => Array
+                (
+                )
+
+        )
+
+    [1] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\pagina\produto\produtoBannerPromocao.php
+            [line] => 2
+            [function] => listarGeral
+            [args] => Array
+                (
+                    [0] => Img, Titulo, Texto, DataFinal
+                    [1] => banner WHERE NOW() BETWEEN DataInicial AND DataFinal AND Tipo = 'Central' AND Ativo = 'A' ORDER BY Idbanner DESC
+                )
+
+        )
+
+    [2] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\conteudoloja.php
+            [line] => 5
+            [args] => Array
+                (
+                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\pagina\produto\produtoBannerPromocao.php
+                )
+
+            [function] => include_once
+        )
+
+    [3] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\index.php
+            [line] => 27
+            [args] => Array
+                (
+                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\conteudoloja.php
+                )
+
+            [function] => include_once
+        )
+
+    [4] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\conteudo.php
+            [line] => 10
+            [args] => Array
+                (
+                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\index.php
+                )
+
+            [function] => include_once
+        )
+
+    [5] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\index.php
+            [line] => 16
+            [args] => Array
+                (
+                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\conteudo.php
+                )
+
+            [function] => include_once
+        )
+
+)
+
+Trace File: D:\htdocs\cratos\Ecommerce-Cratos\source\funcoes\crud\crud.php
+Trace Line: 55
+File: D:\htdocs\cratos\Ecommerce-Cratos\source\funcoes\crud\crud.php
+Line: 55
+Throwable: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Texto' in 'field list'
+Code: 42S22
+Trace: Array
+(
+    [0] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\source\funcoes\crud\crud.php
+            [line] => 55
+            [function] => execute
+            [class] => PDOStatement
+            [type] => ->
+            [args] => Array
+                (
+                )
+
+        )
+
+    [1] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\pagina\produto\produtoBannerPromocao.php
+            [line] => 2
+            [function] => listarGeral
+            [args] => Array
+                (
+                    [0] => Img, Titulo, Texto, DataFinal
+                    [1] => banner WHERE NOW() BETWEEN DataInicial AND DataFinal AND Tipo = 'Central' AND Ativo = 'A' ORDER BY Idbanner DESC
+                )
+
+        )
+
+    [2] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\conteudoloja.php
+            [line] => 5
+            [args] => Array
+                (
+                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\pagina\produto\produtoBannerPromocao.php
+                )
+
+            [function] => include_once
+        )
+
+    [3] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\index.php
+            [line] => 31
+            [args] => Array
+                (
+                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\conteudoloja.php
+                )
+
+            [function] => include_once
+        )
+
+    [4] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\conteudo.php
+            [line] => 10
+            [args] => Array
+                (
+                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\index.php
+                )
+
+            [function] => include_once
+        )
+
+    [5] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\index.php
+            [line] => 16
+            [args] => Array
+                (
+                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\conteudo.php
+                )
+
+            [function] => include_once
+        )
+
+)
+
+Trace File: D:\htdocs\cratos\Ecommerce-Cratos\source\funcoes\crud\crud.php
+Trace Line: 55
+File: D:\htdocs\cratos\Ecommerce-Cratos\source\funcoes\crud\crud.php
+Line: 55
+Throwable: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'idprodutovariacao' in 'where clause'
+Code: 42S22
+Trace: Array
+(
+    [0] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\source\funcoes\crud\crud.php
+            [line] => 55
+            [function] => execute
+            [class] => PDOStatement
+            [type] => ->
+            [args] => Array
+                (
+                )
+
+        )
+
+    [1] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\pagina\produto\produto.php
+            [line] => 122
+            [function] => listarGeral
+            [args] => Array
+                (
+                    [0] => foto
+                    [1] => fotoproduto WHERE idprodutovariacao='187' AND ativo = 'A'
+                )
+
+        )
+
+    [2] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\index.php
+            [line] => 24
+            [args] => Array
+                (
+                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\pagina\produto\produto.php
+                )
+
+            [function] => include_once
+        )
+
+    [3] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\conteudo.php
+            [line] => 10
+            [args] => Array
+                (
+                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\index.php
+                )
+
+            [function] => include_once
+        )
+
+    [4] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\index.php
+            [line] => 16
+            [args] => Array
+                (
+                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\conteudo.php
+                )
+
+            [function] => include_once
+        )
+
+)
+
+Trace File: D:\htdocs\cratos\Ecommerce-Cratos\source\funcoes\crud\crud.php
+Trace Line: 55
+File: D:\htdocs\cratos\Ecommerce-Cratos\source\funcoes\crud\crud.php
+Line: 55
+Throwable: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'c.estrela' in 'field list'
+Code: 42S22
+Trace: Array
+(
+    [0] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\source\funcoes\crud\crud.php
+            [line] => 55
+            [function] => execute
+            [class] => PDOStatement
+            [type] => ->
+            [args] => Array
+                (
+                )
+
+        )
+
+    [1] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\pagina\produto\produto.php
+            [line] => 293
+            [function] => listarGeral
+            [args] => Array
+                (
+                    [0] => c.comentario, c.estrela, c.cadastro, p.Nome
+                    [1] => comentarioproduto c INNER JOIN pessoa p ON p.idpessoa = c.idpessoa AND p.ativo='A' WHERE c.idprodutovariacao = 187
+                )
+
+        )
+
+    [2] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\index.php
+            [line] => 24
+            [args] => Array
+                (
+                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\pagina\produto\produto.php
+                )
+
+            [function] => include_once
+        )
+
+    [3] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\conteudo.php
+            [line] => 10
+            [args] => Array
+                (
+                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\index.php
+                )
+
+            [function] => include_once
+        )
+
+    [4] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\index.php
+            [line] => 16
+            [args] => Array
+                (
+                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\conteudo.php
+                )
+
+            [function] => include_once
+        )
+
+)
+
+Trace File: D:\htdocs\cratos\Ecommerce-Cratos\source\funcoes\crud\crud.php
+Trace Line: 55
+File: D:\htdocs\cratos\Ecommerce-Cratos\source\funcoes\crud\crud.php
+Line: 55
+Throwable: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'idprodutovariacao' in 'where clause'
+Code: 42S22
+Trace: Array
+(
+    [0] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\source\funcoes\crud\crud.php
+            [line] => 55
+            [function] => execute
+            [class] => PDOStatement
+            [type] => ->
+            [args] => Array
+                (
+                )
+
+        )
+
+    [1] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\pagina\produto\produto.php
+            [line] => 122
+            [function] => listarGeral
+            [args] => Array
+                (
+                    [0] => foto
+                    [1] => fotoproduto WHERE idprodutovariacao='187' AND ativo = 'A'
+                )
+
+        )
+
+    [2] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\index.php
+            [line] => 24
+            [args] => Array
+                (
+                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\pagina\produto\produto.php
+                )
+
+            [function] => include_once
+        )
+
+    [3] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\conteudo.php
+            [line] => 10
+            [args] => Array
+                (
+                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\index.php
+                )
+
+            [function] => include_once
+        )
+
+    [4] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\index.php
+            [line] => 16
+            [args] => Array
+                (
+                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\conteudo.php
+                )
+
+            [function] => include_once
+        )
+
+)
+
+Trace File: D:\htdocs\cratos\Ecommerce-Cratos\source\funcoes\crud\crud.php
+Trace Line: 55
+File: D:\htdocs\cratos\Ecommerce-Cratos\source\funcoes\crud\crud.php
+Line: 55

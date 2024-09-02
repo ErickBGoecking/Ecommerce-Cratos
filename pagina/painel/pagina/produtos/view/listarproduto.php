@@ -14,7 +14,7 @@
         $foto = $produto->foto;
         $variacao = listarGeral(
         "pv.altura, pv.largura,pv.peso, pv.destaque, pv.idtipovariacao,
-        e.idestoque, e.qtdatual, e.qtdvendido, e.vendaPrevia, e.custo, e.venda, e.vendapromocional, e.lote, e.vencimento"
+        e.idestoque, e.qtdatual, e.qtdvendido, e.custo, e.venda, e.vendapromocional, e.lote, e.vencimento"
         ,
         "produtovariacao pv 
         INNER JOIN estoque e ON e.idprodutovariacao = pv.idprodutovariacao
