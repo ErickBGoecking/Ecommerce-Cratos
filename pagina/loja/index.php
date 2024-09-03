@@ -36,6 +36,10 @@ include_once 'layout/footer.php';
 <script src="<?php echo $_PREFIXO ?>source/bibliotecas/jquery/jquery.min.js"></script>
 <script src="<?php echo $_PREFIXO ?>source/bibliotecas/bootstrap-3/js/bootstrap.min.js"></script>
 <script src="<?php echo $_PREFIXO ?>source/bibliotecas/slick/js/slick.min.js"></script>
-<script src="<?php echo $_PREFIXO ?>source/bibliotecas/nouislider/js/nouislider.min.js"></script>
+<script src="<?php echo $_PREFIXO ?>source/bibliotecas/novislider/js/nouislider.min.js"></script>
 <script src="<?php echo $_PREFIXO ?>source/bibliotecas/jquery/jquery.zoom.min.js"></script>
 <script src="<?php echo $_PREFIXO ?>source/js/loja/main.js"></script>
+<script src="<?php echo $_PREFIXO ?>source/js/loja/loja.js"></script>
+<script>
+    urlPrefixo = '<?php echo $_PREFIXO ;?>'
+</script>

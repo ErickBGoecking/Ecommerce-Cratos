@@ -12,7 +12,9 @@ switch ($caminho) {
     case'adm':
         include_once 'adm/adm-controle.php';
         break;
-                    
+    case'loja':
+        include_once 'loja/loja-controle.php';
+        break;
     default:
         break;
 }
