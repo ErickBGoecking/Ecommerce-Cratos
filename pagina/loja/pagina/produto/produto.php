@@ -1,79 +1,29 @@
-<style>
-    .product-preview {
-        position: relative;
-        /*width: 560px;*/
-        /*height: 315px; */
-        cursor: pointer;
-        overflow: hidden;
-        border-radius: 8px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    }
-
-    .preview-image {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        display: block;
-    }
-
-    .play-button {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        width: 44px; /* Tamanho do ícone */
-        height: 44px;
-        background: url('<?php echo $_PREFIXO ?>img/youtube/logo.webp') no-repeat center center;
-        background-size: contain;
-        opacity: 0.8;
-        transition: opacity 0.3s;
-    }
-
-    .product-preview:hover .play-button {
-        opacity: 1;
-    }
-    .radio-variacao {
-        display: none;
-    }
-
-    .radio-variacao + label {
-        display: inline-block;
-        padding: 4px 8px;
-        margin: 3px;
-        border: 2px solid #007bff;
-        border-radius: 5px;
-        background-color: #ffffff;
-        color: #007bff;
-        cursor: pointer;
-        transition: all 0.3s ease;
-        text-align: center;
-        font-size: 12px;
-    }
-    .radio-variacao:checked + label {
-        background-color: #007bff;
-        color: #ffffff;
-        border-color: #007bff;
-    }
-    .radio-variacao + label:hover {
-        background-color: #e6f0ff;
-        border-color: #007bff;
-        color: #007bff;
-    }
-</style>
+<head>
+    <link rel="stylesheet" href="<?php echo $_PREFIXO ?>source/css/loja/produto/produto.css">
+</head>
 <?php
 $produtoGet = $url[2];
 if (isset($produtoGet)) {
-    $idProduto = codificar($produtoGet, 'decodificar');
+    $idProdutoVariacaoGet = codificar($produtoGet, 'decodificar');
+    $retornoFotoProduto = listarRegistroUnico('fotoproduto', 'foto', 'idprodutovariacao', $idProdutoVariacaoGet);
+    if($retornoFotoProduto){
+        $foto = $retornoFotoProduto[0]->foto;
+    }else{
+        $foto = 'semfoto.png';
+    }
+
     $retornoProduto = listarRegistroUnico("produto p INNER JOIN produtovariacao pv ON pv.idproduto = p.idproduto AND p.ativo = 'A'
-        INNER JOIN estoque e ON e.idprodutovariacao = pv.idprodutovariacao", 'p.idproduto, p.foto, p.video, p.produto, p.descricao, 
-        pv.idprodutovariacao, pv.detalhe as descricaoVariacao, pv.altura, pv.largura, pv.peso, pv.destaque, e.idestoque, e.qtdatual, e.qtdvendido, 
-        e.vendapromocional, e.custo, e.venda, e.lote, e.vencimento', 'p.idproduto', $idProduto);
+        INNER JOIN estoque e ON e.idprodutovariacao = pv.idprodutovariacao", 'p.idproduto, p.video, p.produto, p.descricao, 
+        pv.idprodutovariacao, pv.idtipovariacao, pv.detalhe, pv.altura, pv.largura, pv.peso, pv.destaque, e.idestoque, e.qtdatual, e.qtdvendido, 
+        e.vendapromocional, e.custo, e.venda, e.lote, e.vencimento', 'pv.idprodutovariacao', $idProdutoVariacaoGet);
     if ($retornoProduto) {
+//        $tiposSelecionados = explode(',', $retornoProduto[0]->idtipovariacao);
         foreach ($retornoProduto as $itemProduto) {
             $idproduto = $itemProduto->idproduto;
             $idprodutovariacao = $itemProduto->idprodutovariacao;
+            $idtipovariacaoBd = $itemProduto->idtipovariacao;
+            $tiposSelecionados = explode(',', $idtipovariacaoBd);
             $idestoque = $itemProduto->idestoque;
-            $foto = $itemProduto->foto;
             $video = $itemProduto->video;
             parse_str(parse_url($video, PHP_URL_QUERY), $queryParams);
             if (isset($queryParams['v'])) {
@@ -82,7 +32,7 @@ if (isset($produtoGet)) {
             }
             $produto = $itemProduto->produto;
             $descricao = $itemProduto->descricao;
-            $descricaoVariacao = $itemProduto->descricaoVariacao;
+            $detalhes = $itemProduto->detalhe;
             $altura = $itemProduto->altura;
             $largura = $itemProduto->largura;
             $peso = $itemProduto->peso;
@@ -91,9 +41,6 @@ if (isset($produtoGet)) {
             $qtdvendido = $itemProduto->qtdvendido;
             $venda = $itemProduto->venda;
             $vendapromocional = $itemProduto->vendapromocional;
-            if (empty($foto)) {
-                $foto = 'sem-imagem.jpg';
-            }
         }
         ?>
         <div id="breadcrumb" class="section">
@@ -119,7 +66,7 @@ if (isset($produtoGet)) {
                                      alt="<?php echo $produto; ?>" title="<?php echo $produto; ?>">
                             </div>
                             <?php
-                            $retornoFotoProduto = listarGeral('foto', "fotoproduto WHERE idproduto='$idproduto' AND ativo = 'A'");
+                            $retornoFotoProduto = listarGeral('foto', "fotoproduto WHERE idprodutovariacao='$idprodutovariacao' AND ativo = 'A'");
                             if ($retornoFotoProduto) {
                                 foreach ($retornoFotoProduto as $itemFotoProduto) {
                                     $fotoProdutoVariacao = $itemFotoProduto->foto;
@@ -183,7 +130,7 @@ if (isset($produtoGet)) {
                         </div>
                     </div>
                     <div class="col-md-5">
-                        <div class="product-details">
+                        <div class="product-details" id="produto-variacao">
                             <h2 class="product-name"><?php echo $produto; ?></h2>
                             <div>
                                 <div class="product-rating">
@@ -220,8 +167,8 @@ if (isset($produtoGet)) {
                                     foreach ($variacoes as $variacao) {
                                         if ($variacao->idtipovariacao == $tipo && isset($categorias[$variacao->pai])) {
                                             $categoria = $categorias[$variacao->pai];
-                                            if (!in_array($variacao->variacao, $variacoesOrganizadas[$categoria])) {
-                                                $variacoesOrganizadas[$categoria][] = $variacao->variacao;
+                                            if (!array_key_exists($variacao->variacao, $variacoesOrganizadas[$categoria])) {
+                                                $variacoesOrganizadas[$categoria][$variacao->idtipovariacao] = $variacao->variacao;
                                             }
                                         }
                                     }
@@ -230,12 +177,15 @@ if (isset($produtoGet)) {
                             foreach ($variacoesOrganizadas as $categoria => $variacoes) {
                                 if (!empty($variacoes)) {
                                     echo "<div><strong>$categoria:</strong></div>";
-                                    foreach ($variacoes as $variacao) {
+//                                    $isFirst = true;
+                                    foreach ($variacoes as $idtipovariacao => $variacao) {
                                         $id = strtolower($categoria) . "_" . strtolower(str_replace(' ', '_', $variacao));
-                                        $checked = $variacao ? 'checked' : '';
+//                                        $checked = $isFirst ? 'checked' : '';
+//                                        $isFirst = false;
+                                        $checked = in_array($idtipovariacao, $tiposSelecionados) ? 'checked' : '';
                                         echo "<div style='display: inline-block;'>";
-                                        echo "<input type='radio' class='radio-variacao' id='$id' name='$categoria' value='$variacao' $checked>";
-                                        echo "<label for='$id'>$variacao $idprodutovariacao</label>";
+                                        echo "<input type='radio' class='radio-variacao' id='$id' name='$categoria' value='$variacao' data-id='$idtipovariacao' data-prod='$idproduto' $checked>";
+                                        echo "<label for='$id'>$variacao (ID: $idtipovariacao)</label>";
                                         echo "</div>";
                                     }
                                     echo "<br>";
@@ -317,7 +267,7 @@ if (isset($produtoGet)) {
                                 <div id="tabDetalhes" class="tab-pane fade in">
                                     <div class="row">
                                         <div class="col-md-12">
-                                            <p><?php echo $descricaoVariacao; ?></p>
+                                            <p><?php echo $detalhes; ?></p>
                                         </div>
                                     </div>
                                 </div>
@@ -637,3 +587,5 @@ if (isset($produtoGet)) {
         </div>
     </div>
 </div>
+<script src="<?php echo $_PREFIXO ?>source/js/loja/produto/produto.js"></script>
+

@@ -20,11 +20,12 @@
                 <div class="row">
                     <div class="products-tabs">
                         <?php
-                        $listaProduto = listarGeral('idproduto, idcategoria, foto, produto, descricao', "produto WHERE ativo = 'A' ORDER BY idproduto DESC LIMIT 12");
+                        $listaProduto = listarGeral('p.idproduto, p.idcategoria, fp.foto, p.produto, p.descricao, pv.idprodutovariacao', "produto p INNER JOIN produtovariacao pv  ON pv.idproduto = p.idproduto INNER JOIN fotoproduto fp  ON pv.idprodutovariacao = fp.idprodutovariacao WHERE p.ativo = 'A' GROUP BY p.idproduto ORDER BY p.idproduto DESC LIMIT 12");
                         if ($listaProduto) {
                             $contador = 0;
                             foreach ($listaProduto as $itemProduto) {
                                 $contador++;
+                                $idprodutovariacao = $itemProduto->idprodutovariacao;
                                 $idproduto = $itemProduto->idproduto;
                                 $produto = $itemProduto->produto;
                                 $foto = $itemProduto->foto;
@@ -75,7 +76,7 @@
                                         </div>
                                     </div>
                                     <div class="add-to-cart">
-                                        <a href="loja/produto/<?php echo codificar($idproduto,'codificar');?>&id=<?php echo $idproduto?>" class="add-to-cart-btn-link"><i class="fa fa-shopping-cart"></i>
+                                        <a href="loja/produto/<?php echo codificar($idprodutovariacao,'codificar');?>" class="add-to-cart-btn-link"><i class="fa fa-shopping-cart"></i>
                                             Adicionar
                                         </a>
                                     </div>
