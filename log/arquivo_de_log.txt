@@ -28217,6 +28217,7 @@ Trace File: D:\htdocs\Cratos\Ecommerce-Cratos\source\funcoes\crud\crud.php
 Trace Line: 55
 File: D:\htdocs\Cratos\Ecommerce-Cratos\source\funcoes\crud\crud.php
 Line: 55
+<<<<<<< HEAD
 Throwable: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'idproduto' in 'where clause'
 Code: 42S22
 Trace: Array
@@ -28290,12 +28291,19 @@ Trace Line: 55
 File: D:\htdocs\cratos\Ecommerce-Cratos\source\funcoes\crud\crud.php
 Line: 55
 Throwable: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '' at line 1
+=======
+Throwable: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '' at line 9
+>>>>>>> fernando2
 Code: 42000
 Trace: Array
 (
     [0] => Array
         (
+<<<<<<< HEAD
             [file] => D:\htdocs\cratos\Ecommerce-Cratos\source\funcoes\crud\crud.php
+=======
+            [file] => D:\htdocs\Cratos\Ecommerce-Cratos\source\funcoes\crud\crud.php
+>>>>>>> fernando2
             [line] => 55
             [function] => execute
             [class] => PDOStatement
@@ -28308,6 +28316,7 @@ Trace: Array
 
     [1] => Array
         (
+<<<<<<< HEAD
             [file] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\pagina\produto\produto.php
             [line] => 299
             [function] => listarGeral
@@ -28315,6 +28324,1517 @@ Trace: Array
                 (
                     [0] => c.comentario, c.estrela, c.cadastro, p.Nome
                     [1] => comentarioproduto c INNER JOIN pessoa p ON p.idpessoa = c.idpessoa AND p.ativo='A' WHERE c.idprodutovariacao = 
+=======
+            [file] => D:\htdocs\Cratos\Ecommerce-Cratos\pagina\painel\pagina\produtos\view\editarProduto.php
+            [line] => 11
+            [function] => listarGeral
+            [args] => Array
+                (
+                    [0] => 
+p.idcategoria, p.foto, p.video, p.produto, p.descricao, p.ativo,
+pv.idprodutovariacao, pv.idtipovariacao, pv.detalhe, pv.altura, pv.largura, pv.comprimento, pv.peso, pv.codigosku, pv.codigobarras,
+e.idfornecedor, e.custo, e.venda, e.vendapromocional
+
+                    [1] => 
+produtovariacao pv
+INNER JOIN produto p ON p.idproduto = pv.idproduto
+INNER JOIN estoque e ON e.idprodutovariacao = pv.idprodutovariacao
+WHERE idproduto = 
+
+>>>>>>> fernando2
+                )
+
+        )
+
+    [2] => Array
+        (
+<<<<<<< HEAD
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\index.php
+            [line] => 24
+            [args] => Array
+                (
+                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\pagina\produto\produto.php
+=======
+            [file] => D:\htdocs\Cratos\Ecommerce-Cratos\pagina\painel\pagina\produtos\produtos.php
+            [line] => 11
+            [args] => Array
+                (
+                    [0] => D:\htdocs\Cratos\Ecommerce-Cratos\pagina\painel\pagina\produtos\view\editarProduto.php
+>>>>>>> fernando2
+                )
+
+            [function] => include_once
+        )
+
+    [3] => Array
+        (
+<<<<<<< HEAD
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\conteudo.php
+            [line] => 10
+            [args] => Array
+                (
+                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\index.php
+=======
+            [file] => D:\htdocs\Cratos\Ecommerce-Cratos\pagina\painel\index.php
+            [line] => 109
+            [args] => Array
+                (
+                    [0] => D:\htdocs\Cratos\Ecommerce-Cratos\pagina\painel\pagina\produtos\produtos.php
+>>>>>>> fernando2
+                )
+
+            [function] => include_once
+        )
+
+    [4] => Array
+        (
+<<<<<<< HEAD
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\index.php
+            [line] => 16
+            [args] => Array
+                (
+                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\conteudo.php
+                )
+
+            [function] => include_once
+        )
+
+)
+
+Trace File: D:\htdocs\cratos\Ecommerce-Cratos\source\funcoes\crud\crud.php
+Trace Line: 55
+File: D:\htdocs\cratos\Ecommerce-Cratos\source\funcoes\crud\crud.php
+Line: 55
+Throwable: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'p.foto' in 'field list'
+Code: 42S22
+Trace: Array
+(
+    [0] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\source\funcoes\crud\crud.php
+            [line] => 55
+            [function] => execute
+            [class] => PDOStatement
+            [type] => ->
+            [args] => Array
+                (
+                )
+
+        )
+
+    [1] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\pagina\produto\lista.php
+            [line] => 23
+            [function] => listarGeral
+            [args] => Array
+                (
+                    [0] => p.idproduto, p.idcategoria, p.foto, p.produto, p.descricao, pv.idprodutovariacao
+                    [1] => produto p INNER JOIN produtovariacao pv  ON pv.idproduto = p.idproduto WHERE p.ativo = 'A' GROUP BY p.idproduto ORDER BY p.idproduto DESC LIMIT 12
+                )
+
+        )
+
+    [2] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\conteudoloja.php
+            [line] => 3
+            [args] => Array
+                (
+                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\pagina\produto\lista.php
+                )
+
+            [function] => include_once
+        )
+
+    [3] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\index.php
+            [line] => 31
+            [args] => Array
+                (
+                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\conteudoloja.php
+                )
+
+            [function] => include_once
+        )
+
+    [4] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\conteudo.php
+            [line] => 17
+            [args] => Array
+                (
+                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\index.php
+=======
+            [file] => D:\htdocs\Cratos\Ecommerce-Cratos\conteudo.php
+            [line] => 7
+            [args] => Array
+                (
+                    [0] => D:\htdocs\Cratos\Ecommerce-Cratos\pagina\painel\index.php
+>>>>>>> fernando2
+                )
+
+            [function] => include_once
+        )
+
+    [5] => Array
+        (
+<<<<<<< HEAD
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\index.php
+            [line] => 16
+            [args] => Array
+                (
+                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\conteudo.php
+=======
+            [file] => D:\htdocs\Cratos\Ecommerce-Cratos\index.php
+            [line] => 16
+            [args] => Array
+                (
+                    [0] => D:\htdocs\Cratos\Ecommerce-Cratos\conteudo.php
+>>>>>>> fernando2
+                )
+
+            [function] => include_once
+        )
+
+)
+
+<<<<<<< HEAD
+Trace File: D:\htdocs\cratos\Ecommerce-Cratos\source\funcoes\crud\crud.php
+Trace Line: 55
+File: D:\htdocs\cratos\Ecommerce-Cratos\source\funcoes\crud\crud.php
+Line: 55
+Throwable: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'p.foto' in 'field list'
+Code: 42S22
+=======
+Trace File: D:\htdocs\Cratos\Ecommerce-Cratos\source\funcoes\crud\crud.php
+Trace Line: 55
+File: D:\htdocs\Cratos\Ecommerce-Cratos\source\funcoes\crud\crud.php
+Line: 55
+Throwable: SQLSTATE[23000]: Integrity constraint violation: 1052 Column 'idproduto' in where clause is ambiguous
+Code: 23000
+>>>>>>> fernando2
+Trace: Array
+(
+    [0] => Array
+        (
+<<<<<<< HEAD
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\source\funcoes\crud\crud.php
+=======
+            [file] => D:\htdocs\Cratos\Ecommerce-Cratos\source\funcoes\crud\crud.php
+>>>>>>> fernando2
+            [line] => 55
+            [function] => execute
+            [class] => PDOStatement
+            [type] => ->
+            [args] => Array
+                (
+                )
+
+        )
+
+    [1] => Array
+        (
+<<<<<<< HEAD
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\pagina\produto\lista.php
+            [line] => 23
+            [function] => listarGeral
+            [args] => Array
+                (
+                    [0] => p.idproduto, p.idcategoria, p.foto, p.produto, p.descricao, pv.idprodutovariacao
+                    [1] => produto p INNER JOIN produtovariacao pv  ON pv.idproduto = p.idproduto WHERE p.ativo = 'A' GROUP BY p.idproduto ORDER BY p.idproduto DESC LIMIT 12
+=======
+            [file] => D:\htdocs\Cratos\Ecommerce-Cratos\pagina\painel\pagina\produtos\view\editarProduto.php
+            [line] => 11
+            [function] => listarGeral
+            [args] => Array
+                (
+                    [0] => 
+p.idcategoria, p.foto, p.video, p.produto, p.descricao, p.ativo,
+pv.idprodutovariacao, pv.idtipovariacao, pv.detalhe, pv.altura, pv.largura, pv.comprimento, pv.peso, pv.codigosku, pv.codigobarras,
+e.idfornecedor, e.custo, e.venda, e.vendapromocional
+
+                    [1] => 
+produtovariacao pv
+INNER JOIN produto p ON p.idproduto = pv.idproduto
+INNER JOIN estoque e ON e.idprodutovariacao = pv.idprodutovariacao
+WHERE idproduto = 144
+
+>>>>>>> fernando2
+                )
+
+        )
+
+    [2] => Array
+        (
+<<<<<<< HEAD
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\conteudoloja.php
+            [line] => 3
+            [args] => Array
+                (
+                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\pagina\produto\lista.php
+=======
+            [file] => D:\htdocs\Cratos\Ecommerce-Cratos\pagina\painel\pagina\produtos\produtos.php
+            [line] => 11
+            [args] => Array
+                (
+                    [0] => D:\htdocs\Cratos\Ecommerce-Cratos\pagina\painel\pagina\produtos\view\editarProduto.php
+>>>>>>> fernando2
+                )
+
+            [function] => include_once
+        )
+
+    [3] => Array
+        (
+<<<<<<< HEAD
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\index.php
+            [line] => 27
+            [args] => Array
+                (
+                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\conteudoloja.php
+=======
+            [file] => D:\htdocs\Cratos\Ecommerce-Cratos\pagina\painel\index.php
+            [line] => 109
+            [args] => Array
+                (
+                    [0] => D:\htdocs\Cratos\Ecommerce-Cratos\pagina\painel\pagina\produtos\produtos.php
+>>>>>>> fernando2
+                )
+
+            [function] => include_once
+        )
+
+    [4] => Array
+        (
+<<<<<<< HEAD
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\conteudo.php
+            [line] => 10
+            [args] => Array
+                (
+                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\index.php
+=======
+            [file] => D:\htdocs\Cratos\Ecommerce-Cratos\conteudo.php
+            [line] => 7
+            [args] => Array
+                (
+                    [0] => D:\htdocs\Cratos\Ecommerce-Cratos\pagina\painel\index.php
+>>>>>>> fernando2
+                )
+
+            [function] => include_once
+        )
+
+    [5] => Array
+        (
+<<<<<<< HEAD
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\index.php
+            [line] => 16
+            [args] => Array
+                (
+                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\conteudo.php
+=======
+            [file] => D:\htdocs\Cratos\Ecommerce-Cratos\index.php
+            [line] => 16
+            [args] => Array
+                (
+                    [0] => D:\htdocs\Cratos\Ecommerce-Cratos\conteudo.php
+>>>>>>> fernando2
+                )
+
+            [function] => include_once
+        )
+
+)
+
+<<<<<<< HEAD
+Trace File: D:\htdocs\cratos\Ecommerce-Cratos\source\funcoes\crud\crud.php
+Trace Line: 55
+File: D:\htdocs\cratos\Ecommerce-Cratos\source\funcoes\crud\crud.php
+Line: 55
+Throwable: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'p.foto' in 'field list'
+Code: 42S22
+=======
+Trace File: D:\htdocs\Cratos\Ecommerce-Cratos\source\funcoes\crud\crud.php
+Trace Line: 55
+File: D:\htdocs\Cratos\Ecommerce-Cratos\source\funcoes\crud\crud.php
+Line: 55
+Throwable: SQLSTATE[23000]: Integrity constraint violation: 1052 Column 'idproduto' in where clause is ambiguous
+Code: 23000
+>>>>>>> fernando2
+Trace: Array
+(
+    [0] => Array
+        (
+<<<<<<< HEAD
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\source\funcoes\crud\crud.php
+=======
+            [file] => D:\htdocs\Cratos\Ecommerce-Cratos\source\funcoes\crud\crud.php
+>>>>>>> fernando2
+            [line] => 55
+            [function] => execute
+            [class] => PDOStatement
+            [type] => ->
+            [args] => Array
+                (
+                )
+
+        )
+
+    [1] => Array
+        (
+<<<<<<< HEAD
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\pagina\produto\lista.php
+            [line] => 23
+            [function] => listarGeral
+            [args] => Array
+                (
+                    [0] => p.idproduto, p.idcategoria, p.foto, p.produto, p.descricao, pv.idprodutovariacao
+                    [1] => produto p INNER JOIN produtovariacao pv  ON pv.idproduto = p.idproduto WHERE p.ativo = 'A' GROUP BY p.idproduto ORDER BY p.idproduto DESC LIMIT 12
+=======
+            [file] => D:\htdocs\Cratos\Ecommerce-Cratos\pagina\painel\pagina\produtos\view\editarProduto.php
+            [line] => 12
+            [function] => listarGeral
+            [args] => Array
+                (
+                    [0] => 
+p.idcategoria, p.foto, p.video, p.produto, p.descricao, p.ativo,
+pv.idprodutovariacao, pv.idtipovariacao, pv.detalhe, pv.altura, pv.largura, pv.comprimento, pv.peso, pv.codigosku, pv.codigobarras,
+e.idfornecedor, e.custo, e.venda, e.vendapromocional
+
+                    [1] => 
+produtovariacao pv
+INNER JOIN produto p ON p.idproduto = pv.idproduto
+INNER JOIN estoque e ON e.idprodutovariacao = pv.idprodutovariacao
+WHERE idproduto = 144
+
+>>>>>>> fernando2
+                )
+
+        )
+
+    [2] => Array
+        (
+<<<<<<< HEAD
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\conteudoloja.php
+            [line] => 3
+            [args] => Array
+                (
+                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\pagina\produto\lista.php
+=======
+            [file] => D:\htdocs\Cratos\Ecommerce-Cratos\pagina\painel\pagina\produtos\produtos.php
+            [line] => 11
+            [args] => Array
+                (
+                    [0] => D:\htdocs\Cratos\Ecommerce-Cratos\pagina\painel\pagina\produtos\view\editarProduto.php
+>>>>>>> fernando2
+                )
+
+            [function] => include_once
+        )
+
+    [3] => Array
+        (
+<<<<<<< HEAD
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\index.php
+            [line] => 27
+            [args] => Array
+                (
+                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\conteudoloja.php
+=======
+            [file] => D:\htdocs\Cratos\Ecommerce-Cratos\pagina\painel\index.php
+            [line] => 109
+            [args] => Array
+                (
+                    [0] => D:\htdocs\Cratos\Ecommerce-Cratos\pagina\painel\pagina\produtos\produtos.php
+>>>>>>> fernando2
+                )
+
+            [function] => include_once
+        )
+
+    [4] => Array
+        (
+<<<<<<< HEAD
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\conteudo.php
+            [line] => 10
+            [args] => Array
+                (
+                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\index.php
+=======
+            [file] => D:\htdocs\Cratos\Ecommerce-Cratos\conteudo.php
+            [line] => 7
+            [args] => Array
+                (
+                    [0] => D:\htdocs\Cratos\Ecommerce-Cratos\pagina\painel\index.php
+>>>>>>> fernando2
+                )
+
+            [function] => include_once
+        )
+
+    [5] => Array
+        (
+<<<<<<< HEAD
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\index.php
+            [line] => 16
+            [args] => Array
+                (
+                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\conteudo.php
+=======
+            [file] => D:\htdocs\Cratos\Ecommerce-Cratos\index.php
+            [line] => 16
+            [args] => Array
+                (
+                    [0] => D:\htdocs\Cratos\Ecommerce-Cratos\conteudo.php
+>>>>>>> fernando2
+                )
+
+            [function] => include_once
+        )
+
+)
+
+<<<<<<< HEAD
+Trace File: D:\htdocs\cratos\Ecommerce-Cratos\source\funcoes\crud\crud.php
+Trace Line: 55
+File: D:\htdocs\cratos\Ecommerce-Cratos\source\funcoes\crud\crud.php
+Line: 55
+Throwable: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'p.foto' in 'field list'
+Code: 42S22
+Trace: Array
+(
+    [0] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\source\funcoes\crud\crud.php
+            [line] => 55
+            [function] => execute
+            [class] => PDOStatement
+            [type] => ->
+            [args] => Array
+                (
+                )
+
+        )
+
+    [1] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\pagina\produto\lista.php
+            [line] => 23
+            [function] => listarGeral
+            [args] => Array
+                (
+                    [0] => p.idproduto, p.idcategoria, p.foto, p.produto, p.descricao, pv.idprodutovariacao
+                    [1] => produto p INNER JOIN produtovariacao pv  ON pv.idproduto = p.idproduto WHERE p.ativo = 'A' GROUP BY p.idproduto ORDER BY p.idproduto DESC LIMIT 12
+                )
+
+        )
+
+    [2] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\conteudoloja.php
+            [line] => 3
+            [args] => Array
+                (
+                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\pagina\produto\lista.php
+                )
+
+            [function] => include_once
+        )
+
+    [3] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\index.php
+            [line] => 27
+            [args] => Array
+                (
+                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\conteudoloja.php
+                )
+
+            [function] => include_once
+        )
+
+    [4] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\conteudo.php
+            [line] => 10
+            [args] => Array
+                (
+                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\index.php
+                )
+
+            [function] => include_once
+        )
+
+    [5] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\index.php
+            [line] => 16
+            [args] => Array
+                (
+                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\conteudo.php
+                )
+
+            [function] => include_once
+        )
+
+)
+
+Trace File: D:\htdocs\cratos\Ecommerce-Cratos\source\funcoes\crud\crud.php
+Trace Line: 55
+File: D:\htdocs\cratos\Ecommerce-Cratos\source\funcoes\crud\crud.php
+Line: 55
+Throwable: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'p.foto' in 'field list'
+Code: 42S22
+Trace: Array
+(
+    [0] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\source\funcoes\crud\crud.php
+            [line] => 55
+            [function] => execute
+            [class] => PDOStatement
+            [type] => ->
+            [args] => Array
+                (
+                )
+
+        )
+
+    [1] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\pagina\produto\lista.php
+            [line] => 23
+            [function] => listarGeral
+            [args] => Array
+                (
+                    [0] => p.idproduto, p.idcategoria, p.foto, p.produto, p.descricao, pv.idprodutovariacao
+                    [1] => produto p INNER JOIN produtovariacao pv  ON pv.idproduto = p.idproduto WHERE p.ativo = 'A' GROUP BY p.idproduto ORDER BY p.idproduto DESC LIMIT 12
+                )
+
+        )
+
+    [2] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\conteudoloja.php
+            [line] => 3
+            [args] => Array
+                (
+                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\pagina\produto\lista.php
+                )
+
+            [function] => include_once
+        )
+
+    [3] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\index.php
+            [line] => 31
+            [args] => Array
+                (
+                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\conteudoloja.php
+                )
+
+            [function] => include_once
+        )
+
+    [4] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\conteudo.php
+            [line] => 10
+            [args] => Array
+                (
+                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\index.php
+                )
+
+            [function] => include_once
+        )
+
+    [5] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\index.php
+            [line] => 16
+            [args] => Array
+                (
+                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\conteudo.php
+                )
+
+            [function] => include_once
+        )
+
+)
+
+Trace File: D:\htdocs\cratos\Ecommerce-Cratos\source\funcoes\crud\crud.php
+Trace Line: 55
+File: D:\htdocs\cratos\Ecommerce-Cratos\source\funcoes\crud\crud.php
+Line: 55
+Throwable: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'p.foto' in 'field list'
+Code: 42S22
+Trace: Array
+(
+    [0] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\source\funcoes\crud\crud.php
+            [line] => 55
+            [function] => execute
+            [class] => PDOStatement
+            [type] => ->
+            [args] => Array
+                (
+                )
+
+        )
+
+    [1] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\pagina\produto\lista.php
+            [line] => 23
+            [function] => listarGeral
+            [args] => Array
+                (
+                    [0] => p.idproduto, p.idcategoria, p.foto, p.produto, p.descricao, pv.idprodutovariacao
+                    [1] => produto p INNER JOIN produtovariacao pv  ON pv.idproduto = p.idproduto WHERE p.ativo = 'A' GROUP BY p.idproduto ORDER BY p.idproduto DESC LIMIT 12
+                )
+
+        )
+
+    [2] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\conteudoloja.php
+            [line] => 3
+            [args] => Array
+                (
+                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\pagina\produto\lista.php
+                )
+
+            [function] => include_once
+        )
+
+    [3] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\index.php
+            [line] => 31
+            [args] => Array
+                (
+                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\conteudoloja.php
+                )
+
+            [function] => include_once
+        )
+
+    [4] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\conteudo.php
+            [line] => 17
+            [args] => Array
+                (
+                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\index.php
+                )
+
+            [function] => include_once
+        )
+
+    [5] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\index.php
+            [line] => 16
+            [args] => Array
+                (
+                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\conteudo.php
+                )
+
+            [function] => include_once
+        )
+
+)
+
+Trace File: D:\htdocs\cratos\Ecommerce-Cratos\source\funcoes\crud\crud.php
+Trace Line: 55
+File: D:\htdocs\cratos\Ecommerce-Cratos\source\funcoes\crud\crud.php
+Line: 55
+Throwable: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'p.foto' in 'field list'
+Code: 42S22
+Trace: Array
+(
+    [0] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\source\funcoes\crud\crud.php
+            [line] => 55
+            [function] => execute
+            [class] => PDOStatement
+            [type] => ->
+            [args] => Array
+                (
+                )
+
+        )
+
+    [1] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\pagina\produto\lista.php
+            [line] => 23
+            [function] => listarGeral
+            [args] => Array
+                (
+                    [0] => p.idproduto, p.idcategoria, p.foto, p.produto, p.descricao, pv.idprodutovariacao
+                    [1] => produto p INNER JOIN produtovariacao pv  ON pv.idproduto = p.idproduto WHERE p.ativo = 'A' GROUP BY p.idproduto ORDER BY p.idproduto DESC LIMIT 12
+                )
+
+        )
+
+    [2] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\conteudoloja.php
+            [line] => 3
+            [args] => Array
+                (
+                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\pagina\produto\lista.php
+                )
+
+            [function] => include_once
+        )
+
+    [3] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\index.php
+            [line] => 27
+            [args] => Array
+                (
+                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\conteudoloja.php
+                )
+
+            [function] => include_once
+        )
+
+    [4] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\conteudo.php
+            [line] => 10
+            [args] => Array
+                (
+                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\index.php
+                )
+
+            [function] => include_once
+        )
+
+    [5] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\index.php
+            [line] => 16
+            [args] => Array
+                (
+                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\conteudo.php
+                )
+
+            [function] => include_once
+        )
+
+)
+
+Trace File: D:\htdocs\cratos\Ecommerce-Cratos\source\funcoes\crud\crud.php
+Trace Line: 55
+File: D:\htdocs\cratos\Ecommerce-Cratos\source\funcoes\crud\crud.php
+Line: 55
+Throwable: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'p.foto' in 'field list'
+Code: 42S22
+Trace: Array
+(
+    [0] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\source\funcoes\crud\crud.php
+            [line] => 55
+            [function] => execute
+            [class] => PDOStatement
+            [type] => ->
+            [args] => Array
+                (
+                )
+
+        )
+
+    [1] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\pagina\produto\lista.php
+            [line] => 23
+            [function] => listarGeral
+            [args] => Array
+                (
+                    [0] => p.idproduto, p.idcategoria, p.foto, p.produto, p.descricao, pv.idprodutovariacao
+                    [1] => produto p INNER JOIN produtovariacao pv  ON pv.idproduto = p.idproduto WHERE p.ativo = 'A' GROUP BY p.idproduto ORDER BY p.idproduto DESC LIMIT 12
+                )
+
+        )
+
+    [2] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\conteudoloja.php
+            [line] => 3
+            [args] => Array
+                (
+                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\pagina\produto\lista.php
+                )
+
+            [function] => include_once
+        )
+
+    [3] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\index.php
+            [line] => 27
+            [args] => Array
+                (
+                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\conteudoloja.php
+                )
+
+            [function] => include_once
+        )
+
+    [4] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\conteudo.php
+            [line] => 10
+            [args] => Array
+                (
+                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\index.php
+                )
+
+            [function] => include_once
+        )
+
+    [5] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\index.php
+            [line] => 16
+            [args] => Array
+                (
+                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\conteudo.php
+                )
+
+            [function] => include_once
+        )
+
+)
+
+Trace File: D:\htdocs\cratos\Ecommerce-Cratos\source\funcoes\crud\crud.php
+Trace Line: 55
+File: D:\htdocs\cratos\Ecommerce-Cratos\source\funcoes\crud\crud.php
+Line: 55
+Throwable: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'p.foto' in 'field list'
+Code: 42S22
+Trace: Array
+(
+    [0] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\source\funcoes\crud\crud.php
+            [line] => 55
+            [function] => execute
+            [class] => PDOStatement
+            [type] => ->
+            [args] => Array
+                (
+                )
+
+        )
+
+    [1] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\pagina\produto\lista.php
+            [line] => 23
+            [function] => listarGeral
+            [args] => Array
+                (
+                    [0] => p.idproduto, p.idcategoria, p.foto, p.produto, p.descricao, pv.idprodutovariacao
+                    [1] => produto p INNER JOIN produtovariacao pv  ON pv.idproduto = p.idproduto WHERE p.ativo = 'A' GROUP BY p.idproduto ORDER BY p.idproduto DESC LIMIT 12
+                )
+
+        )
+
+    [2] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\conteudoloja.php
+            [line] => 3
+            [args] => Array
+                (
+                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\pagina\produto\lista.php
+                )
+
+            [function] => include_once
+        )
+
+    [3] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\index.php
+            [line] => 27
+            [args] => Array
+                (
+                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\conteudoloja.php
+                )
+
+            [function] => include_once
+        )
+
+    [4] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\conteudo.php
+            [line] => 10
+            [args] => Array
+                (
+                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\index.php
+                )
+
+            [function] => include_once
+        )
+
+    [5] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\index.php
+            [line] => 16
+            [args] => Array
+                (
+                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\conteudo.php
+                )
+
+            [function] => include_once
+        )
+
+)
+
+Trace File: D:\htdocs\cratos\Ecommerce-Cratos\source\funcoes\crud\crud.php
+Trace Line: 55
+File: D:\htdocs\cratos\Ecommerce-Cratos\source\funcoes\crud\crud.php
+Line: 55
+Throwable: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'p.foto' in 'field list'
+Code: 42S22
+Trace: Array
+(
+    [0] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\source\funcoes\crud\crud.php
+            [line] => 55
+            [function] => execute
+            [class] => PDOStatement
+            [type] => ->
+            [args] => Array
+                (
+                )
+
+        )
+
+    [1] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\pagina\produto\lista.php
+            [line] => 23
+            [function] => listarGeral
+            [args] => Array
+                (
+                    [0] => p.idproduto, p.idcategoria, p.foto, p.produto, p.descricao, pv.idprodutovariacao
+                    [1] => produto p INNER JOIN produtovariacao pv  ON pv.idproduto = p.idproduto WHERE p.ativo = 'A' GROUP BY p.idproduto ORDER BY p.idproduto DESC LIMIT 12
+                )
+
+        )
+
+    [2] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\conteudoloja.php
+            [line] => 3
+            [args] => Array
+                (
+                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\pagina\produto\lista.php
+                )
+
+            [function] => include_once
+        )
+
+    [3] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\index.php
+            [line] => 31
+            [args] => Array
+                (
+                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\conteudoloja.php
+                )
+
+            [function] => include_once
+        )
+
+    [4] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\conteudo.php
+            [line] => 10
+            [args] => Array
+                (
+                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\index.php
+                )
+
+            [function] => include_once
+        )
+
+    [5] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\index.php
+            [line] => 16
+            [args] => Array
+                (
+                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\conteudo.php
+                )
+
+            [function] => include_once
+        )
+
+)
+
+Trace File: D:\htdocs\cratos\Ecommerce-Cratos\source\funcoes\crud\crud.php
+Trace Line: 55
+File: D:\htdocs\cratos\Ecommerce-Cratos\source\funcoes\crud\crud.php
+Line: 55
+Throwable: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'p.foto' in 'field list'
+Code: 42S22
+Trace: Array
+(
+    [0] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\source\funcoes\crud\crud.php
+            [line] => 55
+            [function] => execute
+            [class] => PDOStatement
+            [type] => ->
+            [args] => Array
+                (
+                )
+
+        )
+
+    [1] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\pagina\produto\lista.php
+            [line] => 23
+            [function] => listarGeral
+            [args] => Array
+                (
+                    [0] => p.idproduto, p.idcategoria, p.foto, p.produto, p.descricao, pv.idprodutovariacao
+                    [1] => produto p INNER JOIN produtovariacao pv  ON pv.idproduto = p.idproduto WHERE p.ativo = 'A' GROUP BY p.idproduto ORDER BY p.idproduto DESC LIMIT 12
+                )
+
+        )
+
+    [2] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\conteudoloja.php
+            [line] => 3
+            [args] => Array
+                (
+                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\pagina\produto\lista.php
+                )
+
+            [function] => include_once
+        )
+
+    [3] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\index.php
+            [line] => 31
+            [args] => Array
+                (
+                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\conteudoloja.php
+                )
+
+            [function] => include_once
+        )
+
+    [4] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\conteudo.php
+            [line] => 10
+            [args] => Array
+                (
+                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\index.php
+                )
+
+            [function] => include_once
+        )
+
+    [5] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\index.php
+            [line] => 16
+            [args] => Array
+                (
+                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\conteudo.php
+                )
+
+            [function] => include_once
+        )
+
+)
+
+Trace File: D:\htdocs\cratos\Ecommerce-Cratos\source\funcoes\crud\crud.php
+Trace Line: 55
+File: D:\htdocs\cratos\Ecommerce-Cratos\source\funcoes\crud\crud.php
+Line: 55
+Throwable: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'p.foto' in 'field list'
+Code: 42S22
+Trace: Array
+(
+    [0] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\source\funcoes\crud\crud.php
+            [line] => 55
+            [function] => execute
+            [class] => PDOStatement
+            [type] => ->
+            [args] => Array
+                (
+                )
+
+        )
+
+    [1] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\pagina\produto\lista.php
+            [line] => 23
+            [function] => listarGeral
+            [args] => Array
+                (
+                    [0] => p.idproduto, p.idcategoria, p.foto, p.produto, p.descricao, pv.idprodutovariacao
+                    [1] => produto p INNER JOIN produtovariacao pv  ON pv.idproduto = p.idproduto WHERE p.ativo = 'A' GROUP BY p.idproduto ORDER BY p.idproduto DESC LIMIT 12
+                )
+
+        )
+
+    [2] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\conteudoloja.php
+            [line] => 3
+            [args] => Array
+                (
+                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\pagina\produto\lista.php
+                )
+
+            [function] => include_once
+        )
+
+    [3] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\index.php
+            [line] => 31
+            [args] => Array
+                (
+                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\conteudoloja.php
+                )
+
+            [function] => include_once
+        )
+
+    [4] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\conteudo.php
+            [line] => 17
+            [args] => Array
+                (
+                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\index.php
+                )
+
+            [function] => include_once
+        )
+
+    [5] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\index.php
+            [line] => 16
+            [args] => Array
+                (
+                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\conteudo.php
+                )
+
+            [function] => include_once
+        )
+
+)
+
+Trace File: D:\htdocs\cratos\Ecommerce-Cratos\source\funcoes\crud\crud.php
+Trace Line: 55
+File: D:\htdocs\cratos\Ecommerce-Cratos\source\funcoes\crud\crud.php
+Line: 55
+Throwable: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'p.foto' in 'field list'
+Code: 42S22
+Trace: Array
+(
+    [0] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\source\funcoes\crud\crud.php
+            [line] => 55
+            [function] => execute
+            [class] => PDOStatement
+            [type] => ->
+            [args] => Array
+                (
+                )
+
+        )
+
+    [1] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\pagina\produto\lista.php
+            [line] => 23
+            [function] => listarGeral
+            [args] => Array
+                (
+                    [0] => p.idproduto, p.idcategoria, p.foto, p.produto, p.descricao, pv.idprodutovariacao
+                    [1] => produto p INNER JOIN produtovariacao pv  ON pv.idproduto = p.idproduto WHERE p.ativo = 'A' GROUP BY p.idproduto ORDER BY p.idproduto DESC LIMIT 12
+                )
+
+        )
+
+    [2] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\conteudoloja.php
+            [line] => 3
+            [args] => Array
+                (
+                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\pagina\produto\lista.php
+                )
+
+            [function] => include_once
+        )
+
+    [3] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\index.php
+            [line] => 27
+            [args] => Array
+                (
+                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\conteudoloja.php
+                )
+
+            [function] => include_once
+        )
+
+    [4] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\conteudo.php
+            [line] => 10
+            [args] => Array
+                (
+                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\index.php
+                )
+
+            [function] => include_once
+        )
+
+    [5] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\index.php
+            [line] => 16
+            [args] => Array
+                (
+                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\conteudo.php
+                )
+
+            [function] => include_once
+        )
+
+)
+
+Trace File: D:\htdocs\cratos\Ecommerce-Cratos\source\funcoes\crud\crud.php
+Trace Line: 55
+File: D:\htdocs\cratos\Ecommerce-Cratos\source\funcoes\crud\crud.php
+Line: 55
+Throwable: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'p.foto' in 'field list'
+Code: 42S22
+Trace: Array
+(
+    [0] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\source\funcoes\crud\crud.php
+            [line] => 55
+            [function] => execute
+            [class] => PDOStatement
+            [type] => ->
+            [args] => Array
+                (
+                )
+
+        )
+
+    [1] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\pagina\produto\lista.php
+            [line] => 23
+            [function] => listarGeral
+            [args] => Array
+                (
+                    [0] => p.idproduto, p.idcategoria, p.foto, p.produto, p.descricao, pv.idprodutovariacao
+                    [1] => produto p INNER JOIN produtovariacao pv  ON pv.idproduto = p.idproduto WHERE p.ativo = 'A' GROUP BY p.idproduto ORDER BY p.idproduto DESC LIMIT 12
+                )
+
+        )
+
+    [2] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\conteudoloja.php
+            [line] => 3
+            [args] => Array
+                (
+                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\pagina\produto\lista.php
+                )
+
+            [function] => include_once
+        )
+
+    [3] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\index.php
+            [line] => 27
+            [args] => Array
+                (
+                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\conteudoloja.php
+                )
+
+            [function] => include_once
+        )
+
+    [4] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\conteudo.php
+            [line] => 10
+            [args] => Array
+                (
+                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\index.php
+                )
+
+            [function] => include_once
+        )
+
+    [5] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\index.php
+            [line] => 16
+            [args] => Array
+                (
+                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\conteudo.php
+                )
+
+            [function] => include_once
+        )
+
+)
+
+Trace File: D:\htdocs\cratos\Ecommerce-Cratos\source\funcoes\crud\crud.php
+Trace Line: 55
+File: D:\htdocs\cratos\Ecommerce-Cratos\source\funcoes\crud\crud.php
+Line: 55
+Throwable: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'p.foto' in 'field list'
+Code: 42S22
+Trace: Array
+(
+    [0] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\source\funcoes\crud\crud.php
+            [line] => 55
+            [function] => execute
+            [class] => PDOStatement
+            [type] => ->
+            [args] => Array
+                (
+                )
+
+        )
+
+    [1] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\pagina\produto\lista.php
+            [line] => 23
+            [function] => listarGeral
+            [args] => Array
+                (
+                    [0] => p.idproduto, p.idcategoria, p.foto, p.produto, p.descricao, pv.idprodutovariacao
+                    [1] => produto p INNER JOIN produtovariacao pv  ON pv.idproduto = p.idproduto WHERE p.ativo = 'A' GROUP BY p.idproduto ORDER BY p.idproduto DESC LIMIT 12
+                )
+
+        )
+
+    [2] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\conteudoloja.php
+            [line] => 3
+            [args] => Array
+                (
+                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\pagina\produto\lista.php
+                )
+
+            [function] => include_once
+        )
+
+    [3] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\index.php
+            [line] => 31
+            [args] => Array
+                (
+                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\conteudoloja.php
+                )
+
+            [function] => include_once
+        )
+
+    [4] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\conteudo.php
+            [line] => 10
+            [args] => Array
+                (
+                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\index.php
+                )
+
+            [function] => include_once
+        )
+
+    [5] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\index.php
+            [line] => 16
+            [args] => Array
+                (
+                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\conteudo.php
+                )
+
+            [function] => include_once
+        )
+
+)
+
+Trace File: D:\htdocs\cratos\Ecommerce-Cratos\source\funcoes\crud\crud.php
+Trace Line: 55
+File: D:\htdocs\cratos\Ecommerce-Cratos\source\funcoes\crud\crud.php
+Line: 55
+Throwable: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '' at line 1
+Code: 42000
+Trace: Array
+(
+    [0] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\source\funcoes\crud\crud.php
+            [line] => 55
+            [function] => execute
+            [class] => PDOStatement
+            [type] => ->
+            [args] => Array
+                (
+                )
+
+        )
+
+    [1] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\pagina\produto\produto.php
+            [line] => 305
+            [function] => listarGeral
+            [args] => Array
+                (
+                    [0] => c.comentario, c.estrela, c.cadastro, p.Nome
+                    [1] => comentarioproduto c INNER JOIN pessoa p ON p.idpessoa = c.idpessoa AND p.ativo='A' WHERE c.idprodutovariacao = 
                 )
 
         )
@@ -28344,6 +29864,1530 @@ Trace: Array
         )
 
     [4] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\index.php
+            [line] => 16
+            [args] => Array
+                (
+                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\conteudo.php
+                )
+
+            [function] => include_once
+        )
+
+)
+
+Trace File: D:\htdocs\cratos\Ecommerce-Cratos\source\funcoes\crud\crud.php
+Trace Line: 55
+File: D:\htdocs\cratos\Ecommerce-Cratos\source\funcoes\crud\crud.php
+Line: 55
+Throwable: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '' at line 1
+Code: 42000
+Trace: Array
+(
+    [0] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\source\funcoes\crud\crud.php
+            [line] => 55
+            [function] => execute
+            [class] => PDOStatement
+            [type] => ->
+            [args] => Array
+                (
+                )
+
+        )
+
+    [1] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\pagina\produto\produto.php
+            [line] => 305
+            [function] => listarGeral
+            [args] => Array
+                (
+                    [0] => c.comentario, c.estrela, c.cadastro, p.Nome
+                    [1] => comentarioproduto c INNER JOIN pessoa p ON p.idpessoa = c.idpessoa AND p.ativo='A' WHERE c.idprodutovariacao = 
+                )
+
+        )
+
+    [2] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\index.php
+            [line] => 24
+            [args] => Array
+                (
+                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\pagina\produto\produto.php
+                )
+
+            [function] => include_once
+        )
+
+    [3] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\conteudo.php
+            [line] => 10
+            [args] => Array
+                (
+                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\index.php
+                )
+
+            [function] => include_once
+        )
+
+    [4] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\index.php
+            [line] => 16
+            [args] => Array
+                (
+                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\conteudo.php
+                )
+
+            [function] => include_once
+        )
+
+)
+
+Trace File: D:\htdocs\cratos\Ecommerce-Cratos\source\funcoes\crud\crud.php
+Trace Line: 55
+File: D:\htdocs\cratos\Ecommerce-Cratos\source\funcoes\crud\crud.php
+Line: 55
+Throwable: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '' at line 1
+Code: 42000
+Trace: Array
+(
+    [0] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\source\funcoes\crud\crud.php
+            [line] => 55
+            [function] => execute
+            [class] => PDOStatement
+            [type] => ->
+            [args] => Array
+                (
+                )
+
+        )
+
+    [1] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\pagina\produto\produto.php
+            [line] => 305
+            [function] => listarGeral
+            [args] => Array
+                (
+                    [0] => c.comentario, c.estrela, c.cadastro, p.Nome
+                    [1] => comentarioproduto c INNER JOIN pessoa p ON p.idpessoa = c.idpessoa AND p.ativo='A' WHERE c.idprodutovariacao = 
+                )
+
+        )
+
+    [2] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\index.php
+            [line] => 24
+            [args] => Array
+                (
+                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\pagina\produto\produto.php
+                )
+
+            [function] => include_once
+        )
+
+    [3] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\conteudo.php
+            [line] => 10
+            [args] => Array
+                (
+                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\index.php
+                )
+
+            [function] => include_once
+        )
+
+    [4] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\index.php
+            [line] => 16
+            [args] => Array
+                (
+                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\conteudo.php
+                )
+
+            [function] => include_once
+        )
+
+)
+
+Trace File: D:\htdocs\cratos\Ecommerce-Cratos\source\funcoes\crud\crud.php
+Trace Line: 55
+File: D:\htdocs\cratos\Ecommerce-Cratos\source\funcoes\crud\crud.php
+Line: 55
+Throwable: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '' at line 1
+Code: 42000
+Trace: Array
+(
+    [0] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\source\funcoes\crud\crud.php
+            [line] => 55
+            [function] => execute
+            [class] => PDOStatement
+            [type] => ->
+            [args] => Array
+                (
+                )
+
+        )
+
+    [1] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\pagina\produto\produto.php
+            [line] => 305
+            [function] => listarGeral
+            [args] => Array
+                (
+                    [0] => c.comentario, c.estrela, c.cadastro, p.Nome
+                    [1] => comentarioproduto c INNER JOIN pessoa p ON p.idpessoa = c.idpessoa AND p.ativo='A' WHERE c.idprodutovariacao = 
+                )
+
+        )
+
+    [2] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\index.php
+            [line] => 24
+            [args] => Array
+                (
+                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\pagina\produto\produto.php
+                )
+
+            [function] => include_once
+        )
+
+    [3] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\conteudo.php
+            [line] => 10
+            [args] => Array
+                (
+                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\index.php
+                )
+
+            [function] => include_once
+        )
+
+    [4] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\index.php
+            [line] => 16
+            [args] => Array
+                (
+                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\conteudo.php
+                )
+
+            [function] => include_once
+        )
+
+)
+
+Trace File: D:\htdocs\cratos\Ecommerce-Cratos\source\funcoes\crud\crud.php
+Trace Line: 55
+File: D:\htdocs\cratos\Ecommerce-Cratos\source\funcoes\crud\crud.php
+Line: 55
+Throwable: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '' at line 1
+Code: 42000
+Trace: Array
+(
+    [0] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\source\funcoes\crud\crud.php
+            [line] => 55
+            [function] => execute
+            [class] => PDOStatement
+            [type] => ->
+            [args] => Array
+                (
+                )
+
+        )
+
+    [1] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\pagina\produto\produto.php
+            [line] => 305
+            [function] => listarGeral
+            [args] => Array
+                (
+                    [0] => c.comentario, c.estrela, c.cadastro, p.Nome
+                    [1] => comentarioproduto c INNER JOIN pessoa p ON p.idpessoa = c.idpessoa AND p.ativo='A' WHERE c.idprodutovariacao = 
+                )
+
+        )
+
+    [2] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\index.php
+            [line] => 24
+            [args] => Array
+                (
+                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\pagina\produto\produto.php
+                )
+
+            [function] => include_once
+        )
+
+    [3] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\conteudo.php
+            [line] => 10
+            [args] => Array
+                (
+                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\index.php
+                )
+
+            [function] => include_once
+        )
+
+    [4] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\index.php
+            [line] => 16
+            [args] => Array
+                (
+                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\conteudo.php
+                )
+
+            [function] => include_once
+        )
+
+)
+
+Trace File: D:\htdocs\cratos\Ecommerce-Cratos\source\funcoes\crud\crud.php
+Trace Line: 55
+File: D:\htdocs\cratos\Ecommerce-Cratos\source\funcoes\crud\crud.php
+Line: 55
+Throwable: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '' at line 1
+Code: 42000
+Trace: Array
+(
+    [0] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\source\funcoes\crud\crud.php
+            [line] => 55
+            [function] => execute
+            [class] => PDOStatement
+            [type] => ->
+            [args] => Array
+                (
+                )
+
+        )
+
+    [1] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\pagina\produto\produto.php
+            [line] => 305
+            [function] => listarGeral
+            [args] => Array
+                (
+                    [0] => c.comentario, c.estrela, c.cadastro, p.Nome
+                    [1] => comentarioproduto c INNER JOIN pessoa p ON p.idpessoa = c.idpessoa AND p.ativo='A' WHERE c.idprodutovariacao = 
+                )
+
+        )
+
+    [2] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\index.php
+            [line] => 24
+            [args] => Array
+                (
+                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\pagina\produto\produto.php
+                )
+
+            [function] => include_once
+        )
+
+    [3] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\conteudo.php
+            [line] => 10
+            [args] => Array
+                (
+                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\index.php
+                )
+
+            [function] => include_once
+        )
+
+    [4] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\index.php
+            [line] => 16
+            [args] => Array
+                (
+                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\conteudo.php
+                )
+
+            [function] => include_once
+        )
+
+)
+
+Trace File: D:\htdocs\cratos\Ecommerce-Cratos\source\funcoes\crud\crud.php
+Trace Line: 55
+File: D:\htdocs\cratos\Ecommerce-Cratos\source\funcoes\crud\crud.php
+Line: 55
+Throwable: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'p.foto' in 'field list'
+Code: 42S22
+Trace: Array
+(
+    [0] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\source\funcoes\crud\crud.php
+            [line] => 55
+            [function] => execute
+            [class] => PDOStatement
+            [type] => ->
+            [args] => Array
+                (
+                )
+
+        )
+
+    [1] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\pagina\produto\lista.php
+            [line] => 23
+            [function] => listarGeral
+            [args] => Array
+                (
+                    [0] => p.idproduto, p.idcategoria, p.foto, p.produto, p.descricao, pv.idprodutovariacao
+                    [1] => produto p INNER JOIN produtovariacao pv  ON pv.idproduto = p.idproduto WHERE p.ativo = 'A' GROUP BY p.idproduto ORDER BY p.idproduto DESC LIMIT 12
+                )
+
+        )
+
+    [2] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\conteudoloja.php
+            [line] => 3
+            [args] => Array
+                (
+                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\pagina\produto\lista.php
+                )
+
+            [function] => include_once
+        )
+
+    [3] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\index.php
+            [line] => 27
+            [args] => Array
+                (
+                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\conteudoloja.php
+                )
+
+            [function] => include_once
+        )
+
+    [4] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\conteudo.php
+            [line] => 10
+            [args] => Array
+                (
+                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\index.php
+                )
+
+            [function] => include_once
+        )
+
+    [5] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\index.php
+            [line] => 16
+            [args] => Array
+                (
+                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\conteudo.php
+                )
+
+            [function] => include_once
+        )
+
+)
+
+Trace File: D:\htdocs\cratos\Ecommerce-Cratos\source\funcoes\crud\crud.php
+Trace Line: 55
+File: D:\htdocs\cratos\Ecommerce-Cratos\source\funcoes\crud\crud.php
+Line: 55
+Throwable: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'p.foto' in 'field list'
+Code: 42S22
+Trace: Array
+(
+    [0] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\source\funcoes\crud\crud.php
+            [line] => 55
+            [function] => execute
+            [class] => PDOStatement
+            [type] => ->
+            [args] => Array
+                (
+                )
+
+        )
+
+    [1] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\pagina\produto\lista.php
+            [line] => 23
+            [function] => listarGeral
+            [args] => Array
+                (
+                    [0] => p.idproduto, p.idcategoria, p.foto, p.produto, p.descricao, pv.idprodutovariacao
+                    [1] => produto p INNER JOIN produtovariacao pv  ON pv.idproduto = p.idproduto WHERE p.ativo = 'A' GROUP BY p.idproduto ORDER BY p.idproduto DESC LIMIT 12
+                )
+
+        )
+
+    [2] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\conteudoloja.php
+            [line] => 3
+            [args] => Array
+                (
+                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\pagina\produto\lista.php
+                )
+
+            [function] => include_once
+        )
+
+    [3] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\index.php
+            [line] => 27
+            [args] => Array
+                (
+                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\conteudoloja.php
+                )
+
+            [function] => include_once
+        )
+
+    [4] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\conteudo.php
+            [line] => 10
+            [args] => Array
+                (
+                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\index.php
+                )
+
+            [function] => include_once
+        )
+
+    [5] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\index.php
+            [line] => 16
+            [args] => Array
+                (
+                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\conteudo.php
+                )
+
+            [function] => include_once
+        )
+
+)
+
+Trace File: D:\htdocs\cratos\Ecommerce-Cratos\source\funcoes\crud\crud.php
+Trace Line: 55
+File: D:\htdocs\cratos\Ecommerce-Cratos\source\funcoes\crud\crud.php
+Line: 55
+Throwable: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '' at line 1
+Code: 42000
+Trace: Array
+(
+    [0] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\source\funcoes\crud\crud.php
+            [line] => 55
+            [function] => execute
+            [class] => PDOStatement
+            [type] => ->
+            [args] => Array
+                (
+                )
+
+        )
+
+    [1] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\pagina\produto\produto.php
+            [line] => 305
+            [function] => listarGeral
+            [args] => Array
+                (
+                    [0] => c.comentario, c.estrela, c.cadastro, p.Nome
+                    [1] => comentarioproduto c INNER JOIN pessoa p ON p.idpessoa = c.idpessoa AND p.ativo='A' WHERE c.idprodutovariacao = 
+                )
+
+        )
+
+    [2] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\index.php
+            [line] => 24
+            [args] => Array
+                (
+                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\pagina\produto\produto.php
+                )
+
+            [function] => include_once
+        )
+
+    [3] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\conteudo.php
+            [line] => 10
+            [args] => Array
+                (
+                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\index.php
+                )
+
+            [function] => include_once
+        )
+
+    [4] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\index.php
+            [line] => 16
+            [args] => Array
+                (
+                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\conteudo.php
+                )
+
+            [function] => include_once
+        )
+
+)
+
+Trace File: D:\htdocs\cratos\Ecommerce-Cratos\source\funcoes\crud\crud.php
+Trace Line: 55
+File: D:\htdocs\cratos\Ecommerce-Cratos\source\funcoes\crud\crud.php
+Line: 55
+Throwable: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'p.foto' in 'field list'
+Code: 42S22
+Trace: Array
+(
+    [0] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\source\funcoes\crud\crud.php
+            [line] => 55
+            [function] => execute
+            [class] => PDOStatement
+            [type] => ->
+            [args] => Array
+                (
+                )
+
+        )
+
+    [1] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\pagina\produto\lista.php
+            [line] => 23
+            [function] => listarGeral
+            [args] => Array
+                (
+                    [0] => p.idproduto, p.idcategoria, p.foto, p.produto, p.descricao, pv.idprodutovariacao
+                    [1] => produto p INNER JOIN produtovariacao pv  ON pv.idproduto = p.idproduto WHERE p.ativo = 'A' GROUP BY p.idproduto ORDER BY p.idproduto DESC LIMIT 12
+                )
+
+        )
+
+    [2] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\conteudoloja.php
+            [line] => 3
+            [args] => Array
+                (
+                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\pagina\produto\lista.php
+                )
+
+            [function] => include_once
+        )
+
+    [3] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\index.php
+            [line] => 31
+            [args] => Array
+                (
+                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\conteudoloja.php
+                )
+
+            [function] => include_once
+        )
+
+    [4] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\conteudo.php
+            [line] => 10
+            [args] => Array
+                (
+                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\index.php
+                )
+
+            [function] => include_once
+        )
+
+    [5] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\index.php
+            [line] => 16
+            [args] => Array
+                (
+                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\conteudo.php
+                )
+
+            [function] => include_once
+        )
+
+)
+
+Trace File: D:\htdocs\cratos\Ecommerce-Cratos\source\funcoes\crud\crud.php
+Trace Line: 55
+File: D:\htdocs\cratos\Ecommerce-Cratos\source\funcoes\crud\crud.php
+Line: 55
+Throwable: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'p.foto' in 'field list'
+Code: 42S22
+Trace: Array
+(
+    [0] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\source\funcoes\crud\crud.php
+            [line] => 55
+            [function] => execute
+            [class] => PDOStatement
+            [type] => ->
+            [args] => Array
+                (
+                )
+
+        )
+
+    [1] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\pagina\produto\lista.php
+            [line] => 23
+            [function] => listarGeral
+            [args] => Array
+                (
+                    [0] => p.idproduto, p.idcategoria, p.foto, p.produto, p.descricao, pv.idprodutovariacao
+                    [1] => produto p INNER JOIN produtovariacao pv  ON pv.idproduto = p.idproduto WHERE p.ativo = 'A' GROUP BY p.idproduto ORDER BY p.idproduto DESC LIMIT 12
+                )
+
+        )
+
+    [2] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\conteudoloja.php
+            [line] => 3
+            [args] => Array
+                (
+                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\pagina\produto\lista.php
+                )
+
+            [function] => include_once
+        )
+
+    [3] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\index.php
+            [line] => 31
+            [args] => Array
+                (
+                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\conteudoloja.php
+                )
+
+            [function] => include_once
+        )
+
+    [4] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\conteudo.php
+            [line] => 10
+            [args] => Array
+                (
+                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\index.php
+                )
+
+            [function] => include_once
+        )
+
+    [5] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\index.php
+            [line] => 16
+            [args] => Array
+                (
+                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\conteudo.php
+                )
+
+            [function] => include_once
+        )
+
+)
+
+Trace File: D:\htdocs\cratos\Ecommerce-Cratos\source\funcoes\crud\crud.php
+Trace Line: 55
+File: D:\htdocs\cratos\Ecommerce-Cratos\source\funcoes\crud\crud.php
+Line: 55
+Throwable: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'p.foto' in 'field list'
+Code: 42S22
+Trace: Array
+(
+    [0] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\source\funcoes\crud\crud.php
+            [line] => 55
+            [function] => execute
+            [class] => PDOStatement
+            [type] => ->
+            [args] => Array
+                (
+                )
+
+        )
+
+    [1] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\pagina\produto\lista.php
+            [line] => 23
+            [function] => listarGeral
+            [args] => Array
+                (
+                    [0] => p.idproduto, p.idcategoria, p.foto, p.produto, p.descricao, pv.idprodutovariacao
+                    [1] => produto p INNER JOIN produtovariacao pv  ON pv.idproduto = p.idproduto WHERE p.ativo = 'A' GROUP BY p.idproduto ORDER BY p.idproduto DESC LIMIT 12
+                )
+
+        )
+
+    [2] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\conteudoloja.php
+            [line] => 3
+            [args] => Array
+                (
+                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\pagina\produto\lista.php
+                )
+
+            [function] => include_once
+        )
+
+    [3] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\index.php
+            [line] => 31
+            [args] => Array
+                (
+                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\conteudoloja.php
+                )
+
+            [function] => include_once
+        )
+
+    [4] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\conteudo.php
+            [line] => 17
+            [args] => Array
+                (
+                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\index.php
+                )
+
+            [function] => include_once
+        )
+
+    [5] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\index.php
+            [line] => 16
+            [args] => Array
+                (
+                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\conteudo.php
+                )
+
+            [function] => include_once
+        )
+
+)
+
+Trace File: D:\htdocs\cratos\Ecommerce-Cratos\source\funcoes\crud\crud.php
+Trace Line: 55
+File: D:\htdocs\cratos\Ecommerce-Cratos\source\funcoes\crud\crud.php
+Line: 55
+Throwable: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'p.foto' in 'field list'
+Code: 42S22
+Trace: Array
+(
+    [0] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\source\funcoes\crud\crud.php
+            [line] => 55
+            [function] => execute
+            [class] => PDOStatement
+            [type] => ->
+            [args] => Array
+                (
+                )
+
+        )
+
+    [1] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\pagina\produto\lista.php
+            [line] => 23
+            [function] => listarGeral
+            [args] => Array
+                (
+                    [0] => p.idproduto, p.idcategoria, p.foto, p.produto, p.descricao, pv.idprodutovariacao
+                    [1] => produto p INNER JOIN produtovariacao pv  ON pv.idproduto = p.idproduto WHERE p.ativo = 'A' GROUP BY p.idproduto ORDER BY p.idproduto DESC LIMIT 12
+                )
+
+        )
+
+    [2] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\conteudoloja.php
+            [line] => 3
+            [args] => Array
+                (
+                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\pagina\produto\lista.php
+                )
+
+            [function] => include_once
+        )
+
+    [3] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\index.php
+            [line] => 27
+            [args] => Array
+                (
+                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\conteudoloja.php
+                )
+
+            [function] => include_once
+        )
+
+    [4] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\conteudo.php
+            [line] => 10
+            [args] => Array
+                (
+                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\index.php
+                )
+
+            [function] => include_once
+        )
+
+    [5] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\index.php
+            [line] => 16
+            [args] => Array
+                (
+                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\conteudo.php
+                )
+
+            [function] => include_once
+        )
+
+)
+
+Trace File: D:\htdocs\cratos\Ecommerce-Cratos\source\funcoes\crud\crud.php
+Trace Line: 55
+File: D:\htdocs\cratos\Ecommerce-Cratos\source\funcoes\crud\crud.php
+Line: 55
+Throwable: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'p.foto' in 'field list'
+Code: 42S22
+Trace: Array
+(
+    [0] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\source\funcoes\crud\crud.php
+            [line] => 55
+            [function] => execute
+            [class] => PDOStatement
+            [type] => ->
+            [args] => Array
+                (
+                )
+
+        )
+
+    [1] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\pagina\produto\lista.php
+            [line] => 23
+            [function] => listarGeral
+            [args] => Array
+                (
+                    [0] => p.idproduto, p.idcategoria, p.foto, p.produto, p.descricao, pv.idprodutovariacao
+                    [1] => produto p INNER JOIN produtovariacao pv  ON pv.idproduto = p.idproduto WHERE p.ativo = 'A' GROUP BY p.idproduto ORDER BY p.idproduto DESC LIMIT 12
+                )
+
+        )
+
+    [2] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\conteudoloja.php
+            [line] => 3
+            [args] => Array
+                (
+                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\pagina\produto\lista.php
+                )
+
+            [function] => include_once
+        )
+
+    [3] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\index.php
+            [line] => 27
+            [args] => Array
+                (
+                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\conteudoloja.php
+                )
+
+            [function] => include_once
+        )
+
+    [4] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\conteudo.php
+            [line] => 10
+            [args] => Array
+                (
+                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\index.php
+                )
+
+            [function] => include_once
+        )
+
+    [5] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\index.php
+            [line] => 16
+            [args] => Array
+                (
+                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\conteudo.php
+                )
+
+            [function] => include_once
+        )
+
+)
+
+Trace File: D:\htdocs\cratos\Ecommerce-Cratos\source\funcoes\crud\crud.php
+Trace Line: 55
+File: D:\htdocs\cratos\Ecommerce-Cratos\source\funcoes\crud\crud.php
+Line: 55
+Throwable: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'p.foto' in 'field list'
+Code: 42S22
+Trace: Array
+(
+    [0] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\source\funcoes\crud\crud.php
+            [line] => 55
+            [function] => execute
+            [class] => PDOStatement
+            [type] => ->
+            [args] => Array
+                (
+                )
+
+        )
+
+    [1] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\pagina\produto\lista.php
+            [line] => 23
+            [function] => listarGeral
+            [args] => Array
+                (
+                    [0] => p.idproduto, p.idcategoria, p.foto, p.produto, p.descricao, pv.idprodutovariacao
+                    [1] => produto p INNER JOIN produtovariacao pv  ON pv.idproduto = p.idproduto WHERE p.ativo = 'A' GROUP BY p.idproduto ORDER BY p.idproduto DESC LIMIT 12
+                )
+
+        )
+
+    [2] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\conteudoloja.php
+            [line] => 3
+            [args] => Array
+                (
+                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\pagina\produto\lista.php
+                )
+
+            [function] => include_once
+        )
+
+    [3] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\index.php
+            [line] => 27
+            [args] => Array
+                (
+                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\conteudoloja.php
+                )
+
+            [function] => include_once
+        )
+
+    [4] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\conteudo.php
+            [line] => 10
+            [args] => Array
+                (
+                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\index.php
+                )
+
+            [function] => include_once
+        )
+
+    [5] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\index.php
+            [line] => 16
+            [args] => Array
+                (
+                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\conteudo.php
+                )
+
+            [function] => include_once
+        )
+
+)
+
+Trace File: D:\htdocs\cratos\Ecommerce-Cratos\source\funcoes\crud\crud.php
+Trace Line: 55
+File: D:\htdocs\cratos\Ecommerce-Cratos\source\funcoes\crud\crud.php
+Line: 55
+Throwable: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'p.foto' in 'field list'
+Code: 42S22
+Trace: Array
+(
+    [0] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\source\funcoes\crud\crud.php
+            [line] => 55
+            [function] => execute
+            [class] => PDOStatement
+            [type] => ->
+            [args] => Array
+                (
+                )
+
+        )
+
+    [1] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\pagina\produto\lista.php
+            [line] => 23
+            [function] => listarGeral
+            [args] => Array
+                (
+                    [0] => p.idproduto, p.idcategoria, p.foto, p.produto, p.descricao, pv.idprodutovariacao
+                    [1] => produto p INNER JOIN produtovariacao pv  ON pv.idproduto = p.idproduto WHERE p.ativo = 'A' GROUP BY p.idproduto ORDER BY p.idproduto DESC LIMIT 12
+                )
+
+        )
+
+    [2] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\conteudoloja.php
+            [line] => 3
+            [args] => Array
+                (
+                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\pagina\produto\lista.php
+                )
+
+            [function] => include_once
+        )
+
+    [3] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\index.php
+            [line] => 31
+            [args] => Array
+                (
+                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\conteudoloja.php
+                )
+
+            [function] => include_once
+        )
+
+    [4] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\conteudo.php
+            [line] => 10
+            [args] => Array
+                (
+                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\index.php
+                )
+
+            [function] => include_once
+        )
+
+    [5] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\index.php
+            [line] => 16
+            [args] => Array
+                (
+                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\conteudo.php
+                )
+
+            [function] => include_once
+        )
+
+)
+
+Trace File: D:\htdocs\cratos\Ecommerce-Cratos\source\funcoes\crud\crud.php
+Trace Line: 55
+File: D:\htdocs\cratos\Ecommerce-Cratos\source\funcoes\crud\crud.php
+Line: 55
+Throwable: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'p.foto' in 'field list'
+Code: 42S22
+Trace: Array
+(
+    [0] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\source\funcoes\crud\crud.php
+            [line] => 55
+            [function] => execute
+            [class] => PDOStatement
+            [type] => ->
+            [args] => Array
+                (
+                )
+
+        )
+
+    [1] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\pagina\produto\lista.php
+            [line] => 23
+            [function] => listarGeral
+            [args] => Array
+                (
+                    [0] => p.idproduto, p.idcategoria, p.foto, p.produto, p.descricao, pv.idprodutovariacao
+                    [1] => produto p INNER JOIN produtovariacao pv  ON pv.idproduto = p.idproduto WHERE p.ativo = 'A' GROUP BY p.idproduto ORDER BY p.idproduto DESC LIMIT 12
+                )
+
+        )
+
+    [2] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\conteudoloja.php
+            [line] => 3
+            [args] => Array
+                (
+                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\pagina\produto\lista.php
+                )
+
+            [function] => include_once
+        )
+
+    [3] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\index.php
+            [line] => 31
+            [args] => Array
+                (
+                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\conteudoloja.php
+                )
+
+            [function] => include_once
+        )
+
+    [4] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\conteudo.php
+            [line] => 17
+            [args] => Array
+                (
+                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\index.php
+                )
+
+            [function] => include_once
+        )
+
+    [5] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\index.php
+            [line] => 16
+            [args] => Array
+                (
+                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\conteudo.php
+                )
+
+            [function] => include_once
+        )
+
+)
+
+Trace File: D:\htdocs\cratos\Ecommerce-Cratos\source\funcoes\crud\crud.php
+Trace Line: 55
+File: D:\htdocs\cratos\Ecommerce-Cratos\source\funcoes\crud\crud.php
+Line: 55
+Throwable: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'p.foto' in 'field list'
+Code: 42S22
+Trace: Array
+(
+    [0] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\source\funcoes\crud\crud.php
+            [line] => 55
+            [function] => execute
+            [class] => PDOStatement
+            [type] => ->
+            [args] => Array
+                (
+                )
+
+        )
+
+    [1] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\pagina\produto\lista.php
+            [line] => 23
+            [function] => listarGeral
+            [args] => Array
+                (
+                    [0] => p.idproduto, p.idcategoria, p.foto, p.produto, p.descricao, pv.idprodutovariacao
+                    [1] => produto p INNER JOIN produtovariacao pv  ON pv.idproduto = p.idproduto WHERE p.ativo = 'A' GROUP BY p.idproduto ORDER BY p.idproduto DESC LIMIT 12
+                )
+
+        )
+
+    [2] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\conteudoloja.php
+            [line] => 3
+            [args] => Array
+                (
+                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\pagina\produto\lista.php
+                )
+
+            [function] => include_once
+        )
+
+    [3] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\index.php
+            [line] => 27
+            [args] => Array
+                (
+                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\conteudoloja.php
+                )
+
+            [function] => include_once
+        )
+
+    [4] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\conteudo.php
+            [line] => 10
+            [args] => Array
+                (
+                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\index.php
+                )
+
+            [function] => include_once
+        )
+
+    [5] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\index.php
+            [line] => 16
+            [args] => Array
+                (
+                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\conteudo.php
+                )
+
+            [function] => include_once
+        )
+
+)
+
+Trace File: D:\htdocs\cratos\Ecommerce-Cratos\source\funcoes\crud\crud.php
+Trace Line: 55
+File: D:\htdocs\cratos\Ecommerce-Cratos\source\funcoes\crud\crud.php
+Line: 55
+Throwable: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'p.foto' in 'field list'
+Code: 42S22
+Trace: Array
+(
+    [0] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\source\funcoes\crud\crud.php
+            [line] => 55
+            [function] => execute
+            [class] => PDOStatement
+            [type] => ->
+            [args] => Array
+                (
+                )
+
+        )
+
+    [1] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\pagina\produto\lista.php
+            [line] => 23
+            [function] => listarGeral
+            [args] => Array
+                (
+                    [0] => p.idproduto, p.idcategoria, p.foto, p.produto, p.descricao, pv.idprodutovariacao
+                    [1] => produto p INNER JOIN produtovariacao pv  ON pv.idproduto = p.idproduto WHERE p.ativo = 'A' GROUP BY p.idproduto ORDER BY p.idproduto DESC LIMIT 12
+                )
+
+        )
+
+    [2] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\conteudoloja.php
+            [line] => 3
+            [args] => Array
+                (
+                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\pagina\produto\lista.php
+                )
+
+            [function] => include_once
+        )
+
+    [3] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\index.php
+            [line] => 27
+            [args] => Array
+                (
+                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\conteudoloja.php
+                )
+
+            [function] => include_once
+        )
+
+    [4] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\conteudo.php
+            [line] => 10
+            [args] => Array
+                (
+                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\index.php
+                )
+
+            [function] => include_once
+        )
+
+    [5] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\index.php
+            [line] => 16
+            [args] => Array
+                (
+                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\conteudo.php
+                )
+
+            [function] => include_once
+        )
+
+)
+
+Trace File: D:\htdocs\cratos\Ecommerce-Cratos\source\funcoes\crud\crud.php
+Trace Line: 55
+File: D:\htdocs\cratos\Ecommerce-Cratos\source\funcoes\crud\crud.php
+Line: 55
+Throwable: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'p.foto' in 'field list'
+Code: 42S22
+Trace: Array
+(
+    [0] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\source\funcoes\crud\crud.php
+            [line] => 55
+            [function] => execute
+            [class] => PDOStatement
+            [type] => ->
+            [args] => Array
+                (
+                )
+
+        )
+
+    [1] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\pagina\produto\lista.php
+            [line] => 23
+            [function] => listarGeral
+            [args] => Array
+                (
+                    [0] => p.idproduto, p.idcategoria, p.foto, p.produto, p.descricao, pv.idprodutovariacao
+                    [1] => produto p INNER JOIN produtovariacao pv  ON pv.idproduto = p.idproduto WHERE p.ativo = 'A' GROUP BY p.idproduto ORDER BY p.idproduto DESC LIMIT 12
+                )
+
+        )
+
+    [2] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\conteudoloja.php
+            [line] => 3
+            [args] => Array
+                (
+                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\pagina\produto\lista.php
+                )
+
+            [function] => include_once
+        )
+
+    [3] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\index.php
+            [line] => 31
+            [args] => Array
+                (
+                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\conteudoloja.php
+                )
+
+            [function] => include_once
+        )
+
+    [4] => Array
+        (
+            [file] => D:\htdocs\cratos\Ecommerce-Cratos\conteudo.php
+            [line] => 10
+            [args] => Array
+                (
+                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\index.php
+                )
+
+            [function] => include_once
+        )
+
+    [5] => Array
         (
             [file] => D:\htdocs\cratos\Ecommerce-Cratos\index.php
             [line] => 16
@@ -29201,2862 +32245,6 @@ Trace File: D:\htdocs\cratos\Ecommerce-Cratos\source\funcoes\crud\crud.php
 Trace Line: 55
 File: D:\htdocs\cratos\Ecommerce-Cratos\source\funcoes\crud\crud.php
 Line: 55
-Throwable: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'p.foto' in 'field list'
-Code: 42S22
-Trace: Array
-(
-    [0] => Array
-        (
-            [file] => D:\htdocs\cratos\Ecommerce-Cratos\source\funcoes\crud\crud.php
-            [line] => 55
-            [function] => execute
-            [class] => PDOStatement
-            [type] => ->
-            [args] => Array
-                (
-                )
-
-        )
-
-    [1] => Array
-        (
-            [file] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\pagina\produto\lista.php
-            [line] => 23
-            [function] => listarGeral
-            [args] => Array
-                (
-                    [0] => p.idproduto, p.idcategoria, p.foto, p.produto, p.descricao, pv.idprodutovariacao
-                    [1] => produto p INNER JOIN produtovariacao pv  ON pv.idproduto = p.idproduto WHERE p.ativo = 'A' GROUP BY p.idproduto ORDER BY p.idproduto DESC LIMIT 12
-                )
-
-        )
-
-    [2] => Array
-        (
-            [file] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\conteudoloja.php
-            [line] => 3
-            [args] => Array
-                (
-                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\pagina\produto\lista.php
-                )
-
-            [function] => include_once
-        )
-
-    [3] => Array
-        (
-            [file] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\index.php
-            [line] => 31
-            [args] => Array
-                (
-                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\conteudoloja.php
-                )
-
-            [function] => include_once
-        )
-
-    [4] => Array
-        (
-            [file] => D:\htdocs\cratos\Ecommerce-Cratos\conteudo.php
-            [line] => 10
-            [args] => Array
-                (
-                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\index.php
-                )
-
-            [function] => include_once
-        )
-
-    [5] => Array
-        (
-            [file] => D:\htdocs\cratos\Ecommerce-Cratos\index.php
-            [line] => 16
-            [args] => Array
-                (
-                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\conteudo.php
-                )
-
-            [function] => include_once
-        )
-
-)
-
-Trace File: D:\htdocs\cratos\Ecommerce-Cratos\source\funcoes\crud\crud.php
-Trace Line: 55
-File: D:\htdocs\cratos\Ecommerce-Cratos\source\funcoes\crud\crud.php
-Line: 55
-Throwable: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'p.foto' in 'field list'
-Code: 42S22
-Trace: Array
-(
-    [0] => Array
-        (
-            [file] => D:\htdocs\cratos\Ecommerce-Cratos\source\funcoes\crud\crud.php
-            [line] => 55
-            [function] => execute
-            [class] => PDOStatement
-            [type] => ->
-            [args] => Array
-                (
-                )
-
-        )
-
-    [1] => Array
-        (
-            [file] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\pagina\produto\lista.php
-            [line] => 23
-            [function] => listarGeral
-            [args] => Array
-                (
-                    [0] => p.idproduto, p.idcategoria, p.foto, p.produto, p.descricao, pv.idprodutovariacao
-                    [1] => produto p INNER JOIN produtovariacao pv  ON pv.idproduto = p.idproduto WHERE p.ativo = 'A' GROUP BY p.idproduto ORDER BY p.idproduto DESC LIMIT 12
-                )
-
-        )
-
-    [2] => Array
-        (
-            [file] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\conteudoloja.php
-            [line] => 3
-            [args] => Array
-                (
-                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\pagina\produto\lista.php
-                )
-
-            [function] => include_once
-        )
-
-    [3] => Array
-        (
-            [file] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\index.php
-            [line] => 31
-            [args] => Array
-                (
-                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\conteudoloja.php
-                )
-
-            [function] => include_once
-        )
-
-    [4] => Array
-        (
-            [file] => D:\htdocs\cratos\Ecommerce-Cratos\conteudo.php
-            [line] => 17
-            [args] => Array
-                (
-                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\index.php
-                )
-
-            [function] => include_once
-        )
-
-    [5] => Array
-        (
-            [file] => D:\htdocs\cratos\Ecommerce-Cratos\index.php
-            [line] => 16
-            [args] => Array
-                (
-                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\conteudo.php
-                )
-
-            [function] => include_once
-        )
-
-)
-
-Trace File: D:\htdocs\cratos\Ecommerce-Cratos\source\funcoes\crud\crud.php
-Trace Line: 55
-File: D:\htdocs\cratos\Ecommerce-Cratos\source\funcoes\crud\crud.php
-Line: 55
-Throwable: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'p.foto' in 'field list'
-Code: 42S22
-Trace: Array
-(
-    [0] => Array
-        (
-            [file] => D:\htdocs\cratos\Ecommerce-Cratos\source\funcoes\crud\crud.php
-            [line] => 55
-            [function] => execute
-            [class] => PDOStatement
-            [type] => ->
-            [args] => Array
-                (
-                )
-
-        )
-
-    [1] => Array
-        (
-            [file] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\pagina\produto\lista.php
-            [line] => 23
-            [function] => listarGeral
-            [args] => Array
-                (
-                    [0] => p.idproduto, p.idcategoria, p.foto, p.produto, p.descricao, pv.idprodutovariacao
-                    [1] => produto p INNER JOIN produtovariacao pv  ON pv.idproduto = p.idproduto WHERE p.ativo = 'A' GROUP BY p.idproduto ORDER BY p.idproduto DESC LIMIT 12
-                )
-
-        )
-
-    [2] => Array
-        (
-            [file] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\conteudoloja.php
-            [line] => 3
-            [args] => Array
-                (
-                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\pagina\produto\lista.php
-                )
-
-            [function] => include_once
-        )
-
-    [3] => Array
-        (
-            [file] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\index.php
-            [line] => 27
-            [args] => Array
-                (
-                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\conteudoloja.php
-                )
-
-            [function] => include_once
-        )
-
-    [4] => Array
-        (
-            [file] => D:\htdocs\cratos\Ecommerce-Cratos\conteudo.php
-            [line] => 10
-            [args] => Array
-                (
-                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\index.php
-                )
-
-            [function] => include_once
-        )
-
-    [5] => Array
-        (
-            [file] => D:\htdocs\cratos\Ecommerce-Cratos\index.php
-            [line] => 16
-            [args] => Array
-                (
-                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\conteudo.php
-                )
-
-            [function] => include_once
-        )
-
-)
-
-Trace File: D:\htdocs\cratos\Ecommerce-Cratos\source\funcoes\crud\crud.php
-Trace Line: 55
-File: D:\htdocs\cratos\Ecommerce-Cratos\source\funcoes\crud\crud.php
-Line: 55
-Throwable: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'p.foto' in 'field list'
-Code: 42S22
-Trace: Array
-(
-    [0] => Array
-        (
-            [file] => D:\htdocs\cratos\Ecommerce-Cratos\source\funcoes\crud\crud.php
-            [line] => 55
-            [function] => execute
-            [class] => PDOStatement
-            [type] => ->
-            [args] => Array
-                (
-                )
-
-        )
-
-    [1] => Array
-        (
-            [file] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\pagina\produto\lista.php
-            [line] => 23
-            [function] => listarGeral
-            [args] => Array
-                (
-                    [0] => p.idproduto, p.idcategoria, p.foto, p.produto, p.descricao, pv.idprodutovariacao
-                    [1] => produto p INNER JOIN produtovariacao pv  ON pv.idproduto = p.idproduto WHERE p.ativo = 'A' GROUP BY p.idproduto ORDER BY p.idproduto DESC LIMIT 12
-                )
-
-        )
-
-    [2] => Array
-        (
-            [file] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\conteudoloja.php
-            [line] => 3
-            [args] => Array
-                (
-                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\pagina\produto\lista.php
-                )
-
-            [function] => include_once
-        )
-
-    [3] => Array
-        (
-            [file] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\index.php
-            [line] => 27
-            [args] => Array
-                (
-                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\conteudoloja.php
-                )
-
-            [function] => include_once
-        )
-
-    [4] => Array
-        (
-            [file] => D:\htdocs\cratos\Ecommerce-Cratos\conteudo.php
-            [line] => 10
-            [args] => Array
-                (
-                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\index.php
-                )
-
-            [function] => include_once
-        )
-
-    [5] => Array
-        (
-            [file] => D:\htdocs\cratos\Ecommerce-Cratos\index.php
-            [line] => 16
-            [args] => Array
-                (
-                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\conteudo.php
-                )
-
-            [function] => include_once
-        )
-
-)
-
-Trace File: D:\htdocs\cratos\Ecommerce-Cratos\source\funcoes\crud\crud.php
-Trace Line: 55
-File: D:\htdocs\cratos\Ecommerce-Cratos\source\funcoes\crud\crud.php
-Line: 55
-Throwable: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'p.foto' in 'field list'
-Code: 42S22
-Trace: Array
-(
-    [0] => Array
-        (
-            [file] => D:\htdocs\cratos\Ecommerce-Cratos\source\funcoes\crud\crud.php
-            [line] => 55
-            [function] => execute
-            [class] => PDOStatement
-            [type] => ->
-            [args] => Array
-                (
-                )
-
-        )
-
-    [1] => Array
-        (
-            [file] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\pagina\produto\lista.php
-            [line] => 23
-            [function] => listarGeral
-            [args] => Array
-                (
-                    [0] => p.idproduto, p.idcategoria, p.foto, p.produto, p.descricao, pv.idprodutovariacao
-                    [1] => produto p INNER JOIN produtovariacao pv  ON pv.idproduto = p.idproduto WHERE p.ativo = 'A' GROUP BY p.idproduto ORDER BY p.idproduto DESC LIMIT 12
-                )
-
-        )
-
-    [2] => Array
-        (
-            [file] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\conteudoloja.php
-            [line] => 3
-            [args] => Array
-                (
-                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\pagina\produto\lista.php
-                )
-
-            [function] => include_once
-        )
-
-    [3] => Array
-        (
-            [file] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\index.php
-            [line] => 31
-            [args] => Array
-                (
-                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\conteudoloja.php
-                )
-
-            [function] => include_once
-        )
-
-    [4] => Array
-        (
-            [file] => D:\htdocs\cratos\Ecommerce-Cratos\conteudo.php
-            [line] => 10
-            [args] => Array
-                (
-                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\index.php
-                )
-
-            [function] => include_once
-        )
-
-    [5] => Array
-        (
-            [file] => D:\htdocs\cratos\Ecommerce-Cratos\index.php
-            [line] => 16
-            [args] => Array
-                (
-                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\conteudo.php
-                )
-
-            [function] => include_once
-        )
-
-)
-
-Trace File: D:\htdocs\cratos\Ecommerce-Cratos\source\funcoes\crud\crud.php
-Trace Line: 55
-File: D:\htdocs\cratos\Ecommerce-Cratos\source\funcoes\crud\crud.php
-Line: 55
-Throwable: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '' at line 1
-Code: 42000
-Trace: Array
-(
-    [0] => Array
-        (
-            [file] => D:\htdocs\cratos\Ecommerce-Cratos\source\funcoes\crud\crud.php
-            [line] => 55
-            [function] => execute
-            [class] => PDOStatement
-            [type] => ->
-            [args] => Array
-                (
-                )
-
-        )
-
-    [1] => Array
-        (
-            [file] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\pagina\produto\produto.php
-            [line] => 305
-            [function] => listarGeral
-            [args] => Array
-                (
-                    [0] => c.comentario, c.estrela, c.cadastro, p.Nome
-                    [1] => comentarioproduto c INNER JOIN pessoa p ON p.idpessoa = c.idpessoa AND p.ativo='A' WHERE c.idprodutovariacao = 
-                )
-
-        )
-
-    [2] => Array
-        (
-            [file] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\index.php
-            [line] => 24
-            [args] => Array
-                (
-                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\pagina\produto\produto.php
-                )
-
-            [function] => include_once
-        )
-
-    [3] => Array
-        (
-            [file] => D:\htdocs\cratos\Ecommerce-Cratos\conteudo.php
-            [line] => 10
-            [args] => Array
-                (
-                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\index.php
-                )
-
-            [function] => include_once
-        )
-
-    [4] => Array
-        (
-            [file] => D:\htdocs\cratos\Ecommerce-Cratos\index.php
-            [line] => 16
-            [args] => Array
-                (
-                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\conteudo.php
-                )
-
-            [function] => include_once
-        )
-
-)
-
-Trace File: D:\htdocs\cratos\Ecommerce-Cratos\source\funcoes\crud\crud.php
-Trace Line: 55
-File: D:\htdocs\cratos\Ecommerce-Cratos\source\funcoes\crud\crud.php
-Line: 55
-Throwable: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '' at line 1
-Code: 42000
-Trace: Array
-(
-    [0] => Array
-        (
-            [file] => D:\htdocs\cratos\Ecommerce-Cratos\source\funcoes\crud\crud.php
-            [line] => 55
-            [function] => execute
-            [class] => PDOStatement
-            [type] => ->
-            [args] => Array
-                (
-                )
-
-        )
-
-    [1] => Array
-        (
-            [file] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\pagina\produto\produto.php
-            [line] => 305
-            [function] => listarGeral
-            [args] => Array
-                (
-                    [0] => c.comentario, c.estrela, c.cadastro, p.Nome
-                    [1] => comentarioproduto c INNER JOIN pessoa p ON p.idpessoa = c.idpessoa AND p.ativo='A' WHERE c.idprodutovariacao = 
-                )
-
-        )
-
-    [2] => Array
-        (
-            [file] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\index.php
-            [line] => 24
-            [args] => Array
-                (
-                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\pagina\produto\produto.php
-                )
-
-            [function] => include_once
-        )
-
-    [3] => Array
-        (
-            [file] => D:\htdocs\cratos\Ecommerce-Cratos\conteudo.php
-            [line] => 10
-            [args] => Array
-                (
-                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\index.php
-                )
-
-            [function] => include_once
-        )
-
-    [4] => Array
-        (
-            [file] => D:\htdocs\cratos\Ecommerce-Cratos\index.php
-            [line] => 16
-            [args] => Array
-                (
-                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\conteudo.php
-                )
-
-            [function] => include_once
-        )
-
-)
-
-Trace File: D:\htdocs\cratos\Ecommerce-Cratos\source\funcoes\crud\crud.php
-Trace Line: 55
-File: D:\htdocs\cratos\Ecommerce-Cratos\source\funcoes\crud\crud.php
-Line: 55
-Throwable: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '' at line 1
-Code: 42000
-Trace: Array
-(
-    [0] => Array
-        (
-            [file] => D:\htdocs\cratos\Ecommerce-Cratos\source\funcoes\crud\crud.php
-            [line] => 55
-            [function] => execute
-            [class] => PDOStatement
-            [type] => ->
-            [args] => Array
-                (
-                )
-
-        )
-
-    [1] => Array
-        (
-            [file] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\pagina\produto\produto.php
-            [line] => 305
-            [function] => listarGeral
-            [args] => Array
-                (
-                    [0] => c.comentario, c.estrela, c.cadastro, p.Nome
-                    [1] => comentarioproduto c INNER JOIN pessoa p ON p.idpessoa = c.idpessoa AND p.ativo='A' WHERE c.idprodutovariacao = 
-                )
-
-        )
-
-    [2] => Array
-        (
-            [file] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\index.php
-            [line] => 24
-            [args] => Array
-                (
-                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\pagina\produto\produto.php
-                )
-
-            [function] => include_once
-        )
-
-    [3] => Array
-        (
-            [file] => D:\htdocs\cratos\Ecommerce-Cratos\conteudo.php
-            [line] => 10
-            [args] => Array
-                (
-                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\index.php
-                )
-
-            [function] => include_once
-        )
-
-    [4] => Array
-        (
-            [file] => D:\htdocs\cratos\Ecommerce-Cratos\index.php
-            [line] => 16
-            [args] => Array
-                (
-                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\conteudo.php
-                )
-
-            [function] => include_once
-        )
-
-)
-
-Trace File: D:\htdocs\cratos\Ecommerce-Cratos\source\funcoes\crud\crud.php
-Trace Line: 55
-File: D:\htdocs\cratos\Ecommerce-Cratos\source\funcoes\crud\crud.php
-Line: 55
-Throwable: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '' at line 1
-Code: 42000
-Trace: Array
-(
-    [0] => Array
-        (
-            [file] => D:\htdocs\cratos\Ecommerce-Cratos\source\funcoes\crud\crud.php
-            [line] => 55
-            [function] => execute
-            [class] => PDOStatement
-            [type] => ->
-            [args] => Array
-                (
-                )
-
-        )
-
-    [1] => Array
-        (
-            [file] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\pagina\produto\produto.php
-            [line] => 305
-            [function] => listarGeral
-            [args] => Array
-                (
-                    [0] => c.comentario, c.estrela, c.cadastro, p.Nome
-                    [1] => comentarioproduto c INNER JOIN pessoa p ON p.idpessoa = c.idpessoa AND p.ativo='A' WHERE c.idprodutovariacao = 
-                )
-
-        )
-
-    [2] => Array
-        (
-            [file] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\index.php
-            [line] => 24
-            [args] => Array
-                (
-                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\pagina\produto\produto.php
-                )
-
-            [function] => include_once
-        )
-
-    [3] => Array
-        (
-            [file] => D:\htdocs\cratos\Ecommerce-Cratos\conteudo.php
-            [line] => 10
-            [args] => Array
-                (
-                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\index.php
-                )
-
-            [function] => include_once
-        )
-
-    [4] => Array
-        (
-            [file] => D:\htdocs\cratos\Ecommerce-Cratos\index.php
-            [line] => 16
-            [args] => Array
-                (
-                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\conteudo.php
-                )
-
-            [function] => include_once
-        )
-
-)
-
-Trace File: D:\htdocs\cratos\Ecommerce-Cratos\source\funcoes\crud\crud.php
-Trace Line: 55
-File: D:\htdocs\cratos\Ecommerce-Cratos\source\funcoes\crud\crud.php
-Line: 55
-Throwable: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '' at line 1
-Code: 42000
-Trace: Array
-(
-    [0] => Array
-        (
-            [file] => D:\htdocs\cratos\Ecommerce-Cratos\source\funcoes\crud\crud.php
-            [line] => 55
-            [function] => execute
-            [class] => PDOStatement
-            [type] => ->
-            [args] => Array
-                (
-                )
-
-        )
-
-    [1] => Array
-        (
-            [file] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\pagina\produto\produto.php
-            [line] => 305
-            [function] => listarGeral
-            [args] => Array
-                (
-                    [0] => c.comentario, c.estrela, c.cadastro, p.Nome
-                    [1] => comentarioproduto c INNER JOIN pessoa p ON p.idpessoa = c.idpessoa AND p.ativo='A' WHERE c.idprodutovariacao = 
-                )
-
-        )
-
-    [2] => Array
-        (
-            [file] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\index.php
-            [line] => 24
-            [args] => Array
-                (
-                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\pagina\produto\produto.php
-                )
-
-            [function] => include_once
-        )
-
-    [3] => Array
-        (
-            [file] => D:\htdocs\cratos\Ecommerce-Cratos\conteudo.php
-            [line] => 10
-            [args] => Array
-                (
-                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\index.php
-                )
-
-            [function] => include_once
-        )
-
-    [4] => Array
-        (
-            [file] => D:\htdocs\cratos\Ecommerce-Cratos\index.php
-            [line] => 16
-            [args] => Array
-                (
-                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\conteudo.php
-                )
-
-            [function] => include_once
-        )
-
-)
-
-Trace File: D:\htdocs\cratos\Ecommerce-Cratos\source\funcoes\crud\crud.php
-Trace Line: 55
-File: D:\htdocs\cratos\Ecommerce-Cratos\source\funcoes\crud\crud.php
-Line: 55
-Throwable: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '' at line 1
-Code: 42000
-Trace: Array
-(
-    [0] => Array
-        (
-            [file] => D:\htdocs\cratos\Ecommerce-Cratos\source\funcoes\crud\crud.php
-            [line] => 55
-            [function] => execute
-            [class] => PDOStatement
-            [type] => ->
-            [args] => Array
-                (
-                )
-
-        )
-
-    [1] => Array
-        (
-            [file] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\pagina\produto\produto.php
-            [line] => 305
-            [function] => listarGeral
-            [args] => Array
-                (
-                    [0] => c.comentario, c.estrela, c.cadastro, p.Nome
-                    [1] => comentarioproduto c INNER JOIN pessoa p ON p.idpessoa = c.idpessoa AND p.ativo='A' WHERE c.idprodutovariacao = 
-                )
-
-        )
-
-    [2] => Array
-        (
-            [file] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\index.php
-            [line] => 24
-            [args] => Array
-                (
-                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\pagina\produto\produto.php
-                )
-
-            [function] => include_once
-        )
-
-    [3] => Array
-        (
-            [file] => D:\htdocs\cratos\Ecommerce-Cratos\conteudo.php
-            [line] => 10
-            [args] => Array
-                (
-                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\index.php
-                )
-
-            [function] => include_once
-        )
-
-    [4] => Array
-        (
-            [file] => D:\htdocs\cratos\Ecommerce-Cratos\index.php
-            [line] => 16
-            [args] => Array
-                (
-                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\conteudo.php
-                )
-
-            [function] => include_once
-        )
-
-)
-
-Trace File: D:\htdocs\cratos\Ecommerce-Cratos\source\funcoes\crud\crud.php
-Trace Line: 55
-File: D:\htdocs\cratos\Ecommerce-Cratos\source\funcoes\crud\crud.php
-Line: 55
-Throwable: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'p.foto' in 'field list'
-Code: 42S22
-Trace: Array
-(
-    [0] => Array
-        (
-            [file] => D:\htdocs\cratos\Ecommerce-Cratos\source\funcoes\crud\crud.php
-            [line] => 55
-            [function] => execute
-            [class] => PDOStatement
-            [type] => ->
-            [args] => Array
-                (
-                )
-
-        )
-
-    [1] => Array
-        (
-            [file] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\pagina\produto\lista.php
-            [line] => 23
-            [function] => listarGeral
-            [args] => Array
-                (
-                    [0] => p.idproduto, p.idcategoria, p.foto, p.produto, p.descricao, pv.idprodutovariacao
-                    [1] => produto p INNER JOIN produtovariacao pv  ON pv.idproduto = p.idproduto WHERE p.ativo = 'A' GROUP BY p.idproduto ORDER BY p.idproduto DESC LIMIT 12
-                )
-
-        )
-
-    [2] => Array
-        (
-            [file] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\conteudoloja.php
-            [line] => 3
-            [args] => Array
-                (
-                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\pagina\produto\lista.php
-                )
-
-            [function] => include_once
-        )
-
-    [3] => Array
-        (
-            [file] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\index.php
-            [line] => 27
-            [args] => Array
-                (
-                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\conteudoloja.php
-                )
-
-            [function] => include_once
-        )
-
-    [4] => Array
-        (
-            [file] => D:\htdocs\cratos\Ecommerce-Cratos\conteudo.php
-            [line] => 10
-            [args] => Array
-                (
-                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\index.php
-                )
-
-            [function] => include_once
-        )
-
-    [5] => Array
-        (
-            [file] => D:\htdocs\cratos\Ecommerce-Cratos\index.php
-            [line] => 16
-            [args] => Array
-                (
-                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\conteudo.php
-                )
-
-            [function] => include_once
-        )
-
-)
-
-Trace File: D:\htdocs\cratos\Ecommerce-Cratos\source\funcoes\crud\crud.php
-Trace Line: 55
-File: D:\htdocs\cratos\Ecommerce-Cratos\source\funcoes\crud\crud.php
-Line: 55
-Throwable: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'p.foto' in 'field list'
-Code: 42S22
-Trace: Array
-(
-    [0] => Array
-        (
-            [file] => D:\htdocs\cratos\Ecommerce-Cratos\source\funcoes\crud\crud.php
-            [line] => 55
-            [function] => execute
-            [class] => PDOStatement
-            [type] => ->
-            [args] => Array
-                (
-                )
-
-        )
-
-    [1] => Array
-        (
-            [file] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\pagina\produto\lista.php
-            [line] => 23
-            [function] => listarGeral
-            [args] => Array
-                (
-                    [0] => p.idproduto, p.idcategoria, p.foto, p.produto, p.descricao, pv.idprodutovariacao
-                    [1] => produto p INNER JOIN produtovariacao pv  ON pv.idproduto = p.idproduto WHERE p.ativo = 'A' GROUP BY p.idproduto ORDER BY p.idproduto DESC LIMIT 12
-                )
-
-        )
-
-    [2] => Array
-        (
-            [file] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\conteudoloja.php
-            [line] => 3
-            [args] => Array
-                (
-                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\pagina\produto\lista.php
-                )
-
-            [function] => include_once
-        )
-
-    [3] => Array
-        (
-            [file] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\index.php
-            [line] => 27
-            [args] => Array
-                (
-                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\conteudoloja.php
-                )
-
-            [function] => include_once
-        )
-
-    [4] => Array
-        (
-            [file] => D:\htdocs\cratos\Ecommerce-Cratos\conteudo.php
-            [line] => 10
-            [args] => Array
-                (
-                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\index.php
-                )
-
-            [function] => include_once
-        )
-
-    [5] => Array
-        (
-            [file] => D:\htdocs\cratos\Ecommerce-Cratos\index.php
-            [line] => 16
-            [args] => Array
-                (
-                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\conteudo.php
-                )
-
-            [function] => include_once
-        )
-
-)
-
-Trace File: D:\htdocs\cratos\Ecommerce-Cratos\source\funcoes\crud\crud.php
-Trace Line: 55
-File: D:\htdocs\cratos\Ecommerce-Cratos\source\funcoes\crud\crud.php
-Line: 55
-Throwable: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '' at line 1
-Code: 42000
-Trace: Array
-(
-    [0] => Array
-        (
-            [file] => D:\htdocs\cratos\Ecommerce-Cratos\source\funcoes\crud\crud.php
-            [line] => 55
-            [function] => execute
-            [class] => PDOStatement
-            [type] => ->
-            [args] => Array
-                (
-                )
-
-        )
-
-    [1] => Array
-        (
-            [file] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\pagina\produto\produto.php
-            [line] => 305
-            [function] => listarGeral
-            [args] => Array
-                (
-                    [0] => c.comentario, c.estrela, c.cadastro, p.Nome
-                    [1] => comentarioproduto c INNER JOIN pessoa p ON p.idpessoa = c.idpessoa AND p.ativo='A' WHERE c.idprodutovariacao = 
-                )
-
-        )
-
-    [2] => Array
-        (
-            [file] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\index.php
-            [line] => 24
-            [args] => Array
-                (
-                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\pagina\produto\produto.php
-                )
-
-            [function] => include_once
-        )
-
-    [3] => Array
-        (
-            [file] => D:\htdocs\cratos\Ecommerce-Cratos\conteudo.php
-            [line] => 10
-            [args] => Array
-                (
-                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\index.php
-                )
-
-            [function] => include_once
-        )
-
-    [4] => Array
-        (
-            [file] => D:\htdocs\cratos\Ecommerce-Cratos\index.php
-            [line] => 16
-            [args] => Array
-                (
-                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\conteudo.php
-                )
-
-            [function] => include_once
-        )
-
-)
-
-Trace File: D:\htdocs\cratos\Ecommerce-Cratos\source\funcoes\crud\crud.php
-Trace Line: 55
-File: D:\htdocs\cratos\Ecommerce-Cratos\source\funcoes\crud\crud.php
-Line: 55
-Throwable: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'p.foto' in 'field list'
-Code: 42S22
-Trace: Array
-(
-    [0] => Array
-        (
-            [file] => D:\htdocs\cratos\Ecommerce-Cratos\source\funcoes\crud\crud.php
-            [line] => 55
-            [function] => execute
-            [class] => PDOStatement
-            [type] => ->
-            [args] => Array
-                (
-                )
-
-        )
-
-    [1] => Array
-        (
-            [file] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\pagina\produto\lista.php
-            [line] => 23
-            [function] => listarGeral
-            [args] => Array
-                (
-                    [0] => p.idproduto, p.idcategoria, p.foto, p.produto, p.descricao, pv.idprodutovariacao
-                    [1] => produto p INNER JOIN produtovariacao pv  ON pv.idproduto = p.idproduto WHERE p.ativo = 'A' GROUP BY p.idproduto ORDER BY p.idproduto DESC LIMIT 12
-                )
-
-        )
-
-    [2] => Array
-        (
-            [file] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\conteudoloja.php
-            [line] => 3
-            [args] => Array
-                (
-                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\pagina\produto\lista.php
-                )
-
-            [function] => include_once
-        )
-
-    [3] => Array
-        (
-            [file] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\index.php
-            [line] => 31
-            [args] => Array
-                (
-                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\conteudoloja.php
-                )
-
-            [function] => include_once
-        )
-
-    [4] => Array
-        (
-            [file] => D:\htdocs\cratos\Ecommerce-Cratos\conteudo.php
-            [line] => 10
-            [args] => Array
-                (
-                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\index.php
-                )
-
-            [function] => include_once
-        )
-
-    [5] => Array
-        (
-            [file] => D:\htdocs\cratos\Ecommerce-Cratos\index.php
-            [line] => 16
-            [args] => Array
-                (
-                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\conteudo.php
-                )
-
-            [function] => include_once
-        )
-
-)
-
-Trace File: D:\htdocs\cratos\Ecommerce-Cratos\source\funcoes\crud\crud.php
-Trace Line: 55
-File: D:\htdocs\cratos\Ecommerce-Cratos\source\funcoes\crud\crud.php
-Line: 55
-Throwable: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'p.foto' in 'field list'
-Code: 42S22
-Trace: Array
-(
-    [0] => Array
-        (
-            [file] => D:\htdocs\cratos\Ecommerce-Cratos\source\funcoes\crud\crud.php
-            [line] => 55
-            [function] => execute
-            [class] => PDOStatement
-            [type] => ->
-            [args] => Array
-                (
-                )
-
-        )
-
-    [1] => Array
-        (
-            [file] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\pagina\produto\lista.php
-            [line] => 23
-            [function] => listarGeral
-            [args] => Array
-                (
-                    [0] => p.idproduto, p.idcategoria, p.foto, p.produto, p.descricao, pv.idprodutovariacao
-                    [1] => produto p INNER JOIN produtovariacao pv  ON pv.idproduto = p.idproduto WHERE p.ativo = 'A' GROUP BY p.idproduto ORDER BY p.idproduto DESC LIMIT 12
-                )
-
-        )
-
-    [2] => Array
-        (
-            [file] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\conteudoloja.php
-            [line] => 3
-            [args] => Array
-                (
-                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\pagina\produto\lista.php
-                )
-
-            [function] => include_once
-        )
-
-    [3] => Array
-        (
-            [file] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\index.php
-            [line] => 31
-            [args] => Array
-                (
-                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\conteudoloja.php
-                )
-
-            [function] => include_once
-        )
-
-    [4] => Array
-        (
-            [file] => D:\htdocs\cratos\Ecommerce-Cratos\conteudo.php
-            [line] => 10
-            [args] => Array
-                (
-                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\index.php
-                )
-
-            [function] => include_once
-        )
-
-    [5] => Array
-        (
-            [file] => D:\htdocs\cratos\Ecommerce-Cratos\index.php
-            [line] => 16
-            [args] => Array
-                (
-                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\conteudo.php
-                )
-
-            [function] => include_once
-        )
-
-)
-
-Trace File: D:\htdocs\cratos\Ecommerce-Cratos\source\funcoes\crud\crud.php
-Trace Line: 55
-File: D:\htdocs\cratos\Ecommerce-Cratos\source\funcoes\crud\crud.php
-Line: 55
-Throwable: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'p.foto' in 'field list'
-Code: 42S22
-Trace: Array
-(
-    [0] => Array
-        (
-            [file] => D:\htdocs\cratos\Ecommerce-Cratos\source\funcoes\crud\crud.php
-            [line] => 55
-            [function] => execute
-            [class] => PDOStatement
-            [type] => ->
-            [args] => Array
-                (
-                )
-
-        )
-
-    [1] => Array
-        (
-            [file] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\pagina\produto\lista.php
-            [line] => 23
-            [function] => listarGeral
-            [args] => Array
-                (
-                    [0] => p.idproduto, p.idcategoria, p.foto, p.produto, p.descricao, pv.idprodutovariacao
-                    [1] => produto p INNER JOIN produtovariacao pv  ON pv.idproduto = p.idproduto WHERE p.ativo = 'A' GROUP BY p.idproduto ORDER BY p.idproduto DESC LIMIT 12
-                )
-
-        )
-
-    [2] => Array
-        (
-            [file] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\conteudoloja.php
-            [line] => 3
-            [args] => Array
-                (
-                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\pagina\produto\lista.php
-                )
-
-            [function] => include_once
-        )
-
-    [3] => Array
-        (
-            [file] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\index.php
-            [line] => 31
-            [args] => Array
-                (
-                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\conteudoloja.php
-                )
-
-            [function] => include_once
-        )
-
-    [4] => Array
-        (
-            [file] => D:\htdocs\cratos\Ecommerce-Cratos\conteudo.php
-            [line] => 17
-            [args] => Array
-                (
-                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\index.php
-                )
-
-            [function] => include_once
-        )
-
-    [5] => Array
-        (
-            [file] => D:\htdocs\cratos\Ecommerce-Cratos\index.php
-            [line] => 16
-            [args] => Array
-                (
-                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\conteudo.php
-                )
-
-            [function] => include_once
-        )
-
-)
-
-Trace File: D:\htdocs\cratos\Ecommerce-Cratos\source\funcoes\crud\crud.php
-Trace Line: 55
-File: D:\htdocs\cratos\Ecommerce-Cratos\source\funcoes\crud\crud.php
-Line: 55
-Throwable: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'p.foto' in 'field list'
-Code: 42S22
-Trace: Array
-(
-    [0] => Array
-        (
-            [file] => D:\htdocs\cratos\Ecommerce-Cratos\source\funcoes\crud\crud.php
-            [line] => 55
-            [function] => execute
-            [class] => PDOStatement
-            [type] => ->
-            [args] => Array
-                (
-                )
-
-        )
-
-    [1] => Array
-        (
-            [file] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\pagina\produto\lista.php
-            [line] => 23
-            [function] => listarGeral
-            [args] => Array
-                (
-                    [0] => p.idproduto, p.idcategoria, p.foto, p.produto, p.descricao, pv.idprodutovariacao
-                    [1] => produto p INNER JOIN produtovariacao pv  ON pv.idproduto = p.idproduto WHERE p.ativo = 'A' GROUP BY p.idproduto ORDER BY p.idproduto DESC LIMIT 12
-                )
-
-        )
-
-    [2] => Array
-        (
-            [file] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\conteudoloja.php
-            [line] => 3
-            [args] => Array
-                (
-                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\pagina\produto\lista.php
-                )
-
-            [function] => include_once
-        )
-
-    [3] => Array
-        (
-            [file] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\index.php
-            [line] => 27
-            [args] => Array
-                (
-                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\conteudoloja.php
-                )
-
-            [function] => include_once
-        )
-
-    [4] => Array
-        (
-            [file] => D:\htdocs\cratos\Ecommerce-Cratos\conteudo.php
-            [line] => 10
-            [args] => Array
-                (
-                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\index.php
-                )
-
-            [function] => include_once
-        )
-
-    [5] => Array
-        (
-            [file] => D:\htdocs\cratos\Ecommerce-Cratos\index.php
-            [line] => 16
-            [args] => Array
-                (
-                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\conteudo.php
-                )
-
-            [function] => include_once
-        )
-
-)
-
-Trace File: D:\htdocs\cratos\Ecommerce-Cratos\source\funcoes\crud\crud.php
-Trace Line: 55
-File: D:\htdocs\cratos\Ecommerce-Cratos\source\funcoes\crud\crud.php
-Line: 55
-Throwable: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'p.foto' in 'field list'
-Code: 42S22
-Trace: Array
-(
-    [0] => Array
-        (
-            [file] => D:\htdocs\cratos\Ecommerce-Cratos\source\funcoes\crud\crud.php
-            [line] => 55
-            [function] => execute
-            [class] => PDOStatement
-            [type] => ->
-            [args] => Array
-                (
-                )
-
-        )
-
-    [1] => Array
-        (
-            [file] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\pagina\produto\lista.php
-            [line] => 23
-            [function] => listarGeral
-            [args] => Array
-                (
-                    [0] => p.idproduto, p.idcategoria, p.foto, p.produto, p.descricao, pv.idprodutovariacao
-                    [1] => produto p INNER JOIN produtovariacao pv  ON pv.idproduto = p.idproduto WHERE p.ativo = 'A' GROUP BY p.idproduto ORDER BY p.idproduto DESC LIMIT 12
-                )
-
-        )
-
-    [2] => Array
-        (
-            [file] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\conteudoloja.php
-            [line] => 3
-            [args] => Array
-                (
-                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\pagina\produto\lista.php
-                )
-
-            [function] => include_once
-        )
-
-    [3] => Array
-        (
-            [file] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\index.php
-            [line] => 27
-            [args] => Array
-                (
-                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\conteudoloja.php
-                )
-
-            [function] => include_once
-        )
-
-    [4] => Array
-        (
-            [file] => D:\htdocs\cratos\Ecommerce-Cratos\conteudo.php
-            [line] => 10
-            [args] => Array
-                (
-                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\index.php
-                )
-
-            [function] => include_once
-        )
-
-    [5] => Array
-        (
-            [file] => D:\htdocs\cratos\Ecommerce-Cratos\index.php
-            [line] => 16
-            [args] => Array
-                (
-                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\conteudo.php
-                )
-
-            [function] => include_once
-        )
-
-)
-
-Trace File: D:\htdocs\cratos\Ecommerce-Cratos\source\funcoes\crud\crud.php
-Trace Line: 55
-File: D:\htdocs\cratos\Ecommerce-Cratos\source\funcoes\crud\crud.php
-Line: 55
-Throwable: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'p.foto' in 'field list'
-Code: 42S22
-Trace: Array
-(
-    [0] => Array
-        (
-            [file] => D:\htdocs\cratos\Ecommerce-Cratos\source\funcoes\crud\crud.php
-            [line] => 55
-            [function] => execute
-            [class] => PDOStatement
-            [type] => ->
-            [args] => Array
-                (
-                )
-
-        )
-
-    [1] => Array
-        (
-            [file] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\pagina\produto\lista.php
-            [line] => 23
-            [function] => listarGeral
-            [args] => Array
-                (
-                    [0] => p.idproduto, p.idcategoria, p.foto, p.produto, p.descricao, pv.idprodutovariacao
-                    [1] => produto p INNER JOIN produtovariacao pv  ON pv.idproduto = p.idproduto WHERE p.ativo = 'A' GROUP BY p.idproduto ORDER BY p.idproduto DESC LIMIT 12
-                )
-
-        )
-
-    [2] => Array
-        (
-            [file] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\conteudoloja.php
-            [line] => 3
-            [args] => Array
-                (
-                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\pagina\produto\lista.php
-                )
-
-            [function] => include_once
-        )
-
-    [3] => Array
-        (
-            [file] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\index.php
-            [line] => 27
-            [args] => Array
-                (
-                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\conteudoloja.php
-                )
-
-            [function] => include_once
-        )
-
-    [4] => Array
-        (
-            [file] => D:\htdocs\cratos\Ecommerce-Cratos\conteudo.php
-            [line] => 10
-            [args] => Array
-                (
-                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\index.php
-                )
-
-            [function] => include_once
-        )
-
-    [5] => Array
-        (
-            [file] => D:\htdocs\cratos\Ecommerce-Cratos\index.php
-            [line] => 16
-            [args] => Array
-                (
-                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\conteudo.php
-                )
-
-            [function] => include_once
-        )
-
-)
-
-Trace File: D:\htdocs\cratos\Ecommerce-Cratos\source\funcoes\crud\crud.php
-Trace Line: 55
-File: D:\htdocs\cratos\Ecommerce-Cratos\source\funcoes\crud\crud.php
-Line: 55
-Throwable: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'p.foto' in 'field list'
-Code: 42S22
-Trace: Array
-(
-    [0] => Array
-        (
-            [file] => D:\htdocs\cratos\Ecommerce-Cratos\source\funcoes\crud\crud.php
-            [line] => 55
-            [function] => execute
-            [class] => PDOStatement
-            [type] => ->
-            [args] => Array
-                (
-                )
-
-        )
-
-    [1] => Array
-        (
-            [file] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\pagina\produto\lista.php
-            [line] => 23
-            [function] => listarGeral
-            [args] => Array
-                (
-                    [0] => p.idproduto, p.idcategoria, p.foto, p.produto, p.descricao, pv.idprodutovariacao
-                    [1] => produto p INNER JOIN produtovariacao pv  ON pv.idproduto = p.idproduto WHERE p.ativo = 'A' GROUP BY p.idproduto ORDER BY p.idproduto DESC LIMIT 12
-                )
-
-        )
-
-    [2] => Array
-        (
-            [file] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\conteudoloja.php
-            [line] => 3
-            [args] => Array
-                (
-                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\pagina\produto\lista.php
-                )
-
-            [function] => include_once
-        )
-
-    [3] => Array
-        (
-            [file] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\index.php
-            [line] => 31
-            [args] => Array
-                (
-                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\conteudoloja.php
-                )
-
-            [function] => include_once
-        )
-
-    [4] => Array
-        (
-            [file] => D:\htdocs\cratos\Ecommerce-Cratos\conteudo.php
-            [line] => 10
-            [args] => Array
-                (
-                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\index.php
-                )
-
-            [function] => include_once
-        )
-
-    [5] => Array
-        (
-            [file] => D:\htdocs\cratos\Ecommerce-Cratos\index.php
-            [line] => 16
-            [args] => Array
-                (
-                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\conteudo.php
-                )
-
-            [function] => include_once
-        )
-
-)
-
-Trace File: D:\htdocs\cratos\Ecommerce-Cratos\source\funcoes\crud\crud.php
-Trace Line: 55
-File: D:\htdocs\cratos\Ecommerce-Cratos\source\funcoes\crud\crud.php
-Line: 55
-Throwable: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'p.foto' in 'field list'
-Code: 42S22
-Trace: Array
-(
-    [0] => Array
-        (
-            [file] => D:\htdocs\cratos\Ecommerce-Cratos\source\funcoes\crud\crud.php
-            [line] => 55
-            [function] => execute
-            [class] => PDOStatement
-            [type] => ->
-            [args] => Array
-                (
-                )
-
-        )
-
-    [1] => Array
-        (
-            [file] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\pagina\produto\lista.php
-            [line] => 23
-            [function] => listarGeral
-            [args] => Array
-                (
-                    [0] => p.idproduto, p.idcategoria, p.foto, p.produto, p.descricao, pv.idprodutovariacao
-                    [1] => produto p INNER JOIN produtovariacao pv  ON pv.idproduto = p.idproduto WHERE p.ativo = 'A' GROUP BY p.idproduto ORDER BY p.idproduto DESC LIMIT 12
-                )
-
-        )
-
-    [2] => Array
-        (
-            [file] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\conteudoloja.php
-            [line] => 3
-            [args] => Array
-                (
-                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\pagina\produto\lista.php
-                )
-
-            [function] => include_once
-        )
-
-    [3] => Array
-        (
-            [file] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\index.php
-            [line] => 31
-            [args] => Array
-                (
-                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\conteudoloja.php
-                )
-
-            [function] => include_once
-        )
-
-    [4] => Array
-        (
-            [file] => D:\htdocs\cratos\Ecommerce-Cratos\conteudo.php
-            [line] => 17
-            [args] => Array
-                (
-                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\index.php
-                )
-
-            [function] => include_once
-        )
-
-    [5] => Array
-        (
-            [file] => D:\htdocs\cratos\Ecommerce-Cratos\index.php
-            [line] => 16
-            [args] => Array
-                (
-                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\conteudo.php
-                )
-
-            [function] => include_once
-        )
-
-)
-
-Trace File: D:\htdocs\cratos\Ecommerce-Cratos\source\funcoes\crud\crud.php
-Trace Line: 55
-File: D:\htdocs\cratos\Ecommerce-Cratos\source\funcoes\crud\crud.php
-Line: 55
-Throwable: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'p.foto' in 'field list'
-Code: 42S22
-Trace: Array
-(
-    [0] => Array
-        (
-            [file] => D:\htdocs\cratos\Ecommerce-Cratos\source\funcoes\crud\crud.php
-            [line] => 55
-            [function] => execute
-            [class] => PDOStatement
-            [type] => ->
-            [args] => Array
-                (
-                )
-
-        )
-
-    [1] => Array
-        (
-            [file] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\pagina\produto\lista.php
-            [line] => 23
-            [function] => listarGeral
-            [args] => Array
-                (
-                    [0] => p.idproduto, p.idcategoria, p.foto, p.produto, p.descricao, pv.idprodutovariacao
-                    [1] => produto p INNER JOIN produtovariacao pv  ON pv.idproduto = p.idproduto WHERE p.ativo = 'A' GROUP BY p.idproduto ORDER BY p.idproduto DESC LIMIT 12
-                )
-
-        )
-
-    [2] => Array
-        (
-            [file] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\conteudoloja.php
-            [line] => 3
-            [args] => Array
-                (
-                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\pagina\produto\lista.php
-                )
-
-            [function] => include_once
-        )
-
-    [3] => Array
-        (
-            [file] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\index.php
-            [line] => 27
-            [args] => Array
-                (
-                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\conteudoloja.php
-                )
-
-            [function] => include_once
-        )
-
-    [4] => Array
-        (
-            [file] => D:\htdocs\cratos\Ecommerce-Cratos\conteudo.php
-            [line] => 10
-            [args] => Array
-                (
-                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\index.php
-                )
-
-            [function] => include_once
-        )
-
-    [5] => Array
-        (
-            [file] => D:\htdocs\cratos\Ecommerce-Cratos\index.php
-            [line] => 16
-            [args] => Array
-                (
-                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\conteudo.php
-                )
-
-            [function] => include_once
-        )
-
-)
-
-Trace File: D:\htdocs\cratos\Ecommerce-Cratos\source\funcoes\crud\crud.php
-Trace Line: 55
-File: D:\htdocs\cratos\Ecommerce-Cratos\source\funcoes\crud\crud.php
-Line: 55
-Throwable: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'p.foto' in 'field list'
-Code: 42S22
-Trace: Array
-(
-    [0] => Array
-        (
-            [file] => D:\htdocs\cratos\Ecommerce-Cratos\source\funcoes\crud\crud.php
-            [line] => 55
-            [function] => execute
-            [class] => PDOStatement
-            [type] => ->
-            [args] => Array
-                (
-                )
-
-        )
-
-    [1] => Array
-        (
-            [file] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\pagina\produto\lista.php
-            [line] => 23
-            [function] => listarGeral
-            [args] => Array
-                (
-                    [0] => p.idproduto, p.idcategoria, p.foto, p.produto, p.descricao, pv.idprodutovariacao
-                    [1] => produto p INNER JOIN produtovariacao pv  ON pv.idproduto = p.idproduto WHERE p.ativo = 'A' GROUP BY p.idproduto ORDER BY p.idproduto DESC LIMIT 12
-                )
-
-        )
-
-    [2] => Array
-        (
-            [file] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\conteudoloja.php
-            [line] => 3
-            [args] => Array
-                (
-                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\pagina\produto\lista.php
-                )
-
-            [function] => include_once
-        )
-
-    [3] => Array
-        (
-            [file] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\index.php
-            [line] => 27
-            [args] => Array
-                (
-                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\conteudoloja.php
-                )
-
-            [function] => include_once
-        )
-
-    [4] => Array
-        (
-            [file] => D:\htdocs\cratos\Ecommerce-Cratos\conteudo.php
-            [line] => 10
-            [args] => Array
-                (
-                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\index.php
-                )
-
-            [function] => include_once
-        )
-
-    [5] => Array
-        (
-            [file] => D:\htdocs\cratos\Ecommerce-Cratos\index.php
-            [line] => 16
-            [args] => Array
-                (
-                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\conteudo.php
-                )
-
-            [function] => include_once
-        )
-
-)
-
-Trace File: D:\htdocs\cratos\Ecommerce-Cratos\source\funcoes\crud\crud.php
-Trace Line: 55
-File: D:\htdocs\cratos\Ecommerce-Cratos\source\funcoes\crud\crud.php
-Line: 55
-Throwable: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'p.foto' in 'field list'
-Code: 42S22
-Trace: Array
-(
-    [0] => Array
-        (
-            [file] => D:\htdocs\cratos\Ecommerce-Cratos\source\funcoes\crud\crud.php
-            [line] => 55
-            [function] => execute
-            [class] => PDOStatement
-            [type] => ->
-            [args] => Array
-                (
-                )
-
-        )
-
-    [1] => Array
-        (
-            [file] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\pagina\produto\lista.php
-            [line] => 23
-            [function] => listarGeral
-            [args] => Array
-                (
-                    [0] => p.idproduto, p.idcategoria, p.foto, p.produto, p.descricao, pv.idprodutovariacao
-                    [1] => produto p INNER JOIN produtovariacao pv  ON pv.idproduto = p.idproduto WHERE p.ativo = 'A' GROUP BY p.idproduto ORDER BY p.idproduto DESC LIMIT 12
-                )
-
-        )
-
-    [2] => Array
-        (
-            [file] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\conteudoloja.php
-            [line] => 3
-            [args] => Array
-                (
-                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\pagina\produto\lista.php
-                )
-
-            [function] => include_once
-        )
-
-    [3] => Array
-        (
-            [file] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\index.php
-            [line] => 31
-            [args] => Array
-                (
-                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\conteudoloja.php
-                )
-
-            [function] => include_once
-        )
-
-    [4] => Array
-        (
-            [file] => D:\htdocs\cratos\Ecommerce-Cratos\conteudo.php
-            [line] => 10
-            [args] => Array
-                (
-                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\index.php
-                )
-
-            [function] => include_once
-        )
-
-    [5] => Array
-        (
-            [file] => D:\htdocs\cratos\Ecommerce-Cratos\index.php
-            [line] => 16
-            [args] => Array
-                (
-                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\conteudo.php
-                )
-
-            [function] => include_once
-        )
-
-)
-
-Trace File: D:\htdocs\cratos\Ecommerce-Cratos\source\funcoes\crud\crud.php
-Trace Line: 55
-File: D:\htdocs\cratos\Ecommerce-Cratos\source\funcoes\crud\crud.php
-Line: 55
-Throwable: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'p.foto' in 'field list'
-Code: 42S22
-Trace: Array
-(
-    [0] => Array
-        (
-            [file] => D:\htdocs\cratos\Ecommerce-Cratos\source\funcoes\crud\crud.php
-            [line] => 55
-            [function] => execute
-            [class] => PDOStatement
-            [type] => ->
-            [args] => Array
-                (
-                )
-
-        )
-
-    [1] => Array
-        (
-            [file] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\pagina\produto\lista.php
-            [line] => 23
-            [function] => listarGeral
-            [args] => Array
-                (
-                    [0] => p.idproduto, p.idcategoria, p.foto, p.produto, p.descricao, pv.idprodutovariacao
-                    [1] => produto p INNER JOIN produtovariacao pv  ON pv.idproduto = p.idproduto WHERE p.ativo = 'A' GROUP BY p.idproduto ORDER BY p.idproduto DESC LIMIT 12
-                )
-
-        )
-
-    [2] => Array
-        (
-            [file] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\conteudoloja.php
-            [line] => 3
-            [args] => Array
-                (
-                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\pagina\produto\lista.php
-                )
-
-            [function] => include_once
-        )
-
-    [3] => Array
-        (
-            [file] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\index.php
-            [line] => 31
-            [args] => Array
-                (
-                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\conteudoloja.php
-                )
-
-            [function] => include_once
-        )
-
-    [4] => Array
-        (
-            [file] => D:\htdocs\cratos\Ecommerce-Cratos\conteudo.php
-            [line] => 17
-            [args] => Array
-                (
-                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\index.php
-                )
-
-            [function] => include_once
-        )
-
-    [5] => Array
-        (
-            [file] => D:\htdocs\cratos\Ecommerce-Cratos\index.php
-            [line] => 16
-            [args] => Array
-                (
-                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\conteudo.php
-                )
-
-            [function] => include_once
-        )
-
-)
-
-Trace File: D:\htdocs\cratos\Ecommerce-Cratos\source\funcoes\crud\crud.php
-Trace Line: 55
-File: D:\htdocs\cratos\Ecommerce-Cratos\source\funcoes\crud\crud.php
-Line: 55
-Throwable: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'p.foto' in 'field list'
-Code: 42S22
-Trace: Array
-(
-    [0] => Array
-        (
-            [file] => D:\htdocs\cratos\Ecommerce-Cratos\source\funcoes\crud\crud.php
-            [line] => 55
-            [function] => execute
-            [class] => PDOStatement
-            [type] => ->
-            [args] => Array
-                (
-                )
-
-        )
-
-    [1] => Array
-        (
-            [file] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\pagina\produto\lista.php
-            [line] => 23
-            [function] => listarGeral
-            [args] => Array
-                (
-                    [0] => p.idproduto, p.idcategoria, p.foto, p.produto, p.descricao, pv.idprodutovariacao
-                    [1] => produto p INNER JOIN produtovariacao pv  ON pv.idproduto = p.idproduto WHERE p.ativo = 'A' GROUP BY p.idproduto ORDER BY p.idproduto DESC LIMIT 12
-                )
-
-        )
-
-    [2] => Array
-        (
-            [file] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\conteudoloja.php
-            [line] => 3
-            [args] => Array
-                (
-                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\pagina\produto\lista.php
-                )
-
-            [function] => include_once
-        )
-
-    [3] => Array
-        (
-            [file] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\index.php
-            [line] => 27
-            [args] => Array
-                (
-                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\conteudoloja.php
-                )
-
-            [function] => include_once
-        )
-
-    [4] => Array
-        (
-            [file] => D:\htdocs\cratos\Ecommerce-Cratos\conteudo.php
-            [line] => 10
-            [args] => Array
-                (
-                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\index.php
-                )
-
-            [function] => include_once
-        )
-
-    [5] => Array
-        (
-            [file] => D:\htdocs\cratos\Ecommerce-Cratos\index.php
-            [line] => 16
-            [args] => Array
-                (
-                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\conteudo.php
-                )
-
-            [function] => include_once
-        )
-
-)
-
-Trace File: D:\htdocs\cratos\Ecommerce-Cratos\source\funcoes\crud\crud.php
-Trace Line: 55
-File: D:\htdocs\cratos\Ecommerce-Cratos\source\funcoes\crud\crud.php
-Line: 55
-Throwable: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'p.foto' in 'field list'
-Code: 42S22
-Trace: Array
-(
-    [0] => Array
-        (
-            [file] => D:\htdocs\cratos\Ecommerce-Cratos\source\funcoes\crud\crud.php
-            [line] => 55
-            [function] => execute
-            [class] => PDOStatement
-            [type] => ->
-            [args] => Array
-                (
-                )
-
-        )
-
-    [1] => Array
-        (
-            [file] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\pagina\produto\lista.php
-            [line] => 23
-            [function] => listarGeral
-            [args] => Array
-                (
-                    [0] => p.idproduto, p.idcategoria, p.foto, p.produto, p.descricao, pv.idprodutovariacao
-                    [1] => produto p INNER JOIN produtovariacao pv  ON pv.idproduto = p.idproduto WHERE p.ativo = 'A' GROUP BY p.idproduto ORDER BY p.idproduto DESC LIMIT 12
-                )
-
-        )
-
-    [2] => Array
-        (
-            [file] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\conteudoloja.php
-            [line] => 3
-            [args] => Array
-                (
-                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\pagina\produto\lista.php
-                )
-
-            [function] => include_once
-        )
-
-    [3] => Array
-        (
-            [file] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\index.php
-            [line] => 27
-            [args] => Array
-                (
-                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\conteudoloja.php
-                )
-
-            [function] => include_once
-        )
-
-    [4] => Array
-        (
-            [file] => D:\htdocs\cratos\Ecommerce-Cratos\conteudo.php
-            [line] => 10
-            [args] => Array
-                (
-                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\index.php
-                )
-
-            [function] => include_once
-        )
-
-    [5] => Array
-        (
-            [file] => D:\htdocs\cratos\Ecommerce-Cratos\index.php
-            [line] => 16
-            [args] => Array
-                (
-                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\conteudo.php
-                )
-
-            [function] => include_once
-        )
-
-)
-
-Trace File: D:\htdocs\cratos\Ecommerce-Cratos\source\funcoes\crud\crud.php
-Trace Line: 55
-File: D:\htdocs\cratos\Ecommerce-Cratos\source\funcoes\crud\crud.php
-Line: 55
-Throwable: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'p.foto' in 'field list'
-Code: 42S22
-Trace: Array
-(
-    [0] => Array
-        (
-            [file] => D:\htdocs\cratos\Ecommerce-Cratos\source\funcoes\crud\crud.php
-            [line] => 55
-            [function] => execute
-            [class] => PDOStatement
-            [type] => ->
-            [args] => Array
-                (
-                )
-
-        )
-
-    [1] => Array
-        (
-            [file] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\pagina\produto\lista.php
-            [line] => 23
-            [function] => listarGeral
-            [args] => Array
-                (
-                    [0] => p.idproduto, p.idcategoria, p.foto, p.produto, p.descricao, pv.idprodutovariacao
-                    [1] => produto p INNER JOIN produtovariacao pv  ON pv.idproduto = p.idproduto WHERE p.ativo = 'A' GROUP BY p.idproduto ORDER BY p.idproduto DESC LIMIT 12
-                )
-
-        )
-
-    [2] => Array
-        (
-            [file] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\conteudoloja.php
-            [line] => 3
-            [args] => Array
-                (
-                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\pagina\produto\lista.php
-                )
-
-            [function] => include_once
-        )
-
-    [3] => Array
-        (
-            [file] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\index.php
-            [line] => 27
-            [args] => Array
-                (
-                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\conteudoloja.php
-                )
-
-            [function] => include_once
-        )
-
-    [4] => Array
-        (
-            [file] => D:\htdocs\cratos\Ecommerce-Cratos\conteudo.php
-            [line] => 10
-            [args] => Array
-                (
-                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\index.php
-                )
-
-            [function] => include_once
-        )
-
-    [5] => Array
-        (
-            [file] => D:\htdocs\cratos\Ecommerce-Cratos\index.php
-            [line] => 16
-            [args] => Array
-                (
-                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\conteudo.php
-                )
-
-            [function] => include_once
-        )
-
-)
-
-Trace File: D:\htdocs\cratos\Ecommerce-Cratos\source\funcoes\crud\crud.php
-Trace Line: 55
-File: D:\htdocs\cratos\Ecommerce-Cratos\source\funcoes\crud\crud.php
-Line: 55
-Throwable: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'p.foto' in 'field list'
-Code: 42S22
-Trace: Array
-(
-    [0] => Array
-        (
-            [file] => D:\htdocs\cratos\Ecommerce-Cratos\source\funcoes\crud\crud.php
-            [line] => 55
-            [function] => execute
-            [class] => PDOStatement
-            [type] => ->
-            [args] => Array
-                (
-                )
-
-        )
-
-    [1] => Array
-        (
-            [file] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\pagina\produto\lista.php
-            [line] => 23
-            [function] => listarGeral
-            [args] => Array
-                (
-                    [0] => p.idproduto, p.idcategoria, p.foto, p.produto, p.descricao, pv.idprodutovariacao
-                    [1] => produto p INNER JOIN produtovariacao pv  ON pv.idproduto = p.idproduto WHERE p.ativo = 'A' GROUP BY p.idproduto ORDER BY p.idproduto DESC LIMIT 12
-                )
-
-        )
-
-    [2] => Array
-        (
-            [file] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\conteudoloja.php
-            [line] => 3
-            [args] => Array
-                (
-                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\pagina\produto\lista.php
-                )
-
-            [function] => include_once
-        )
-
-    [3] => Array
-        (
-            [file] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\index.php
-            [line] => 31
-            [args] => Array
-                (
-                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\conteudoloja.php
-                )
-
-            [function] => include_once
-        )
-
-    [4] => Array
-        (
-            [file] => D:\htdocs\cratos\Ecommerce-Cratos\conteudo.php
-            [line] => 10
-            [args] => Array
-                (
-                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\index.php
-                )
-
-            [function] => include_once
-        )
-
-    [5] => Array
-        (
-            [file] => D:\htdocs\cratos\Ecommerce-Cratos\index.php
-            [line] => 16
-            [args] => Array
-                (
-                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\conteudo.php
-                )
-
-            [function] => include_once
-        )
-
-)
-
-Trace File: D:\htdocs\cratos\Ecommerce-Cratos\source\funcoes\crud\crud.php
-Trace Line: 55
-File: D:\htdocs\cratos\Ecommerce-Cratos\source\funcoes\crud\crud.php
-Line: 55
-Throwable: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'p.foto' in 'field list'
-Code: 42S22
-Trace: Array
-(
-    [0] => Array
-        (
-            [file] => D:\htdocs\cratos\Ecommerce-Cratos\source\funcoes\crud\crud.php
-            [line] => 55
-            [function] => execute
-            [class] => PDOStatement
-            [type] => ->
-            [args] => Array
-                (
-                )
-
-        )
-
-    [1] => Array
-        (
-            [file] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\pagina\produto\lista.php
-            [line] => 23
-            [function] => listarGeral
-            [args] => Array
-                (
-                    [0] => p.idproduto, p.idcategoria, p.foto, p.produto, p.descricao, pv.idprodutovariacao
-                    [1] => produto p INNER JOIN produtovariacao pv  ON pv.idproduto = p.idproduto WHERE p.ativo = 'A' GROUP BY p.idproduto ORDER BY p.idproduto DESC LIMIT 12
-                )
-
-        )
-
-    [2] => Array
-        (
-            [file] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\conteudoloja.php
-            [line] => 3
-            [args] => Array
-                (
-                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\pagina\produto\lista.php
-                )
-
-            [function] => include_once
-        )
-
-    [3] => Array
-        (
-            [file] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\index.php
-            [line] => 31
-            [args] => Array
-                (
-                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\conteudoloja.php
-                )
-
-            [function] => include_once
-        )
-
-    [4] => Array
-        (
-            [file] => D:\htdocs\cratos\Ecommerce-Cratos\conteudo.php
-            [line] => 17
-            [args] => Array
-                (
-                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\index.php
-                )
-
-            [function] => include_once
-        )
-
-    [5] => Array
-        (
-            [file] => D:\htdocs\cratos\Ecommerce-Cratos\index.php
-            [line] => 16
-            [args] => Array
-                (
-                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\conteudo.php
-                )
-
-            [function] => include_once
-        )
-
-)
-
-Trace File: D:\htdocs\cratos\Ecommerce-Cratos\source\funcoes\crud\crud.php
-Trace Line: 55
-File: D:\htdocs\cratos\Ecommerce-Cratos\source\funcoes\crud\crud.php
-Line: 55
-Throwable: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'p.foto' in 'field list'
-Code: 42S22
-Trace: Array
-(
-    [0] => Array
-        (
-            [file] => D:\htdocs\cratos\Ecommerce-Cratos\source\funcoes\crud\crud.php
-            [line] => 55
-            [function] => execute
-            [class] => PDOStatement
-            [type] => ->
-            [args] => Array
-                (
-                )
-
-        )
-
-    [1] => Array
-        (
-            [file] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\pagina\produto\lista.php
-            [line] => 23
-            [function] => listarGeral
-            [args] => Array
-                (
-                    [0] => p.idproduto, p.idcategoria, p.foto, p.produto, p.descricao, pv.idprodutovariacao
-                    [1] => produto p INNER JOIN produtovariacao pv  ON pv.idproduto = p.idproduto WHERE p.ativo = 'A' GROUP BY p.idproduto ORDER BY p.idproduto DESC LIMIT 12
-                )
-
-        )
-
-    [2] => Array
-        (
-            [file] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\conteudoloja.php
-            [line] => 3
-            [args] => Array
-                (
-                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\pagina\produto\lista.php
-                )
-
-            [function] => include_once
-        )
-
-    [3] => Array
-        (
-            [file] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\index.php
-            [line] => 27
-            [args] => Array
-                (
-                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\conteudoloja.php
-                )
-
-            [function] => include_once
-        )
-
-    [4] => Array
-        (
-            [file] => D:\htdocs\cratos\Ecommerce-Cratos\conteudo.php
-            [line] => 10
-            [args] => Array
-                (
-                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\index.php
-                )
-
-            [function] => include_once
-        )
-
-    [5] => Array
-        (
-            [file] => D:\htdocs\cratos\Ecommerce-Cratos\index.php
-            [line] => 16
-            [args] => Array
-                (
-                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\conteudo.php
-                )
-
-            [function] => include_once
-        )
-
-)
-
-Trace File: D:\htdocs\cratos\Ecommerce-Cratos\source\funcoes\crud\crud.php
-Trace Line: 55
-File: D:\htdocs\cratos\Ecommerce-Cratos\source\funcoes\crud\crud.php
-Line: 55
-Throwable: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'p.foto' in 'field list'
-Code: 42S22
-Trace: Array
-(
-    [0] => Array
-        (
-            [file] => D:\htdocs\cratos\Ecommerce-Cratos\source\funcoes\crud\crud.php
-            [line] => 55
-            [function] => execute
-            [class] => PDOStatement
-            [type] => ->
-            [args] => Array
-                (
-                )
-
-        )
-
-    [1] => Array
-        (
-            [file] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\pagina\produto\lista.php
-            [line] => 23
-            [function] => listarGeral
-            [args] => Array
-                (
-                    [0] => p.idproduto, p.idcategoria, p.foto, p.produto, p.descricao, pv.idprodutovariacao
-                    [1] => produto p INNER JOIN produtovariacao pv  ON pv.idproduto = p.idproduto WHERE p.ativo = 'A' GROUP BY p.idproduto ORDER BY p.idproduto DESC LIMIT 12
-                )
-
-        )
-
-    [2] => Array
-        (
-            [file] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\conteudoloja.php
-            [line] => 3
-            [args] => Array
-                (
-                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\pagina\produto\lista.php
-                )
-
-            [function] => include_once
-        )
-
-    [3] => Array
-        (
-            [file] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\index.php
-            [line] => 27
-            [args] => Array
-                (
-                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\conteudoloja.php
-                )
-
-            [function] => include_once
-        )
-
-    [4] => Array
-        (
-            [file] => D:\htdocs\cratos\Ecommerce-Cratos\conteudo.php
-            [line] => 10
-            [args] => Array
-                (
-                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\index.php
-                )
-
-            [function] => include_once
-        )
-
-    [5] => Array
-        (
-            [file] => D:\htdocs\cratos\Ecommerce-Cratos\index.php
-            [line] => 16
-            [args] => Array
-                (
-                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\conteudo.php
-                )
-
-            [function] => include_once
-        )
-
-)
-
-Trace File: D:\htdocs\cratos\Ecommerce-Cratos\source\funcoes\crud\crud.php
-Trace Line: 55
-File: D:\htdocs\cratos\Ecommerce-Cratos\source\funcoes\crud\crud.php
-Line: 55
-Throwable: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'p.foto' in 'field list'
-Code: 42S22
-Trace: Array
-(
-    [0] => Array
-        (
-            [file] => D:\htdocs\cratos\Ecommerce-Cratos\source\funcoes\crud\crud.php
-            [line] => 55
-            [function] => execute
-            [class] => PDOStatement
-            [type] => ->
-            [args] => Array
-                (
-                )
-
-        )
-
-    [1] => Array
-        (
-            [file] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\pagina\produto\lista.php
-            [line] => 23
-            [function] => listarGeral
-            [args] => Array
-                (
-                    [0] => p.idproduto, p.idcategoria, p.foto, p.produto, p.descricao, pv.idprodutovariacao
-                    [1] => produto p INNER JOIN produtovariacao pv  ON pv.idproduto = p.idproduto WHERE p.ativo = 'A' GROUP BY p.idproduto ORDER BY p.idproduto DESC LIMIT 12
-                )
-
-        )
-
-    [2] => Array
-        (
-            [file] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\conteudoloja.php
-            [line] => 3
-            [args] => Array
-                (
-                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\pagina\produto\lista.php
-                )
-
-            [function] => include_once
-        )
-
-    [3] => Array
-        (
-            [file] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\index.php
-            [line] => 27
-            [args] => Array
-                (
-                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\conteudoloja.php
-                )
-
-            [function] => include_once
-        )
-
-    [4] => Array
-        (
-            [file] => D:\htdocs\cratos\Ecommerce-Cratos\conteudo.php
-            [line] => 10
-            [args] => Array
-                (
-                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\index.php
-                )
-
-            [function] => include_once
-        )
-
-    [5] => Array
-        (
-            [file] => D:\htdocs\cratos\Ecommerce-Cratos\index.php
-            [line] => 16
-            [args] => Array
-                (
-                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\conteudo.php
-                )
-
-            [function] => include_once
-        )
-
-)
-
-Trace File: D:\htdocs\cratos\Ecommerce-Cratos\source\funcoes\crud\crud.php
-Trace Line: 55
-File: D:\htdocs\cratos\Ecommerce-Cratos\source\funcoes\crud\crud.php
-Line: 55
-Throwable: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'p.foto' in 'field list'
-Code: 42S22
-Trace: Array
-(
-    [0] => Array
-        (
-            [file] => D:\htdocs\cratos\Ecommerce-Cratos\source\funcoes\crud\crud.php
-            [line] => 55
-            [function] => execute
-            [class] => PDOStatement
-            [type] => ->
-            [args] => Array
-                (
-                )
-
-        )
-
-    [1] => Array
-        (
-            [file] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\pagina\produto\lista.php
-            [line] => 23
-            [function] => listarGeral
-            [args] => Array
-                (
-                    [0] => p.idproduto, p.idcategoria, p.foto, p.produto, p.descricao, pv.idprodutovariacao
-                    [1] => produto p INNER JOIN produtovariacao pv  ON pv.idproduto = p.idproduto WHERE p.ativo = 'A' GROUP BY p.idproduto ORDER BY p.idproduto DESC LIMIT 12
-                )
-
-        )
-
-    [2] => Array
-        (
-            [file] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\conteudoloja.php
-            [line] => 3
-            [args] => Array
-                (
-                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\pagina\produto\lista.php
-                )
-
-            [function] => include_once
-        )
-
-    [3] => Array
-        (
-            [file] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\index.php
-            [line] => 31
-            [args] => Array
-                (
-                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\conteudoloja.php
-                )
-
-            [function] => include_once
-        )
-
-    [4] => Array
-        (
-            [file] => D:\htdocs\cratos\Ecommerce-Cratos\conteudo.php
-            [line] => 10
-            [args] => Array
-                (
-                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\index.php
-                )
-
-            [function] => include_once
-        )
-
-    [5] => Array
-        (
-            [file] => D:\htdocs\cratos\Ecommerce-Cratos\index.php
-            [line] => 16
-            [args] => Array
-                (
-                    [0] => D:\htdocs\cratos\Ecommerce-Cratos\conteudo.php
-                )
-
-            [function] => include_once
-        )
-
-)
-
-Trace File: D:\htdocs\cratos\Ecommerce-Cratos\source\funcoes\crud\crud.php
-Trace Line: 55
-File: D:\htdocs\cratos\Ecommerce-Cratos\source\funcoes\crud\crud.php
-Line: 55
 Throwable: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '' at line 1
 Code: 42000
 Trace: Array
@@ -32896,4 +33084,9 @@ Trace: Array
 Trace File: D:\htdocs\cratos\Ecommerce-Cratos\source\funcoes\crud\crud.php
 Trace Line: 55
 File: D:\htdocs\cratos\Ecommerce-Cratos\source\funcoes\crud\crud.php
+=======
+Trace File: D:\htdocs\Cratos\Ecommerce-Cratos\source\funcoes\crud\crud.php
+Trace Line: 55
+File: D:\htdocs\Cratos\Ecommerce-Cratos\source\funcoes\crud\crud.php
+>>>>>>> fernando2
 Line: 55

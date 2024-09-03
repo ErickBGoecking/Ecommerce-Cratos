@@ -85,7 +85,12 @@ foreach($produtos as $produto){
                         </div>
                         <div class="order-4 flex-reverse d-flex flex-row-reverse">
                             <div class="d-flex gap-3 order-md-3 order-2 justify-content-center" style="width:100px">
-                                <strong>$btnAtivo</strong>
+                                <div>$btnAtivo</div>
+                                <div id="spanLoading" class="d-none">
+                                    <div class="mt-2 spinner-border spinner-border-sm text-body-tertiary" role="status">
+                                        <span class="visually-hidden">Loading...</span>
+                                    </div>
+                                </div>
                             </div>
                             <div>
                                 <div>
@@ -135,7 +140,12 @@ foreach($produtos as $produto){
                         </div>
                         <div class="order-4 flex-reverse d-flex flex-row-reverse">
                             <div class="d-flex gap-3 order-md-3 order-2 justify-content-center" style="width:100px">
-                                <strong>$btnAtivo</strong>
+                                <div>$btnAtivo</div>
+                                <div id="spanLoading" class="d-none">
+                                    <div class="mt-2 spinner-border spinner-border-sm text-body-tertiary" role="status">
+                                        <span class="visually-hidden">Loading...</span>
+                                    </div>
+                                </div>
                             </div>
                             <div>
                                 <div>

@@ -8,13 +8,16 @@ function configuraElementos(){
     const inputPrecoPromoEdicao = document.querySelectorAll('#inputsEdicaoEstoque .input-precoPromo');
     const btnAtivo = document.querySelectorAll('#inputsEdicaoEstoque .btnAtivo')
     const btnDelete = document.querySelectorAll('.btnDelete')
+    // const spanLoading = document.querySelectorAll('#spanLoading')
 
     btnAtivo.forEach((botao)=>{
         botao.addEventListener('click',async(event)=>{
             const idProduto = event.target.value
             let form = document.createElement('form')
-
-            event.target.innerHTML = '<div class="spinner-border" role="status"><span class="visually-hidden">Loading...</span></div>'
+            event.target.innerHTML = '<div  style="transform:scale(0.7);"><div class="spinner-border" role="status"><span class="visually-hidden">Loading...</span></div></div>'
+            event.target.classList.remove('btn-outline-success')
+            event.target.classList.remove('btn-outline-danger')
+            event.target.classList.add('btn-outline-secondary')
             event.target.classList.add('border')
             event.target.classList.add('border-0')
             const retorno = await postRetorno('adm/produtos/alterarativo/'+idProduto,form) 
@@ -30,7 +33,7 @@ function configuraElementos(){
                         event.target.innerHTML = conteudo
                         event.target.classList.remove('border')
                         event.target.classList.remove('border-0')
-                    },1000)
+                    },500)
                 }else{
                     var conteudo = '<span class="mdi mdi-lock-open-check"></span> Desativado';
                     event.target.classList.add('btn-outline-danger')
@@ -40,7 +43,7 @@ function configuraElementos(){
                         event.target.innerHTML = conteudo
                         event.target.classList.remove('border')
                         event.target.classList.remove('border-0')
-                    },1000)
+                    },500)
                 }
                 // mensagem(retorno.mensagem)    
             }else{

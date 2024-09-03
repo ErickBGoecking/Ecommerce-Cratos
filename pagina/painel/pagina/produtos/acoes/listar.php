@@ -23,7 +23,7 @@
                 class="rounded" style="max-width:80px;max-height:80px;">
             </div>
         <div class="order-1" style="max-width:200px;">
-            Produto: <strong><?php echo $produto->produto ?></strong>
+            Produto: <a href="<?= $_PREFIXO?>adm/produtos/editar/<?php echo base64_encode($produto->idproduto);?>"><strong><?php echo $produto->produto ?></strong></a>
         </div>
         <!-- <div>Descrição: <strong><?php echo $descricao?></strong></div> -->
         <div class="order-md-3 order-4 d-flex flex-column flex-fill gap-2 align-items-center">

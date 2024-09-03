@@ -31,7 +31,7 @@ async function carregarConteudo(controle,divConteudo) {
         return retorno
 }
 
-async function postRetorno(controle,form) {
+async function khjpostRetorno(controle,form) {
     controle +='/'
     var formData = new FormData(form);
     formData.append('controle', controle);
