@@ -7,6 +7,9 @@ if(isset($url[2])){
         case"cadastro":
             include_once('pagina/painel/pagina/produtos/view/cadastroproduto.php');
             break;
+        case"editar":
+            include_once('pagina/painel/pagina/produtos/view/editarProduto.php');
+            break;
         // case"cadastrar":
         //     cadastrar('produto');
         //     break;
