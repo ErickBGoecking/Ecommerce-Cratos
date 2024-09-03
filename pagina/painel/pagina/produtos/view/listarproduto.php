@@ -44,18 +44,31 @@
         <h5 class="offcanvas-title" id="offcanvasRightLabel">Offcanvas right</h5>
         <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
     </div>
-    <div class="offcanvas-body">
+    <div class="offcanvas-body d-flex flex-column gap-3">
         <div>
             <h5>Estoque</h5>
             <div class="d-flex gap-3">
-                <input type="radio" class="btn-check" name="filtro-estoque" id="filtro-estoque1" autocomplete="off" checked>
-                <label class="btn btn-outline-secondary" for="filtro-estoque1">Todos</label>
+                <input type="radio" class="btn-check" name="estoque" id="estoqueAll" autocomplete="off" checked>
+                <label class="btn btn-outline-secondary" for="estoqueAll">Todos</label>
 
-                <input type="radio" class="btn-check" name="filtro-estoque" id="filtro-estoque2" autocomplete="off">
-                <label class="btn btn-outline-secondary" for="filtro-estoque2">Em estoque</label>
+                <input type="radio" class="btn-check" name="estoque" id="estoqueEmEstoque" autocomplete="off">
+                <label class="btn btn-outline-secondary" for="estoqueEmEstoque">Em Estoque</label>
 
-                <input type="radio" class="btn-check" name="filtro-estoque" id="filtro-estoque3" autocomplete="off">
-                <label class="btn btn-outline-secondary" for="filtro-estoque3">Fora de estoque</label>
+                <input type="radio" class="btn-check" name="estoque" id="estoqueSemEstoque" autocomplete="off">
+                <label class="btn btn-outline-secondary" for="estoqueSemEstoque">Sem Estoque</label>
+            </div>
+        </div>
+        <div>
+            <h5>Preço</h5>
+            <div class="d-flex gap-3">
+                <input type="radio" class="btn-check" name="preco" id="precoTodos" autocomplete="off" checked>
+                <label class="btn btn-outline-secondary" for="precoTodos">Todos</label>
+
+                <input type="radio" class="btn-check" name="preco" id="precoAbaixo100" autocomplete="off">
+                <label class="btn btn-outline-secondary" for="precoAbaixo100">Abaixo de 100</label>
+
+                <input type="radio" class="btn-check" name="preco" id="precoAcima100" autocomplete="off">
+                <label class="btn btn-outline-secondary" for="precoAcima100">Acima de 100</label>
             </div>
         </div>
     </div>

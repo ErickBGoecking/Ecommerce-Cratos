@@ -31,8 +31,31 @@ if(validarSessaoAdm()){
 <?php include_once('./pagina/painel/layout/mensagem.php')?>
 
 <!-- --------------------------------------- -->
+<style>
+.loading-container {
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: aliceblue;
+    position: fixed;
+    z-index: 999;
+}
 
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
 
+    100% {
+        transform: rotate(360deg);
+    }
+}
+</style>
+<div class="loading-container vw-100 vh-100 d-flex flex-column justify-content-center align-items-center d-none" id="loading">
+    <div class="spinner-border text-warning" role="status">
+        <span class="visually-hidden">Loading...</span>
+    </div>
+    <p>Carregando...</p>
+</div>
 
 <div>
     <?php include_once('./pagina/painel/layout/header.php');?>

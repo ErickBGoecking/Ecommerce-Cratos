@@ -1,4 +1,12 @@
 var urlPrefixo = ""
+function loading(status){
+    const div = document.getElementById('loading')
+    if(status){
+        div.classList.remove('d-none')
+    }else{
+        div.classList.add('d-none')
+    }
+}
 
 async function carregarConteudo(controle,divConteudo) {
     fetch(urlPrefixo + 'controle/controle.php', {

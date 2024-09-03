@@ -13,6 +13,10 @@ function configuraElementos(){
         botao.addEventListener('click',async(event)=>{
             const idProduto = event.target.value
             let form = document.createElement('form')
+
+            event.target.innerHTML = '<div class="spinner-border" role="status"><span class="visually-hidden">Loading...</span></div>'
+            event.target.classList.add('border')
+            event.target.classList.add('border-0')
             const retorno = await postRetorno('adm/produtos/alterarativo/'+idProduto,form) 
             
             if(retorno.sucesso){    
@@ -22,13 +26,21 @@ function configuraElementos(){
                     event.target.classList.add('btn-outline-success')
                     event.target.classList.remove('text-danger')
                     event.target.classList.add('text-success')
-                    event.target.innerHTML = conteudo
+                    setTimeout(()=>{
+                        event.target.innerHTML = conteudo
+                        event.target.classList.remove('border')
+                        event.target.classList.remove('border-0')
+                    },1000)
                 }else{
                     var conteudo = '<span class="mdi mdi-lock-open-check"></span> Desativado';
                     event.target.classList.add('btn-outline-danger')
                     event.target.classList.add('text-danger')
                     event.target.classList.remove('text-success')
-                    event.target.innerHTML = conteudo
+                    setTimeout(()=>{
+                        event.target.innerHTML = conteudo
+                        event.target.classList.remove('border')
+                        event.target.classList.remove('border-0')
+                    },1000)
                 }
                 // mensagem(retorno.mensagem)    
             }else{
@@ -122,6 +134,8 @@ async function buscar(){
     var conteudo = await carregarConteudo(`adm/produtos/busca/${busca}/${paginacao}/${filtro}`,'conteudoLista')
     if(conteudo.sucesso){
         setTimeout(function() {configuraElementos();}, 500);
+        loading(true)
+        setTimeout(function() {loading(false);}, 500);
     }
 }
 const boxBuscaRapida = document.getElementById('boxBuscaRapida')
@@ -135,6 +149,30 @@ inputBusca.addEventListener('keypress', function(event) {
     }
   }
 });
+
+const radioFiltros = document.querySelectorAll('input[type="radio"]')
+radioFiltros.forEach(radio => {
+    radio.addEventListener('click',(event)=>{
+        filtrar()
+        buscar()
+    })
+    
+});
+
+function filtrar(){
+    filtro = ""
+    const radioButtons = document.querySelectorAll('input[type="radio"]');
+    radioButtons.forEach((radio) => {
+        if (radio.checked) {
+            if(filtro ==""){
+                filtro = radio.id
+            }else{
+                filtro += ","+radio.id
+            }
+        }
+    });
+}
+
 inputBusca.addEventListener('keyup', () => {
     var qtdCaracteres = inputBusca.value;
     if (qtdCaracteres.length >= 3) {
