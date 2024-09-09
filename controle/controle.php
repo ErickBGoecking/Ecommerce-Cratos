@@ -15,8 +15,6 @@ switch ($caminho) {
     case'loja':
         include_once 'loja/loja-controle.php';
         break;
-    default:
-        break;
 }
 
 // ----------------------------------------------
