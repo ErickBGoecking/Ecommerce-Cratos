@@ -33090,3 +33090,942 @@ Trace Line: 55
 File: D:\htdocs\Cratos\Ecommerce-Cratos\source\funcoes\crud\crud.php
 >>>>>>> fernando2
 Line: 55
+Throwable: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'p.foto' in 'field list'
+Code: 42S22
+Trace: Array
+(
+    [0] => Array
+        (
+            [file] => D:\htdocs\Cratos\Ecommerce-Cratos\source\funcoes\crud\crud.php
+            [line] => 55
+            [function] => execute
+            [class] => PDOStatement
+            [type] => ->
+            [args] => Array
+                (
+                )
+
+        )
+
+    [1] => Array
+        (
+            [file] => D:\htdocs\Cratos\Ecommerce-Cratos\pagina\painel\pagina\produtos\view\editarProduto.php
+            [line] => 11
+            [function] => listarGeral
+            [args] => Array
+                (
+                    [0] => 
+p.idcategoria, p.foto, p.video, p.produto, p.descricao, p.ativo,
+pv.idprodutovariacao, pv.idtipovariacao, pv.detalhe, pv.altura, pv.largura, pv.comprimento, pv.peso, pv.codigosku, pv.codigobarras,
+e.idfornecedor, e.custo, e.venda, e.vendapromocional, e.qtdatual
+
+                    [1] => 
+produtovariacao pv
+INNER JOIN produto p ON p.idproduto = pv.idproduto
+INNER JOIN estoque e ON e.idprodutovariacao = pv.idprodutovariacao
+WHERE pv.idproduto = 144
+
+                )
+
+        )
+
+    [2] => Array
+        (
+            [file] => D:\htdocs\Cratos\Ecommerce-Cratos\pagina\painel\pagina\produtos\produtos.php
+            [line] => 11
+            [args] => Array
+                (
+                    [0] => D:\htdocs\Cratos\Ecommerce-Cratos\pagina\painel\pagina\produtos\view\editarProduto.php
+                )
+
+            [function] => include_once
+        )
+
+    [3] => Array
+        (
+            [file] => D:\htdocs\Cratos\Ecommerce-Cratos\pagina\painel\index.php
+            [line] => 109
+            [args] => Array
+                (
+                    [0] => D:\htdocs\Cratos\Ecommerce-Cratos\pagina\painel\pagina\produtos\produtos.php
+                )
+
+            [function] => include_once
+        )
+
+    [4] => Array
+        (
+            [file] => D:\htdocs\Cratos\Ecommerce-Cratos\conteudo.php
+            [line] => 7
+            [args] => Array
+                (
+                    [0] => D:\htdocs\Cratos\Ecommerce-Cratos\pagina\painel\index.php
+                )
+
+            [function] => include_once
+        )
+
+    [5] => Array
+        (
+            [file] => D:\htdocs\Cratos\Ecommerce-Cratos\index.php
+            [line] => 16
+            [args] => Array
+                (
+                    [0] => D:\htdocs\Cratos\Ecommerce-Cratos\conteudo.php
+                )
+
+            [function] => include_once
+        )
+
+)
+
+Trace File: D:\htdocs\Cratos\Ecommerce-Cratos\source\funcoes\crud\crud.php
+Trace Line: 55
+File: D:\htdocs\Cratos\Ecommerce-Cratos\source\funcoes\crud\crud.php
+Line: 55
+Throwable: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'p.foto' in 'field list'
+Code: 42S22
+Trace: Array
+(
+    [0] => Array
+        (
+            [file] => D:\htdocs\Cratos\Ecommerce-Cratos\source\funcoes\crud\crud.php
+            [line] => 55
+            [function] => execute
+            [class] => PDOStatement
+            [type] => ->
+            [args] => Array
+                (
+                )
+
+        )
+
+    [1] => Array
+        (
+            [file] => D:\htdocs\Cratos\Ecommerce-Cratos\pagina\painel\pagina\produtos\view\editarProduto.php
+            [line] => 11
+            [function] => listarGeral
+            [args] => Array
+                (
+                    [0] => 
+p.idcategoria, p.foto, p.video, p.produto, p.descricao, p.ativo,
+pv.idprodutovariacao, pv.idtipovariacao, pv.detalhe, pv.altura, pv.largura, pv.comprimento, pv.peso, pv.codigosku, pv.codigobarras,
+e.idfornecedor, e.custo, e.venda, e.vendapromocional, e.qtdatual
+
+                    [1] => 
+produtovariacao pv
+INNER JOIN produto p ON p.idproduto = pv.idproduto
+INNER JOIN estoque e ON e.idprodutovariacao = pv.idprodutovariacao
+WHERE pv.idproduto = 145
+
+                )
+
+        )
+
+    [2] => Array
+        (
+            [file] => D:\htdocs\Cratos\Ecommerce-Cratos\pagina\painel\pagina\produtos\produtos.php
+            [line] => 11
+            [args] => Array
+                (
+                    [0] => D:\htdocs\Cratos\Ecommerce-Cratos\pagina\painel\pagina\produtos\view\editarProduto.php
+                )
+
+            [function] => include_once
+        )
+
+    [3] => Array
+        (
+            [file] => D:\htdocs\Cratos\Ecommerce-Cratos\pagina\painel\index.php
+            [line] => 109
+            [args] => Array
+                (
+                    [0] => D:\htdocs\Cratos\Ecommerce-Cratos\pagina\painel\pagina\produtos\produtos.php
+                )
+
+            [function] => include_once
+        )
+
+    [4] => Array
+        (
+            [file] => D:\htdocs\Cratos\Ecommerce-Cratos\conteudo.php
+            [line] => 7
+            [args] => Array
+                (
+                    [0] => D:\htdocs\Cratos\Ecommerce-Cratos\pagina\painel\index.php
+                )
+
+            [function] => include_once
+        )
+
+    [5] => Array
+        (
+            [file] => D:\htdocs\Cratos\Ecommerce-Cratos\index.php
+            [line] => 16
+            [args] => Array
+                (
+                    [0] => D:\htdocs\Cratos\Ecommerce-Cratos\conteudo.php
+                )
+
+            [function] => include_once
+        )
+
+)
+
+Trace File: D:\htdocs\Cratos\Ecommerce-Cratos\source\funcoes\crud\crud.php
+Trace Line: 55
+File: D:\htdocs\Cratos\Ecommerce-Cratos\source\funcoes\crud\crud.php
+Line: 55
+Throwable: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'p.foto' in 'field list'
+Code: 42S22
+Trace: Array
+(
+    [0] => Array
+        (
+            [file] => D:\htdocs\Cratos\Ecommerce-Cratos\source\funcoes\crud\crud.php
+            [line] => 55
+            [function] => execute
+            [class] => PDOStatement
+            [type] => ->
+            [args] => Array
+                (
+                )
+
+        )
+
+    [1] => Array
+        (
+            [file] => D:\htdocs\Cratos\Ecommerce-Cratos\pagina\painel\pagina\produtos\view\editarProduto.php
+            [line] => 11
+            [function] => listarGeral
+            [args] => Array
+                (
+                    [0] => 
+p.idcategoria, p.foto, p.video, p.produto, p.descricao, p.ativo,
+pv.idprodutovariacao, pv.idtipovariacao, pv.detalhe, pv.altura, pv.largura, pv.comprimento, pv.peso, pv.codigosku, pv.codigobarras,
+e.idfornecedor, e.custo, e.venda, e.vendapromocional, e.qtdatual
+
+                    [1] => 
+produtovariacao pv
+INNER JOIN produto p ON p.idproduto = pv.idproduto
+INNER JOIN estoque e ON e.idprodutovariacao = pv.idprodutovariacao
+WHERE pv.idproduto = 144
+
+                )
+
+        )
+
+    [2] => Array
+        (
+            [file] => D:\htdocs\Cratos\Ecommerce-Cratos\pagina\painel\pagina\produtos\produtos.php
+            [line] => 11
+            [args] => Array
+                (
+                    [0] => D:\htdocs\Cratos\Ecommerce-Cratos\pagina\painel\pagina\produtos\view\editarProduto.php
+                )
+
+            [function] => include_once
+        )
+
+    [3] => Array
+        (
+            [file] => D:\htdocs\Cratos\Ecommerce-Cratos\pagina\painel\index.php
+            [line] => 109
+            [args] => Array
+                (
+                    [0] => D:\htdocs\Cratos\Ecommerce-Cratos\pagina\painel\pagina\produtos\produtos.php
+                )
+
+            [function] => include_once
+        )
+
+    [4] => Array
+        (
+            [file] => D:\htdocs\Cratos\Ecommerce-Cratos\conteudo.php
+            [line] => 7
+            [args] => Array
+                (
+                    [0] => D:\htdocs\Cratos\Ecommerce-Cratos\pagina\painel\index.php
+                )
+
+            [function] => include_once
+        )
+
+    [5] => Array
+        (
+            [file] => D:\htdocs\Cratos\Ecommerce-Cratos\index.php
+            [line] => 16
+            [args] => Array
+                (
+                    [0] => D:\htdocs\Cratos\Ecommerce-Cratos\conteudo.php
+                )
+
+            [function] => include_once
+        )
+
+)
+
+Trace File: D:\htdocs\Cratos\Ecommerce-Cratos\source\funcoes\crud\crud.php
+Trace Line: 55
+File: D:\htdocs\Cratos\Ecommerce-Cratos\source\funcoes\crud\crud.php
+Line: 55
+Throwable: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'p.foto' in 'field list'
+Code: 42S22
+Trace: Array
+(
+    [0] => Array
+        (
+            [file] => D:\htdocs\Cratos\Ecommerce-Cratos\source\funcoes\crud\crud.php
+            [line] => 55
+            [function] => execute
+            [class] => PDOStatement
+            [type] => ->
+            [args] => Array
+                (
+                )
+
+        )
+
+    [1] => Array
+        (
+            [file] => D:\htdocs\Cratos\Ecommerce-Cratos\pagina\painel\pagina\produtos\view\editarProduto.php
+            [line] => 11
+            [function] => listarGeral
+            [args] => Array
+                (
+                    [0] => 
+p.idcategoria, p.foto, p.video, p.produto, p.descricao, p.ativo,
+pv.idprodutovariacao, pv.idtipovariacao, pv.detalhe, pv.altura, pv.largura, pv.comprimento, pv.peso, pv.codigosku, pv.codigobarras,
+e.idfornecedor, e.custo, e.venda, e.vendapromocional, e.qtdatual
+
+                    [1] => 
+produtovariacao pv
+INNER JOIN produto p ON p.idproduto = pv.idproduto
+INNER JOIN estoque e ON e.idprodutovariacao = pv.idprodutovariacao
+WHERE pv.idproduto = 144
+
+                )
+
+        )
+
+    [2] => Array
+        (
+            [file] => D:\htdocs\Cratos\Ecommerce-Cratos\pagina\painel\pagina\produtos\produtos.php
+            [line] => 11
+            [args] => Array
+                (
+                    [0] => D:\htdocs\Cratos\Ecommerce-Cratos\pagina\painel\pagina\produtos\view\editarProduto.php
+                )
+
+            [function] => include_once
+        )
+
+    [3] => Array
+        (
+            [file] => D:\htdocs\Cratos\Ecommerce-Cratos\pagina\painel\index.php
+            [line] => 109
+            [args] => Array
+                (
+                    [0] => D:\htdocs\Cratos\Ecommerce-Cratos\pagina\painel\pagina\produtos\produtos.php
+                )
+
+            [function] => include_once
+        )
+
+    [4] => Array
+        (
+            [file] => D:\htdocs\Cratos\Ecommerce-Cratos\conteudo.php
+            [line] => 7
+            [args] => Array
+                (
+                    [0] => D:\htdocs\Cratos\Ecommerce-Cratos\pagina\painel\index.php
+                )
+
+            [function] => include_once
+        )
+
+    [5] => Array
+        (
+            [file] => D:\htdocs\Cratos\Ecommerce-Cratos\index.php
+            [line] => 16
+            [args] => Array
+                (
+                    [0] => D:\htdocs\Cratos\Ecommerce-Cratos\conteudo.php
+                )
+
+            [function] => include_once
+        )
+
+)
+
+Trace File: D:\htdocs\Cratos\Ecommerce-Cratos\source\funcoes\crud\crud.php
+Trace Line: 55
+File: D:\htdocs\Cratos\Ecommerce-Cratos\source\funcoes\crud\crud.php
+Line: 55
+Throwable: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'p.foto' in 'field list'
+Code: 42S22
+Trace: Array
+(
+    [0] => Array
+        (
+            [file] => D:\htdocs\Cratos\Ecommerce-Cratos\source\funcoes\crud\crud.php
+            [line] => 55
+            [function] => execute
+            [class] => PDOStatement
+            [type] => ->
+            [args] => Array
+                (
+                )
+
+        )
+
+    [1] => Array
+        (
+            [file] => D:\htdocs\Cratos\Ecommerce-Cratos\pagina\painel\pagina\produtos\view\editarProduto.php
+            [line] => 11
+            [function] => listarGeral
+            [args] => Array
+                (
+                    [0] => 
+p.idcategoria, p.foto, p.video, p.produto, p.descricao, p.ativo,
+pv.idprodutovariacao, pv.idtipovariacao, pv.detalhe, pv.altura, pv.largura, pv.comprimento, pv.peso, pv.codigosku, pv.codigobarras,
+e.idfornecedor, e.custo, e.venda, e.vendapromocional, e.qtdatual
+
+                    [1] => 
+produtovariacao pv
+INNER JOIN produto p ON p.idproduto = pv.idproduto
+INNER JOIN estoque e ON e.idprodutovariacao = pv.idprodutovariacao
+WHERE pv.idproduto = 144
+
+                )
+
+        )
+
+    [2] => Array
+        (
+            [file] => D:\htdocs\Cratos\Ecommerce-Cratos\pagina\painel\pagina\produtos\produtos.php
+            [line] => 11
+            [args] => Array
+                (
+                    [0] => D:\htdocs\Cratos\Ecommerce-Cratos\pagina\painel\pagina\produtos\view\editarProduto.php
+                )
+
+            [function] => include_once
+        )
+
+    [3] => Array
+        (
+            [file] => D:\htdocs\Cratos\Ecommerce-Cratos\pagina\painel\index.php
+            [line] => 109
+            [args] => Array
+                (
+                    [0] => D:\htdocs\Cratos\Ecommerce-Cratos\pagina\painel\pagina\produtos\produtos.php
+                )
+
+            [function] => include_once
+        )
+
+    [4] => Array
+        (
+            [file] => D:\htdocs\Cratos\Ecommerce-Cratos\conteudo.php
+            [line] => 7
+            [args] => Array
+                (
+                    [0] => D:\htdocs\Cratos\Ecommerce-Cratos\pagina\painel\index.php
+                )
+
+            [function] => include_once
+        )
+
+    [5] => Array
+        (
+            [file] => D:\htdocs\Cratos\Ecommerce-Cratos\index.php
+            [line] => 16
+            [args] => Array
+                (
+                    [0] => D:\htdocs\Cratos\Ecommerce-Cratos\conteudo.php
+                )
+
+            [function] => include_once
+        )
+
+)
+
+Trace File: D:\htdocs\Cratos\Ecommerce-Cratos\source\funcoes\crud\crud.php
+Trace Line: 55
+File: D:\htdocs\Cratos\Ecommerce-Cratos\source\funcoes\crud\crud.php
+Line: 55
+Throwable: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'FROM 
+produtovariacao pv
+INNER JOIN produto p ON p.idproduto = pv.idproduto...' at line 5
+Code: 42000
+Trace: Array
+(
+    [0] => Array
+        (
+            [file] => D:\htdocs\Cratos\Ecommerce-Cratos\source\funcoes\crud\crud.php
+            [line] => 55
+            [function] => execute
+            [class] => PDOStatement
+            [type] => ->
+            [args] => Array
+                (
+                )
+
+        )
+
+    [1] => Array
+        (
+            [file] => D:\htdocs\Cratos\Ecommerce-Cratos\pagina\painel\pagina\produtos\view\editarProduto.php
+            [line] => 12
+            [function] => listarGeral
+            [args] => Array
+                (
+                    [0] => 
+p.idcategoria, p.video, p.produto, p.descricao, p.ativo,
+pv.idprodutovariacao, pv.idtipovariacao, pv.detalhe, pv.altura, pv.largura, pv.comprimento, pv.peso, pv.codigosku, pv.codigobarras,
+e.idfornecedor, e.custo, e.venda, e.vendapromocional, e.qtdatual,
+
+                    [1] => 
+produtovariacao pv
+INNER JOIN produto p ON p.idproduto = pv.idproduto
+INNER JOIN estoque e ON e.idprodutovariacao = pv.idprodutovariacao
+INNER JOIN fotoproduto f ON f.idprodutovariacao = pv.idprodutovariacao
+WHERE pv.idproduto = 144
+
+                )
+
+        )
+
+    [2] => Array
+        (
+            [file] => D:\htdocs\Cratos\Ecommerce-Cratos\pagina\painel\pagina\produtos\produtos.php
+            [line] => 11
+            [args] => Array
+                (
+                    [0] => D:\htdocs\Cratos\Ecommerce-Cratos\pagina\painel\pagina\produtos\view\editarProduto.php
+                )
+
+            [function] => include_once
+        )
+
+    [3] => Array
+        (
+            [file] => D:\htdocs\Cratos\Ecommerce-Cratos\pagina\painel\index.php
+            [line] => 109
+            [args] => Array
+                (
+                    [0] => D:\htdocs\Cratos\Ecommerce-Cratos\pagina\painel\pagina\produtos\produtos.php
+                )
+
+            [function] => include_once
+        )
+
+    [4] => Array
+        (
+            [file] => D:\htdocs\Cratos\Ecommerce-Cratos\conteudo.php
+            [line] => 7
+            [args] => Array
+                (
+                    [0] => D:\htdocs\Cratos\Ecommerce-Cratos\pagina\painel\index.php
+                )
+
+            [function] => include_once
+        )
+
+    [5] => Array
+        (
+            [file] => D:\htdocs\Cratos\Ecommerce-Cratos\index.php
+            [line] => 16
+            [args] => Array
+                (
+                    [0] => D:\htdocs\Cratos\Ecommerce-Cratos\conteudo.php
+                )
+
+            [function] => include_once
+        )
+
+)
+
+Trace File: D:\htdocs\Cratos\Ecommerce-Cratos\source\funcoes\crud\crud.php
+Trace Line: 55
+File: D:\htdocs\Cratos\Ecommerce-Cratos\source\funcoes\crud\crud.php
+Line: 55
+Throwable: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'FROM 
+produtovariacao pv
+INNER JOIN produto p ON p.idproduto = pv.idproduto...' at line 5
+Code: 42000
+Trace: Array
+(
+    [0] => Array
+        (
+            [file] => D:\htdocs\Cratos\Ecommerce-Cratos\source\funcoes\crud\crud.php
+            [line] => 55
+            [function] => execute
+            [class] => PDOStatement
+            [type] => ->
+            [args] => Array
+                (
+                )
+
+        )
+
+    [1] => Array
+        (
+            [file] => D:\htdocs\Cratos\Ecommerce-Cratos\pagina\painel\pagina\produtos\view\editarProduto.php
+            [line] => 11
+            [function] => listarGeral
+            [args] => Array
+                (
+                    [0] => 
+p.idcategoria, p.video, p.produto, p.descricao, p.ativo,
+pv.idprodutovariacao, pv.idtipovariacao, pv.detalhe, pv.altura, pv.largura, pv.comprimento, pv.peso, pv.codigosku, pv.codigobarras,
+e.idfornecedor, e.custo, e.venda, e.vendapromocional, e.qtdatual,
+
+                    [1] => 
+produtovariacao pv
+INNER JOIN produto p ON p.idproduto = pv.idproduto
+INNER JOIN estoque e ON e.idprodutovariacao = pv.idprodutovariacao
+WHERE pv.idproduto = 144
+
+                )
+
+        )
+
+    [2] => Array
+        (
+            [file] => D:\htdocs\Cratos\Ecommerce-Cratos\pagina\painel\pagina\produtos\produtos.php
+            [line] => 11
+            [args] => Array
+                (
+                    [0] => D:\htdocs\Cratos\Ecommerce-Cratos\pagina\painel\pagina\produtos\view\editarProduto.php
+                )
+
+            [function] => include_once
+        )
+
+    [3] => Array
+        (
+            [file] => D:\htdocs\Cratos\Ecommerce-Cratos\pagina\painel\index.php
+            [line] => 109
+            [args] => Array
+                (
+                    [0] => D:\htdocs\Cratos\Ecommerce-Cratos\pagina\painel\pagina\produtos\produtos.php
+                )
+
+            [function] => include_once
+        )
+
+    [4] => Array
+        (
+            [file] => D:\htdocs\Cratos\Ecommerce-Cratos\conteudo.php
+            [line] => 7
+            [args] => Array
+                (
+                    [0] => D:\htdocs\Cratos\Ecommerce-Cratos\pagina\painel\index.php
+                )
+
+            [function] => include_once
+        )
+
+    [5] => Array
+        (
+            [file] => D:\htdocs\Cratos\Ecommerce-Cratos\index.php
+            [line] => 16
+            [args] => Array
+                (
+                    [0] => D:\htdocs\Cratos\Ecommerce-Cratos\conteudo.php
+                )
+
+            [function] => include_once
+        )
+
+)
+
+Trace File: D:\htdocs\Cratos\Ecommerce-Cratos\source\funcoes\crud\crud.php
+Trace Line: 55
+File: D:\htdocs\Cratos\Ecommerce-Cratos\source\funcoes\crud\crud.php
+Line: 55
+Throwable: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'FROM 
+produtovariacao pv
+INNER JOIN produto p ON p.idproduto = pv.idproduto...' at line 5
+Code: 42000
+Trace: Array
+(
+    [0] => Array
+        (
+            [file] => D:\htdocs\Cratos\Ecommerce-Cratos\source\funcoes\crud\crud.php
+            [line] => 55
+            [function] => execute
+            [class] => PDOStatement
+            [type] => ->
+            [args] => Array
+                (
+                )
+
+        )
+
+    [1] => Array
+        (
+            [file] => D:\htdocs\Cratos\Ecommerce-Cratos\pagina\painel\pagina\produtos\view\editarProduto.php
+            [line] => 11
+            [function] => listarGeral
+            [args] => Array
+                (
+                    [0] => 
+p.idcategoria, p.video, p.produto, p.descricao, p.ativo,
+pv.idprodutovariacao, pv.idtipovariacao, pv.detalhe, pv.altura, pv.largura, pv.comprimento, pv.peso, pv.codigosku, pv.codigobarras,
+e.idfornecedor, e.custo, e.venda, e.vendapromocional, e.qtdatual,
+
+                    [1] => 
+produtovariacao pv
+INNER JOIN produto p ON p.idproduto = pv.idproduto
+INNER JOIN estoque e ON e.idprodutovariacao = pv.idprodutovariacao
+WHERE pv.idproduto = 144
+
+                )
+
+        )
+
+    [2] => Array
+        (
+            [file] => D:\htdocs\Cratos\Ecommerce-Cratos\pagina\painel\pagina\produtos\produtos.php
+            [line] => 11
+            [args] => Array
+                (
+                    [0] => D:\htdocs\Cratos\Ecommerce-Cratos\pagina\painel\pagina\produtos\view\editarProduto.php
+                )
+
+            [function] => include_once
+        )
+
+    [3] => Array
+        (
+            [file] => D:\htdocs\Cratos\Ecommerce-Cratos\pagina\painel\index.php
+            [line] => 109
+            [args] => Array
+                (
+                    [0] => D:\htdocs\Cratos\Ecommerce-Cratos\pagina\painel\pagina\produtos\produtos.php
+                )
+
+            [function] => include_once
+        )
+
+    [4] => Array
+        (
+            [file] => D:\htdocs\Cratos\Ecommerce-Cratos\conteudo.php
+            [line] => 7
+            [args] => Array
+                (
+                    [0] => D:\htdocs\Cratos\Ecommerce-Cratos\pagina\painel\index.php
+                )
+
+            [function] => include_once
+        )
+
+    [5] => Array
+        (
+            [file] => D:\htdocs\Cratos\Ecommerce-Cratos\index.php
+            [line] => 16
+            [args] => Array
+                (
+                    [0] => D:\htdocs\Cratos\Ecommerce-Cratos\conteudo.php
+                )
+
+            [function] => include_once
+        )
+
+)
+
+Trace File: D:\htdocs\Cratos\Ecommerce-Cratos\source\funcoes\crud\crud.php
+Trace Line: 55
+File: D:\htdocs\Cratos\Ecommerce-Cratos\source\funcoes\crud\crud.php
+Line: 55
+Throwable: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'FROM 
+produtovariacao pv
+INNER JOIN produto p ON p.idproduto = pv.idproduto...' at line 5
+Code: 42000
+Trace: Array
+(
+    [0] => Array
+        (
+            [file] => D:\htdocs\Cratos\Ecommerce-Cratos\source\funcoes\crud\crud.php
+            [line] => 55
+            [function] => execute
+            [class] => PDOStatement
+            [type] => ->
+            [args] => Array
+                (
+                )
+
+        )
+
+    [1] => Array
+        (
+            [file] => D:\htdocs\Cratos\Ecommerce-Cratos\pagina\painel\pagina\produtos\view\editarProduto.php
+            [line] => 11
+            [function] => listarGeral
+            [args] => Array
+                (
+                    [0] => 
+p.idcategoria, p.video, p.produto, p.descricao, p.ativo,
+pv.idprodutovariacao, pv.idtipovariacao, pv.detalhe, pv.altura, pv.largura, pv.comprimento, pv.peso, pv.codigosku, pv.codigobarras,
+e.idfornecedor, e.custo, e.venda, e.vendapromocional, e.qtdatual,
+
+                    [1] => 
+produtovariacao pv
+INNER JOIN produto p ON p.idproduto = pv.idproduto
+INNER JOIN estoque e ON e.idprodutovariacao = pv.idprodutovariacao
+WHERE pv.idproduto = 144
+
+                )
+
+        )
+
+    [2] => Array
+        (
+            [file] => D:\htdocs\Cratos\Ecommerce-Cratos\pagina\painel\pagina\produtos\produtos.php
+            [line] => 11
+            [args] => Array
+                (
+                    [0] => D:\htdocs\Cratos\Ecommerce-Cratos\pagina\painel\pagina\produtos\view\editarProduto.php
+                )
+
+            [function] => include_once
+        )
+
+    [3] => Array
+        (
+            [file] => D:\htdocs\Cratos\Ecommerce-Cratos\pagina\painel\index.php
+            [line] => 109
+            [args] => Array
+                (
+                    [0] => D:\htdocs\Cratos\Ecommerce-Cratos\pagina\painel\pagina\produtos\produtos.php
+                )
+
+            [function] => include_once
+        )
+
+    [4] => Array
+        (
+            [file] => D:\htdocs\Cratos\Ecommerce-Cratos\conteudo.php
+            [line] => 7
+            [args] => Array
+                (
+                    [0] => D:\htdocs\Cratos\Ecommerce-Cratos\pagina\painel\index.php
+                )
+
+            [function] => include_once
+        )
+
+    [5] => Array
+        (
+            [file] => D:\htdocs\Cratos\Ecommerce-Cratos\index.php
+            [line] => 16
+            [args] => Array
+                (
+                    [0] => D:\htdocs\Cratos\Ecommerce-Cratos\conteudo.php
+                )
+
+            [function] => include_once
+        )
+
+)
+
+Trace File: D:\htdocs\Cratos\Ecommerce-Cratos\source\funcoes\crud\crud.php
+Trace Line: 55
+File: D:\htdocs\Cratos\Ecommerce-Cratos\source\funcoes\crud\crud.php
+Line: 55
+Throwable: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '?+-j' at line 9
+Code: 42000
+Trace: Array
+(
+    [0] => Array
+        (
+            [file] => D:\htdocs\Cratos\Ecommerce-Cratos\source\funcoes\crud\crud.php
+            [line] => 55
+            [function] => execute
+            [class] => PDOStatement
+            [type] => ->
+            [args] => Array
+                (
+                )
+
+        )
+
+    [1] => Array
+        (
+            [file] => D:\htdocs\Cratos\Ecommerce-Cratos\pagina\painel\pagina\produtos\view\editarProduto.php
+            [line] => 11
+            [function] => listarGeral
+            [args] => Array
+                (
+                    [0] => 
+p.idproduto,p.idcategoria, p.video, p.produto, p.descricao, p.ativo,
+pv.idprodutovariacao, pv.idtipovariacao, pv.detalhe, pv.altura, pv.largura, pv.comprimento, pv.peso, pv.codigosku, pv.codigobarras,
+e.idfornecedor, e.custo, e.venda, e.vendapromocional, e.qtdatual
+
+                    [1] => 
+produtovariacao pv
+INNER JOIN produto p ON p.idproduto = pv.idproduto
+INNER JOIN estoque e ON e.idprodutovariacao = pv.idprodutovariacao
+WHERE pv.idproduto = –+-j
+
+                )
+
+        )
+
+    [2] => Array
+        (
+            [file] => D:\htdocs\Cratos\Ecommerce-Cratos\pagina\painel\pagina\produtos\produtos.php
+            [line] => 11
+            [args] => Array
+                (
+                    [0] => D:\htdocs\Cratos\Ecommerce-Cratos\pagina\painel\pagina\produtos\view\editarProduto.php
+                )
+
+            [function] => include_once
+        )
+
+    [3] => Array
+        (
+            [file] => D:\htdocs\Cratos\Ecommerce-Cratos\pagina\painel\index.php
+            [line] => 109
+            [args] => Array
+                (
+                    [0] => D:\htdocs\Cratos\Ecommerce-Cratos\pagina\painel\pagina\produtos\produtos.php
+                )
+
+            [function] => include_once
+        )
+
+    [4] => Array
+        (
+            [file] => D:\htdocs\Cratos\Ecommerce-Cratos\conteudo.php
+            [line] => 7
+            [args] => Array
+                (
+                    [0] => D:\htdocs\Cratos\Ecommerce-Cratos\pagina\painel\index.php
+                )
+
+            [function] => include_once
+        )
+
+    [5] => Array
+        (
+            [file] => D:\htdocs\Cratos\Ecommerce-Cratos\index.php
+            [line] => 16
+            [args] => Array
+                (
+                    [0] => D:\htdocs\Cratos\Ecommerce-Cratos\conteudo.php
+                )
+
+            [function] => include_once
+        )
+
+)
+
+Trace File: D:\htdocs\Cratos\Ecommerce-Cratos\source\funcoes\crud\crud.php
+Trace Line: 55
+File: D:\htdocs\Cratos\Ecommerce-Cratos\source\funcoes\crud\crud.php
+Line: 55

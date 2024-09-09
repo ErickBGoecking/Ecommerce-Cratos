@@ -465,6 +465,19 @@ function gerarCombinacoes(array, index = 0, prefixo = '',id='') {
         });
     });
 }
+function configTols(){
+    areaHoverList = document.querySelectorAll('#areaHover')
+    areaHoverList.forEach((element) => {
+        element.addEventListener('mouseover', (event) => {
+            ferramentasEdicaoTexto.classList.remove('d-none');
+            element.appendChild(ferramentasEdicaoTexto);
+        });
+        element.addEventListener('mouseout', (event) => {
+            ferramentasEdicaoTexto.classList.add('d-none');
+        });
+    });
+}
+configTols()
 function apagarDoArrayAtributo(atributo) {
     delete listaVariaveis[atributo]
 }
@@ -606,6 +619,23 @@ async function cadastrarProduto(){
         
     }else{
         mensagem(produto.mensagem,erro)
+    }
+
+}
+async function salvarProduto(){
+    var form = document.getElementById('formularioProduto')
+    loading(true)
+    const produto = await postRetorno('adm/produtos/alterarproduto',form)
+    if(produto.sucesso){
+        mensagem(produto.mensagem)
+        setTimeout(function() {loading(false);}, 500);
+        setTimeout(function() {
+            window.location.href = "../listar"
+        }, 1500);
+
+    }else{
+        mensagem(produto.mensagem,erro)
+        setTimeout(function() {loading(false);}, 500);
     }
 
 }

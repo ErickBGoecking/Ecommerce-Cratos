@@ -1,7 +1,7 @@
 <?php 
 $idproduto = base64_decode($url[3]);
 $produto = listarGeral('
-p.idcategoria, p.foto, p.video, p.produto, p.descricao, p.ativo,
+p.idproduto,p.idcategoria, p.video, p.produto, p.descricao, p.ativo,
 pv.idprodutovariacao, pv.idtipovariacao, pv.detalhe, pv.altura, pv.largura, pv.comprimento, pv.peso, pv.codigosku, pv.codigobarras,
 e.idfornecedor, e.custo, e.venda, e.vendapromocional, e.qtdatual
 ',"
@@ -11,6 +11,13 @@ INNER JOIN estoque e ON e.idprodutovariacao = pv.idprodutovariacao
 WHERE pv.idproduto = $idproduto
 ");
 
+// print_r($produto);
+
+if (count($produto) > 1) {
+    $verificaVariacao = "d-none";
+} else {
+    $verificaVariacao = "";
+}
 ?>
 
 <style>
@@ -35,8 +42,8 @@ WHERE pv.idproduto = $idproduto
 
 
 <!-- <form action="<?= $_PREFIXO?>pagina/painel/pagina/produtos/acoes/cadastrarproduto.php" method="post" -->
-<form action="" method="post"
-    id="formularioProduto" enctype="multipart/form-data">
+<form action="../../../../pagina/painel/pagina/produtos/acoes/alterarproduto.php" method="post" id="formularioProduto" enctype="multipart/form-data">
+    <input type="text" name="idproduto" class="d-none" value="<?= $idproduto ?>">
     <div class="container" style="max-width:780px;" id="conteudoInputs">
         <h2>Novo Produto</h2>
         <div class="d-flex flex-column gap-3 mb-0">
@@ -45,7 +52,8 @@ WHERE pv.idproduto = $idproduto
                     <h5>Nome e descricao</h5>
                     <div>
                         <label for="produto_produto" class="form-text">Nome</label>
-                        <input type="text" class="form-control" name="produto" id="inputProduto" value="<?= $produto[0]->produto ?>">
+                        <input type="text" class="form-control" name="produto" id="inputProduto"
+                            value="<?= $produto[0]->produto ?>">
                     </div>
                     <div>
                         <label for="produto_descricao">Descrição</label>
@@ -141,7 +149,7 @@ WHERE pv.idproduto = $idproduto
                                     </div>
                                     <div id="textDescricao" class="text-input" contenteditable="true"
                                         style="max-height:250px; overflow-y:scroll;">
-                                    <?php echo $produto[0]->descricao; ?>
+                                        <?php echo $produto[0]->descricao; ?>
                                     </div>
                                 </div>
                             </div>
@@ -153,7 +161,7 @@ WHERE pv.idproduto = $idproduto
                 </div>
             </div>
 
-            <div class="card">
+            <div class="card <?= $verificaVariacao;?>">
                 <div class="card-body d-flex flex-column gap-2">
                     <h5>Detalhes</h5>
                     <div class="card p-3">
@@ -170,12 +178,10 @@ WHERE pv.idproduto = $idproduto
                                     <button type="button" id="underline" class="option-button format buttonEditor">
                                         <i class="fa-solid fa-underline"></i>
                                     </button>
-                                    <button type="button" id="strikethrough"
-                                        class="option-button format buttonEditor">
+                                    <button type="button" id="strikethrough" class="option-button format buttonEditor">
                                         <i class="fa-solid fa-strikethrough"></i>
                                     </button>
-                                    <button type="button" id="superscript"
-                                        class="option-button script buttonEditor">
+                                    <button type="button" id="superscript" class="option-button script buttonEditor">
                                         <i class="fa-solid fa-superscript"></i>
                                     </button>
                                     <button type="button" id="subscript" class="option-button script buttonEditor">
@@ -185,8 +191,7 @@ WHERE pv.idproduto = $idproduto
                                     <button type="button" id="insertOrderedList" class="option-button buttonEditor">
                                         <div class="fa-solid fa-list-ol"></div>
                                     </button>
-                                    <button type="button" id="insertUnorderedList"
-                                        class="option-button buttonEditor">
+                                    <button type="button" id="insertUnorderedList" class="option-button buttonEditor">
                                         <i class="fa-solid fa-list"></i>
                                     </button>
                                     <!-- Undo/Redo -->
@@ -207,12 +212,10 @@ WHERE pv.idproduto = $idproduto
                                     <button type="button" id="justifyLeft" class="option-button align buttonEditor">
                                         <i class="fa-solid fa-align-left"></i>
                                     </button>
-                                    <button type="button" id="justifyCenter"
-                                        class="option-button align buttonEditor">
+                                    <button type="button" id="justifyCenter" class="option-button align buttonEditor">
                                         <i class="fa-solid fa-align-center"></i>
                                     </button>
-                                    <button type="button" id="justifyRight"
-                                        class="option-button align buttonEditor">
+                                    <button type="button" id="justifyRight" class="option-button align buttonEditor">
                                         <i class="fa-solid fa-align-right"></i>
                                     </button>
                                     <button type="button" id="justifyFull" class="option-button align buttonEditor">
@@ -259,7 +262,7 @@ WHERE pv.idproduto = $idproduto
                 </div>
             </div>
 
-            <div class="card">
+            <div class="card <?= $verificaVariacao;?>">
                 <div class="card-body d-flex flex-column">
                     <h5>Fotos</h5>
                     <div class="d-flex flex-wrap gap-3 mt-3" id="SequenciaFotosProduto" style="position:relative;">
@@ -280,7 +283,8 @@ WHERE pv.idproduto = $idproduto
                     <h5>Video</h5>
                     <label for="video_video" class="form-text">Cole um link do Youtube ou do Vimeo sobre o seu
                         produto</label>
-                    <input type="text" class="form-control" name="video" id="inputVideo" value="<?= $produto[0]->video; ?>">
+                    <input type="text" class="form-control" name="video" id="inputVideo"
+                        value="<?= $produto[0]->video; ?>">
                     <div class="flex-fill text-center mt-3">
                         <div id="video"></div>
                     </div>
@@ -299,7 +303,7 @@ WHERE pv.idproduto = $idproduto
                         ?>
                         <button class="btn btn-secondary"><?= $categoria[0]->categoria?></button>
                         <?php }?>
-                        
+
                     </div>
                     <div>
                         <button type="button" class="btn btn-light" data-bs-toggle="modal"
@@ -313,27 +317,28 @@ WHERE pv.idproduto = $idproduto
             </div>
 
 
-            <div class="card" id="cardPrecos">
+            <div class="card <?= $verificaVariacao;?>" id="cardPrecos">
                 <div class="card-body">
                     <h5>Preços</h5>
                     <div class="d-flex flex-wrap gap-3">
                         <div class="d-flex flex-fill gap-3 col-md-5">
                             <div class="flex-fill">
                                 <label for="" class="form-text">Preço de venda</label>
-                                <input type="text" class="form-control flex-fill" name="venda" id="estoque_venda"value="<?= "R$ ".$produto[0]->venda?>"
-                                    placeholder="R$ 0.00">
+                                <input type="text" class="form-control flex-fill" name="venda" id="estoque_venda"
+                                    value="<?= "R$ ".$produto[0]->venda?>" placeholder="R$ 0.00">
                             </div>
                             <div class="flex-fill">
                                 <label for="" class="form-text">Preço promocional</label>
-                                <input type="text" class="form-control flex-fill" name="vendaPromocional"value="<?= "R$ ".$produto[0]->vendapromocional?>"
-                                    id="estoque_vendapromocional" placeholder="R$ 0.00">
+                                <input type="text" class="form-control flex-fill" name="vendaPromocional"
+                                    value="<?= "R$ ".$produto[0]->vendapromocional?>" id="estoque_vendapromocional"
+                                    placeholder="R$ 0.00">
                             </div>
                         </div>
                         <div class="d-flex flex-fill gap-3 col-md-5">
                             <div class="flex-fill">
                                 <label for="" class="form-text">Custo</label>
-                                <input type="text" class="form-control flex-fill" name="custo" id="estoque_custo"value="<?= "R$ ".$produto[0]->custo?>"
-                                    placeholder="R$ 0.00">
+                                <input type="text" class="form-control flex-fill" name="custo" id="estoque_custo"
+                                    value="<?= "R$ ".$produto[0]->custo?>" placeholder="R$ 0.00">
                             </div>
                             <div class="flex-fill">
                                 <label for="" class="form-text">Margem de lucro</label>
@@ -345,24 +350,22 @@ WHERE pv.idproduto = $idproduto
                 </div>
             </div>
 
-            <div class="card" id="cardEstoque">
+            <div class="card <?= $verificaVariacao;?>" id="cardEstoque">
                 <div class="card-body d-flex flex-column">
                     <h5>Estoque</h5>
                     <label for="estoque_estoque" class="form-text">Quantidade</label>
                     <div class="d-flex gap-3">
-                        <input type="text" class="form-control" name="qtdatual" id="inputEstoque" 
-                        <?php  
+                        <input type="text" class="form-control" name="qtdatual" id="inputEstoque" <?php  
                         if(!empty($produto[0]->qtdatual or $produto[0]->qtdatual != 0)){
                             echo 'value="'.$produto[0]->qtdatual.'"';
                         }else{
                             echo 'disabled';
                         }
-                        ?> 
-                            placeholder="&#8734;">
+                        ?> placeholder="&#8734;">
                         <div class="form-check form-switch">
                             <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault"
-                                <?php if(empty($produto[0]->qtdatual)){echo 'checked';}?>
-                            <label class="form-check-label" for="flexSwitchCheckChecked">Infinito</label>
+                                <?php if(empty($produto[0]->qtdatual)){echo 'checked';}?> <label
+                                class="form-check-label" for="flexSwitchCheckChecked">Infinito</label>
                         </div>
                     </div>
                 </div>
@@ -372,8 +375,9 @@ WHERE pv.idproduto = $idproduto
                     <h5>Fornecedor</h5>
                     <div class="d-flex gap-3">
                         <div class="flex-fill" id="divSelectFornecedor">
-                            <select name="fornecedor" id="inputFornecedor" class="form-select form-select-sm" aria-label="Small select example">
-                                
+                            <select name="fornecedor" id="inputFornecedor" class="form-select form-select-sm"
+                                aria-label="Small select example">
+
                                 <?php 
                                 $fornecedores = listarGeral('f.idfornecedor,f.descricao,p.nome',
                                 'fornecedor f
@@ -394,17 +398,18 @@ WHERE pv.idproduto = $idproduto
                             </select>
                         </div>
                         <button type="button" class="btn btn-primary" data-bs-toggle="modal"
-                        data-bs-target="#modalGeral" id="btnNovoFornecedor">Novo</button>
+                            data-bs-target="#modalGeral" id="btnNovoFornecedor">Novo</button>
                     </div>
                 </div>
             </div>
 
-            <div class="card" id="cardCodigos">
+            <div class="card <?= $verificaVariacao;?>" id="cardCodigos">
                 <div class="card-body d-flex flex-column gap-2">
                     <h5>Códigos</h5>
                     <div>
                         <label for="codigo_sku" class="form-text">SKU</label>
-                        <input type="text" class="form-control" name="codigo_sku" id="codigo_sku" value="<?= $produto[0]->codigosku?>">
+                        <input type="text" class="form-control" name="codigo_sku" id="codigo_sku"
+                            value="<?= $produto[0]->codigosku?>">
                         <div id="codigo_sku_help" class="form-text">
                             SKU é um código que você cria internamente para ter o controle dos seus produtos com
                             variações.
@@ -412,7 +417,8 @@ WHERE pv.idproduto = $idproduto
                     </div>
                     <div>
                         <label for="codigo_barras">Codigo de Barras</label>
-                        <input tipe="text" name="codigo_barras" class="form-control" id="input-codigo-barras"value="<?= $produto[0]->codigobarras?>"></input>
+                        <input tipe="text" name="codigo_barras" class="form-control" id="input-codigo-barras"
+                            value="<?= $produto[0]->codigobarras?>"></input>
                         <div id="codigo_sku_help" class="form-text">
                             O código de barras é composto por 13 números e serve para identificar um produto.
                         </div>
@@ -423,7 +429,7 @@ WHERE pv.idproduto = $idproduto
                 </div>
             </div>
 
-            <div class="card" id="cardPesoDimensao">
+            <div class="card <?= $verificaVariacao;?>" id="cardPesoDimensao">
                 <div class="card-body d-flex flex-column gap-2">
                     <h5>Peso e dimensões</h5>
                     <p>Usaremos esses dados para calcular o custo de envio de seus produtos.</p>
@@ -432,34 +438,36 @@ WHERE pv.idproduto = $idproduto
                             <div class="flex-fill ">
                                 <label for="produtovariacao_peso" class="form-text">Peso</label>
                                 <input type="text" class="form-control" name="peso" id="produtovariacao_peso"
-                                    placeholder="0.000 Kg">
+                                    value="<?= $produto[0]->peso ?>" placeholder="0.000 Kg">
                             </div>
                             <div class="flex-fill ">
                                 <label for="produtovariacao_comprimento" class="form-text">Comprimento</label>
                                 <input type="text" class="form-control" name="comprimento"
-                                    id="produtovariacao_comprimento" placeholder="0 cm">
+                                    value="<?= $produto[0]->comprimento ?>" id="produtovariacao_comprimento"
+                                    placeholder="0 cm">
                             </div>
                         </div>
                         <div class="d-flex flex-fill gap-3 col-md-5">
                             <div class="flex-fill ">
                                 <label for="produtovariacao_largura" class="form-text">Largura</label>
                                 <input type="text" class="form-control" name="largura" id="produtovariacao_largura"
-                                    placeholder="0 cm">
+                                    value="<?= $produto[0]->largura ?>" placeholder="0 cm">
                             </div>
                             <div class="flex-fill ">
                                 <label for="produtovariacao_altura" class="form-text">Altura</label>
                                 <input type="text" class="form-control" name="altura" id="produtovariacao_altura"
-                                    placeholder="0 cm">
+                                    value="<?= $produto[0]->altura ?>" placeholder="0 cm">
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <div class="card p-3 d-none" style="position:absolute; bottom:0; margin-bottom:230px; transform:scale(0.8);" id="ferramentasEdicaoTexto">
+            <div class="card p-3 d-none" style="position:absolute; bottom:0; margin-bottom:230px; transform:scale(0.8);"
+                id="ferramentasEdicaoTexto">
                 <div>
                     <div class="container">
-                        <div class="options";">
+                        <div class="options" ;">
                             <!-- Text Format -->
                             <button type="button" id="bold" class="option-button format buttonEditor">
                                 <i class="fa-solid fa-bold"></i>
@@ -470,12 +478,10 @@ WHERE pv.idproduto = $idproduto
                             <button type="button" id="underline" class="option-button format buttonEditor">
                                 <i class="fa-solid fa-underline"></i>
                             </button>
-                            <button type="button" id="strikethrough"
-                                class="option-button format buttonEditor">
+                            <button type="button" id="strikethrough" class="option-button format buttonEditor">
                                 <i class="fa-solid fa-strikethrough"></i>
                             </button>
-                            <button type="button" id="superscript"
-                                class="option-button script buttonEditor">
+                            <button type="button" id="superscript" class="option-button script buttonEditor">
                                 <i class="fa-solid fa-superscript"></i>
                             </button>
                             <button type="button" id="subscript" class="option-button script buttonEditor">
@@ -485,8 +491,7 @@ WHERE pv.idproduto = $idproduto
                             <button type="button" id="insertOrderedList" class="option-button buttonEditor">
                                 <div class="fa-solid fa-list-ol"></div>
                             </button>
-                            <button type="button" id="insertUnorderedList"
-                                class="option-button buttonEditor">
+                            <button type="button" id="insertUnorderedList" class="option-button buttonEditor">
                                 <i class="fa-solid fa-list"></i>
                             </button>
                             <!-- Undo/Redo -->
@@ -507,12 +512,10 @@ WHERE pv.idproduto = $idproduto
                             <button type="button" id="justifyLeft" class="option-button align buttonEditor">
                                 <i class="fa-solid fa-align-left"></i>
                             </button>
-                            <button type="button" id="justifyCenter"
-                                class="option-button align buttonEditor">
+                            <button type="button" id="justifyCenter" class="option-button align buttonEditor">
                                 <i class="fa-solid fa-align-center"></i>
                             </button>
-                            <button type="button" id="justifyRight"
-                                class="option-button align buttonEditor">
+                            <button type="button" id="justifyRight" class="option-button align buttonEditor">
                                 <i class="fa-solid fa-align-right"></i>
                             </button>
                             <button type="button" id="justifyFull" class="option-button align buttonEditor">
@@ -569,15 +572,107 @@ WHERE pv.idproduto = $idproduto
             </div>
 
             <div id="variacoesGeradas" class=" d-flex flex-column gap-3">
+                <?php 
+                if(count($produto)>1){
+                    foreach($produto as $variacao){
+                        ?>
+                <div class="card">
+                    <div class="card-header">
+                        Variação: <h5><?= $variacao->produto . $variacao->idprodutovariacao ?> </h5>
+                    </div>
+                    <div class="card-body d-flex flex-wrap gap-3 justify-content-between align-items-between"
+                        id="divMais<?= $variacao->idprodutovariacao ?>" style="height:95px; overflow: hidden">
+                        <input type="text" name="idprodutovariacao[]" class="d-none" value="<?= $variacao->idprodutovariacao ?>">
+
+                        <input type="text" name="idTipoVariacao[]" class="d-none"
+                            value="<?= $variacao->idtipovariacao ?>">
+                        <div class="d-flex flex-column flex-fill">
+                            <label for="" class="form-label">Estoque</label>
+                            <input type="text" class="form-control" name="VariacaoEstoque[]"
+                                value="<?= $variacao->qtdatual ?>" placeholder="&#8734;">
+                        </div>
+                        <div class="d-flex flex-column flex-fill">
+                            <label for="" class="form-label">Preço Venda</label>
+                            <input type="text" class="form-control" name="VariacaoPrecoVenda[]"
+                                value="<?= $variacao->venda ?>">
+                        </div>
+                        <div class="d-flex flex-column flex-fill">
+                            <label for="" class="form-label">Preço Promocional</label>
+                            <input type="text" class="form-control" name="VariacaoPrecoPromocional[]"
+                                value="<?= $variacao->vendapromocional ?>">
+                        </div>
+                        <div class="d-flex flex-column flex-fill">
+                            <label for="" class="form-label">Custo</label>
+                            <input type="text" class="form-control" name="VariacaoCusto[]"
+                                value="<?= $variacao->custo ?>">
+                        </div>
+                        <div class="d-flex flex-column flex-fill">
+                            <label for="" class="form-label">Peso</label>
+                            <input type="text" class="form-control" name="VariacaoPeso[]"
+                                value="<?= $variacao->peso ?>">
+                        </div>
+                        <div class="d-flex flex-column flex-fill">
+                            <label for="" class="form-label">Comprimento</label>
+                            <input type="text" class="form-control" name="VariacaoComprimento[]"
+                                value="<?= $variacao->comprimento ?>">
+                        </div>
+                        <div class="d-flex flex-column flex-fill">
+                            <label for="" class="form-label">Largura</label>
+                            <input type="text" class="form-control" name="VariacaoLargura[]"
+                                value="<?= $variacao->largura ?>">
+                        </div>
+                        <div class="d-flex flex-column flex-fill">
+                            <label for="" class="form-label">Altura</label>
+                            <input type="text" class="form-control" name="VariacaoAltura[]"
+                                value="<?= $variacao->altura ?>">
+                        </div>
+                        <div class="d-flex flex-column flex-fill">
+                            <label for="" class="form-label">SKU</label>
+                            <input type="text" class="form-control" name="VariacaoSku[]"
+                                value="<?= $variacao->codigosku ?>">
+                        </div>
+                        <div class="d-flex flex-column flex-fill">
+                            <label for="" class="form-label">Código de Barras</label>
+                            <input type="text" class="form-control" name="VariacaoCodigoBarras[]"
+                                value="<?= $variacao->codigobarras ?>">
+                        </div>
+                        <div>
+                            <label class="form-label">Detalhes</label>
+                            <div id="areaHover">
+                                <div id="textDetalhe" class="text-input variacaoDetalhe" contenteditable="true"
+                                    style="max-height:250px; overflow-y:scroll;">
+                                    <?php echo $variacao->detalhe; ?>
+                                </div>
+                                <textarea name="variavelDetalhe[]" id="inputDetalhes" class="d-none">
+                                    <?php echo $variacao->detalhe; ?>
+                                </textarea>
+                            </div>
+                        </div>
+
+
+                    </div>
+
+                    <Button type="button" class="btn btn-primary rounded-circle p-1 pt-0 pb-0 d-flex gap-2"
+                        id="btn<?= $variacao->idprodutovariacao?>" value="True"
+                        style="position:absolute; bottom:-15px; right:50%;"
+                        onclick="exibirMais('btn<?= $variacao->idprodutovariacao ?>','divMais<?= $variacao->idprodutovariacao ?>')">
+                        <span class="mdi mdi-arrow-down-drop-circle-outline" style="transform:scale(1.5);"></span>
+                    </Button>
+                </div>
+
+
+                <?php
+                    }
+                }
+                ?>
             </div>
 
             <div class="d-flex justify-content-end gap-3 mb-4 ">
                 <button type="button" class="btn btn-outline-secondary">Cancelar</button>
                 <!-- <button type="submit" class="btn btn-primary">Salvar Produto</button> -->
-                <button type="button" class="btn btn-primary" onclick="cadastrarProduto()">Salvar Produto</button>
+                <button type="button" class="btn btn-primary" onclick=" salvarProduto()">Salvar Produto</button>
             </div>
         </div>
-    </div>
     </div>
 </form>
 

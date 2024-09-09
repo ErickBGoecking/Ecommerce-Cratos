@@ -15,8 +15,8 @@
                     <button class="btn btn-primary" onclick="buscar()">Busca</button>
                     <button class="btn btn-outline-secondary d-flex" type="button" data-bs-toggle="offcanvas"
                         data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
-                        <span class="mdi mdi-filter-outline"></span>
-                        Filtro
+                        <span class="mdi mdi-tune"></span>
+                        <span class="ps-2">Filtro</span>
                     </button>
                 </div>
                 <div class="card border border-0 shadow d-none"
@@ -41,7 +41,7 @@
 
 <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
     <div class="offcanvas-header">
-        <h5 class="offcanvas-title" id="offcanvasRightLabel">Offcanvas right</h5>
+        <h5 class="offcanvas-title" id="offcanvasRightLabel"><span class="mdi mdi-tune"></span><span class="px-2">Filtros</span></h5>
         <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
     </div>
     <div class="offcanvas-body d-flex flex-column gap-3">

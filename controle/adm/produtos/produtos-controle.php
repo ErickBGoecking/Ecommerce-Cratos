@@ -40,5 +40,8 @@ if (isset($controle[2]) && !empty($controle[2])) {
         case'buscarapida':
             include_once '../pagina/painel/pagina/produtos/acoes/buscaRapida.php';
             break;
+        case'alterarproduto':
+            include_once '../pagina/painel/pagina/produtos/acoes/alterarproduto.php';
+            break;
     }
 }

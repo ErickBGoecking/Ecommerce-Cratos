@@ -128,7 +128,7 @@ async function listar(){
     }
 }
 
-listar()
+
 const inputBusca = document.getElementById('inputBusca');
 
 async function buscar(){
@@ -141,6 +141,7 @@ async function buscar(){
         setTimeout(function() {loading(false);}, 500);
     }
 }
+buscar()
 const boxBuscaRapida = document.getElementById('boxBuscaRapida')
 const boxBuscaRapidaConteudo = document.getElementById('boxBuscaRapidaConteudo')
 

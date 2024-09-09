@@ -1,9 +1,14 @@
 <?php
     $_PREFIXO = "../../../../";
-    $produtos = listarGeral('idproduto,produto,foto,descricao,ativo','produto');
+    $produtos = listarGeral('p.idproduto, p.produto,p.ativo, MIN(f.foto) AS foto',"
+    produtovariacao pv
+    INNER JOIN produto p ON p.idproduto = pv.idproduto
+    INNER JOIN fotoproduto f ON f.idprodutovariacao = pv.idprodutovariacao
+    GROUP BY p.idproduto, p.produto");
     foreach($produtos as $produto){
         $idproduto = $produto->idproduto;
         $link = $_PREFIXO . "adm";
+        // $foto = "";
         $foto = $produto->foto;
         $variacao = listarGeral(
         "pv.idprodutovariacao, pv.altura, pv.largura,pv.peso, pv.destaque, pv.idtipovariacao,
@@ -18,9 +23,9 @@
 
 <div class="card card-lista mt-2 border border-0 shadow-sm d-flex flex-row" id="cardproduto<?=$idproduto?>">
     <div class="card-body d-flex flex-column flex-md-row justify-content-between gap-3" id="inputsEdicaoEstoque">
-        <div class="order-0"><img
+        <div class="order-0"><a href="<?= $_PREFIXO?>adm/produtos/editar/<?php echo base64_encode($produto->idproduto);?>"><img
                 src="<?=$_PREFIXO?>img/produto/<?php if(empty($foto)){echo "semfoto.png";}else{ echo $foto;}?>"
-                class="rounded" style="max-width:80px;max-height:80px;">
+                class="rounded" style="max-width:80px;max-height:80px;"></a>
             </div>
         <div class="order-1" style="max-width:200px;">
             Produto: <a href="<?= $_PREFIXO?>adm/produtos/editar/<?php echo base64_encode($produto->idproduto);?>"><strong><?php echo $produto->produto ?></strong></a>
