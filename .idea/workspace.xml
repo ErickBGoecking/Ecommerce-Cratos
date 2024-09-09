@@ -5,18 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e4031bf4-ec88-4847-add9-970c57ab60d5" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/controle/loja/loja-controle.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/controle/loja/produto/produto-controle.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pagina/loja/pagina/produto/produtoVariacao.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/source/css/loja/produto/produto.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/source/js/loja/loja.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/source/js/loja/produto/produto.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controle/controle.php" beforeDir="false" afterPath="$PROJECT_DIR$/controle/controle.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/log/arquivo_de_log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/log/arquivo_de_log.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pagina/loja/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/pagina/loja/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pagina/loja/pagina/produto/lista.php" beforeDir="false" afterPath="$PROJECT_DIR$/pagina/loja/pagina/produto/lista.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pagina/loja/pagina/produto/produto.php" beforeDir="false" afterPath="$PROJECT_DIR$/pagina/loja/pagina/produto/produto.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/css/loja/produto/produto.css" beforeDir="false" afterPath="$PROJECT_DIR$/source/css/loja/produto/produto.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/source/css/style.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,12 +39,12 @@
               <option name="branches">
                 <list>
                   <RecentBranch>
-                    <option name="branchName" value="luciano" />
-                    <option name="lastUsedInstant" value="1719878167" />
+                    <option name="branchName" value="main" />
+                    <option name="lastUsedInstant" value="1725380107" />
                   </RecentBranch>
                   <RecentBranch>
-                    <option name="branchName" value="main" />
-                    <option name="lastUsedInstant" value="1719877798" />
+                    <option name="branchName" value="luciano" />
+                    <option name="lastUsedInstant" value="1719878167" />
                   </RecentBranch>
                   <RecentBranch>
                     <option name="branchName" value="luciano-menu" />
@@ -87,8 +79,8 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "luciano",
-    "last_opened_file_path": "D:/htdocs/cratos/Ecommerce-Cratos/controle/loja/produto",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "D:/htdocs/cratos/Ecommerce-Cratos",
     "list.type.of.created.stylesheet": "CSS",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -169,7 +161,9 @@
       <workItem from="1724941897812" duration="3864000" />
       <workItem from="1724952781937" duration="1841000" />
       <workItem from="1725281074603" duration="15153000" />
-      <workItem from="1725367385050" duration="10228000" />
+      <workItem from="1725367385050" duration="21700000" />
+      <workItem from="1725646801404" duration="31000" />
+      <workItem from="1725891188144" duration="753000" />
     </task>
     <servers />
   </component>

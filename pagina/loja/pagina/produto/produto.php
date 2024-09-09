@@ -42,6 +42,59 @@ if (isset($produtoGet)) {
             $venda = $itemProduto->venda;
             $vendapromocional = $itemProduto->vendapromocional;
         }
+        $totalComentario = 0;
+        $totalEstrela = 0;
+        $calcMediaEstrela = 0;
+        $retornoComentarioPessoa = listarGeral('c.comentario, c.estrela, c.cadastro, p.Nome', "comentarioproduto c INNER JOIN pessoa p ON p.idpessoa = c.idpessoa AND p.ativo='A' WHERE c.idprodutovariacao = $idprodutovariacao");
+        if ($retornoComentarioPessoa) {
+            $totalComentario = count($retornoComentarioPessoa);
+            foreach ($retornoComentarioPessoa as $mediaEstrela) {
+                $calcMediaEstrela += $mediaEstrela->estrela;
+            }
+            $totalEstrela = $calcMediaEstrela / $totalComentario;
+        }
+
+
+        $estrelasCheias = floor($totalEstrela);
+        $estrelasMeia = ($totalEstrela - $estrelasCheias) >= 0.5 ? 1 : 0;
+        $estrelasVazias = 5 - ($estrelasCheias + $estrelasMeia);
+
+        $cincoEstrelas = listarGeral('c.estrela', "comentarioproduto c WHERE c.estrela = '5' AND c.idprodutovariacao = $idprodutovariacao");
+        $quatroEstrelas = listarGeral('c.estrela', "comentarioproduto c WHERE c.estrela = '4' AND c.idprodutovariacao = $idprodutovariacao");
+        $tresEstrelas = listarGeral('c.estrela', "comentarioproduto c WHERE c.estrela = '3' AND c.idprodutovariacao = $idprodutovariacao");
+        $doisEstrelas = listarGeral('c.estrela', "comentarioproduto c WHERE c.estrela = '2' AND c.idprodutovariacao = $idprodutovariacao");
+        $umaEstrelas = listarGeral('c.estrela', "comentarioproduto c WHERE c.estrela = '1' AND c.idprodutovariacao = $idprodutovariacao");
+        if($cincoEstrelas){
+            $totalCincoEstrelas = count($cincoEstrelas);
+        }else{
+            $totalCincoEstrelas = 0;
+        }
+        if($quatroEstrelas){
+            $totalQuatroEstrelas = count($quatroEstrelas);
+        }else{
+            $totalQuatroEstrelas = 0;
+        }
+        if($tresEstrelas){
+            $totalTresEstrelas = count($tresEstrelas);
+        }else{
+            $totalTresEstrelas = 0;
+        }
+        if($doisEstrelas){
+            $totalDoisEstrelas = count($doisEstrelas);
+        }else{
+            $totalDoisEstrelas = 0;
+        }
+        if($umaEstrelas){
+            $totalUmaEstrelas = count($umaEstrelas);
+        }else{
+            $totalUmaEstrelas = 0;
+        }
+        $totalAvaliacoes = $totalCincoEstrelas + $totalQuatroEstrelas + $totalTresEstrelas + $totalDoisEstrelas + $totalUmaEstrelas;
+        $porcentagemCincoEstrelas = $totalAvaliacoes > 0 ? ($totalCincoEstrelas / $totalAvaliacoes) * 100 : 0;
+        $porcentagemQuatroEstrelas = $totalAvaliacoes > 0 ? ($totalQuatroEstrelas / $totalAvaliacoes) * 100 : 0;
+        $porcentagemTresEstrelas = $totalAvaliacoes > 0 ? ($totalTresEstrelas / $totalAvaliacoes) * 100 : 0;
+        $porcentagemDoisEstrelas = $totalAvaliacoes > 0 ? ($totalDoisEstrelas / $totalAvaliacoes) * 100 : 0;
+        $porcentagemUmaEstrelas = $totalAvaliacoes > 0 ? ($totalUmaEstrelas / $totalAvaliacoes) * 100 : 0;
         ?>
         <div id="breadcrumb" class="section">
             <div class="container">
@@ -59,7 +112,7 @@ if (isset($produtoGet)) {
         <div class="section">
             <div class="container">
                 <div class="row">
-                    <div class="col-md-5 col-md-push-2">
+                    <div class="col-md-5 col-md-push-2" style="margin-bottom: -150px">
                         <div id="product-main-img">
                             <div class="product-preview">
                                 <img src="<?php echo $_PREFIXO ?>img/produto/<?php echo $foto; ?>"
@@ -134,13 +187,18 @@ if (isset($produtoGet)) {
                             <h2 class="product-name"><?php echo $produto; ?></h2>
                             <div>
                                 <div class="product-rating">
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star-o"></i>
+                                    <span><?php echo number_format($totalEstrela, 1); ; ?></span>
+                                    <?php for ($i = 0; $i < $estrelasCheias; $i++): ?>
+                                        <i class="fa fa-star"></i>
+                                    <?php endfor; ?>
+                                    <?php if ($estrelasMeia): ?>
+                                        <i class="fa fa-star-half-o"></i>
+                                    <?php endif; ?>
+                                    <?php for ($i = 0; $i < $estrelasVazias; $i++): ?>
+                                        <i class="fa fa-star-o"></i>
+                                    <?php endfor; ?>
                                 </div>
-                                <a class="review-link" href="#">10 Comentários | Adicionar comentário</a>
+                                <a class="review-link" id="click" href="#show-avaliacao" onclick="clickalert()"><?php echo $totalComentario?> Comentário(s)</a>
                             </div>
                             <div>
                                 <h3 class="product-price">R$<?php echo number_format($venda, '2', ',', '.'); ?>
@@ -192,21 +250,8 @@ if (isset($produtoGet)) {
                                 }
                             }
                             ?>
-                            <div class="product-options">
-                                <label>
-                                    Tam:
-                                    <select class="input-select">
-                                        <option value="0">G</option>
-                                    </select>
-                                </label>
-                                <label>
-                                    Cor:
-                                    <select class="input-select-cor" width="150px">
-                                        <option value="0">Vermelho</option>
-                                    </select>
-                                </label>
-                            </div>
-                            <div class="add-to-cart">
+
+                            <div class="add-to-cart" style="margin-top:35px">
                                 <div class="qty-label">
                                     Qtd:
                                     <div class="input-number">
@@ -235,26 +280,23 @@ if (isset($produtoGet)) {
                             </ul>
                         </div>
                     </div>
-                    <?php
-                    $totalComentario = 0;
-                    $totalEstrela = 0;
-                    $calcMediaEstrela = 0;
-                    $retornoComentarioPessoa = listarGeral('c.comentario, c.estrela, c.cadastro, p.Nome', "comentarioproduto c INNER JOIN pessoa p ON p.idpessoa = c.idpessoa AND p.ativo='A' WHERE c.idprodutovariacao = $idprodutovariacao");
-                    if ($retornoComentarioPessoa) {
-                        $totalComentario = count($retornoComentarioPessoa);
-                        foreach ($retornoComentarioPessoa as $mediaEstrela) {
-                            $calcMediaEstrela += $mediaEstrela->estrela;
-                        }
-                        $totalEstrela = $calcMediaEstrela / $totalComentario;
-                    }
-                    ?>
+
+                </div>
+                <div class="row" id="show-avaliacao">
                     <div class="col-md-12">
                         <div id="product-tab">
                             <ul class="tab-nav">
                                 <li class="active"><a data-toggle="tab" href="#tabDescricao">Descrição</a></li>
                                 <li><a data-toggle="tab" href="#tabDetalhes">Detalhes</a></li>
-                                <li><a data-toggle="tab" href="#tabAvaliacao">Avaliações
+                                <li><a data-toggle="tab" href="#tabAvaliacao" id="tabAvalaicaoShow">Avaliações
                                         (<?php echo $totalComentario; ?>)</a></li>
+                                <script>
+
+                                    function clickalert(){
+                                        const tabAvalaicaoShow = document.getElementById('tabAvalaicaoShow');
+                                        tabAvalaicaoShow.click();
+                                    }
+                                </script>
                             </ul>
                             <div class="tab-content">
                                 <div id="tabDescricao" class="tab-pane fade in active">
@@ -276,13 +318,17 @@ if (isset($produtoGet)) {
                                         <div class="col-md-3">
                                             <div id="rating">
                                                 <div class="rating-avg">
-                                                    <span><?php echo $totalEstrela; ?></span>
+                                                    <span><?php echo number_format($totalEstrela, 1); ; ?></span>
                                                     <div class="rating-stars">
-                                                        <i class="fa fa-star"></i>
-                                                        <i class="fa fa-star"></i>
-                                                        <i class="fa fa-star"></i>
-                                                        <i class="fa fa-star"></i>
-                                                        <i class="fa fa-star-o"></i>
+                                                        <?php for ($i = 0; $i < $estrelasCheias; $i++): ?>
+                                                            <i class="fa fa-star"></i>
+                                                        <?php endfor; ?>
+                                                        <?php if ($estrelasMeia): ?>
+                                                            <i class="fa fa-star-half-o"></i>
+                                                        <?php endif; ?>
+                                                        <?php for ($i = 0; $i < $estrelasVazias; $i++): ?>
+                                                            <i class="fa fa-star-o"></i>
+                                                        <?php endfor; ?>
                                                     </div>
                                                 </div>
                                                 <ul class="rating">
@@ -295,9 +341,9 @@ if (isset($produtoGet)) {
                                                             <i class="fa fa-star"></i>
                                                         </div>
                                                         <div class="rating-progress">
-                                                            <div style="width: 80%;"></div>
+                                                            <div style="width: <?php echo $porcentagemCincoEstrelas; ?>%;"></div>
                                                         </div>
-                                                        <span class="sum">3</span>
+                                                        <span class="sum"><?php echo $totalCincoEstrelas;?></span>
                                                     </li>
                                                     <li>
                                                         <div class="rating-stars">
@@ -308,9 +354,9 @@ if (isset($produtoGet)) {
                                                             <i class="fa fa-star-o"></i>
                                                         </div>
                                                         <div class="rating-progress">
-                                                            <div style="width: 60%;"></div>
+                                                            <div style="width: <?php echo $porcentagemQuatroEstrelas; ?>%;"></div>
                                                         </div>
-                                                        <span class="sum">2</span>
+                                                        <span class="sum"><?php echo $totalQuatroEstrelas;?></span>
                                                     </li>
                                                     <li>
                                                         <div class="rating-stars">
@@ -321,9 +367,9 @@ if (isset($produtoGet)) {
                                                             <i class="fa fa-star-o"></i>
                                                         </div>
                                                         <div class="rating-progress">
-                                                            <div></div>
+                                                            <div style="width: <?php echo $porcentagemTresEstrelas; ?>%;"></div>
                                                         </div>
-                                                        <span class="sum">0</span>
+                                                        <span class="sum"><?php echo $totalTresEstrelas;?></span>
                                                     </li>
                                                     <li>
                                                         <div class="rating-stars">
@@ -334,9 +380,9 @@ if (isset($produtoGet)) {
                                                             <i class="fa fa-star-o"></i>
                                                         </div>
                                                         <div class="rating-progress">
-                                                            <div></div>
+                                                            <div style="width: <?php echo $porcentagemDoisEstrelas; ?>%;"></div>
                                                         </div>
-                                                        <span class="sum">0</span>
+                                                        <span class="sum"><?php echo $totalDoisEstrelas;?></span>
                                                     </li>
                                                     <li>
                                                         <div class="rating-stars">
@@ -347,9 +393,9 @@ if (isset($produtoGet)) {
                                                             <i class="fa fa-star-o"></i>
                                                         </div>
                                                         <div class="rating-progress">
-                                                            <div></div>
+                                                            <div style="width: <?php echo $porcentagemUmaEstrelas; ?>%;"></div>
                                                         </div>
-                                                        <span class="sum">0</span>
+                                                        <span class="sum"><?php echo $totalUmaEstrelas;?></span>
                                                     </li>
                                                 </ul>
                                             </div>
@@ -476,8 +522,7 @@ if (isset($produtoGet)) {
                         <div class="product-rating">
                         </div>
                         <div class="product-btns">
-                            <button class="add-to-wishlist"><i class="fa fa-heart-o"></i><span class="tooltipp">LISTA DE DESEJO</span>
-                            </button>
+                            <button class="add-to-wishlist"><i class="fa fa-heart-o"></i><span class="tooltipp">LISTA DE DESEJO</span></button>
                             <button class="add-to-compare"><i class="fa fa-exchange"></i><span
                                         class="tooltipp">COMPARAR</span></button>
                             <button class="quick-view"><i class="fa fa-eye"></i><span class="tooltipp">VER MAIS</span>
