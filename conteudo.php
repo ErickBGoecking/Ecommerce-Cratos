@@ -1,5 +1,7 @@
 <?php
+session_start();
 include_once("source/funcoes/funcoes.php");
+include_once("source/funcoes/correio/api.php");
 
 if(isset($url[0])){
     switch($url[0]){

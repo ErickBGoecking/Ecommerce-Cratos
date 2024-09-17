@@ -5,10 +5,30 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e4031bf4-ec88-4847-add9-970c57ab60d5" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/pagina/loja/pagina/produto/acoes/addCarrinho.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pagina/loja/pagina/produto/acoes/upQtdCarrinho.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pagina/loja/pagina/produto/view/carrinho.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/source/css/loja/produto/cesta-carrinho.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/source/funcoes/correio/api.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/source/js/loja/mensagemToast.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pagina/loja/pagina/produto/produto.php" beforeDir="false" afterPath="$PROJECT_DIR$/pagina/loja/pagina/produto/produto.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/conteudo.php" beforeDir="false" afterPath="$PROJECT_DIR$/conteudo.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controle/loja/produto/produto-controle.php" beforeDir="false" afterPath="$PROJECT_DIR$/controle/loja/produto/produto-controle.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/log/arquivo_de_log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/log/arquivo_de_log.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pagina/loja/conteudoloja.php" beforeDir="false" afterPath="$PROJECT_DIR$/pagina/loja/conteudoloja.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pagina/loja/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/pagina/loja/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pagina/loja/layout/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/pagina/loja/layout/header.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pagina/loja/layout/menu.php" beforeDir="false" afterPath="$PROJECT_DIR$/pagina/loja/layout/menu.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pagina/loja/pagina/produto/lista.php" beforeDir="false" afterPath="$PROJECT_DIR$/pagina/loja/pagina/produto/view/lista.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pagina/loja/pagina/produto/produto.php" beforeDir="false" afterPath="$PROJECT_DIR$/pagina/loja/pagina/produto/view/produto.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pagina/loja/pagina/produto/produtoBannerPromocao.php" beforeDir="false" afterPath="$PROJECT_DIR$/pagina/loja/pagina/produto/view/produtoBannerPromocao.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pagina/loja/pagina/produto/produtoVariacao.php" beforeDir="false" afterPath="$PROJECT_DIR$/pagina/loja/pagina/produto/view/produtoVariacao.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pagina/loja/pagina/produto/produtocarrosselMaisVendido.php" beforeDir="false" afterPath="$PROJECT_DIR$/pagina/loja/pagina/produto/view/produtocarrosselMaisVendido.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/source/css/loja/produto/produto.css" beforeDir="false" afterPath="$PROJECT_DIR$/source/css/loja/produto/produto.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/source/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/css/padrao.css" beforeDir="false" afterPath="$PROJECT_DIR$/source/css/padrao.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/funcoes/funcoes.php" beforeDir="false" afterPath="$PROJECT_DIR$/source/funcoes/funcoes.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/js/loja/loja.js" beforeDir="false" afterPath="$PROJECT_DIR$/source/js/loja/loja.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/js/loja/produto/produto.js" beforeDir="false" afterPath="$PROJECT_DIR$/source/js/loja/produto/produto.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,8 +41,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="CSS File" />
         <option value="JavaScript File" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
@@ -75,36 +95,36 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
-    "last_opened_file_path": "D:/htdocs/cratos/Ecommerce-Cratos",
-    "list.type.of.created.stylesheet": "CSS",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "MTConfigurable",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;luciano&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/htdocs/cratos/Ecommerce-Cratos&quot;,
+    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;MTConfigurable&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\pagina\produto\acoes" />
+      <recent name="D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\layout" />
       <recent name="D:\htdocs\cratos\Ecommerce-Cratos\controle\loja\produto" />
       <recent name="D:\htdocs\cratos\Ecommerce-Cratos\controle\loja" />
       <recent name="D:\htdocs\cratos\Ecommerce-Cratos\source\bibliotecas\novislider\css" />
-      <recent name="D:\htdocs\cratos\Ecommerce-Cratos\source\js" />
-      <recent name="D:\htdocs\cratos\Ecommerce-Cratos\source\bibliotecas\bootstrap-3" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\pagina\produto\view" />
       <recent name="D:\htdocs\cratos\Ecommerce-Cratos" />
       <recent name="D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja" />
       <recent name="D:\htdocs\cratos\Ecommerce-Cratos\pagina\loja\pagina" />
       <recent name="D:\htdocs\cratos\Ecommerce-Cratos\source\bibliotecas\slide" />
-      <recent name="D:\htdocs\cratos\Ecommerce-Cratos\source\css" />
     </key>
   </component>
   <component name="SharedIndexes">
@@ -164,6 +184,9 @@
       <workItem from="1725367385050" duration="21700000" />
       <workItem from="1725646801404" duration="31000" />
       <workItem from="1725891188144" duration="753000" />
+      <workItem from="1725912468923" duration="56797000" />
+      <workItem from="1726254086326" duration="6139000" />
+      <workItem from="1726575506431" duration="3786000" />
     </task>
     <servers />
   </component>

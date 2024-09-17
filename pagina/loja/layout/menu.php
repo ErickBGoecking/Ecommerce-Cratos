@@ -2,7 +2,7 @@
     <div class="container">
         <div id="responsive-nav">
             <ul class="main-nav nav navbar-nav">
-                <li class="active"><a href="#">Início</a></li>
+                <li class="active"><a href="<?php echo $_PREFIXO;?>">Início</a></li>
                 <li><a href="#">Proteína Whey</a></li>
                 <li><a href="#">Top 20</a></li>
                 <li><a href="#">Marcas</a></li>

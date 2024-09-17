@@ -21,44 +21,72 @@ function getSelectedRadios() {
         return null;
     }
 }
+
 async function enviarIdVariacao() {
     const selectedData = getSelectedRadios();
     if (selectedData) {
         const {selectedIds, dataProduto} = selectedData;
-        const form=document.createElement('form');
-        const retorno = await postRetorno('loja/produto/produtovariacao/'+selectedIds+'/'+dataProduto,form)
-        console.log(retorno.id);  // Remove this line before deploying the code to avoid console.log() in production.
-        if (retorno){
+        const form = document.createElement('form');
+        const retorno = await postRetorno('loja/produto/produtovariacao/' + selectedIds + '/' + dataProduto, form)
+        console.log(retorno.id);
+        if (retorno) {
             window.location.href = `${retorno.id}`;
         }
     }
 }
-// function enviarIdVariacao() {
-//     const selectedData = getSelectedRadios();
-//     if (selectedData) {
-//         const {selectedIds, dataProduto} = selectedData;
-//         fetch('../../../pagina/loja/pagina/produto/produtoVariacao.php', {
-//             method: 'POST',
-//             headers: {
-//                 'Content-Type': 'application/x-www-form-urlencoded',
-//             },
-//             body: 'variacao=' + encodeURIComponent(selectedIds) + '&prod=' + encodeURIComponent(dataProduto)
-//         })
-//             .then(response => response.text())
-//             .then(data => {
-//                 console.log(data);
-//                 window.location.href = `https://cratos.prod/loja/produto/${data.trim()}`;
-//             })
-//             .catch(error => console.error('Erro na requisição:', error));
-//     }
-// }
+
 radios.forEach((radio) => {
     radio.addEventListener('click', function () {
         enviarIdVariacao();
     });
 });
 
-document.querySelector('.add-to-cart-btn').addEventListener('click', function (e) {
-    e.preventDefault();
-    enviarIdVariacao();
+
+async function adicionarCarrinho(variacao) {
+    const quantidade = document.getElementById('quantidade').value;
+    const form = document.createElement('form');
+    const retorno = await postRetorno('loja/produto/addCarrinho/' + variacao + '/' + quantidade, form)
+    if (retorno.sucesso) {
+        mensagemToast('Sucesso!', 'Produto inserido no carrinho!', 'success', 'toast-top-right')
+    } else {
+        mensagemToast('Algo deu errado!', retorno.mensagem, 'error', 'toast-top-right')
+    }
+    setTimeout(() => {
+        window.location.reload();
+    }, 1500);
+}
+
+async function atualizarQuantidade(variacao, operacao) {
+    const form = document.createElement('form');
+    const retorno = await postRetorno('loja/produto/upQtdCarrinho/' + variacao + '/' + operacao, form)
+    // if (retorno.sucesso) {
+    //     mensagemToast('Sucesso!', retorno.mensagem, 'success', 'toast-top-right')
+    // } else {
+    //     mensagemToast('Algo deu errado!', retorno.mensagem, 'error', 'toast-top-right')
+    // }
+    window.location.reload();
+}
+
+function upQtdDelProd(classe,operacao){
+    document.querySelectorAll(classe).forEach(button => {
+        button.addEventListener('click', function () {
+            let idProdutoVariacao = this.getAttribute('data-id');
+            atualizarQuantidade(idProdutoVariacao, operacao);
+        });
+    });
+}
+upQtdDelProd('.qtdmais','up')
+upQtdDelProd('.qtdmenos','down')
+upQtdDelProd('.remover','del')
+
+document.querySelectorAll('.qtd-input').forEach(input => {
+    input.addEventListener('change', function () {
+        let idProdutoVariacao = this.getAttribute('data-id');
+        let novaQuantidade = this.value;
+        if (novaQuantidade < 1) {
+            novaQuantidade = 1;
+            this.value = 1;
+        }
+        atualizarQuantidade(idProdutoVariacao, novaQuantidade);
+    });
 });

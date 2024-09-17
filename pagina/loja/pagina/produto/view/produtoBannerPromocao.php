@@ -9,7 +9,7 @@ if ($listaBannerCentral) {
     }
     $dataExpiracaoBanner = $DataFinalCentral;
     ?>
-    <div id="hot-deal" class="section" style="background-image: url('./img/produto/<?php echo $ImgCentral;?>')">
+    <div id="hot-deal" class="section" style="background-image: url('./img/banner/<?php echo $ImgCentral;?>')">
         <div class="container">
             <div class="row">
                 <div class="col-md-12">

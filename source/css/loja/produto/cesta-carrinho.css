@@ -1,0 +1,89 @@
+.header-cesta {
+    display: grid;
+    grid-template-columns: auto 80px 130px;
+    padding: 10px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.header-cesta h5 {
+    margin: 0;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1em;
+}
+
+.header-cesta h5:first-child {
+    text-align: left;
+}
+.product {
+    display: flex!important;
+    align-items: flex-start!important;
+    gap: 20px!important;
+    padding: 20px!important;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    background-color: #f9f9f9;
+}
+
+.product img {
+    flex-shrink: 0!important;
+}
+
+.captionCratos {
+    flex-grow: 1!important;
+    padding-top: 5px!important;
+}
+
+.captionCratos h3 {
+    margin: 0!important;
+    font-size: 1.2em!important;
+}
+
+.captionCratos p {
+    margin: 0!important;
+    font-size: 0.9em!important;
+    color: #555!important;
+}
+
+.details-wrapper {
+    display: flex!important;
+    flex-direction: row!important;
+    align-items: center!important;
+    gap: 20px!important;
+    padding-top: 5px!important;
+}
+
+.qty-label {
+    display: flex!important;
+    flex-direction: column!important;
+    align-items: center!important;
+    font-size: 0.9em!important;
+}
+.input-number {
+    display: flex!important;
+    align-items: center!important;
+    justify-content: center!important;
+    position: relative!important;
+}
+.qtd-input {
+    width: 60px!important;
+    text-align: center!important;
+}
+.qty-up, .qty-down {
+    cursor: pointer!important;
+}
+.text-center-cratos {
+    /*position: absolute;*/
+    bottom: 30px;
+    text-align: center;
+    color: red;
+    cursor: pointer;
+    width: 100%;
+}
+.product-details {
+    text-align: right!important;
+}
+
+.qtd-input{
+    width:80px!important;
+}

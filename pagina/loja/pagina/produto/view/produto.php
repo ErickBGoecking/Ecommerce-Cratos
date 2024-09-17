@@ -2,24 +2,25 @@
     <link rel="stylesheet" href="<?php echo $_PREFIXO ?>source/css/loja/produto/produto.css">
 </head>
 <?php
-$produtoGet = $url[2];
-if (isset($produtoGet)) {
+if (isset($url[2]) && !empty($url[2])) {
+    $produtoGet = $url[2];
     $idProdutoVariacaoGet = codificar($produtoGet, 'decodificar');
     $retornoFotoProduto = listarRegistroUnico('fotoproduto', 'foto', 'idprodutovariacao', $idProdutoVariacaoGet);
-    if($retornoFotoProduto){
+    if ($retornoFotoProduto) {
         $foto = $retornoFotoProduto[0]->foto;
-    }else{
+    } else {
         $foto = 'semfoto.png';
     }
-
     $retornoProduto = listarRegistroUnico("produto p INNER JOIN produtovariacao pv ON pv.idproduto = p.idproduto AND p.ativo = 'A'
-        INNER JOIN estoque e ON e.idprodutovariacao = pv.idprodutovariacao", 'p.idproduto, p.video, p.produto, p.descricao, 
+        INNER JOIN estoque e ON e.idprodutovariacao = pv.idprodutovariacao INNER JOIN categoria c ON c.IdCategoria = p.idcategoria", 'c.IdCategoria, c.Categoria, p.idproduto, p.video, p.produto, p.descricao, 
         pv.idprodutovariacao, pv.idtipovariacao, pv.detalhe, pv.altura, pv.largura, pv.peso, pv.destaque, e.idestoque, e.qtdatual, e.qtdvendido, 
         e.vendapromocional, e.custo, e.venda, e.lote, e.vencimento', 'pv.idprodutovariacao', $idProdutoVariacaoGet);
     if ($retornoProduto) {
 //        $tiposSelecionados = explode(',', $retornoProduto[0]->idtipovariacao);
         foreach ($retornoProduto as $itemProduto) {
             $idproduto = $itemProduto->idproduto;
+            $IdCategoriaProduto = $itemProduto->IdCategoria;
+            $categoriaProduto = $itemProduto->Categoria;
             $idprodutovariacao = $itemProduto->idprodutovariacao;
             $idtipovariacaoBd = $itemProduto->idtipovariacao;
             $tiposSelecionados = explode(',', $idtipovariacaoBd);
@@ -30,7 +31,7 @@ if (isset($produtoGet)) {
                 $video = 'https://www.youtube.com/embed/' . $queryParams['v'];
                 $videoId = isset($queryParams['v']) ? $queryParams['v'] : '';
             }
-            $produto = $itemProduto->produto;
+            $produtoNome = $itemProduto->produto;
             $descricao = $itemProduto->descricao;
             $detalhes = $itemProduto->detalhe;
             $altura = $itemProduto->altura;
@@ -39,8 +40,16 @@ if (isset($produtoGet)) {
             $destaque = $itemProduto->destaque;
             $qtdatual = $itemProduto->qtdatual;
             $qtdvendido = $itemProduto->qtdvendido;
-            $venda = $itemProduto->venda;
-            $vendapromocional = $itemProduto->vendapromocional;
+            if ($itemProduto->venda) {
+                $venda = number_format($itemProduto->venda, '2', ',', '.');
+            } else {
+                $venda = '00,00';
+            }
+            if ($itemProduto->vendapromocional) {
+                $vendapromocional = number_format($itemProduto->vendapromocional, '2', ',', '.');
+            } else {
+                $vendapromocional = '00,00';
+            }
         }
         $totalComentario = 0;
         $totalEstrela = 0;
@@ -64,29 +73,29 @@ if (isset($produtoGet)) {
         $tresEstrelas = listarGeral('c.estrela', "comentarioproduto c WHERE c.estrela = '3' AND c.idprodutovariacao = $idprodutovariacao");
         $doisEstrelas = listarGeral('c.estrela', "comentarioproduto c WHERE c.estrela = '2' AND c.idprodutovariacao = $idprodutovariacao");
         $umaEstrelas = listarGeral('c.estrela', "comentarioproduto c WHERE c.estrela = '1' AND c.idprodutovariacao = $idprodutovariacao");
-        if($cincoEstrelas){
+        if ($cincoEstrelas) {
             $totalCincoEstrelas = count($cincoEstrelas);
-        }else{
+        } else {
             $totalCincoEstrelas = 0;
         }
-        if($quatroEstrelas){
+        if ($quatroEstrelas) {
             $totalQuatroEstrelas = count($quatroEstrelas);
-        }else{
+        } else {
             $totalQuatroEstrelas = 0;
         }
-        if($tresEstrelas){
+        if ($tresEstrelas) {
             $totalTresEstrelas = count($tresEstrelas);
-        }else{
+        } else {
             $totalTresEstrelas = 0;
         }
-        if($doisEstrelas){
+        if ($doisEstrelas) {
             $totalDoisEstrelas = count($doisEstrelas);
-        }else{
+        } else {
             $totalDoisEstrelas = 0;
         }
-        if($umaEstrelas){
+        if ($umaEstrelas) {
             $totalUmaEstrelas = count($umaEstrelas);
-        }else{
+        } else {
             $totalUmaEstrelas = 0;
         }
         $totalAvaliacoes = $totalCincoEstrelas + $totalQuatroEstrelas + $totalTresEstrelas + $totalDoisEstrelas + $totalUmaEstrelas;
@@ -101,9 +110,9 @@ if (isset($produtoGet)) {
                 <div class="row">
                     <div class="col-md-12">
                         <ul class="breadcrumb-tree">
-                            <li><a href="#">Produto</a></li>
                             <li><a href="#">Detalhes do produto</a></li>
-                            <li class="active"><?php echo $produto; ?></li>
+                            <li><a href="#"><?php echo $categoriaProduto ?></a></li>
+                            <li class="active"><?php echo $produtoNome; ?></li>
                         </ul>
                     </div>
                 </div>
@@ -116,7 +125,7 @@ if (isset($produtoGet)) {
                         <div id="product-main-img">
                             <div class="product-preview">
                                 <img src="<?php echo $_PREFIXO ?>img/produto/<?php echo $foto; ?>"
-                                     alt="<?php echo $produto; ?>" title="<?php echo $produto; ?>">
+                                     alt="<?php echo $produtoNome; ?>" title="<?php echo $produtoNome; ?>">
                             </div>
                             <?php
                             $retornoFotoProduto = listarGeral('foto', "fotoproduto WHERE idprodutovariacao='$idprodutovariacao' AND ativo = 'A'");
@@ -124,12 +133,12 @@ if (isset($produtoGet)) {
                                 foreach ($retornoFotoProduto as $itemFotoProduto) {
                                     $fotoProdutoVariacao = $itemFotoProduto->foto;
                                     if (empty($fotoProdutoVariacao)) {
-                                        $fotoProdutoVariacao = 'sem-imagem.jpg';
+                                        $fotoProdutoVariacao = 'semfoto.png';
                                     }
                                     ?>
                                     <div class="product-preview">
                                         <img src="<?php echo $_PREFIXO ?>img/produto/<?php echo $fotoProdutoVariacao; ?>"
-                                             alt="<?php echo $produto; ?>" title="<?php echo $produto; ?>">
+                                             alt="<?php echo $produtoNome; ?>" title="<?php echo $produtoNome; ?>">
                                     </div>
                                     <?php
                                 }
@@ -152,19 +161,19 @@ if (isset($produtoGet)) {
                         <div id="product-imgs">
                             <div class="product-preview">
                                 <img src="<?php echo $_PREFIXO ?>img/produto/<?php echo $foto; ?>"
-                                     alt="<?php echo $produto; ?>" title="<?php echo $produto; ?>">
+                                     alt="<?php echo $produtoNome; ?>" title="<?php echo $produtoNome; ?>">
                             </div>
                             <?php
                             if ($retornoFotoProduto) {
                                 foreach ($retornoFotoProduto as $itemFotoProduto) {
                                     $fotoProdutoVariacao = $itemFotoProduto->foto;
                                     if (empty($fotoProdutoVariacao)) {
-                                        $fotoProdutoVariacao = 'sem-imagem.jpg';
+                                        $fotoProdutoVariacao = 'semfoto.png';
                                     }
                                     ?>
                                     <div class="product-preview">
                                         <img src="<?php echo $_PREFIXO ?>img/produto/<?php echo $fotoProdutoVariacao; ?>"
-                                             alt="<?php echo $produto; ?>" title="<?php echo $produto; ?> aa">
+                                             alt="<?php echo $produtoNome; ?>" title="<?php echo $produtoNome; ?> aa">
                                     </div>
                                     <?php
                                 }
@@ -173,7 +182,7 @@ if (isset($produtoGet)) {
                                     <div class="product-preview">
                                         <img class="preview-image"
                                              src="https://img.youtube.com/vi/<?php echo $videoId; ?>/0.jpg"
-                                             alt="<?php echo $produto; ?>" title="<?php echo $produto; ?>">
+                                             alt="<?php echo $produtoNome; ?>" title="<?php echo $produtoNome; ?>">
                                         <div class="play-button"></div>
                                     </div>
                                     <?php
@@ -184,10 +193,10 @@ if (isset($produtoGet)) {
                     </div>
                     <div class="col-md-5">
                         <div class="product-details" id="produto-variacao">
-                            <h2 class="product-name"><?php echo $produto; ?></h2>
+                            <h2 class="product-name"><?php echo $produtoNome; ?></h2>
                             <div>
                                 <div class="product-rating">
-                                    <span><?php echo number_format($totalEstrela, 1); ; ?></span>
+                                    <span><?php echo number_format($totalEstrela, 1);; ?></span>
                                     <?php for ($i = 0; $i < $estrelasCheias; $i++): ?>
                                         <i class="fa fa-star"></i>
                                     <?php endfor; ?>
@@ -198,12 +207,13 @@ if (isset($produtoGet)) {
                                         <i class="fa fa-star-o"></i>
                                     <?php endfor; ?>
                                 </div>
-                                <a class="review-link" id="click" href="#show-avaliacao" onclick="clickalert()"><?php echo $totalComentario?> Comentário(s)</a>
+                                <a class="review-link" id="click" href="#show-avaliacao"
+                                   onclick="clickalert()"><?php echo $totalComentario ?> Comentário(s)</a>
                             </div>
                             <div>
-                                <h3 class="product-price">R$<?php echo number_format($venda, '2', ',', '.'); ?>
+                                <h3 class="product-price">R$ <?php echo $venda; ?>
                                     <del class="product-old-price">
-                                        R$<?php echo number_format($vendapromocional, '2', ',', '.'); ?></del>
+                                        R$ <?php echo $vendapromocional; ?></del>
                                 </h3>
                                 <span class="product-available"><?php echo $qtdatual; ?> estoque.</span>
                             </div>
@@ -255,22 +265,26 @@ if (isset($produtoGet)) {
                                 <div class="qty-label">
                                     Qtd:
                                     <div class="input-number">
-                                        <input type="number" value="1">
+                                        <input type="number" id="quantidade" value="1">
                                         <span class="qty-up">+</span>
                                         <span class="qty-down">-</span>
                                     </div>
                                 </div>
-                                <button class="add-to-cart-btn"><i class="fa fa-shopping-cart"></i> ADICIONAR</button>
+                                <button class="add-to-cart-btn" onclick="adicionarCarrinho('<?php echo codificar($idProdutoVariacaoGet, "codificar"); ?>')"><i
+                                            class="fa fa-shopping-cart"></i> ADICIONAR
+                                </button>
                             </div>
                             <ul class="product-btns">
-                                <li><a href="#"><i class="fa fa-heart-o"></i> LISTA DE DESEJO</a></li>
-                                <li><a href="#"><i class="fa fa-exchange"></i> COMPARAR</a></li>
+                                <li><a href="<?php echo $_PREFIXO?>loja/carrinho"><i class="fa fa-shopping-cart"></i> ver carrinho</a></li>
+<!--                                <li><a href="#"><i class="fa fa-heart-o"></i> LISTA DE DESEJO</a></li>-->
+<!--                                <li><a href="#"><i class="fa fa-exchange"></i> COMPARAR</a></li>-->
+                                <li><a href="<?php echo $_PREFIXO ?>"><i class="fa fa-exchange"></i> continuar comprando</a></li>
                             </ul>
-                            <ul class="product-links">
-                                <li>Categoria:</li>
-                                <li><a href="#">Headphones</a></li>
-                                <li><a href="#">Accessories</a></li>
-                            </ul>
+<!--                            <ul class="product-links">-->
+<!--                                <li>Categoria:</li>-->
+<!--                                <li><a href="#">--><?php //echo $categoriaProduto ?><!--</a></li>-->
+<!--                                <li><a href="#">--><?php //echo '/ ' . $produtoNome; ?><!--</a></li>-->
+<!--                            </ul>-->
                             <ul class="product-links" style="margin-top:22px!important">
                                 <li>Compartilhar:</li>
                                 <li><a href="#"><i class="fa fa-facebook"></i></a></li>
@@ -290,13 +304,6 @@ if (isset($produtoGet)) {
                                 <li><a data-toggle="tab" href="#tabDetalhes">Detalhes</a></li>
                                 <li><a data-toggle="tab" href="#tabAvaliacao" id="tabAvalaicaoShow">Avaliações
                                         (<?php echo $totalComentario; ?>)</a></li>
-                                <script>
-
-                                    function clickalert(){
-                                        const tabAvalaicaoShow = document.getElementById('tabAvalaicaoShow');
-                                        tabAvalaicaoShow.click();
-                                    }
-                                </script>
                             </ul>
                             <div class="tab-content">
                                 <div id="tabDescricao" class="tab-pane fade in active">
@@ -318,7 +325,7 @@ if (isset($produtoGet)) {
                                         <div class="col-md-3">
                                             <div id="rating">
                                                 <div class="rating-avg">
-                                                    <span><?php echo number_format($totalEstrela, 1); ; ?></span>
+                                                    <span><?php echo number_format($totalEstrela, 1); ?></span>
                                                     <div class="rating-stars">
                                                         <?php for ($i = 0; $i < $estrelasCheias; $i++): ?>
                                                             <i class="fa fa-star"></i>
@@ -343,7 +350,7 @@ if (isset($produtoGet)) {
                                                         <div class="rating-progress">
                                                             <div style="width: <?php echo $porcentagemCincoEstrelas; ?>%;"></div>
                                                         </div>
-                                                        <span class="sum"><?php echo $totalCincoEstrelas;?></span>
+                                                        <span class="sum"><?php echo $totalCincoEstrelas; ?></span>
                                                     </li>
                                                     <li>
                                                         <div class="rating-stars">
@@ -356,7 +363,7 @@ if (isset($produtoGet)) {
                                                         <div class="rating-progress">
                                                             <div style="width: <?php echo $porcentagemQuatroEstrelas; ?>%;"></div>
                                                         </div>
-                                                        <span class="sum"><?php echo $totalQuatroEstrelas;?></span>
+                                                        <span class="sum"><?php echo $totalQuatroEstrelas; ?></span>
                                                     </li>
                                                     <li>
                                                         <div class="rating-stars">
@@ -369,7 +376,7 @@ if (isset($produtoGet)) {
                                                         <div class="rating-progress">
                                                             <div style="width: <?php echo $porcentagemTresEstrelas; ?>%;"></div>
                                                         </div>
-                                                        <span class="sum"><?php echo $totalTresEstrelas;?></span>
+                                                        <span class="sum"><?php echo $totalTresEstrelas; ?></span>
                                                     </li>
                                                     <li>
                                                         <div class="rating-stars">
@@ -382,7 +389,7 @@ if (isset($produtoGet)) {
                                                         <div class="rating-progress">
                                                             <div style="width: <?php echo $porcentagemDoisEstrelas; ?>%;"></div>
                                                         </div>
-                                                        <span class="sum"><?php echo $totalDoisEstrelas;?></span>
+                                                        <span class="sum"><?php echo $totalDoisEstrelas; ?></span>
                                                     </li>
                                                     <li>
                                                         <div class="rating-stars">
@@ -395,7 +402,7 @@ if (isset($produtoGet)) {
                                                         <div class="rating-progress">
                                                             <div style="width: <?php echo $porcentagemUmaEstrelas; ?>%;"></div>
                                                         </div>
-                                                        <span class="sum"><?php echo $totalUmaEstrelas;?></span>
+                                                        <span class="sum"><?php echo $totalUmaEstrelas; ?></span>
                                                     </li>
                                                 </ul>
                                             </div>
@@ -495,7 +502,7 @@ if (isset($produtoGet)) {
         </div>
         <?php
     }
-}
+
 ?>
 <div class="section">
     <div class="container">
@@ -505,132 +512,74 @@ if (isset($produtoGet)) {
                     <h3 class="title">Produtos Relacionados</h3>
                 </div>
             </div>
-            <div class="col-md-3 col-xs-6">
-                <div class="product">
-                    <div class="product-img">
-                        <img src="<?php echo $_PREFIXO ?>img/produto/product01.jpg" alt="">
-                        <div class="product-label">
-                            <span class="sale">-30%</span>
+            <?php
+            $listaProdutoRelacionado = listarGeral('p.idproduto, p.idcategoria, fp.foto, p.produto, p.descricao, pv.idprodutovariacao, e.venda, e.vendapromocional', "produto p INNER JOIN produtovariacao pv  ON pv.idproduto = p.idproduto AND p.idproduto <> $idproduto INNER JOIN estoque e  ON e.idprodutovariacao = pv.idprodutovariacao INNER JOIN fotoproduto fp  ON pv.idprodutovariacao = fp.idprodutovariacao WHERE p.ativo = 'A' AND p.idcategoria = $IdCategoriaProduto  GROUP BY p.idproduto ORDER BY p.idproduto DESC LIMIT 12");
+            if ($listaProdutoRelacionado) {
+                foreach ($listaProdutoRelacionado as $itemProdutoRelacionado) {
+                    $idprodutovariacaoRelacionado = $itemProdutoRelacionado->idprodutovariacao;
+                    $idprodutoRelacionado = $itemProdutoRelacionado->idproduto;
+                    $produtoRelacionadoNome = $itemProdutoRelacionado->produto;
+                    if ($itemProdutoRelacionado->venda) {
+                        $vendaRelacionado = number_format($itemProdutoRelacionado->venda, '2', ',', '.');
+                    } else {
+                        $vendaRelacionado = '00,00';
+                    }
+                    if ($itemProdutoRelacionado->vendapromocional) {
+                        $vendapromocionalRelacionado = number_format($itemProdutoRelacionado->vendapromocional, '2', ',', '.');
+                    } else {
+                        $vendapromocionalRelacionado = '00,00';
+                    }
+                    if ($itemProdutoRelacionado->foto) {
+                        $fotoRelacionado = $itemProdutoRelacionado->foto;
+                    } else {
+                        $fotoRelacionado = 'semfoto.png';
+                    }
+                    $descricaoRelacionado = $itemProdutoRelacionado->descricao;
+                    ?>
+                    <div class="col-md-3 col-xs-6">
+                        <div class="product">
+                            <div class="product-img">
+                                <img src="<?php echo $_PREFIXO ?>img/produto/<?php echo $fotoRelacionado ?>"
+                                     alt="<?php echo $produtoRelacionadoNome ?>"
+                                     title="<?php echo $produtoRelacionadoNome ?>">
+                                <div class="product-label">
+                                    <span class="sale">-30%</span>
+                                </div>
+                            </div>
+                            <div class="product-body">
+                                <p class="product-Categoria"><?php echo $categoriaProduto; ?></p>
+                                <h3 class="product-name"><a href="#"><?php echo $produtoRelacionadoNome; ?></a></h3>
+                                <h4 class="product-price">R$ <?php echo $vendapromocionalRelacionado; ?>
+                                    <del class="product-old-price">R$ <?php echo $vendaRelacionado; ?></del>
+                                </h4>
+                                <div class="product-rating">
+                                </div>
+                                <div class="product-btns">
+                                    <button class="add-to-wishlist"><i class="fa fa-heart-o"></i><span class="tooltipp">LISTA DE DESEJO</span>
+                                    </button>
+                                    <button class="add-to-compare"><i class="fa fa-exchange"></i><span
+                                                class="tooltipp">COMPARAR</span></button>
+                                    <button class="quick-view"><i class="fa fa-eye"></i><span
+                                                class="tooltipp">VER MAIS</span>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="add-to-cart">
+                                <a href="<?php echo codificar($idprodutovariacaoRelacionado, 'codificar'); ?>"
+                                   class="add-to-cart-btn-link"><i class="fa fa-shopping-cart"></i>
+                                    Adicionar</a>
+                            </div>
                         </div>
                     </div>
-                    <div class="product-body">
-                        <p class="product-Categoria">Categoria</p>
-                        <h3 class="product-name"><a href="#">NOME PRODUTO</a></h3>
-                        <h4 class="product-price">R$980.00
-                            <del class="product-old-price">R$990.00</del>
-                        </h4>
-                        <div class="product-rating">
-                        </div>
-                        <div class="product-btns">
-                            <button class="add-to-wishlist"><i class="fa fa-heart-o"></i><span class="tooltipp">LISTA DE DESEJO</span></button>
-                            <button class="add-to-compare"><i class="fa fa-exchange"></i><span
-                                        class="tooltipp">COMPARAR</span></button>
-                            <button class="quick-view"><i class="fa fa-eye"></i><span class="tooltipp">VER MAIS</span>
-                            </button>
-                        </div>
-                    </div>
-                    <div class="add-to-cart">
-                        <button class="add-to-cart-btn"><i class="fa fa-shopping-cart"></i> ADICIONAR</button>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3 col-xs-6">
-                <div class="product">
-                    <div class="product-img">
-                        <img src="<?php echo $_PREFIXO ?>img/produto/product02.png" alt="">
-                        <div class="product-label">
-                            <span class="new">NEW</span>
-                        </div>
-                    </div>
-                    <div class="product-body">
-                        <p class="product-Categoria">Categoria</p>
-                        <h3 class="product-name"><a href="#">Luciano NOME PRODUTO</a></h3>
-                        <h4 class="product-price">R$980.00
-                            <del class="product-old-price">R$990.00</del>
-                        </h4>
-                        <div class="product-rating">
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                        </div>
-                        <div class="product-btns">
-                            <button class="add-to-wishlist"><i class="fa fa-heart-o"></i><span class="tooltipp">LISTA DE DESEJO</span>
-                            </button>
-                            <button class="add-to-compare"><i class="fa fa-exchange"></i><span
-                                        class="tooltipp">COMPARAR</span></button>
-                            <button class="quick-view"><i class="fa fa-eye"></i><span class="tooltipp">VER MAIS</span>
-                            </button>
-                        </div>
-                    </div>
-                    <div class="add-to-cart">
-                        <button class="add-to-cart-btn"><i class="fa fa-shopping-cart"></i> ADICIONAR</button>
-                    </div>
-                </div>
-            </div>
-            <div class="clearfix visible-sm visible-xs"></div>
-            <div class="col-md-3 col-xs-6">
-                <div class="product">
-                    <div class="product-img">
-                        <img src="<?php echo $_PREFIXO ?>img/produto/product03.png" alt="">
-                    </div>
-                    <div class="product-body">
-                        <p class="product-Categoria">Categoria</p>
-                        <h3 class="product-name"><a href="#">NOME PRODUTO</a></h3>
-                        <h4 class="product-price">R$980.00
-                            <del class="product-old-price">R$990.00</del>
-                        </h4>
-                        <div class="product-rating">
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star-o"></i>
-                        </div>
-                        <div class="product-btns">
-                            <button class="add-to-wishlist"><i class="fa fa-heart-o"></i><span class="tooltipp">LISTA DE DESEJO</span>
-                            </button>
-                            <button class="add-to-compare"><i class="fa fa-exchange"></i><span
-                                        class="tooltipp">COMPARAR</span></button>
-                            <button class="quick-view"><i class="fa fa-eye"></i><span class="tooltipp">VER MAIS</span>
-                            </button>
-                        </div>
-                    </div>
-                    <div class="add-to-cart">
-                        <button class="add-to-cart-btn"><i class="fa fa-shopping-cart"></i> ADICIONAR</button>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3 col-xs-6">
-                <div class="product">
-                    <div class="product-img">
-                        <img src="<?php echo $_PREFIXO ?>img/produto/product04.png" alt="">
-                    </div>
-                    <div class="product-body">
-                        <p class="product-Categoria">Categoria</p>
-                        <h3 class="product-name"><a href="#">NOME PRODUTO</a></h3>
-                        <h4 class="product-price">R$980.00
-                            <del class="product-old-price">R$990.00</del>
-                        </h4>
-                        <div class="product-rating">
-                        </div>
-                        <div class="product-btns">
-                            <button class="add-to-wishlist"><i class="fa fa-heart-o"></i><span class="tooltipp">LISTA DE DESEJO</span>
-                            </button>
-                            <button class="add-to-compare"><i class="fa fa-exchange"></i><span
-                                        class="tooltipp">COMPARAR</span></button>
-                            <button class="quick-view"><i class="fa fa-eye"></i><span class="tooltipp">VER MAIS</span>
-                            </button>
-                        </div>
-                    </div>
-                    <div class="add-to-cart">
-                        <button class="add-to-cart-btn"><i class="fa fa-shopping-cart"></i> ADICIONAR</button>
-                    </div>
-                </div>
-            </div>
+                    <?php
+                }
+            }
+            ?>
         </div>
     </div>
 </div>
+<?php
+}
+?>
 <script src="<?php echo $_PREFIXO ?>source/js/loja/produto/produto.js"></script>
 

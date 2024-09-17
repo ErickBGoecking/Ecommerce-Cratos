@@ -1,11 +1,11 @@
 :root{
-
+    --cor-principal-escuro: #d6af10; /*amarelo escuro*/
     --cor-principal: #f9d02a; /*amarelo*/
     --cor-secundaria: black;/*preta*/
     --cor-segundoPlano: #ece650;/*amarelo claro*/
     --cor-bgdanger: #ed2f2f;/*vermelho claro*/
     --cor-bgdanger-dark: #c6000f;/*vermelho claro*/
-
+    --cor-text-secondary: DimGray;/*cinza*/
     --cor-btn-primary-fonte: black;
     --cor-btn-secondary-fonte: #f9d02a;
 

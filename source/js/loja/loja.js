@@ -10,3 +10,7 @@ async function postRetorno(controle,form) {
     })
     return resposta.json()
 }
+function clickalert(){
+    const tabAvalaicaoShow = document.getElementById('tabAvalaicaoShow');
+    tabAvalaicaoShow.click();
+}

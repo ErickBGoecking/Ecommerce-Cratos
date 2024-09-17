@@ -54,3 +54,4 @@ function codificar($codificar, $tipo)
         return base64_decode($codificar);
     };
 }
+
